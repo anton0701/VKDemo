@@ -63,7 +63,6 @@
 			children = (
 				3406249C2270EA8100B39D5B /* Resources */,
 				340624952270EA0A00B39D5B /* Configurations */,
-				340624942270EA0200B39D5B /* Coordinator */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -71,21 +70,22 @@
 		340624932270E9F600B39D5B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3406249E2270EAB300B39D5B /* UI */,
-				3406249B2270EA4900B39D5B /* Sources */,
 				3406249A2270EA4000B39D5B /* Services */,
-				340624992270EA3600B39D5B /* Common */,
 				340624982270EA2400B39D5B /* Parsers */,
 				340624962270EA1800B39D5B /* Managers */,
+				340624942270EA0200B39D5B /* Coordinators */,
+				3406249E2270EAB300B39D5B /* UI */,
+				3406249B2270EA4900B39D5B /* Sources */,
+				340624992270EA3600B39D5B /* Common */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		340624942270EA0200B39D5B /* Coordinator */ = {
+		340624942270EA0200B39D5B /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Coordinator;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		340624952270EA0A00B39D5B /* Configurations */ = {
