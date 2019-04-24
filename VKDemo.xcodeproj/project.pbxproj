@@ -12,7 +12,6 @@
 		340624882270E9A200B39D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340624872270E9A200B39D5B /* Assets.xcassets */; };
 		3406248B2270E9A200B39D5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340624892270E9A200B39D5B /* LaunchScreen.storyboard */; };
 		340624A02270ECA200B39D5B /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406249F2270ECA200B39D5B /* BaseCoordinator.swift */; };
-		340624A82270EF0F00B39D5B /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A32270EF0F00B39D5B /* Date+Utils.swift */; };
 		340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A42270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift */; };
 		340624AA2270EF0F00B39D5B /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A52270EF0F00B39D5B /* HTTPStatusCodes.swift */; };
 		340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A62270EF0F00B39D5B /* RequestError.swift */; };
@@ -28,7 +27,6 @@
 		3406248A2270E9A200B39D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3406248C2270E9A200B39D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3406249F2270ECA200B39D5B /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		340624A32270EF0F00B39D5B /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		340624A42270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPStatusCodes+Extensions.swift"; sourceTree = "<group>"; };
 		340624A52270EF0F00B39D5B /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
 		340624A62270EF0F00B39D5B /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		340624A22270EEC100B39D5B /* Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				340624A32270EF0F00B39D5B /* Date+Utils.swift */,
 				340624A52270EF0F00B39D5B /* HTTPStatusCodes.swift */,
 				340624A42270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift */,
 				340624A62270EF0F00B39D5B /* RequestError.swift */,
@@ -343,7 +340,6 @@
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
 				340624812270E9A000B39D5B /* AppDelegate.swift in Sources */,
-				340624A82270EF0F00B39D5B /* Date+Utils.swift in Sources */,
 				340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */,
 				340624A02270ECA200B39D5B /* BaseCoordinator.swift in Sources */,
 			);
