@@ -1,9 +1,9 @@
 //
-//  RestServiceModel.swift
-//  Vanilla
+//  BaseCoordinator.swift
+//  VKDemo
 //
-//  Created by Konstantin Ursul on 8/3/17.
-//  Copyright © 2017 BrightBox. All rights reserved.
+//  Created by Anton Krylov on 24/04/2019.
+//  Copyright © 2019 Anton Krylov. All rights reserved.
 //
 
 import Foundation

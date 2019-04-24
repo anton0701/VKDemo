@@ -1,9 +1,9 @@
 //
-//  RequestError.swift
-//  Vanilla
+//  BaseCoordinator.swift
+//  VKDemo
 //
-//  Created by diana hersonskaia on 24.07.2018.
-//  Copyright © 2018 BrightBox. All rights reserved.
+//  Created by Anton Krylov on 24/04/2019.
+//  Copyright © 2019 Anton Krylov. All rights reserved.
 //
 
 import Foundation
