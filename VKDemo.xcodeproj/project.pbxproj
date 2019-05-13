@@ -98,7 +98,7 @@
 		340624932270E9F600B39D5B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3406249B2270EA4900B39D5B /* Sources */,
+				3406249B2270EA4900B39D5B /* User flows */,
 				340624962270EA1800B39D5B /* Managers */,
 				3406249A2270EA4000B39D5B /* Services */,
 				340624982270EA2400B39D5B /* Parsers */,
@@ -156,12 +156,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		3406249B2270EA4900B39D5B /* Sources */ = {
+		3406249B2270EA4900B39D5B /* User flows */ = {
 			isa = PBXGroup;
 			children = (
-				34D2D5282289A0EB007A8113 /* Launch Screen */,
+				34D2D5282289A0EB007A8113 /* #Launch Screen */,
+				34D2D5292289A4E2007A8113 /* #Auth */,
 			);
-			path = Sources;
+			path = "User flows";
 			sourceTree = "<group>";
 		};
 		3406249C2270EA8100B39D5B /* Resources */ = {
@@ -192,11 +193,18 @@
 			path = "Base&Extensions";
 			sourceTree = "<group>";
 		};
-		34D2D5282289A0EB007A8113 /* Launch Screen */ = {
+		34D2D5282289A0EB007A8113 /* #Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Launch Screen";
+			path = "#Launch Screen";
+			sourceTree = "<group>";
+		};
+		34D2D5292289A4E2007A8113 /* #Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "#Auth";
 			sourceTree = "<group>";
 		};
 		B8933D810FA23DC089BBCD4D /* Frameworks */ = {
