@@ -17,6 +17,8 @@
 		340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A62270EF0F00B39D5B /* RequestError.swift */; };
 		340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A72270EF0F00B39D5B /* RequestResponse.swift */; };
 		340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624AD2270F06D00B39D5B /* AppCoordinator.swift */; };
+		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
+		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		9E13B4859500BFDC237C2311 /* Pods_VKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		340624A62270EF0F00B39D5B /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		340624A72270EF0F00B39D5B /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
 		340624AD2270F06D00B39D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		436B60AFC158E4EC98719CD9 /* Pods-VKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.debug.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC01E6C6F14070BA0DB98B7 /* Pods-VKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.release.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 		34D2D5292289A4E2007A8113 /* #Auth */ = {
 			isa = PBXGroup;
 			children = (
+				34D2D52A2289A808007A8113 /* AuthViewController.swift */,
+				34D2D52C2289A815007A8113 /* AuthViewModel.swift */,
 			);
 			path = "#Auth";
 			sourceTree = "<group>";
@@ -351,9 +357,11 @@
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
 				340624812270E9A000B39D5B /* AppDelegate.swift in Sources */,
+				34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */,
 				340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */,
 				340624A02270ECA200B39D5B /* BaseCoordinator.swift in Sources */,
 				340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */,
+				34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

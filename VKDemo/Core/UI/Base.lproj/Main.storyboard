@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="JtT-Sp-gHT">
             <objects>
-                <viewController id="vjl-Lv-6sd" sceneMemberID="viewController">
+                <viewController id="vjl-Lv-6sd" customClass="AuthViewController" customModule="VKDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qSr-P6-3nv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9KW-1t-WcW">
-                                        <rect key="frame" x="100" y="301" width="214" height="214"/>
+                                        <rect key="frame" x="125" y="326" width="164" height="164"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9KW-1t-WcW" secondAttribute="height" multiplier="1:1" id="GYY-gw-6cL"/>
                                         </constraints>
@@ -31,7 +31,7 @@
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.47058823529999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="9KW-1t-WcW" firstAttribute="centerX" secondItem="8Fo-Rn-vpm" secondAttribute="centerX" id="2uD-gy-oMl"/>
-                                    <constraint firstItem="9KW-1t-WcW" firstAttribute="width" secondItem="8Fo-Rn-vpm" secondAttribute="width" constant="-200" id="7fT-8k-SVC"/>
+                                    <constraint firstItem="9KW-1t-WcW" firstAttribute="width" secondItem="8Fo-Rn-vpm" secondAttribute="width" constant="-250" id="7fT-8k-SVC"/>
                                     <constraint firstItem="9KW-1t-WcW" firstAttribute="centerY" secondItem="8Fo-Rn-vpm" secondAttribute="centerY" constant="-40" id="Fp9-6v-okb"/>
                                 </constraints>
                             </view>
@@ -45,6 +45,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dqy-wd-HVb"/>
                     </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="9KW-1t-WcW" id="eDx-2F-joy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEd-o9-rRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
