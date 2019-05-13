@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import RxSwift
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    let disposeBag = DisposeBag()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        guard let window = window else {
+            return true
+        }
+        
+        let appCoordinator = AppCoordinator(window: window)
+        _ = appCoordinator.start()
+            .subscribe()
+            .disposed(by: disposeBag)
+        
         return true
     }
 
