@@ -159,6 +159,7 @@
 		3406249B2270EA4900B39D5B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				34D2D5282289A0EB007A8113 /* Launch Screen */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -189,6 +190,13 @@
 				340624A72270EF0F00B39D5B /* RequestResponse.swift */,
 			);
 			path = "Base&Extensions";
+			sourceTree = "<group>";
+		};
+		34D2D5282289A0EB007A8113 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
 		B8933D810FA23DC089BBCD4D /* Frameworks */ = {
