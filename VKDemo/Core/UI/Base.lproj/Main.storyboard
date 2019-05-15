@@ -21,14 +21,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fo-Rn-vpm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KTU-Pl-lcF" customClass="VkLogoView" customModule="VKDemo" customModuleProvider="target">
-                                        <rect key="frame" x="75" y="276" width="264" height="264"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTU-Pl-lcF" customClass="VkLogoView" customModule="VKDemo" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="251" width="314" height="314"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KTU-Pl-lcF" secondAttribute="height" multiplier="1:1" id="Zgt-AI-ron"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.47058823529999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KTU-Pl-lcF" firstAttribute="centerY" secondItem="8Fo-Rn-vpm" secondAttribute="centerY" constant="-40" id="P24-uf-1fU"/>
+                                    <constraint firstItem="KTU-Pl-lcF" firstAttribute="centerX" secondItem="8Fo-Rn-vpm" secondAttribute="centerX" id="WaK-FZ-CpW"/>
+                                    <constraint firstItem="KTU-Pl-lcF" firstAttribute="width" secondItem="8Fo-Rn-vpm" secondAttribute="width" constant="-100" id="zUp-5j-sct"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
