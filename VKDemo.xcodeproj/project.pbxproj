@@ -132,14 +132,13 @@
 		340624932270E9F600B39D5B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3406249B2270EA4900B39D5B /* UserStories */,
+				3406249B2270EA4900B39D5B /* Modules */,
 				340624962270EA1800B39D5B /* Managers */,
 				3406249A2270EA4000B39D5B /* Services */,
 				340624982270EA2400B39D5B /* Parsers */,
 				340624942270EA0200B39D5B /* Coordinators */,
 				3406249E2270EAB300B39D5B /* UI */,
-				340624992270EA3600B39D5B /* Common */,
-				340624A22270EEC100B39D5B /* Base&Extensions */,
+				340624A22270EEC100B39D5B /* Common&Base&Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -177,14 +176,6 @@
 			path = Parsers;
 			sourceTree = "<group>";
 		};
-		340624992270EA3600B39D5B /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				340624802270E9A000B39D5B /* AppDelegate.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		3406249A2270EA4000B39D5B /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,13 +183,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		3406249B2270EA4900B39D5B /* UserStories */ = {
+		3406249B2270EA4900B39D5B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				34D2D5282289A0EB007A8113 /* #Launch Screen */,
 				34D2D5292289A4E2007A8113 /* #Auth */,
 			);
-			path = UserStories;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		3406249C2270EA8100B39D5B /* Resources */ = {
@@ -221,16 +212,17 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		340624A22270EEC100B39D5B /* Base&Extensions */ = {
+		340624A22270EEC100B39D5B /* Common&Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				340624802270E9A000B39D5B /* AppDelegate.swift */,
 				340624A52270EF0F00B39D5B /* HTTPStatusCodes.swift */,
 				340624A42270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift */,
 				340624A62270EF0F00B39D5B /* RequestError.swift */,
 				340624A72270EF0F00B39D5B /* RequestResponse.swift */,
 				3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */,
 			);
-			path = "Base&Extensions";
+			path = "Common&Base&Extensions";
 			sourceTree = "<group>";
 		};
 		3408FA55228C4B7600433B61 /* Custom Buttons */ = {

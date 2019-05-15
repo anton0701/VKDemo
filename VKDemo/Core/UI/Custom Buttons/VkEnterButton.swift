@@ -13,11 +13,11 @@ class VkEnterButton: UIButton {
     
     private let activeBgColor = UIColor(red: 60/255, green: 100/255, blue: 160/255, alpha: 1.0)
     private let highlightedBgColor = UIColor(red: 62/255, green: 90/255, blue: 140/255, alpha: 1.0)
-    private let notActiveBgColor = UIColor(red: 105/255, green: 145/255, blue: 205/255, alpha: 1.0)
+    private let disabledBgColor = UIColor(red: 105/255, green: 145/255, blue: 205/255, alpha: 1.0)
     
     private let activeFontColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1.0)
     private let highlightedFontColor = UIColor(red: 156/255, green: 176/255, blue: 212/255, alpha: 1.0)
-    private let notActiveFontColor = UIColor(red: 170/255, green: 170/255, blue: 190/255, alpha: 1.0)
+    private let disabledFontColor = UIColor(red: 170/255, green: 170/255, blue: 190/255, alpha: 1.0)
     
     
     override init(frame: CGRect) {
@@ -35,10 +35,10 @@ class VkEnterButton: UIButton {
         
         setBackgroundColor(color: activeBgColor, forState: .normal)
         setBackgroundColor(color: highlightedBgColor, forState: .highlighted)
-        setBackgroundColor(color: notActiveBgColor, forState: .disabled)
+        setBackgroundColor(color: disabledBgColor, forState: .disabled)
         
         setTitleColor(activeFontColor, for: .normal)
-        setTitleColor(notActiveFontColor, for: .disabled)
+        setTitleColor(disabledFontColor, for: .disabled)
         setTitleColor(highlightedFontColor, for: .highlighted)
         
         layer.cornerRadius = 15.0
