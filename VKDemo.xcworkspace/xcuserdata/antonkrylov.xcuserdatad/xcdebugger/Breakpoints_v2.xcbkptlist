@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Coordinators/AuthCoordinator.swift"
-            timestampString = "579642679.7778291"
+            timestampString = "579644709.576888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "start()"
             landmarkType = "7">
          </BreakpointContent>

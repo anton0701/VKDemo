@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import SafariServices
 
 enum AuthCoordinationResult {
     case success
@@ -30,7 +31,18 @@ class AuthCoordinator: BaseCoordinator<Void> {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
+        authVm.authorize
+            .subscribe(onNext:{ [weak self] in
+                self?.showSignInVC(in: navigationController)
+            })
+            .disposed(by: disposeBag)
+        
         return Observable.never()
+    }
+    
+    private func showSignInVC(in navigationController: UINavigationController) {
+        let safariViewController = SFSafariViewController(url: URL(string: "https://oauth.vk.com/authorize?client_id=1&display=page&redirect_uri=http://example.com/callback&scope=friends&response_type=token&v=5.95&state=123456")!)
+        navigationController.pushViewController(safariViewController, animated: true)
     }
 }
 

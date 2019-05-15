@@ -11,14 +11,15 @@ import RxSwift
 
 class AuthViewModel {
     
+    // Input
     let showSignInScreen: AnyObserver<Void>
     
+    // Output
+    let authorize: Observable<Void>
+    
     init() {
-//        let _chooseLanguage = PublishSubject<Void>()
-//        self.chooseLanguage = _chooseLanguage.asObserver()
-//        self.showLanguageList = _chooseLanguage.asObservable()
-
         let _showSignInScreen = PublishSubject<Void>()
         self.showSignInScreen = _showSignInScreen.asObserver()
+        self.authorize = _showSignInScreen.asObservable()
     }
 }

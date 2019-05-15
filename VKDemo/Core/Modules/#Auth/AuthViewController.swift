@@ -26,12 +26,12 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupBindings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        setupBindings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,12 +47,18 @@ class AuthViewController: UIViewController {
             .disposed(by: disposeBag)
         
         emailTextField.rx
-            .controlEvent(.allTouchEvents)
+            .controlEvent(.editingDidBegin)
+            .do(onNext: { [weak self] in
+                self?.emailTextField.endEditing(true)
+            })
             .bind(to: viewModel.showSignInScreen)
             .disposed(by: disposeBag)
         
         passwordTextField.rx
-            .controlEvent(.allTouchEvents)
+            .controlEvent(.editingDidBegin)
+            .do(onNext: { [weak self] in
+                self?.passwordTextField.endEditing(true)
+            })
             .bind(to: viewModel.showSignInScreen)
             .disposed(by: disposeBag)
     }
