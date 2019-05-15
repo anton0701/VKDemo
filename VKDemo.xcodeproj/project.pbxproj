@@ -17,6 +17,8 @@
 		340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A72270EF0F00B39D5B /* RequestResponse.swift */; };
 		340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624AD2270F06D00B39D5B /* AppCoordinator.swift */; };
 		3408FA54228C42D500433B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA53228C42D500433B61 /* Assets.xcassets */; };
+		3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA56228C4BAC00433B61 /* VkEnterButton.swift */; };
+		3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA58228C4FFE00433B61 /* Colors.xcassets */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -36,6 +38,8 @@
 		340624A72270EF0F00B39D5B /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
 		340624AD2270F06D00B39D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3408FA53228C42D500433B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3408FA56228C4BAC00433B61 /* VkEnterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkEnterButton.swift; sourceTree = "<group>"; };
+		3408FA58228C4FFE00433B61 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				3408FA53228C42D500433B61 /* Assets.xcassets */,
+				3408FA58228C4FFE00433B61 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 		3406249E2270EAB300B39D5B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3408FA55228C4B7600433B61 /* Custom Buttons */,
 				34D2D52E2289D971007A8113 /* Custom Views */,
 				340624842270E9A000B39D5B /* Main.storyboard */,
 				340624892270E9A200B39D5B /* LaunchScreen.storyboard */,
@@ -198,6 +204,14 @@
 				340624A72270EF0F00B39D5B /* RequestResponse.swift */,
 			);
 			path = "Base&Extensions";
+			sourceTree = "<group>";
+		};
+		3408FA55228C4B7600433B61 /* Custom Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3408FA56228C4BAC00433B61 /* VkEnterButton.swift */,
+			);
+			path = "Custom Buttons";
 			sourceTree = "<group>";
 		};
 		34D2D5282289A0EB007A8113 /* #Launch Screen */ = {
@@ -293,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3406248B2270E9A200B39D5B /* LaunchScreen.storyboard in Resources */,
+				3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */,
 				3408FA54228C42D500433B61 /* Assets.xcassets in Resources */,
 				340624862270E9A000B39D5B /* Main.storyboard in Resources */,
 			);
@@ -364,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */,
 				340624AA2270EF0F00B39D5B /* HTTPStatusCodes.swift in Sources */,
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
 				34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */,

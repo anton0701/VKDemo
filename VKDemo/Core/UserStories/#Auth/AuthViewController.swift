@@ -13,7 +13,8 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var vkLogoView: VkLogoView!
     @IBOutlet weak var logoViewCenterYConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var enterButton: VkEnterButton!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -23,9 +24,11 @@ class AuthViewController: UIViewController {
     private func startWelcomeAnimation() {
         logoViewCenterYConstraint.constant = -150
         
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 1.0, animations: {
             self.vkLogoView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.view.layoutIfNeeded()
+        }) { completed in
+            self.enterButton.isEnabled = true
         }
     }
 }
