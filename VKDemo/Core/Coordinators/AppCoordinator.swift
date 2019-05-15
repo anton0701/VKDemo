@@ -18,8 +18,7 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        return Observable.never()
-//        let repositoryListCoordinator = RepositoryListCoordinator(window: window)
-//        return coordinate(to: repositoryListCoordinator)
+        let authCoordinator = AuthCoordinator(rootViewController: window.rootViewController!)
+        return coordinate(to: authCoordinator)
     }
 }

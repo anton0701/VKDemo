@@ -15,6 +15,8 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var logoViewCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var enterButton: VkEnterButton!
     
+    var viewModel: AuthViewModel!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
