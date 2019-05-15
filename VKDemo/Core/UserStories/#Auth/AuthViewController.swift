@@ -28,7 +28,7 @@ class AuthViewController: UIViewController {
             self.vkLogoView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.view.layoutIfNeeded()
         }) { completed in
-            self.enterButton.isEnabled = true
+//            self.enterButton.isEnabled = true
         }
     }
 }

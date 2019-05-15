@@ -31,6 +31,8 @@ class VkEnterButton: UIButton {
     }
     
     private func commonInit() {
+        setTitle("Войти", for: .normal)
+        
         setBackgroundColor(color: activeBgColor, forState: .normal)
         setBackgroundColor(color: highlightedBgColor, forState: .highlighted)
         setBackgroundColor(color: notActiveBgColor, forState: .disabled)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vjl-Lv-6sd">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="vjl-Lv-6sd" customClass="AuthViewController" customModule="VKDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qSr-P6-3nv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fo-Rn-vpm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTU-Pl-lcF" customClass="VkLogoView" customModule="VKDemo" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="251" width="314" height="314"/>
+                                        <rect key="frame" x="50" y="156" width="275" height="275"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -30,33 +30,43 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-mq-NcK">
-                                        <rect key="frame" x="16" y="573" width="382" height="85"/>
+                                        <rect key="frame" x="16" y="439" width="343" height="100"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gp8-JR-LTn">
-                                                <rect key="frame" x="8" y="8" width="366" height="69"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Gp8-JR-LTn">
+                                                <rect key="frame" x="12" y="8" width="319" height="84"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail или телефон" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="a6M-CR-56y">
-                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="319" height="39.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                     </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-xx-JIk">
+                                                        <rect key="frame" x="0.0" y="41.5" width="319" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="xF1-zO-SY6"/>
+                                                        </constraints>
+                                                    </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wu3-s7-c3y">
-                                                        <rect key="frame" x="0.0" y="38.5" width="366" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="319" height="39.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ovd-xx-JIk" firstAttribute="centerY" secondItem="Gp8-JR-LTn" secondAttribute="centerY" id="E8e-KN-ltF"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Gp8-JR-LTn" secondAttribute="trailing" constant="8" id="R33-88-DpU"/>
-                                            <constraint firstAttribute="height" constant="85" id="cWm-uD-FiZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="Gp8-JR-LTn" secondAttribute="bottom" constant="8" id="hVn-Aa-G7e"/>
+                                            <constraint firstItem="Gp8-JR-LTn" firstAttribute="centerY" secondItem="k7z-mq-NcK" secondAttribute="centerY" id="B4i-zC-fpn"/>
+                                            <constraint firstItem="Gp8-JR-LTn" firstAttribute="centerX" secondItem="k7z-mq-NcK" secondAttribute="centerX" id="DAN-4p-ajj"/>
+                                            <constraint firstAttribute="height" constant="100" id="cWm-uD-FiZ"/>
                                             <constraint firstItem="Gp8-JR-LTn" firstAttribute="top" secondItem="k7z-mq-NcK" secondAttribute="top" constant="8" id="lnJ-se-MmJ"/>
-                                            <constraint firstItem="Gp8-JR-LTn" firstAttribute="leading" secondItem="k7z-mq-NcK" secondAttribute="leading" constant="8" id="tSE-Bw-EMf"/>
+                                            <constraint firstItem="Gp8-JR-LTn" firstAttribute="leading" secondItem="k7z-mq-NcK" secondAttribute="leading" constant="12" id="tSE-Bw-EMf"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -65,7 +75,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qs-8T-Sld" customClass="VkEnterButton" customModule="VKDemo" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="689" width="382" height="60"/>
+                                        <rect key="frame" x="16" y="570" width="343" height="60"/>
                                         <color key="backgroundColor" red="0.31372549019607843" green="0.47058823529411764" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="put-k9-sUk"/>
@@ -107,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEd-o9-rRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-339" y="335"/>
+            <point key="canvasLocation" x="-339.375" y="334.85915492957747"/>
         </scene>
     </scenes>
 </document>
