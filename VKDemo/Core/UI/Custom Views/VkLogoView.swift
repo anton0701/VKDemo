@@ -104,6 +104,55 @@ class VkLogoView: UIView {
         return backgroundPath
     }
     
+    private func getApplePath(frame: CGRect) -> UIBezierPath {
+        let bezierPath = UIBezierPath()
+        bezierPath.move(to: CGPoint(x: frame.minX + 0.62723 * frame.width, y: frame.minY + 0.51575 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.63882 * frame.width, y: frame.minY + 0.46806 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.62723 * frame.width, y: frame.minY + 0.49667 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.63212 * frame.width, y: frame.minY + 0.48070 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.67766 * frame.width, y: frame.minY + 0.42550 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.65323 * frame.width, y: frame.minY + 0.44021 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.67612 * frame.width, y: frame.minY + 0.42631 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.59226 * frame.width, y: frame.minY + 0.37806 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.65040 * frame.width, y: frame.minY + 0.38426 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.60795 * frame.width, y: frame.minY + 0.37885 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.50351 * frame.width, y: frame.minY + 0.40000 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.55625 * frame.width, y: frame.minY + 0.37446 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.52178 * frame.width, y: frame.minY + 0.40000 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.42635 * frame.width, y: frame.minY + 0.37911 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.48523 * frame.width, y: frame.minY + 0.40000 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.45644 * frame.width, y: frame.minY + 0.37885 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.32989 * frame.width, y: frame.minY + 0.43892 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.38698 * frame.width, y: frame.minY + 0.38012 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.35046 * frame.width, y: frame.minY + 0.40284 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.31600 * frame.width, y: frame.minY + 0.47476 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.32345 * frame.width, y: frame.minY + 0.45001 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.31908 * frame.width, y: frame.minY + 0.46214 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.35973 * frame.width, y: frame.minY + 0.67842 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.29851 * frame.width, y: frame.minY + 0.54361 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.32602 * frame.width, y: frame.minY + 0.62843 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.43304 * frame.width, y: frame.minY + 0.73850 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.37902 * frame.width, y: frame.minY + 0.70705 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.40268 * frame.width, y: frame.minY + 0.73981 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.50943 * frame.width, y: frame.minY + 0.71915 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.46262 * frame.width, y: frame.minY + 0.73748 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.47369 * frame.width, y: frame.minY + 0.71915 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.58634 * frame.width, y: frame.minY + 0.73774 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.54518 * frame.width, y: frame.minY + 0.71915 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.55497 * frame.width, y: frame.minY + 0.73850 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.65785 * frame.width, y: frame.minY + 0.67973 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.61823 * frame.width, y: frame.minY + 0.73748 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.63829 * frame.width, y: frame.minY + 0.70834 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.69000 * frame.width, y: frame.minY + 0.61218 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.68022 * frame.width, y: frame.minY + 0.64597 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.68925 * frame.width, y: frame.minY + 0.61374 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.62723 * frame.width, y: frame.minY + 0.51575 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.68925 * frame.width, y: frame.minY + 0.61168 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.62802 * frame.width, y: frame.minY + 0.58769 * frame.height))
+        bezierPath.close()
+        bezierPath.move(to: CGPoint(x: frame.minX + 0.56885 * frame.width, y: frame.minY + 0.33889 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.59329 * frame.width, y: frame.minY + 0.26333 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.58531 * frame.width, y: frame.minY + 0.31902 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.59587 * frame.width, y: frame.minY + 0.29091 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.52434 * frame.width, y: frame.minY + 0.29918 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.56962 * frame.width, y: frame.minY + 0.26410 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.54107 * frame.width, y: frame.minY + 0.27883 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.49991 * frame.width, y: frame.minY + 0.37293 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.50943 * frame.width, y: frame.minY + 0.31723 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.49630 * frame.width, y: frame.minY + 0.34534 * frame.height))
+        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.56885 * frame.width, y: frame.minY + 0.33914 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.52564 * frame.width, y: frame.minY + 0.37472 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.55264 * frame.width, y: frame.minY + 0.35924 * frame.height))
+        bezierPath.addLine(to: CGPoint(x: frame.minX + 0.56885 * frame.width, y: frame.minY + 0.33889 * frame.height))
+        bezierPath.close()
+        bezierPath.usesEvenOddFillRule = true
+        blueMain.setFill()
+        bezierPath.fill()
+        blueMain.setStroke()
+        bezierPath.lineWidth = 2.31
+        bezierPath.stroke()
+        
+        return bezierPath
+    }
+    
+    private func getDotPath(frame: CGRect) -> UIBezierPath {
+        func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
+        
+        //// Oval Drawing
+        let ovalPath = UIBezierPath(ovalIn: CGRect(x: frame.minX + fastFloor(frame.width * 0.33333 + 0.5), y: frame.minY + fastFloor(frame.height * 0.33333 + 0.5), width: fastFloor(frame.width * 0.66667 + 0.5) - fastFloor(frame.width * 0.33333 + 0.5), height: fastFloor(frame.height * 0.66667 + 0.5) - fastFloor(frame.height * 0.33333 + 0.5)))
+        blueMain.setFill()
+        ovalPath.fill()
+        blueMain.setStroke()
+        ovalPath.lineWidth = 10
+        ovalPath.stroke()
+        
+        return ovalPath
+    }
+
     required init?(coder aDecoder: NSCoder) {
         self.currentShape = .roundedRect
         self.currentState = .normal
@@ -127,5 +176,17 @@ class VkLogoView: UIView {
         vkLayer.path = vkPath.cgPath
         vkLayer.fillColor = blueMain.cgColor
         layer.addSublayer(vkLayer)
+    }
+    
+    func showAnimation() {
+        let animation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+//        animation.fromValue = vkLayer.path
+        animation.toValue = getDotPath(frame: frame)
+        animation.duration = 1.0
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.fillMode = kCAFillModeForwards
+        animation.autoreverses = true
+        animation.repeatCount = 10
+        vkLayer.add(animation, forKey: "pathAnimation")
     }
 }

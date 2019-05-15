@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/UI/Custom Views/VkLogoView.swift"
-            timestampString = "579642679.777468"
+            timestampString = "579653384.531123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
             endingLineNumber = "116"
-            landmarkName = "prepareForInterfaceBuilder()"
+            landmarkName = "getApplePath(frame:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/UI/Custom Views/VkLogoView.swift"
-            timestampString = "579642679.777548"
+            timestampString = "579653384.531646"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "init(coder:)"
+            landmarkName = "getApplePath(frame:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/UI/Custom Views/VkLogoView.swift"
-            timestampString = "579642679.777601"
+            timestampString = "579653384.532001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/UI/Custom Views/VkLogoView.swift"
-            timestampString = "579642679.777651"
+            timestampString = "579653384.532346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -74,13 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/UI/Custom Views/VkLogoView.swift"
-            timestampString = "579642679.777701"
+            timestampString = "579653384.5327621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
             endingLineNumber = "131"
-            landmarkName = "VkLogoView"
-            landmarkType = "3">
+            landmarkName = "getApplePath(frame:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -72,6 +72,7 @@ class AuthViewController: UIViewController {
             self.view.layoutIfNeeded()
         }) { completed in
             self.enterButton.isEnabled = true
+            self.vkLogoView.showAnimation()
         }
     }
 }
