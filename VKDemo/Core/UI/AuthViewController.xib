@@ -97,7 +97,7 @@
                     <color key="backgroundColor" red="0.29411764709999999" green="0.47058823529999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="nx4-mC-Omv" firstAttribute="width" secondItem="r0L-gH-aVL" secondAttribute="width" constant="-100" id="5ph-kZ-1y9"/>
-                        <constraint firstItem="nx4-mC-Omv" firstAttribute="top" secondItem="r0L-gH-aVL" secondAttribute="top" constant="50" id="739-vW-Vyv"/>
+                        <constraint firstItem="nx4-mC-Omv" firstAttribute="top" secondItem="r0L-gH-aVL" secondAttribute="top" constant="35" id="739-vW-Vyv"/>
                         <constraint firstItem="PQn-Ne-HCk" firstAttribute="centerX" secondItem="r0L-gH-aVL" secondAttribute="centerX" id="APm-gc-yql"/>
                         <constraint firstItem="nx4-mC-Omv" firstAttribute="centerX" secondItem="r0L-gH-aVL" secondAttribute="centerX" id="NnN-Wt-43L"/>
                         <constraint firstItem="PQn-Ne-HCk" firstAttribute="leading" secondItem="r0L-gH-aVL" secondAttribute="leading" constant="16" id="RKa-Ce-Ah1"/>
