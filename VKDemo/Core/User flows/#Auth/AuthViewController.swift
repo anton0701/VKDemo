@@ -11,19 +11,9 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var vkLogoView: VkLogoView!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        UIView.transition(with: logoImageView,
-                          duration: 0.5,
-                          options: .transitionFlipFromLeft,
-                          animations: {
-            
-        }) { completed in
-            print("Completed 1: \(completed)")
-        }
-    
     }
 }
