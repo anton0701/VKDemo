@@ -10,6 +10,9 @@ import UIKit
 import RxSwift
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private let blueMain = UIColor(red: 0.294, green: 0.471, blue: 0.706, alpha: 1.000)
+
     var window: UIWindow?
     let disposeBag = DisposeBag()
 
@@ -18,6 +21,8 @@ import RxSwift
         guard let window = window else {
             return true
         }
+        
+        setupAppearance()
         
         let appCoordinator = AppCoordinator(window: window)
         _ = appCoordinator.start()
@@ -40,5 +45,12 @@ import RxSwift
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+    }
+    
+    private func setupAppearance() {
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barTintColor = blueMain
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
 }

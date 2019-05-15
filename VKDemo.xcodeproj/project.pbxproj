@@ -31,6 +31,8 @@
 		3408FA70228C7A8100433B61 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA68228C7A8100433B61 /* ServiceContainer.swift */; };
 		3408FA71228C7A8100433B61 /* PresentationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA69228C7A8100433B61 /* PresentationContainer.swift */; };
 		3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA6A228C7A8100433B61 /* ConfigContainer.swift */; };
+		3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA77228C9B0200433B61 /* UIViewController+Init.swift */; };
+		3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA79228C9B5700433B61 /* AuthViewController.xib */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -64,6 +66,8 @@
 		3408FA68228C7A8100433B61 /* ServiceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
 		3408FA69228C7A8100433B61 /* PresentationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
 		3408FA6A228C7A8100433B61 /* ConfigContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigContainer.swift; sourceTree = "<group>"; };
+		3408FA77228C9B0200433B61 /* UIViewController+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Init.swift"; sourceTree = "<group>"; };
+		3408FA79228C9B5700433B61 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				34D2D52E2289D971007A8113 /* Custom Views */,
 				340624842270E9A000B39D5B /* Main.storyboard */,
 				340624892270E9A200B39D5B /* LaunchScreen.storyboard */,
+				3408FA79228C9B5700433B61 /* AuthViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				340624A62270EF0F00B39D5B /* RequestError.swift */,
 				340624A72270EF0F00B39D5B /* RequestResponse.swift */,
 				3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */,
+				3408FA77228C9B0200433B61 /* UIViewController+Init.swift */,
 			);
 			path = "Common&Base&Extensions";
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			files = (
 				3406248B2270E9A200B39D5B /* LaunchScreen.storyboard in Resources */,
 				3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */,
+				3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */,
 				3408FA54228C42D500433B61 /* Assets.xcassets in Resources */,
 				340624862270E9A000B39D5B /* Main.storyboard in Resources */,
 			);
@@ -435,6 +442,7 @@
 				340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */,
 				3408FA6F228C7A8100433B61 /* DaoContainer.swift in Sources */,
 				3408FA6E228C7A8100433B61 /* ParseContainer.swift in Sources */,
+				3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */,
 				3408FA71228C7A8100433B61 /* PresentationContainer.swift in Sources */,
 				3408FA5B228C6EA100433B61 /* AuthCoordinator.swift in Sources */,
 				34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */,
@@ -594,7 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.VKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -613,7 +621,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.VKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -15,10 +15,11 @@ class AppCoordinator: BaseCoordinator<Void> {
     
     init(window: UIWindow) {
         self.window = window
+        super.init()
     }
     
     override func start() -> Observable<Void> {
-        let authCoordinator = AuthCoordinator(rootViewController: window.rootViewController!)
+        let authCoordinator = AuthCoordinator(window: window)
         return coordinate(to: authCoordinator)
     }
 }

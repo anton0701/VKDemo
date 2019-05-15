@@ -14,19 +14,21 @@ enum AuthCoordinationResult {
 }
 
 class AuthCoordinator: BaseCoordinator<Void> {
-    private let rootViewController: UIViewController
+    private let window: UIWindow
     
-    init(rootViewController: UIViewController) {
-        self.rootViewController = rootViewController
+    init(window: UIWindow) {
+        self.window = window
+        super.init()
     }
 
     override func start() -> Observable<Void> {
-        let authVc = AuthViewController()
+        let authVc = AuthViewController.loadFromXib()
         let authVm = AuthViewModel()
         let navigationController = UINavigationController(rootViewController: authVc)
         authVc.viewModel = authVm
         
-        rootViewController.present(navigationController, animated: true)
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
         
         return Observable.never()
     }
