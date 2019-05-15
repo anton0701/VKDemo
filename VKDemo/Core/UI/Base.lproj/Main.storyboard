@@ -48,6 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="Dqy-wd-HVb"/>
                     </view>
                     <connections>
+                        <outlet property="logoViewCenterYConstraint" destination="P24-uf-1fU" id="c0I-Ey-d4h"/>
                         <outlet property="vkLogoView" destination="KTU-Pl-lcF" id="rib-9L-5Tp"/>
                     </connections>
                 </viewController>

@@ -12,8 +12,20 @@ import UIKit
 class AuthViewController: UIViewController {
     
     @IBOutlet weak var vkLogoView: VkLogoView!
-    
+    @IBOutlet weak var logoViewCenterYConstraint: NSLayoutConstraint!
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        startWelcomeAnimation()
+    }
+    
+    private func startWelcomeAnimation() {
+        logoViewCenterYConstraint.constant = -150
+        
+        UIView.animate(withDuration: 1) {
+            self.vkLogoView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.view.layoutIfNeeded()
+        }
     }
 }
