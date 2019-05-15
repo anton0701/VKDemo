@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,8 @@
             <connections>
                 <outlet property="emailTextField" destination="U2K-Q7-Omi" id="s0h-yU-ffU"/>
                 <outlet property="enterButton" destination="LA6-q5-VJ2" id="7Ib-08-Y0a"/>
-                <outlet property="logoViewCenterYConstraint" destination="5ph-kZ-1y9" id="viw-1T-yXE"/>
+                <outlet property="logoViewCenterYConstraint" destination="j0C-k9-4D3" id="ZWh-yZ-KBe"/>
+                <outlet property="logoViewTopConstraint" destination="739-vW-Vyv" id="Ish-VS-VRP"/>
                 <outlet property="passwordTextField" destination="nB8-Zt-MXf" id="jBk-m9-RxD"/>
                 <outlet property="view" destination="Aac-5B-ibC" id="wEj-zr-EZ3"/>
                 <outlet property="vkLogoView" destination="nx4-mC-Omv" id="LQy-rP-wwF"/>
@@ -22,14 +23,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Aac-5B-ibC">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0L-gH-aVL">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nx4-mC-Omv" customClass="VkLogoView" customModule="VKDemo" customModuleProvider="target">
-                            <rect key="frame" x="50" y="251" width="314" height="314"/>
+                            <rect key="frame" x="50" y="134" width="220" height="220"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -37,26 +38,26 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQn-Ne-HCk">
-                            <rect key="frame" x="16" y="573" width="382" height="100"/>
+                            <rect key="frame" x="16" y="362" width="288" height="100"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aFI-4e-A0y">
-                                    <rect key="frame" x="12" y="8" width="358" height="84"/>
+                                    <rect key="frame" x="12" y="8" width="264" height="84"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail или телефон" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U2K-Q7-Omi">
-                                            <rect key="frame" x="0.0" y="0.0" width="358" height="39.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="264" height="39.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCh-Q4-nXp">
-                                            <rect key="frame" x="0.0" y="41.5" width="358" height="1"/>
+                                            <rect key="frame" x="0.0" y="41.5" width="264" height="1"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="fD2-vJ-eZu"/>
                                             </constraints>
                                         </view>
                                         <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nB8-Zt-MXf">
-                                            <rect key="frame" x="0.0" y="44.5" width="358" height="39.5"/>
+                                            <rect key="frame" x="0.0" y="44.5" width="264" height="39.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -82,7 +83,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA6-q5-VJ2" customClass="VkEnterButton" customModule="VKDemo" customModuleProvider="target">
-                            <rect key="frame" x="16" y="704" width="382" height="60"/>
+                            <rect key="frame" x="16" y="493" width="288" height="60"/>
                             <color key="backgroundColor" red="0.31372549020000001" green="0.47058823529999999" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="QlW-41-D8Y"/>
@@ -96,6 +97,7 @@
                     <color key="backgroundColor" red="0.29411764709999999" green="0.47058823529999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="nx4-mC-Omv" firstAttribute="width" secondItem="r0L-gH-aVL" secondAttribute="width" constant="-100" id="5ph-kZ-1y9"/>
+                        <constraint firstItem="nx4-mC-Omv" firstAttribute="top" secondItem="r0L-gH-aVL" secondAttribute="top" constant="50" id="739-vW-Vyv"/>
                         <constraint firstItem="PQn-Ne-HCk" firstAttribute="centerX" secondItem="r0L-gH-aVL" secondAttribute="centerX" id="APm-gc-yql"/>
                         <constraint firstItem="nx4-mC-Omv" firstAttribute="centerX" secondItem="r0L-gH-aVL" secondAttribute="centerX" id="NnN-Wt-43L"/>
                         <constraint firstItem="PQn-Ne-HCk" firstAttribute="leading" secondItem="r0L-gH-aVL" secondAttribute="leading" constant="16" id="RKa-Ce-Ah1"/>
@@ -105,6 +107,11 @@
                         <constraint firstItem="LA6-q5-VJ2" firstAttribute="top" secondItem="PQn-Ne-HCk" secondAttribute="bottom" constant="31" id="pIf-aI-r01"/>
                         <constraint firstItem="LA6-q5-VJ2" firstAttribute="leading" secondItem="r0L-gH-aVL" secondAttribute="leading" constant="16" id="pMw-Mi-XOH"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="739-vW-Vyv"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

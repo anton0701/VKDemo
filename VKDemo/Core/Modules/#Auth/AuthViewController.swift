@@ -15,6 +15,7 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var vkLogoView: VkLogoView!
     @IBOutlet weak var logoViewCenterYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var logoViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var enterButton: VkEnterButton!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -57,7 +58,8 @@ class AuthViewController: UIViewController {
     }
     
     private func startWelcomeAnimation() {
-        logoViewCenterYConstraint.constant = -150
+        logoViewCenterYConstraint.isActive = false
+        logoViewTopConstraint.isActive = true
         
         UIView.animate(withDuration: 1.0, animations: {
             self.vkLogoView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
