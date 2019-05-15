@@ -20,6 +20,7 @@
 		3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA56228C4BAC00433B61 /* VkEnterButton.swift */; };
 		3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA58228C4FFE00433B61 /* Colors.xcassets */; };
 		3408FA5B228C6EA100433B61 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA5A228C6EA100433B61 /* AuthCoordinator.swift */; };
+		3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -42,6 +43,7 @@
 		3408FA56228C4BAC00433B61 /* VkEnterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkEnterButton.swift; sourceTree = "<group>"; };
 		3408FA58228C4FFE00433B61 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3408FA5A228C6EA100433B61 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				340624A42270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift */,
 				340624A62270EF0F00B39D5B /* RequestError.swift */,
 				340624A72270EF0F00B39D5B /* RequestResponse.swift */,
+				3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */,
 			);
 			path = "Base&Extensions";
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
 				34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
+				3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */,
 				340624812270E9A000B39D5B /* AppDelegate.swift in Sources */,
 				34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */,
 				340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */,
