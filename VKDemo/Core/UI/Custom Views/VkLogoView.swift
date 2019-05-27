@@ -152,6 +152,11 @@ class VkLogoView: UIView {
 
         return ovalPath
     }
+    
+    private func getBlankPath(frame: CGRect) -> UIBezierPath {
+        func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
+        return UIBezierPath(rect: CGRect(x: frame.midX, y: frame.midY, width: 0, height: 0) )
+    }
 
     required init?(coder aDecoder: NSCoder) {
         self.currentShape = .roundedRect
@@ -180,52 +185,36 @@ class VkLogoView: UIView {
     
     func showAnimation() {
         
-        CATransaction.begin()
+//        CATransaction.begin()
         let animation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+        animation.delegate = self
         animation.fromValue = vkLayer.path
-        animation.toValue = getDotPath(frame: bounds).cgPath
-        animation.duration = 3.0
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.toValue = getBlankPath(frame: bounds).cgPath
+        animation.duration = 0.75
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         animation.fillMode = kCAFillModeForwards
         animation.autoreverses = false
-        animation.repeatCount = 10
-        
-        CATransaction.setCompletionBlock {
-            self.vkLayer.path = self.getDotPath(frame: self.bounds).cgPath
-            let animatio: CABasicAnimation = CABasicAnimation(keyPath: "path")
-//            animation.fromValue = self.vkLayer.path
-            animatio.fromValue = self.getDotPath(frame: self.bounds)
-            animatio.toValue = self.getApplePath(frame: self.bounds).cgPath
-            animatio.duration = 3.0
-            animatio.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-            animatio.fillMode = kCAFillModeForwards
-            animatio.autoreverses = false
-            animatio.repeatCount = 10
-            self.vkLayer.add(animatio, forKey: "pathAnimation1")
-        }
         vkLayer.add(animation, forKey: "pathAnimation")
-        CATransaction.commit()
-//        sleep(1)
-//
-//        sleep(1)
-//        let animation2: CABasicAnimation = CABasicAnimation(keyPath: "path")
-//        animation2.toValue = getDotPath(frame: bounds).cgPath
-//        animation2.duration = 3.0
-//        animation2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        animation2.fillMode = kCAFillModeForwards
-//        animation2.autoreverses = false
-//        animation2.repeatCount = 1
-//        vkLayer.add(animation, forKey: "pathAnimation")
-//
-//        sleep(1)
-//        let animation3: CABasicAnimation = CABasicAnimation(keyPath: "path")
-//        animation3.toValue = getVkPath(frame: bounds).cgPath
-//        animation3.duration = 3.0
-//        animation3.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        animation3.fillMode = kCAFillModeForwards
-//        animation3.autoreverses = false
-//        animation3.repeatCount = 1
-//        vkLayer.add(animation, forKey: "pathAnimation")
-//        sleep(1)
+//        CATransaction.commit()
+        self.vkLayer.path = self.getBlankPath(frame: self.bounds).cgPath
+
+
+    }
+}
+
+extension VkLogoView: CAAnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        let animatio: CABasicAnimation = CABasicAnimation(keyPath: "path")
+//        animatio.delegate = self
+        animatio.fromValue = self.getBlankPath(frame: self.bounds).cgPath
+        animatio.toValue = self.getApplePath(frame: self.bounds).cgPath
+        animatio.duration = 0.75
+        animatio.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        animatio.fillMode = kCAFillModeForwards
+        animatio.autoreverses = false
+        self.vkLayer.add(animatio, forKey: "pathAnimation")
+        
+        self.vkLayer.path = self.getApplePath(frame: self.bounds).cgPath
+
     }
 }
