@@ -8,6 +8,9 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import RxWebKit
+import WebKit
 import SafariServices
 
 enum AuthCoordinationResult {
@@ -41,8 +44,11 @@ class AuthCoordinator: BaseCoordinator<Void> {
     }
     
     private func showSignInVC(in navigationController: UINavigationController) {
-        let safariViewController = SFSafariViewController(url: URL(string: "https://oauth.vk.com/authorize?client_id=5513701&display=mobile&scope=friends&response_type=token&v=5.95&state=123456")!)
-        navigationController.pushViewController(safariViewController, animated: true)
+        let signInVC = SignInViewController()
+        let signInVM = SignInViewModel()
+        signInVC.viewModel = signInVM
+        
+        navigationController.pushViewController(signInVC, animated: true)
     }
 }
 

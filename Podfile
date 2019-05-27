@@ -9,7 +9,8 @@ pod 'RxCocoa'
 pod 'RxAlamofire'
 pod 'Moya' 
 pod 'Reachability'
-pod 'Moya/RxSwift' 
+pod 'Moya/RxSwift'
+pod 'RxWebKit'
   # Pods for MyRepoSearcher
 
 end

@@ -33,6 +33,9 @@
 		3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA6A228C7A8100433B61 /* ConfigContainer.swift */; };
 		3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA77228C9B0200433B61 /* UIViewController+Init.swift */; };
 		3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA79228C9B5700433B61 /* AuthViewController.xib */; };
+		345530B1229C43A50069E335 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B0229C43A50069E335 /* SignInViewController.swift */; };
+		345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B2229C43B30069E335 /* SignInViewModel.swift */; };
+		345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345530B4229C43DE0069E335 /* SignInViewController.xib */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -68,6 +71,9 @@
 		3408FA6A228C7A8100433B61 /* ConfigContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigContainer.swift; sourceTree = "<group>"; };
 		3408FA77228C9B0200433B61 /* UIViewController+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Init.swift"; sourceTree = "<group>"; };
 		3408FA79228C9B5700433B61 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		345530B0229C43A50069E335 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		345530B2229C43B30069E335 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		345530B4229C43DE0069E335 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 		3406249B2270EA4900B39D5B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				345530AF229C43910069E335 /* SignIn */,
 				34D2D5282289A0EB007A8113 /* #Launch Screen */,
 				34D2D5292289A4E2007A8113 /* #Auth */,
 			);
@@ -254,6 +261,16 @@
 				3408FA61228C7A3F00433B61 /* DIContainer.swift */,
 			);
 			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		345530AF229C43910069E335 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				345530B0229C43A50069E335 /* SignInViewController.swift */,
+				345530B2229C43B30069E335 /* SignInViewModel.swift */,
+				345530B4229C43DE0069E335 /* SignInViewController.xib */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		34D2D5282289A0EB007A8113 /* #Launch Screen */ = {
@@ -352,6 +369,7 @@
 				3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */,
 				3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */,
 				3408FA54228C42D500433B61 /* Assets.xcassets in Resources */,
+				345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */,
 				340624862270E9A000B39D5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +393,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxWebKit/RxWebKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -387,6 +406,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxWebKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -426,10 +446,12 @@
 				340624AA2270EF0F00B39D5B /* HTTPStatusCodes.swift in Sources */,
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
 				34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */,
+				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
 				3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */,
 				3408FA6C228C7A8100433B61 /* CoreContainer.swift in Sources */,
 				3408FA60228C79EF00433B61 /* DI.swift in Sources */,
+				345530B1229C43A50069E335 /* SignInViewController.swift in Sources */,
 				3408FA62228C7A3F00433B61 /* DIContainer.swift in Sources */,
 				3408FA70228C7A8100433B61 /* ServiceContainer.swift in Sources */,
 				340624812270E9A000B39D5B /* AppDelegate.swift in Sources */,

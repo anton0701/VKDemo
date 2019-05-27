@@ -18,6 +18,9 @@ PODS:
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
+  - RxWebKit (0.3.7):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
 
 DEPENDENCIES:
   - Moya
@@ -26,6 +29,7 @@ DEPENDENCIES:
   - RxAlamofire
   - RxCocoa
   - RxSwift
+  - RxWebKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -36,6 +40,7 @@ SPEC REPOS:
     - RxAlamofire
     - RxCocoa
     - RxSwift
+    - RxWebKit
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -45,7 +50,8 @@ SPEC CHECKSUMS:
   RxAlamofire: ed65f451f5a9a59419b0b9e705043dc01410edd9
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  RxWebKit: e39e220919e5e24546c837f5f60689036a1e5920
 
-PODFILE CHECKSUM: e5dc262a6d843d76b53667d37208f4af85444f78
+PODFILE CHECKSUM: a2d741bacd7a6734869fa1dcfb3ab03461ac0640
 
 COCOAPODS: 1.6.1
