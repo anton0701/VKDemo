@@ -26,12 +26,6 @@ class SignInViewController: UIViewController {
         }
         
         webView.load(URLRequest(url: url))
-//        webView.rx
-//            .didReceiveServerRedirectForProvisionalNavigation
-//            .asObservable()
-//            .subscribe(onNext: { webView, navigation in
-//                print("111")
-//            }).disposed(by: disposeBag)
         
         webView.rx
             .didReceiveServerRedirectForProvisionalNavigation

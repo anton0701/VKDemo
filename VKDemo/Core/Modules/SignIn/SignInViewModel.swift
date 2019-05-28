@@ -15,7 +15,6 @@ class SignInViewModel {
     
     // Input
     let didReceiveServerRedirectForProvisionalNavigation: AnyObserver< String>
-//    let observable: Observable<String>
     
     // Output
 //    let authorize: Observable<Void>
