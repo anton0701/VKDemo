@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/UI/Custom Buttons/VkEnterButton.swift"
-            timestampString = "580669141.024253"
+            filePath = "VKDemo/Core/Modules/SignIn/SignInViewModel.swift"
+            timestampString = "580747657.299539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/UI/Custom Buttons/VkEnterButton.swift"
-            timestampString = "580669141.024335"
+            filePath = "VKDemo/Core/Modules/SignIn/SignInViewModel.swift"
+            timestampString = "580747657.300212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "init(frame:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -14,17 +14,29 @@ import WebKit
 class SignInViewModel {
     
     // Input
-    let didReceiveServerRedirectForProvisionalNavigation: AnyObserver< String>
+    let decidePolicyNavigationActionObserver: AnyObserver< URL?>
     
     // Output
 //    let authorize: Observable<Void>
 
     init() {
-        didReceiveServerRedirectForProvisionalNavigation = AnyObserver(eventHandler: { event in
+        decidePolicyNavigationActionObserver = AnyObserver(eventHandler: { event in
             switch event {
-            case .next(let urlString):
-                print("Horaaaaay!\n\n")
-                print(urlString)
+            case .next(let url):
+                guard let url = url,
+                    url.absoluteString.contains("#"),
+                    let parametersSubstring = url.absoluteString.split(separator: "#").last else { return }
+                
+                let parametersComponents = parametersSubstring.split(separator: "&")
+                var parametersDict = [String: String]()
+                
+                parametersComponents.forEach({ substring in
+                    let keyValueArray = substring.split(separator: "=")
+                    parametersDict[String(keyValueArray[0])] = String(keyValueArray[1])
+                })
+                
+                print(parametersDict)
+                print(url)
                 break
             default:
                 print("wowowowowo")
