@@ -45,7 +45,7 @@ class AuthCoordinator: BaseCoordinator<Void> {
     
     private func showSignInVC(in navigationController: UINavigationController) {
         let signInVC = SignInViewController()
-        let signInVM = SignInViewModel()
+        let signInVM = SignInViewModel(sessionManager: DI.container.core.sessionManager)
         signInVC.viewModel = signInVM
         
         navigationController.pushViewController(signInVC, animated: true)

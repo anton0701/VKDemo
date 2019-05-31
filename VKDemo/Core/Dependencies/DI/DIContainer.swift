@@ -31,8 +31,7 @@ class DIContainer: DIContainerProtocol {
     init() {
         self.parse = ParseContainer()
         self.config = ConfigContainer()
-        let core = CoreContainer()
-        self.core = core
+        self.core = CoreContainer()
         self.dao = DaoContainer()
         self.presentation = PresentationContainer()
         self.data = DataContainer()

@@ -13,13 +13,15 @@ import WebKit
 
 class SignInViewModel {
     
+    private let sessionManager: UserSessionManager
+    
     // Input
     let decidePolicyNavigationActionObserver: AnyObserver< URL?>
     
     // Output
 //    let authorize: Observable<Void>
 
-    init() {
+    init(sessionManager: UserSessionManager) {
         decidePolicyNavigationActionObserver = AnyObserver(eventHandler: { event in
             switch event {
             case .next(let url):
@@ -44,5 +46,7 @@ class SignInViewModel {
                 break
             }
         })
+        
+        self.sessionManager = sessionManager
     }
 }
