@@ -16,7 +16,7 @@ class SignInViewModel {
     private let sessionManager: UserSessionManager
     
     // Input
-    let decidePolicyNavigationActionObserver: AnyObserver< URL?>
+    let decidePolicyNavigationActionObserver: AnyObserver<URL?>
     
     // Output
 //    let authorize: Observable<Void>
@@ -39,6 +39,8 @@ class SignInViewModel {
                 
                 print(parametersDict)
                 print(url)
+                
+                sessionManager.saveAccessToken(parametersDict["access_token"])
                 break
             default:
                 print("wowowowowo")
