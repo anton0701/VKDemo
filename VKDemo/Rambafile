@@ -1,0 +1,31 @@
+### Headers settings
+company: BrightBox
+
+### Xcode project settings
+project_name: VKDemo
+xcodeproj_path: VKDemo.xcodeproj
+prefix:
+
+### Code generation settings section
+# The main project target name
+project_target: VKDemo
+
+# The file path for new modules
+project_file_path: Core/Modules/Authed_(Non-Rx)
+
+# The Xcode group path to new modules
+project_group_path: Core/Modules/Authed_(Non-Rx)
+
+### Tests generation settings section
+# The tests target name
+# test_target: CoreTests 
+
+# The file path for new tests
+# test_file_path: CoreTests
+
+# The Xcode group path to new tests
+# test_group_path: Tests
+
+### Templates
+templates:
+- {name: viper_with_xibs}

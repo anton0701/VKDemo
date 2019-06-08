@@ -36,6 +36,12 @@
 		3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA79228C9B5700433B61 /* AuthViewController.xib */; };
 		3436A01122ABF7E800D8E72E /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01022ABF7E800D8E72E /* WelcomeCoordinator.swift */; };
 		3436A01422AC1BB200D8E72E /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01322AC1BB200D8E72E /* MainTabBarCoordinator.swift */; };
+		3436A02022AC48A400D8E72E /* ViperModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01A22AC48A400D8E72E /* ViperModuleOutput.swift */; };
+		3436A02122AC48A400D8E72E /* ViperModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01B22AC48A400D8E72E /* ViperModuleInput.swift */; };
+		3436A02222AC48A400D8E72E /* ViperModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01C22AC48A400D8E72E /* ViperModuleTransitionHandler.swift */; };
+		3436A02322AC48A400D8E72E /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01D22AC48A400D8E72E /* ViperViewController.swift */; };
+		3436A02422AC48A400D8E72E /* ViperModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01E22AC48A400D8E72E /* ViperModuleInitializer.swift */; };
+		3436A02522AC48A400D8E72E /* ViperRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01F22AC48A400D8E72E /* ViperRouterProtocol.swift */; };
 		345530B1229C43A50069E335 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B0229C43A50069E335 /* SignInViewController.swift */; };
 		345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B2229C43B30069E335 /* SignInViewModel.swift */; };
 		345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345530B4229C43DE0069E335 /* SignInViewController.xib */; };
@@ -81,6 +87,12 @@
 		3408FA79228C9B5700433B61 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		3436A01022ABF7E800D8E72E /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		3436A01322AC1BB200D8E72E /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		3436A01A22AC48A400D8E72E /* ViperModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperModuleOutput.swift; sourceTree = "<group>"; };
+		3436A01B22AC48A400D8E72E /* ViperModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperModuleInput.swift; sourceTree = "<group>"; };
+		3436A01C22AC48A400D8E72E /* ViperModuleTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperModuleTransitionHandler.swift; sourceTree = "<group>"; };
+		3436A01D22AC48A400D8E72E /* ViperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
+		3436A01E22AC48A400D8E72E /* ViperModuleInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperModuleInitializer.swift; sourceTree = "<group>"; };
+		3436A01F22AC48A400D8E72E /* ViperRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperRouterProtocol.swift; sourceTree = "<group>"; };
 		345530B0229C43A50069E335 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		345530B2229C43B30069E335 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		345530B4229C43DE0069E335 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -241,6 +253,7 @@
 		340624A22270EEC100B39D5B /* Common&Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3436A01922AC484900D8E72E /* VIPER */,
 				340624802270E9A000B39D5B /* AppDelegate.swift */,
 				340624A52270EF0F00B39D5B /* HTTPStatusCodes.swift */,
 				340624A42270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift */,
@@ -298,7 +311,6 @@
 			isa = PBXGroup;
 			children = (
 				345530AF229C43910069E335 /* SignIn */,
-				34D2D5282289A0EB007A8113 /* #Launch Screen */,
 				34D2D5292289A4E2007A8113 /* #Auth */,
 			);
 			path = "Before_auth_(Rx)";
@@ -317,6 +329,19 @@
 				3436A01322AC1BB200D8E72E /* MainTabBarCoordinator.swift */,
 			);
 			path = "Authed (Non-Rx)";
+			sourceTree = "<group>";
+		};
+		3436A01922AC484900D8E72E /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				3436A01E22AC48A400D8E72E /* ViperModuleInitializer.swift */,
+				3436A01B22AC48A400D8E72E /* ViperModuleInput.swift */,
+				3436A01A22AC48A400D8E72E /* ViperModuleOutput.swift */,
+				3436A01C22AC48A400D8E72E /* ViperModuleTransitionHandler.swift */,
+				3436A01F22AC48A400D8E72E /* ViperRouterProtocol.swift */,
+				3436A01D22AC48A400D8E72E /* ViperViewController.swift */,
+			);
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 		345530AF229C43910069E335 /* SignIn */ = {
@@ -388,13 +413,6 @@
 				3489942622A7C2EC00CC0E5B /* IFeedManager.swift */,
 			);
 			path = FeedManager;
-			sourceTree = "<group>";
-		};
-		34D2D5282289A0EB007A8113 /* #Launch Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "#Launch Screen";
 			sourceTree = "<group>";
 		};
 		34D2D5292289A4E2007A8113 /* #Auth */ = {
@@ -566,12 +584,15 @@
 				345530BB229DA3860069E335 /* IUserSessionManager.swift in Sources */,
 				34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */,
 				3436A01422AC1BB200D8E72E /* MainTabBarCoordinator.swift in Sources */,
+				3436A02122AC48A400D8E72E /* ViperModuleInput.swift in Sources */,
 				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
+				3436A02222AC48A400D8E72E /* ViperModuleTransitionHandler.swift in Sources */,
 				3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */,
 				3408FA6C228C7A8100433B61 /* CoreContainer.swift in Sources */,
 				3408FA60228C79EF00433B61 /* DI.swift in Sources */,
 				345530B1229C43A50069E335 /* SignInViewController.swift in Sources */,
+				3436A02322AC48A400D8E72E /* ViperViewController.swift in Sources */,
 				345530B7229D84FD0069E335 /* UserSessionManager.swift in Sources */,
 				3408FA62228C7A3F00433B61 /* DIContainer.swift in Sources */,
 				3408FA70228C7A8100433B61 /* ServiceContainer.swift in Sources */,
@@ -584,14 +605,17 @@
 				3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */,
 				3408FA6B228C7A8100433B61 /* CoordinatorContainer.swift in Sources */,
 				3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */,
+				3436A02022AC48A400D8E72E /* ViperModuleOutput.swift in Sources */,
 				340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */,
 				3408FA6F228C7A8100433B61 /* DaoContainer.swift in Sources */,
+				3436A02522AC48A400D8E72E /* ViperRouterProtocol.swift in Sources */,
 				3408FA6E228C7A8100433B61 /* ParseContainer.swift in Sources */,
 				3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */,
 				3408FA71228C7A8100433B61 /* PresentationContainer.swift in Sources */,
 				3408FA5B228C6EA100433B61 /* SignInCoordinator.swift in Sources */,
 				34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */,
 				340829C522A19BC800A31ABB /* UserDao.swift in Sources */,
+				3436A02422AC48A400D8E72E /* ViperModuleInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

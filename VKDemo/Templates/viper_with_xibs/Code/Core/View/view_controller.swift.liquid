@@ -1,0 +1,19 @@
+{% include 'company_header' %}
+
+import UIKit
+
+class {{ module_info.name }}ViewController: BaseViewController, ViperModuleTransitionHandler {
+    var presenter: {{ module_info.name }}ViewOutput?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        presenter?.viewLoaded()
+    }
+}
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
+    func setup() {
+
+    }
+}
