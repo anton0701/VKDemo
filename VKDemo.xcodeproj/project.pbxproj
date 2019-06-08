@@ -158,7 +158,6 @@
 			children = (
 				345530BC229DA6050069E335 /* Models */,
 				3406249B2270EA4900B39D5B /* Modules */,
-				340624942270EA0200B39D5B /* RxCoordinators */,
 				3436A01222AC1B9900D8E72E /* Coordinators */,
 				345530B8229D85420069E335 /* Dependencies */,
 				3406249E2270EAB300B39D5B /* UI */,
@@ -167,7 +166,7 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		340624942270EA0200B39D5B /* RxCoordinators */ = {
+		340624942270EA0200B39D5B /* Before auth (Rx) */ = {
 			isa = PBXGroup;
 			children = (
 				3406249F2270ECA200B39D5B /* BaseCoordinator.swift */,
@@ -175,7 +174,7 @@
 				3408FA5A228C6EA100433B61 /* SignInCoordinator.swift */,
 				3436A01022ABF7E800D8E72E /* WelcomeCoordinator.swift */,
 			);
-			path = RxCoordinators;
+			path = "Before auth (Rx)";
 			sourceTree = "<group>";
 		};
 		340624952270EA0A00B39D5B /* Configurations */ = {
@@ -212,9 +211,8 @@
 		3406249B2270EA4900B39D5B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				345530AF229C43910069E335 /* SignIn */,
-				34D2D5282289A0EB007A8113 /* #Launch Screen */,
-				34D2D5292289A4E2007A8113 /* #Auth */,
+				3436A01622AC2FFD00D8E72E /* Before auth (Rx) */,
+				3436A01722AC302000D8E72E /* Authed (Non-Rx) */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -290,9 +288,35 @@
 		3436A01222AC1B9900D8E72E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				3436A01322AC1BB200D8E72E /* MainTabBarCoordinator.swift */,
+				340624942270EA0200B39D5B /* Before auth (Rx) */,
+				3436A01822AC304D00D8E72E /* Authed (Non-Rx) */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		3436A01622AC2FFD00D8E72E /* Before auth (Rx) */ = {
+			isa = PBXGroup;
+			children = (
+				345530AF229C43910069E335 /* SignIn */,
+				34D2D5282289A0EB007A8113 /* #Launch Screen */,
+				34D2D5292289A4E2007A8113 /* #Auth */,
+			);
+			path = "Before auth (Rx)";
+			sourceTree = "<group>";
+		};
+		3436A01722AC302000D8E72E /* Authed (Non-Rx) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Authed (Non-Rx)";
+			sourceTree = "<group>";
+		};
+		3436A01822AC304D00D8E72E /* Authed (Non-Rx) */ = {
+			isa = PBXGroup;
+			children = (
+				3436A01322AC1BB200D8E72E /* MainTabBarCoordinator.swift */,
+			);
+			path = "Authed (Non-Rx)";
 			sourceTree = "<group>";
 		};
 		345530AF229C43910069E335 /* SignIn */ = {
