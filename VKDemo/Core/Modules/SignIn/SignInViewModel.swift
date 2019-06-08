@@ -19,11 +19,11 @@ class SignInViewModel {
     let decidePolicyNavigationActionObserver: AnyObserver<URL?>
     
     // Output
-    let authorized: Observable<AuthCoordinationResult>
+    let authorized: Observable<SignInCoordinationResult>
 
     init(sessionManager: UserSessionManager) {
         
-        let _authorized = PublishSubject<AuthCoordinationResult>()
+        let _authorized = PublishSubject<SignInCoordinationResult>()
         authorized = _authorized.asObservable()
         
         decidePolicyNavigationActionObserver = AnyObserver(eventHandler: { event in

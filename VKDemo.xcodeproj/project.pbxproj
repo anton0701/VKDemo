@@ -20,7 +20,7 @@
 		3408FA54228C42D500433B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA53228C42D500433B61 /* Assets.xcassets */; };
 		3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA56228C4BAC00433B61 /* VkEnterButton.swift */; };
 		3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA58228C4FFE00433B61 /* Colors.xcassets */; };
-		3408FA5B228C6EA100433B61 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA5A228C6EA100433B61 /* AuthCoordinator.swift */; };
+		3408FA5B228C6EA100433B61 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA5A228C6EA100433B61 /* SignInCoordinator.swift */; };
 		3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */; };
 		3408FA60228C79EF00433B61 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA5F228C79EF00433B61 /* DI.swift */; };
 		3408FA62228C7A3F00433B61 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA61228C7A3F00433B61 /* DIContainer.swift */; };
@@ -34,6 +34,7 @@
 		3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA6A228C7A8100433B61 /* ConfigContainer.swift */; };
 		3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA77228C9B0200433B61 /* UIViewController+Init.swift */; };
 		3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA79228C9B5700433B61 /* AuthViewController.xib */; };
+		3436A01122ABF7E800D8E72E /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01022ABF7E800D8E72E /* WelcomeCoordinator.swift */; };
 		345530B1229C43A50069E335 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B0229C43A50069E335 /* SignInViewController.swift */; };
 		345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B2229C43B30069E335 /* SignInViewModel.swift */; };
 		345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345530B4229C43DE0069E335 /* SignInViewController.xib */; };
@@ -63,7 +64,7 @@
 		3408FA53228C42D500433B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3408FA56228C4BAC00433B61 /* VkEnterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkEnterButton.swift; sourceTree = "<group>"; };
 		3408FA58228C4FFE00433B61 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		3408FA5A228C6EA100433B61 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		3408FA5A228C6EA100433B61 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
 		3408FA5F228C79EF00433B61 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		3408FA61228C7A3F00433B61 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		3408FA6A228C7A8100433B61 /* ConfigContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigContainer.swift; sourceTree = "<group>"; };
 		3408FA77228C9B0200433B61 /* UIViewController+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Init.swift"; sourceTree = "<group>"; };
 		3408FA79228C9B5700433B61 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		3436A01022ABF7E800D8E72E /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		345530B0229C43A50069E335 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		345530B2229C43B30069E335 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		345530B4229C43DE0069E335 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -167,7 +169,8 @@
 			children = (
 				3406249F2270ECA200B39D5B /* BaseCoordinator.swift */,
 				340624AD2270F06D00B39D5B /* AppCoordinator.swift */,
-				3408FA5A228C6EA100433B61 /* AuthCoordinator.swift */,
+				3408FA5A228C6EA100433B61 /* SignInCoordinator.swift */,
+				3436A01022ABF7E800D8E72E /* WelcomeCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */,
 				340624AA2270EF0F00B39D5B /* HTTPStatusCodes.swift in Sources */,
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
+				3436A01122ABF7E800D8E72E /* WelcomeCoordinator.swift in Sources */,
 				345530BB229DA3860069E335 /* IUserSessionManager.swift in Sources */,
 				34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */,
 				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
@@ -549,7 +553,7 @@
 				3408FA6E228C7A8100433B61 /* ParseContainer.swift in Sources */,
 				3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */,
 				3408FA71228C7A8100433B61 /* PresentationContainer.swift in Sources */,
-				3408FA5B228C6EA100433B61 /* AuthCoordinator.swift in Sources */,
+				3408FA5B228C6EA100433B61 /* SignInCoordinator.swift in Sources */,
 				34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */,
 				340829C522A19BC800A31ABB /* UserDao.swift in Sources */,
 			);
