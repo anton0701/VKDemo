@@ -20,6 +20,12 @@ enum AuthCoordinationResult {
 class AuthCoordinator: BaseCoordinator<Void> {
     private let window: UIWindow
     
+    // Input
+    private var didAuthorized: AnyObserver<Void>?
+    
+    // Output
+    private var authorized: Observable<Void>?
+    
     init(window: UIWindow) {
         self.window = window
         super.init()
@@ -40,13 +46,20 @@ class AuthCoordinator: BaseCoordinator<Void> {
             })
             .disposed(by: disposeBag)
         
-        return Observable.never()
+        let _authorizedSubject = PublishSubject<Void>()
+        authorized = _authorizedSubject.asObservable()
+        didAuthorized = _authorizedSubject.asObserver()
+        
+        return authorized!
     }
     
     private func showSignInVC(in navigationController: UINavigationController) {
         let signInVC = SignInViewController()
         let signInVM = SignInViewModel(sessionManager: DI.container.core.sessionManager)
         signInVC.viewModel = signInVM
+        
+        guard let didAuthorized = didAuthorized else { return }
+        _ = signInVM.authorized.bind(to: didAuthorized)
         
         navigationController.pushViewController(signInVC, animated: true)
     }

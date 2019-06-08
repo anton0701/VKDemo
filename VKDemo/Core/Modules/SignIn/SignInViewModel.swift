@@ -19,9 +19,13 @@ class SignInViewModel {
     let decidePolicyNavigationActionObserver: AnyObserver<URL?>
     
     // Output
-//    let authorize: Observable<Void>
+    let authorized: Observable<Void>
 
     init(sessionManager: UserSessionManager) {
+        
+        let _authorized = PublishSubject<Void>()
+        authorized = _authorized.asObservable()
+        
         decidePolicyNavigationActionObserver = AnyObserver(eventHandler: { event in
             switch event {
             case .next(let url):
@@ -41,6 +45,7 @@ class SignInViewModel {
                 print(url)
                 
                 sessionManager.saveAccessToken(parametersDict["access_token"])
+                _authorized.onNext(Void())
                 break
             default:
                 print("wowowowowo")
