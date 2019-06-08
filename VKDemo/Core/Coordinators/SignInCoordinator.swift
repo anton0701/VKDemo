@@ -38,21 +38,12 @@ class SignInCoordinator: BaseCoordinator<SignInCoordinationResult> {
         let signInVM = SignInViewModel(sessionManager: DI.container.core.sessionManager)
         signInVC.viewModel = signInVM
         
-        rootViewController.present(signInVC, animated: true, completion: nil)
+        guard let navC = rootViewController as? UINavigationController else {
+            fatalError("123!!!")
+        }
+        navC.pushViewController(signInVC, animated: true)
         
         return signInVM.authorized
-    }
-    
-    private func showSignInVC(in navigationController: UINavigationController) {
-        
-        let signInVC = SignInViewController()
-        let signInVM = SignInViewModel(sessionManager: DI.container.core.sessionManager)
-        signInVC.viewModel = signInVM
-        
-        guard let didAuthorized = didAuthorized else { return }
-        _ = signInVM.authorized.bind(to: didAuthorized)
-        
-        navigationController.pushViewController(signInVC, animated: true)
     }
 }
 

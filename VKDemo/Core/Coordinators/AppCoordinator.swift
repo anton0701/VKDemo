@@ -20,6 +20,12 @@ class AppCoordinator: BaseCoordinator<Void> {
     
     override func start() -> Observable<Void> {
         let welcomeCoordinator = WelcomeCoordinator(window: window)
-        return coordinate(to: welcomeCoordinator)
+        let observable = coordinate(to: welcomeCoordinator).share()
+        
+        _ = observable.subscribe({ event in
+            print("AAABBB \(event)")
+        })
+        
+        return observable
     }
 }

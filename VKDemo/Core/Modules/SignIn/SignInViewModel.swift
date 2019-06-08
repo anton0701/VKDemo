@@ -45,7 +45,11 @@ class SignInViewModel {
                 print(url)
                 
                 sessionManager.saveAccessToken(parametersDict["access_token"])
+                
                 _authorized.onNext(.success)
+                _authorized.on(.next(.success))
+                
+//                authorized.ne
                 break
             default:
                 print("wowowowowo")
