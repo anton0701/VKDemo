@@ -15,23 +15,24 @@ import SafariServices
 
 enum AuthCoordinationResult {
     case success
+    case fail
 }
 
-class AuthCoordinator: BaseCoordinator<Void> {
+class AuthCoordinator: BaseCoordinator<AuthCoordinationResult> {
     private let window: UIWindow
     
     // Input
-    private var didAuthorized: AnyObserver<Void>?
+    private var didAuthorized: AnyObserver<AuthCoordinationResult>?
     
     // Output
-    private var authorized: Observable<Void>?
+    private var authorized: Observable<AuthCoordinationResult>?
     
     init(window: UIWindow) {
         self.window = window
         super.init()
     }
 
-    override func start() -> Observable<Void> {
+    override func start() -> Observable<AuthCoordinationResult> {
         let authVc = AuthViewController.loadFromXib()
         let authVm = AuthViewModel()
         let navigationController = UINavigationController(rootViewController: authVc)
@@ -46,7 +47,7 @@ class AuthCoordinator: BaseCoordinator<Void> {
             })
             .disposed(by: disposeBag)
         
-        let _authorizedSubject = PublishSubject<Void>()
+        let _authorizedSubject = PublishSubject<AuthCoordinationResult>()
         authorized = _authorizedSubject.asObservable()
         didAuthorized = _authorizedSubject.asObserver()
         

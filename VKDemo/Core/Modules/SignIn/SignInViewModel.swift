@@ -19,11 +19,11 @@ class SignInViewModel {
     let decidePolicyNavigationActionObserver: AnyObserver<URL?>
     
     // Output
-    let authorized: Observable<Void>
+    let authorized: Observable<AuthCoordinationResult>
 
     init(sessionManager: UserSessionManager) {
         
-        let _authorized = PublishSubject<Void>()
+        let _authorized = PublishSubject<AuthCoordinationResult>()
         authorized = _authorized.asObservable()
         
         decidePolicyNavigationActionObserver = AnyObserver(eventHandler: { event in
@@ -45,7 +45,7 @@ class SignInViewModel {
                 print(url)
                 
                 sessionManager.saveAccessToken(parametersDict["access_token"])
-                _authorized.onNext(Void())
+                _authorized.onNext(.success)
                 break
             default:
                 print("wowowowowo")
