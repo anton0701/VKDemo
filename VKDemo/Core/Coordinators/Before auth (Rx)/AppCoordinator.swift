@@ -13,6 +13,8 @@ class AppCoordinator: BaseCoordinator<Void> {
     
     private let window: UIWindow
     
+    private let mainCoordinator = MainTabBarCoordinator()
+    
     init(window: UIWindow) {
         self.window = window
         super.init()
@@ -23,12 +25,12 @@ class AppCoordinator: BaseCoordinator<Void> {
         let welcomeCoordinator = WelcomeCoordinator(window: window)
         let observable = coordinate(to: welcomeCoordinator)
         
-//        _ = observable.subscribe({ event in
-//            let mainCoordinator = MainTabBarCoordinator()
-//            mainCoordinator.start()
-//        })
+        _ = observable.subscribe({ event in
+            let mainCoordinator = MainTabBarCoordinator()
+            mainCoordinator.start()
+        })
         
-        return observable
+        return .never()
         
         // Если есть пользак, сразу переход в MainTabBarCoordinator,
         // который не реактивный

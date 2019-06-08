@@ -29,7 +29,6 @@ class MainTabBarCoordinator {
         chatVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
 
         let controllers = [feedVC, chatVC]
-        tabBarController.viewControllers = controllers
         
         tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         

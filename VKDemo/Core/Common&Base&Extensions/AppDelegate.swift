@@ -26,10 +26,7 @@ import RxSwift
         setupAppearance()
         
         let appCoordinator = AppCoordinator(window: window)
-        _ = appCoordinator.start().subscribe(onNext: { _ in
-            let mainCoordinator = MainTabBarCoordinator()
-            mainCoordinator.start()
-        }).disposed(by: disposeBag)
+        _ = appCoordinator.start()
         
         return true
     }
