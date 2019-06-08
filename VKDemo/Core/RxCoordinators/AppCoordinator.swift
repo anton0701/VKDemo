@@ -19,14 +19,18 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
+        // Если нет пользака
         let welcomeCoordinator = WelcomeCoordinator(window: window)
-        let observable = coordinate(to: welcomeCoordinator).share()
+        let observable = coordinate(to: welcomeCoordinator)
         
-        _ = observable.subscribe({ event in
-            let mainCoordinator = MainTabBarCoordinator()
-            mainCoordinator.start()
-        })
+//        _ = observable.subscribe({ event in
+//            let mainCoordinator = MainTabBarCoordinator()
+//            mainCoordinator.start()
+//        })
         
         return observable
+        
+        // Если есть пользак, сразу переход в MainTabBarCoordinator,
+        // который не реактивный
     }
 }

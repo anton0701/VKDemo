@@ -7,9 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 class MainTabBarCoordinator {
     func start() {
+        guard let window = (UIApplication.shared.delegate as? AppDelegate)?.window else {
+            return
+        }
         
+//        let enterPinRouter = EnterPinRouter()
+//
+//        if !enterPinRouter.isModuleVisible() {
+//            window.rootViewController = UINavigationController(rootViewController: EnterPinRouter().createModule(output: self))
+//        }
     }
 }
