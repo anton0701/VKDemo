@@ -41,19 +41,10 @@ class SignInViewModel {
                     parametersDict[String(keyValueArray[0])] = String(keyValueArray[1])
                 })
                 
-                print(parametersDict)
-                print(url)
-                
                 sessionManager.saveAccessToken(parametersDict["access_token"])
-                
                 _authorized.onNext(.success)
-                _authorized.on(.next(.success))
-                
-//                authorized.ne
                 break
             default:
-                print("wowowowowo")
-                print(event)
                 break
             }
         })

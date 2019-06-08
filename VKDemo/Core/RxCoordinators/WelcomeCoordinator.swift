@@ -17,14 +17,12 @@ class WelcomeCoordinator: BaseCoordinator<Void> {
     private let window: UIWindow
     
     private let _authorizedSubject: PublishSubject<Void>
-    private let authorizedObserver: AnyObserver<Void>
     private let authorizedObservable: Observable<Void>
     
     init(window: UIWindow) {
         self.window = window
         
         _authorizedSubject = PublishSubject<Void>()
-        authorizedObserver = _authorizedSubject.asObserver()
         authorizedObservable = _authorizedSubject.asObservable()
         
         super.init()
@@ -45,17 +43,12 @@ class WelcomeCoordinator: BaseCoordinator<Void> {
                 guard let `self` = self,
                     let rootVC = self.window.rootViewController else { return }
                 
-                let auth = self.showSignInVC(on: rootVC).share()
-                    
-                auth
+                _ = self.showSignInVC(on: rootVC)
                 .filter({ signInResult -> Bool in
                     return signInResult == .success
                 })
-                .do(onNext: { _ in
+                .subscribe({ _ in
                     self._authorizedSubject.onNext(Void())
-                }).subscribe({ event in
-                    print(event)
-                    print("234234234 23")
                 })
                 
             })

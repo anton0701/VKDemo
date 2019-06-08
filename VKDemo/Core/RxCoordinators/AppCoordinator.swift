@@ -23,7 +23,8 @@ class AppCoordinator: BaseCoordinator<Void> {
         let observable = coordinate(to: welcomeCoordinator).share()
         
         _ = observable.subscribe({ event in
-            
+            let mainCoordinator = MainTabBarCoordinator()
+            mainCoordinator.start()
         })
         
         return observable
