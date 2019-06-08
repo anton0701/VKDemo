@@ -15,10 +15,24 @@ class MainTabBarCoordinator {
             return
         }
         
-//        let enterPinRouter = EnterPinRouter()
-//
-//        if !enterPinRouter.isModuleVisible() {
-//            window.rootViewController = UINavigationController(rootViewController: EnterPinRouter().createModule(output: self))
-//        }
+        let tabBarController = UITabBarController()
+        
+        let feedVC = UIViewController()
+        feedVC.title = "Feed"
+        feedVC.view.backgroundColor = UIColor.orange
+        
+        let chatVC = UIViewController()
+        chatVC.title = "Chat"
+        chatVC.view.backgroundColor = UIColor.blue
+        
+        feedVC.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
+        chatVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+
+        let controllers = [feedVC, chatVC]
+        tabBarController.viewControllers = controllers
+        
+        tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
+        
+        window.rootViewController = tabBarController
     }
 }
