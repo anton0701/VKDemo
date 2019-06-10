@@ -1,0 +1,27 @@
+{% include 'company_header' %}
+
+import UIKit
+
+class {{ module_info.name }}Router {
+    private weak var transitionHandler: ViperModuleTransitionHandler?
+
+    func createModule() -> UIViewController {
+        let vc = {{ module_info.name }}ViewController.loadFromXib()
+
+        transitionHandler = vc
+
+        let presenter = {{ module_info.name }}Presenter(view: vc, router: self)
+
+        vc.presenter = presenter
+
+        return vc
+    }
+
+    func openModule(with transitionHandler: ViperModuleTransitionHandler, transitionStyle: TransitionStyle) {
+        transitionHandler.openModule(vc: createModule(), style: transitionStyle)
+    }
+}
+
+extension {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+
+}

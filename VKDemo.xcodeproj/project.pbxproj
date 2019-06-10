@@ -42,6 +42,10 @@
 		3436A02322AC48A400D8E72E /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01D22AC48A400D8E72E /* ViperViewController.swift */; };
 		3436A02422AC48A400D8E72E /* ViperModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01E22AC48A400D8E72E /* ViperModuleInitializer.swift */; };
 		3436A02522AC48A400D8E72E /* ViperRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A01F22AC48A400D8E72E /* ViperRouterProtocol.swift */; };
+		3436A02722AE700700D8E72E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A02622AE700600D8E72E /* BaseViewController.swift */; };
+		3436A02922AE711A00D8E72E /* UIViewController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A02822AE711A00D8E72E /* UIViewController+Style.swift */; };
+		3436A02B22AE71CD00D8E72E /* UIView+InCallStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A02A22AE71CD00D8E72E /* UIView+InCallStatusBar.swift */; };
+		3436A02D22AE731300D8E72E /* UIColor+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A02C22AE731300D8E72E /* UIColor+Factory.swift */; };
 		345530B1229C43A50069E335 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B0229C43A50069E335 /* SignInViewController.swift */; };
 		345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B2229C43B30069E335 /* SignInViewModel.swift */; };
 		345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345530B4229C43DE0069E335 /* SignInViewController.xib */; };
@@ -52,10 +56,25 @@
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
+		36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2906D2B6071CF8C5FD822BD2 /* ChatViewInput.swift */; };
+		39AA7A4BC4E3EFD84BD41DD0 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7349F973D526317C2C448E9 /* FeedRouter.swift */; };
+		439794A3950B2DDF3E22E347 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A527030300C4B629FFE665CD /* ChatViewController.xib */; };
+		48131229FB534D311E6056E2 /* FeedViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7248A6CE59E261BFCD0A95 /* FeedViewInput.swift */; };
+		71B6A58A1B4F33BE6D662FE7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA11271A65EDBDFF89FDB84 /* ChatViewController.swift */; };
+		76F94FDFB4D42EFCCF2344C4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D942B52393362D5BB1048B /* FeedViewController.swift */; };
+		83E43A911D52622B90E8596D /* ChatViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887B74F5A2000993C446C870 /* ChatViewOutput.swift */; };
+		8809F9D68A534FF626FD18AC /* FeedViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB99552CB72701B15DDB287 /* FeedViewOutput.swift */; };
+		90583B9B14D905B9D99983E8 /* ChatRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDE9F337A34870B97D8DC62 /* ChatRouterInput.swift */; };
 		9E13B4859500BFDC237C2311 /* Pods_VKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */; };
+		B2EBCBF5A5B0A836875FF328 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A649AB506DE1BE9F3AD7B6BE /* ChatRouter.swift */; };
+		B6928985AAEDB89737C51659 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A611E03E685F7C9F7CFA868A /* ChatPresenter.swift */; };
+		C64958277887EF491CCC0417 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DEA7F5E1C5F4F78E8516FB /* FeedPresenter.swift */; };
+		CC73CAC264A8040490DF068A /* FeedRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C10C2C88A69C59051AF725 /* FeedRouterInput.swift */; };
+		F9125172C8BBC013C736168C /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D8388E7C9BDA825FFB098 /* FeedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2906D2B6071CF8C5FD822BD2 /* ChatViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewInput.swift; sourceTree = "<group>"; };
 		3406247D2270E9A000B39D5B /* VKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		340624802270E9A000B39D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		340624852270E9A000B39D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +112,10 @@
 		3436A01D22AC48A400D8E72E /* ViperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
 		3436A01E22AC48A400D8E72E /* ViperModuleInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperModuleInitializer.swift; sourceTree = "<group>"; };
 		3436A01F22AC48A400D8E72E /* ViperRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperRouterProtocol.swift; sourceTree = "<group>"; };
+		3436A02622AE700600D8E72E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3436A02822AE711A00D8E72E /* UIViewController+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Style.swift"; sourceTree = "<group>"; };
+		3436A02A22AE71CD00D8E72E /* UIView+InCallStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+InCallStatusBar.swift"; sourceTree = "<group>"; };
+		3436A02C22AE731300D8E72E /* UIColor+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Factory.swift"; sourceTree = "<group>"; };
 		345530B0229C43A50069E335 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		345530B2229C43B30069E335 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		345530B4229C43DE0069E335 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -106,6 +129,19 @@
 		436B60AFC158E4EC98719CD9 /* Pods-VKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.debug.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC01E6C6F14070BA0DB98B7 /* Pods-VKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.release.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		887B74F5A2000993C446C870 /* ChatViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewOutput.swift; sourceTree = "<group>"; };
+		8FDE9F337A34870B97D8DC62 /* ChatRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatRouterInput.swift; sourceTree = "<group>"; };
+		A527030300C4B629FFE665CD /* ChatViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		A611E03E685F7C9F7CFA868A /* ChatPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		A649AB506DE1BE9F3AD7B6BE /* ChatRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		B7349F973D526317C2C448E9 /* FeedRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		D9DEA7F5E1C5F4F78E8516FB /* FeedPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		E5C10C2C88A69C59051AF725 /* FeedRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedRouterInput.swift; sourceTree = "<group>"; };
+		EB7248A6CE59E261BFCD0A95 /* FeedViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewInput.swift; sourceTree = "<group>"; };
+		EEB99552CB72701B15DDB287 /* FeedViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewOutput.swift; sourceTree = "<group>"; };
+		EFA11271A65EDBDFF89FDB84 /* ChatViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F0D942B52393362D5BB1048B /* FeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		FB1D8388E7C9BDA825FFB098 /* FeedViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +163,26 @@
 				6EC01E6C6F14070BA0DB98B7 /* Pods-VKDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		0D920FC8439DBBFDBEDA2AD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFA11271A65EDBDFF89FDB84 /* ChatViewController.swift */,
+				A527030300C4B629FFE665CD /* ChatViewController.xib */,
+				2906D2B6071CF8C5FD822BD2 /* ChatViewInput.swift */,
+				887B74F5A2000993C446C870 /* ChatViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22442428BC60D83304463980 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E5C10C2C88A69C59051AF725 /* FeedRouterInput.swift */,
+				B7349F973D526317C2C448E9 /* FeedRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		340624742270E9A000B39D5B = {
@@ -253,6 +309,7 @@
 		340624A22270EEC100B39D5B /* Common&Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3436A02A22AE71CD00D8E72E /* UIView+InCallStatusBar.swift */,
 				3436A01922AC484900D8E72E /* VIPER */,
 				340624802270E9A000B39D5B /* AppDelegate.swift */,
 				340624A52270EF0F00B39D5B /* HTTPStatusCodes.swift */,
@@ -261,6 +318,7 @@
 				340624A72270EF0F00B39D5B /* RequestResponse.swift */,
 				3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */,
 				3408FA77228C9B0200433B61 /* UIViewController+Init.swift */,
+				3436A02C22AE731300D8E72E /* UIColor+Factory.swift */,
 			);
 			path = "Common&Base&Extensions";
 			sourceTree = "<group>";
@@ -319,6 +377,8 @@
 		3436A01722AC302000D8E72E /* Authed_(Non-Rx) */ = {
 			isa = PBXGroup;
 			children = (
+				7D8DE90D6F1C1EB362B57926 /* Feed */,
+				C09D8C6F95C5065234952721 /* Chat */,
 			);
 			path = "Authed_(Non-Rx)";
 			sourceTree = "<group>";
@@ -334,6 +394,8 @@
 		3436A01922AC484900D8E72E /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				3436A02822AE711A00D8E72E /* UIViewController+Style.swift */,
+				3436A02622AE700600D8E72E /* BaseViewController.swift */,
 				3436A01E22AC48A400D8E72E /* ViperModuleInitializer.swift */,
 				3436A01B22AC48A400D8E72E /* ViperModuleInput.swift */,
 				3436A01A22AC48A400D8E72E /* ViperModuleOutput.swift */,
@@ -432,12 +494,68 @@
 			path = "Custom Views";
 			sourceTree = "<group>";
 		};
+		45939E91365AEFF8C2A5CC56 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D9DEA7F5E1C5F4F78E8516FB /* FeedPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		480A1EF694E3A4DB57336420 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8FDE9F337A34870B97D8DC62 /* ChatRouterInput.swift */,
+				A649AB506DE1BE9F3AD7B6BE /* ChatRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7243BCB4A6DEA4C8D6EC467C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0D942B52393362D5BB1048B /* FeedViewController.swift */,
+				FB1D8388E7C9BDA825FFB098 /* FeedViewController.xib */,
+				EB7248A6CE59E261BFCD0A95 /* FeedViewInput.swift */,
+				EEB99552CB72701B15DDB287 /* FeedViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D8DE90D6F1C1EB362B57926 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				22442428BC60D83304463980 /* Router */,
+				45939E91365AEFF8C2A5CC56 /* Presenter */,
+				7243BCB4A6DEA4C8D6EC467C /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		B8933D810FA23DC089BBCD4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C09D8C6F95C5065234952721 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				480A1EF694E3A4DB57336420 /* Router */,
+				FC6DA650276F673346A966CF /* Presenter */,
+				0D920FC8439DBBFDBEDA2AD1 /* View */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		FC6DA650276F673346A966CF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A611E03E685F7C9F7CFA868A /* ChatPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +624,8 @@
 				3408FA54228C42D500433B61 /* Assets.xcassets in Resources */,
 				345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */,
 				340624862270E9A000B39D5B /* Main.storyboard in Resources */,
+				F9125172C8BBC013C736168C /* FeedViewController.xib in Resources */,
+				439794A3950B2DDF3E22E347 /* ChatViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +710,7 @@
 				3436A02222AC48A400D8E72E /* ViperModuleTransitionHandler.swift in Sources */,
 				3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */,
 				3408FA6C228C7A8100433B61 /* CoreContainer.swift in Sources */,
+				3436A02722AE700700D8E72E /* BaseViewController.swift in Sources */,
 				3408FA60228C79EF00433B61 /* DI.swift in Sources */,
 				345530B1229C43A50069E335 /* SignInViewController.swift in Sources */,
 				3436A02322AC48A400D8E72E /* ViperViewController.swift in Sources */,
@@ -597,12 +718,14 @@
 				3408FA62228C7A3F00433B61 /* DIContainer.swift in Sources */,
 				3408FA70228C7A8100433B61 /* ServiceContainer.swift in Sources */,
 				340624812270E9A000B39D5B /* AppDelegate.swift in Sources */,
+				3436A02922AE711A00D8E72E /* UIViewController+Style.swift in Sources */,
 				3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */,
 				34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */,
 				3408FA6D228C7A8100433B61 /* DataContainer.swift in Sources */,
 				340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */,
 				340624A02270ECA200B39D5B /* BaseCoordinator.swift in Sources */,
 				3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */,
+				3436A02D22AE731300D8E72E /* UIColor+Factory.swift in Sources */,
 				3408FA6B228C7A8100433B61 /* CoordinatorContainer.swift in Sources */,
 				3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */,
 				3436A02022AC48A400D8E72E /* ViperModuleOutput.swift in Sources */,
@@ -616,6 +739,19 @@
 				34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */,
 				340829C522A19BC800A31ABB /* UserDao.swift in Sources */,
 				3436A02422AC48A400D8E72E /* ViperModuleInitializer.swift in Sources */,
+				3436A02B22AE71CD00D8E72E /* UIView+InCallStatusBar.swift in Sources */,
+				CC73CAC264A8040490DF068A /* FeedRouterInput.swift in Sources */,
+				39AA7A4BC4E3EFD84BD41DD0 /* FeedRouter.swift in Sources */,
+				C64958277887EF491CCC0417 /* FeedPresenter.swift in Sources */,
+				76F94FDFB4D42EFCCF2344C4 /* FeedViewController.swift in Sources */,
+				48131229FB534D311E6056E2 /* FeedViewInput.swift in Sources */,
+				8809F9D68A534FF626FD18AC /* FeedViewOutput.swift in Sources */,
+				90583B9B14D905B9D99983E8 /* ChatRouterInput.swift in Sources */,
+				B2EBCBF5A5B0A836875FF328 /* ChatRouter.swift in Sources */,
+				B6928985AAEDB89737C51659 /* ChatPresenter.swift in Sources */,
+				71B6A58A1B4F33BE6D662FE7 /* ChatViewController.swift in Sources */,
+				36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */,
+				83E43A911D52622B90E8596D /* ChatViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

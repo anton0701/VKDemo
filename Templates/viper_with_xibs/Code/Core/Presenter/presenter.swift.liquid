@@ -1,0 +1,17 @@
+{% include 'company_header' %}
+
+class {{ module_info.name }}Presenter {
+    private weak var view: {{ module_info.name }}ViewInput?
+    private let router: {{ module_info.name }}RouterInput
+
+    init(view: {{ module_info.name }}ViewInput, router: {{ module_info.name }}RouterInput) {
+        self.view = view
+        self.router = router
+    }
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+    func viewLoaded() {
+
+    }
+}
