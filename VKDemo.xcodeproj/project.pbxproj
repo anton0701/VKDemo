@@ -16,7 +16,7 @@
 		340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A62270EF0F00B39D5B /* RequestError.swift */; };
 		340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624A72270EF0F00B39D5B /* RequestResponse.swift */; };
 		340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340624AD2270F06D00B39D5B /* AppCoordinator.swift */; };
-		340829C522A19BC800A31ABB /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340829C422A19BC800A31ABB /* UserDao.swift */; };
+		340829C522A19BC800A31ABB /* SessionDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340829C422A19BC800A31ABB /* SessionDao.swift */; };
 		3408FA54228C42D500433B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA53228C42D500433B61 /* Assets.xcassets */; };
 		3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA56228C4BAC00433B61 /* VkEnterButton.swift */; };
 		3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA58228C4FFE00433B61 /* Colors.xcassets */; };
@@ -58,6 +58,7 @@
 		349BB8ED22AE7A28003397DC /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EC22AE7A28003397DC /* FeedService.swift */; };
 		349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EF22AE7DC1003397DC /* FeedTarget.swift */; };
 		349BB8F222AE9B6E003397DC /* MoyaProvider+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */; };
+		349BB8F722AEC838003397DC /* VKAccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -91,7 +92,7 @@
 		340624A62270EF0F00B39D5B /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		340624A72270EF0F00B39D5B /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
 		340624AD2270F06D00B39D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		340829C422A19BC800A31ABB /* UserDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
+		340829C422A19BC800A31ABB /* SessionDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDao.swift; sourceTree = "<group>"; };
 		3408FA53228C42D500433B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3408FA56228C4BAC00433B61 /* VkEnterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkEnterButton.swift; sourceTree = "<group>"; };
 		3408FA58228C4FFE00433B61 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		349BB8EC22AE7A28003397DC /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		349BB8EF22AE7DC1003397DC /* FeedTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTarget.swift; sourceTree = "<group>"; };
 		349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Mapping.swift"; sourceTree = "<group>"; };
+		349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAccessTokenPlugin.swift; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -338,7 +340,7 @@
 		340829C322A19B5B00A31ABB /* DAO */ = {
 			isa = PBXGroup;
 			children = (
-				340829C422A19BC800A31ABB /* UserDao.swift */,
+				340829C422A19BC800A31ABB /* SessionDao.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -434,6 +436,7 @@
 				3408FA5E228C79E200433B61 /* DI */,
 				340624962270EA1800B39D5B /* Managers */,
 				3406249A2270EA4000B39D5B /* Services */,
+				349BB8F522AEC68B003397DC /* Plugins */,
 				340829C322A19B5B00A31ABB /* DAO */,
 				340624982270EA2400B39D5B /* Parsers */,
 			);
@@ -505,6 +508,14 @@
 				349BB8EF22AE7DC1003397DC /* FeedTarget.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		349BB8F522AEC68B003397DC /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */,
+			);
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 		34D2D5292289A4E2007A8113 /* #Auth */ = {
@@ -752,6 +763,7 @@
 				3408FA62228C7A3F00433B61 /* DIContainer.swift in Sources */,
 				3408FA70228C7A8100433B61 /* ServiceContainer.swift in Sources */,
 				340624812270E9A000B39D5B /* AppDelegate.swift in Sources */,
+				349BB8F722AEC838003397DC /* VKAccessTokenPlugin.swift in Sources */,
 				3436A02922AE711A00D8E72E /* UIViewController+Style.swift in Sources */,
 				3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */,
 				34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */,
@@ -772,7 +784,7 @@
 				3408FA71228C7A8100433B61 /* PresentationContainer.swift in Sources */,
 				3408FA5B228C6EA100433B61 /* SignInCoordinator.swift in Sources */,
 				34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */,
-				340829C522A19BC800A31ABB /* UserDao.swift in Sources */,
+				340829C522A19BC800A31ABB /* SessionDao.swift in Sources */,
 				3436A02422AC48A400D8E72E /* ViperModuleInitializer.swift in Sources */,
 				3436A02B22AE71CD00D8E72E /* UIView+InCallStatusBar.swift in Sources */,
 				CC73CAC264A8040490DF068A /* FeedRouterInput.swift in Sources */,
