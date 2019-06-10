@@ -59,6 +59,8 @@
 		349BB8F222AE9B6E003397DC /* MoyaProvider+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */; };
 		349BB8F722AEC838003397DC /* VKAccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */; };
 		349BB8F922AEF047003397DC /* MappedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F822AEF047003397DC /* MappedResponse.swift */; };
+		349BB8FB22AEF543003397DC /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8FA22AEF543003397DC /* FeedResponse.swift */; };
+		349BB8FF22AEFA18003397DC /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8FE22AEFA18003397DC /* FeedItem.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -135,6 +137,8 @@
 		349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Mapping.swift"; sourceTree = "<group>"; };
 		349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAccessTokenPlugin.swift; sourceTree = "<group>"; };
 		349BB8F822AEF047003397DC /* MappedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappedResponse.swift; sourceTree = "<group>"; };
+		349BB8FA22AEF543003397DC /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		349BB8FE22AEFA18003397DC /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -466,6 +470,8 @@
 		345530BD229DA60A0069E335 /* Codable */ = {
 			isa = PBXGroup;
 			children = (
+				349BB8FD22AEFA09003397DC /* Items */,
+				349BB8FC22AEF9F9003397DC /* Responses */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -516,6 +522,22 @@
 				349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */,
 			);
 			path = Plugins;
+			sourceTree = "<group>";
+		};
+		349BB8FC22AEF9F9003397DC /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				349BB8FA22AEF543003397DC /* FeedResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		349BB8FD22AEFA09003397DC /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				349BB8FE22AEFA18003397DC /* FeedItem.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		34D2D5292289A4E2007A8113 /* #Auth */ = {
@@ -740,6 +762,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349BB8FF22AEFA18003397DC /* FeedItem.swift in Sources */,
 				3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */,
 				340624AA2270EF0F00B39D5B /* HTTPStatusCodes.swift in Sources */,
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
@@ -790,6 +813,7 @@
 				3436A02B22AE71CD00D8E72E /* UIView+InCallStatusBar.swift in Sources */,
 				CC73CAC264A8040490DF068A /* FeedRouterInput.swift in Sources */,
 				39AA7A4BC4E3EFD84BD41DD0 /* FeedRouter.swift in Sources */,
+				349BB8FB22AEF543003397DC /* FeedResponse.swift in Sources */,
 				C64958277887EF491CCC0417 /* FeedPresenter.swift in Sources */,
 				76F94FDFB4D42EFCCF2344C4 /* FeedViewController.swift in Sources */,
 				48131229FB534D311E6056E2 /* FeedViewInput.swift in Sources */,
