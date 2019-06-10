@@ -58,6 +58,7 @@
 		349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EF22AE7DC1003397DC /* FeedTarget.swift */; };
 		349BB8F222AE9B6E003397DC /* MoyaProvider+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */; };
 		349BB8F722AEC838003397DC /* VKAccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */; };
+		349BB8F922AEF047003397DC /* MappedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F822AEF047003397DC /* MappedResponse.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -133,6 +134,7 @@
 		349BB8EF22AE7DC1003397DC /* FeedTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTarget.swift; sourceTree = "<group>"; };
 		349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Mapping.swift"; sourceTree = "<group>"; };
 		349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAccessTokenPlugin.swift; sourceTree = "<group>"; };
+		349BB8F822AEF047003397DC /* MappedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappedResponse.swift; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				3408FA77228C9B0200433B61 /* UIViewController+Init.swift */,
 				3436A02C22AE731300D8E72E /* UIColor+Factory.swift */,
 				349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */,
+				349BB8F822AEF047003397DC /* MappedResponse.swift */,
 			);
 			path = "Common&Base&Extensions";
 			sourceTree = "<group>";
@@ -782,6 +785,7 @@
 				3408FA5B228C6EA100433B61 /* SignInCoordinator.swift in Sources */,
 				34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */,
 				340829C522A19BC800A31ABB /* SessionDao.swift in Sources */,
+				349BB8F922AEF047003397DC /* MappedResponse.swift in Sources */,
 				3436A02422AC48A400D8E72E /* ViperModuleInitializer.swift in Sources */,
 				3436A02B22AE71CD00D8E72E /* UIView+InCallStatusBar.swift in Sources */,
 				CC73CAC264A8040490DF068A /* FeedRouterInput.swift in Sources */,
