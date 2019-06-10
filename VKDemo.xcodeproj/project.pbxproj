@@ -55,7 +55,6 @@
 		3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942622A7C2EC00CC0E5B /* IFeedManager.swift */; };
 		349BB8E822AE76AC003397DC /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8E722AE76AC003397DC /* FeedTableViewCell.swift */; };
 		349BB8EB22AE76BF003397DC /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349BB8EA22AE76BF003397DC /* FeedTableViewCell.xib */; };
-		349BB8ED22AE7A28003397DC /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EC22AE7A28003397DC /* FeedService.swift */; };
 		349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EF22AE7DC1003397DC /* FeedTarget.swift */; };
 		349BB8F222AE9B6E003397DC /* MoyaProvider+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */; };
 		349BB8F722AEC838003397DC /* VKAccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */; };
@@ -131,7 +130,6 @@
 		3489942622A7C2EC00CC0E5B /* IFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedManager.swift; sourceTree = "<group>"; };
 		349BB8E722AE76AC003397DC /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		349BB8EA22AE76BF003397DC /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
-		349BB8EC22AE7A28003397DC /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		349BB8EF22AE7DC1003397DC /* FeedTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTarget.swift; sourceTree = "<group>"; };
 		349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Mapping.swift"; sourceTree = "<group>"; };
 		349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAccessTokenPlugin.swift; sourceTree = "<group>"; };
@@ -504,7 +502,6 @@
 		349BB8EE22AE7DAD003397DC /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				349BB8EC22AE7A28003397DC /* FeedService.swift */,
 				349BB8EF22AE7DC1003397DC /* FeedTarget.swift */,
 			);
 			path = Feed;
@@ -796,7 +793,6 @@
 				90583B9B14D905B9D99983E8 /* ChatRouterInput.swift in Sources */,
 				B2EBCBF5A5B0A836875FF328 /* ChatRouter.swift in Sources */,
 				B6928985AAEDB89737C51659 /* ChatPresenter.swift in Sources */,
-				349BB8ED22AE7A28003397DC /* FeedService.swift in Sources */,
 				71B6A58A1B4F33BE6D662FE7 /* ChatViewController.swift in Sources */,
 				36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */,
 				83E43A911D52622B90E8596D /* ChatViewOutput.swift in Sources */,
