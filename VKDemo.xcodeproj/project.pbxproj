@@ -53,6 +53,8 @@
 		345530BB229DA3860069E335 /* IUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530BA229DA3860069E335 /* IUserSessionManager.swift */; };
 		3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942422A7C2E500CC0E5B /* FeedManager.swift */; };
 		3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942622A7C2EC00CC0E5B /* IFeedManager.swift */; };
+		349BB8E822AE76AC003397DC /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8E722AE76AC003397DC /* FeedTableViewCell.swift */; };
+		349BB8EB22AE76BF003397DC /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349BB8EA22AE76BF003397DC /* FeedTableViewCell.xib */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -123,6 +125,8 @@
 		345530BA229DA3860069E335 /* IUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSessionManager.swift; sourceTree = "<group>"; };
 		3489942422A7C2E500CC0E5B /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		3489942622A7C2EC00CC0E5B /* IFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedManager.swift; sourceTree = "<group>"; };
+		349BB8E722AE76AC003397DC /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		349BB8EA22AE76BF003397DC /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -477,6 +481,15 @@
 			path = FeedManager;
 			sourceTree = "<group>";
 		};
+		349BB8E622AE7699003397DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				349BB8E722AE76AC003397DC /* FeedTableViewCell.swift */,
+				349BB8EA22AE76BF003397DC /* FeedTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		34D2D5292289A4E2007A8113 /* #Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +527,7 @@
 		7243BCB4A6DEA4C8D6EC467C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				349BB8E622AE7699003397DC /* Cell */,
 				F0D942B52393362D5BB1048B /* FeedViewController.swift */,
 				FB1D8388E7C9BDA825FFB098 /* FeedViewController.xib */,
 				EB7248A6CE59E261BFCD0A95 /* FeedViewInput.swift */,
@@ -618,6 +632,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349BB8EB22AE76BF003397DC /* FeedTableViewCell.xib in Resources */,
 				3406248B2270E9A200B39D5B /* LaunchScreen.storyboard in Resources */,
 				3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */,
 				3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */,
@@ -706,6 +721,7 @@
 				3436A01422AC1BB200D8E72E /* MainTabBarCoordinator.swift in Sources */,
 				3436A02122AC48A400D8E72E /* ViperModuleInput.swift in Sources */,
 				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
+				349BB8E822AE76AC003397DC /* FeedTableViewCell.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
 				3436A02222AC48A400D8E72E /* ViperModuleTransitionHandler.swift in Sources */,
 				3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */,
