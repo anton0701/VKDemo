@@ -21,7 +21,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let url = URL(string: "https://oauth.vk.com/authorize?client_id=5513701&display=mobile&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.95&state=123456") else {
+        guard let url = URL(string: "https://oauth.vk.com/authorize?client_id=5513701&display=mobile&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,photos,status,notes,messages,wall,groups,notifications,stats&response_type=token&v=5.95&state=123456") else {
             return
         }
         
@@ -37,8 +37,15 @@ class SignInViewController: UIViewController {
             }, onCompleted: {
                 print("11")
             })
-            .flatMap({ _, action, handler -> Observable<URL?> in
-                return Observable.just(action.request.url)
+            .filter({ arg -> Bool in
+                let (_, action, _) = arg
+                guard let url = action.request.url else {
+                    return false
+                }
+                return url.absoluteString.contains("#")
+            })
+            .flatMap({ _, action, handler -> Observable<URL> in
+                return Observable.just(action.request.url!)
             })
             .bind(to: viewModel.decidePolicyNavigationActionObserver)
             .disposed(by: disposeBag)

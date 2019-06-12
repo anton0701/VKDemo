@@ -1,5 +1,5 @@
 //
-//  UserDao.swift
+//  SessionDao.swift
 //  VKDemo
 //
 //  Created by Anton Krylov on 31/05/2019.
@@ -8,19 +8,19 @@
 
 import Foundation
 
-protocol IUserDao {
+protocol ISessionDao {
     
     func saveAccessToken(_ accessToken: String?)
     func getAccessToken() -> String?
 }
 
-class UserDao {
+class SessionDao {
     
     private lazy var userDefaults = UserDefaults.standard
     private lazy var accessTokenKey = "accessToken"
 }
 
-extension UserDao: IUserDao {
+extension SessionDao: ISessionDao {
     
     func saveAccessToken(_ accessToken: String?) {
         userDefaults.set(accessToken, forKey: accessTokenKey)

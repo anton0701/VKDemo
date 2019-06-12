@@ -31,10 +31,10 @@ class DIContainer: DIContainerProtocol {
     init() {
         self.parse = ParseContainer()
         self.config = ConfigContainer()
-        self.core = CoreContainer()
         self.dao = DaoContainer()
+        self.core = CoreContainer(dao: self.dao)
         self.presentation = PresentationContainer()
-        self.data = DataContainer()
+        self.data = DataContainer(core: self.core)
         self.coordinator = CoordinatorContainer()
     }
 }

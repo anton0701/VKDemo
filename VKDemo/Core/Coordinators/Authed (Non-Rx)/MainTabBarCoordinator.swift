@@ -17,11 +17,11 @@ class MainTabBarCoordinator {
         
         let tabBarController = UITabBarController()
         
-        let feedVC = UIViewController()
+        let feedVC = FeedRouter().createModule()
         feedVC.title = "Feed"
         feedVC.view.backgroundColor = UIColor.orange
         
-        let chatVC = UIViewController()
+        let chatVC = ChatRouter().createModule()
         chatVC.title = "Chat"
         chatVC.view.backgroundColor = UIColor.blue
         

@@ -7,9 +7,31 @@
 //
 
 import Foundation
+import Moya
 
 protocol DataContainerProtocol {
+    var feedManager: IFeedManager { get }
 }
 
-class DataContainer: DataContainerProtocol {
+class DataContainer {
+    private let serviceContainer = ServiceContainer()
+    
+    private let core: CoreContainerProtocol
+    
+    init(core: CoreContainerProtocol) {
+        self.core = core
+        
+        let authPlugin = VKAccessTokenPlugin(userSessionManager: core.sessionManager)
+        let feedProvider = MoyaProvider<FeedTarget>(plugins: [authPlugin])
+        serviceContainer.add(services: feedProvider)
+        
+        let feedManager = FeedManager(feedProvider: feedProvider)
+        serviceContainer.add(services: feedManager)
+    }
+}
+
+extension DataContainer: DataContainerProtocol {
+    var feedManager: IFeedManager {
+        return serviceContainer.get(service: FeedManager.self)!
+    }
 }

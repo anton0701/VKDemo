@@ -9,7 +9,22 @@
 import Foundation
 
 protocol DaoContainerProtocol {
+    var sessionDao: ISessionDao { get }
 }
 
-class DaoContainer: DaoContainerProtocol {
+class DaoContainer {
+    
+    private let serviceContainer = ServiceContainer()
+    
+    init() {
+        let sessionDao = SessionDao()
+        
+        serviceContainer.add(services: sessionDao)
+    }
+}
+
+extension DaoContainer: DaoContainerProtocol {
+    var sessionDao: ISessionDao {
+        return serviceContainer.get(service: SessionDao.self)!
+    }
 }

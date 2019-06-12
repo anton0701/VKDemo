@@ -10,28 +10,27 @@ import Foundation
 
 class UserSessionManager {
     
-    private let userDao: IUserDao
+    private let sessionDao: ISessionDao
     
     private var accessToken: String?
     
-    init(userDao: IUserDao) {
-        self.userDao = userDao
+    init(sessionDao: ISessionDao) {
+        self.sessionDao = sessionDao
     }
 }
 
 extension UserSessionManager: IUserSessionManager {
     func clearSession() {
         accessToken = nil
-        userDao.saveAccessToken(nil)
+        sessionDao.saveAccessToken(nil)
     }
     
-    
     func getAccessToken() -> String? {
-        return accessToken ?? userDao.getAccessToken()
+        return accessToken ?? sessionDao.getAccessToken()
     }
     
     func saveAccessToken(_ accessToken: String?) {
         self.accessToken = accessToken
-        userDao.saveAccessToken(accessToken)
+        sessionDao.saveAccessToken(accessToken)
     }
 }

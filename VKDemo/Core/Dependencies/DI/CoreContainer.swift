@@ -13,13 +13,13 @@ protocol CoreContainerProtocol {
 }
 
 class CoreContainer: CoreContainerProtocol {
-    let serviceContainer = ServiceContainer()
+    private let serviceContainer = ServiceContainer()
+    let dao: DaoContainerProtocol
 
-    init() {
-        let userDao = UserDao()
-        serviceContainer.add(services: userDao)
+    init(dao: DaoContainerProtocol) {
+        self.dao = dao
         
-        let sessionManager = UserSessionManager(userDao: userDao)
+        let sessionManager = UserSessionManager(sessionDao: dao.sessionDao)
         serviceContainer.add(services: sessionManager)
     }
     

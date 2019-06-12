@@ -1,16 +1,22 @@
-{% include 'company_header' %}
+//
+//  ChatRouter.swift
+//  VKDemo
+//
+//  Created by AntonKrylovBrightBox on 10/06/2019.
+//  Copyright © 2019 BrightBox. All rights reserved.
+//
 
 import UIKit
 
-class {{ module_info.name }}Router {
+class ChatRouter {
     private weak var transitionHandler: ViperModuleTransitionHandler?
 
     func createModule() -> UIViewController {
-        let vc = {{ module_info.name }}ViewController.loadFromXib()
+        let vc = ChatViewController.loadFromXib()
 
         transitionHandler = vc
 
-        let presenter = {{ module_info.name }}Presenter(view: vc, router: self)
+        let presenter = ChatPresenter(view: vc, router: self)
 
         vc.presenter = presenter
 
@@ -22,6 +28,6 @@ class {{ module_info.name }}Router {
     }
 }
 
-extension {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+extension ChatRouter: ChatRouterInput {
 
 }

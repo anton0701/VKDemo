@@ -11,10 +11,10 @@ prefix:
 project_target: VKDemo
 
 # The file path for new modules
-project_file_path: Core/Modules/Authed_(Non-Rx)
+project_file_path: VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)
 
 # The Xcode group path to new modules
-project_group_path: Core/Modules/Authed_(Non-Rx)
+project_group_path: VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)
 
 ### Tests generation settings section
 # The tests target name

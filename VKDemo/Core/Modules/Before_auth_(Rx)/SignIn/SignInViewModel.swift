@@ -16,7 +16,7 @@ class SignInViewModel {
     private let sessionManager: UserSessionManager
     
     // Input
-    let decidePolicyNavigationActionObserver: AnyObserver<URL?>
+    let decidePolicyNavigationActionObserver: AnyObserver<URL>
     
     // Output
     let authorized: Observable<SignInCoordinationResult>
@@ -29,10 +29,7 @@ class SignInViewModel {
         decidePolicyNavigationActionObserver = AnyObserver(eventHandler: { event in
             switch event {
             case .next(let url):
-                guard let url = url,
-                    url.absoluteString.contains("#"),
-                    let parametersSubstring = url.absoluteString.split(separator: "#").last else { return }
-                
+                guard let parametersSubstring = url.absoluteString.split(separator: "#").last else { return }
                 let parametersComponents = parametersSubstring.split(separator: "&")
                 var parametersDict = [String: String]()
                 

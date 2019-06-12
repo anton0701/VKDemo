@@ -7,11 +7,24 @@
 //
 
 import Foundation
+import Moya
 
 class FeedManager {
+    private let feedProvider: MoyaProvider<FeedTarget>
     
+    init(feedProvider: MoyaProvider<FeedTarget>) {
+        self.feedProvider = feedProvider
+    }
 }
 
 extension FeedManager: IFeedManager {
-    
+    func getFeed(success: @escaping (FeedResponse) -> Void,
+                 failure: @escaping FailureClosure) {
+        _ = feedProvider.request(.getFeed, success: { (result: FeedResponse) in
+            success(result)
+        }) { error in
+            failure(error)
+        }
+        
+    }
 }

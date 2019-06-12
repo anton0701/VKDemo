@@ -10,10 +10,27 @@ import Foundation
 
 public enum RequestError: Error {
     case error(code: HTTPStatusCode)
+    case mappingError
     case badResponse
     case unauthorized
     case noInternetConnection
     case other(error: CustomRequestError)
+    
+    case vkError(error: VkError)
+}
+
+public struct ErrorDto: Codable {
+    let error: VkError
+}
+
+public struct VkError: Codable {
+    let errorCode: Int
+    let errorMsg: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case errorCode = "error_code"
+        case errorMsg = "error_msg"
+    }
 }
 
 public protocol CustomRequestError {
