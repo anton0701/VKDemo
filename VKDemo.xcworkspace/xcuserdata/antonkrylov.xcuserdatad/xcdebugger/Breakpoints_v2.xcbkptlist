@@ -10,12 +10,294 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
-            timestampString = "581893206.721035"
+            timestampString = "582042594.2779469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "getFeed(success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/Presenter/FeedPresenter.swift"
+            timestampString = "581904621.1916"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewLoaded()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/Presenter/FeedPresenter.swift"
+            timestampString = "581904621.191938"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewLoaded()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKDemo.FeedPresenter.viewLoaded() -&gt; ()"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/Presenter/FeedPresenter.swift"
+                  timestampString = "582042595.010236"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (VKDemo.FeedResponse) -&gt; () in VKDemo.FeedPresenter.viewLoaded() -&gt; ()"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/Presenter/FeedPresenter.swift"
+                  timestampString = "582042595.013256"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
+            timestampString = "582042594.278435"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getFeed(success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKDemo.FeedManager.getFeed(success: (VKDemo.FeedResponse) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; ()"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
+                  timestampString = "582042595.295295"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (VKDemo.FeedResponse) -&gt; () in VKDemo.FeedManager.getFeed(success: (VKDemo.FeedResponse) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; ()"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
+                  timestampString = "582042595.298262"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/MoyaProvider+Mapping.swift"
+            timestampString = "582042594.278686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "request(_:callbackQueue:progress:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/MoyaProvider+Mapping.swift"
+                  timestampString = "582042595.3111579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/MoyaProvider+Mapping.swift"
+                  timestampString = "582042595.3136899"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "507">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/MoyaProvider+Mapping.swift"
+            timestampString = "582042594.278738"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "request(_:callbackQueue:progress:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/MoyaProvider+Mapping.swift"
+            timestampString = "582042594.278784"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "request(_:callbackQueue:progress:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Before_auth_(Rx)/SignIn/SignInViewModel.swift"
+            timestampString = "582042594.278829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(sessionManager:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;Foundation.URL&gt;) -&gt; () in VKDemo.SignInViewModel.init(sessionManager: VKDemo.UserSessionManager) -&gt; VKDemo.SignInViewModel"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Before_auth_(Rx)/SignIn/SignInViewModel.swift"
+                  timestampString = "582042595.3508511"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "311">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;Foundation.URL&gt;) -&gt; () in VKDemo.SignInViewModel.init(sessionManager: VKDemo.UserSessionManager) -&gt; VKDemo.SignInViewModel"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Before_auth_(Rx)/SignIn/SignInViewModel.swift"
+                  timestampString = "582042595.35274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Before_auth_(Rx)/SignIn/SignInViewController.swift"
+            timestampString = "582042594.2788759"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Before_auth_(Rx)/SignIn/SignInViewController.swift"
+            timestampString = "582042594.278921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
