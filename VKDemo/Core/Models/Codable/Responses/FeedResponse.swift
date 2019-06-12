@@ -8,18 +8,16 @@
 
 import Foundation
 
-struct Profile: Codable {
-    
-}
-
-struct Group: Codable {
-    
-}
-
 struct FeedResponse: Codable {
     let items: [FeedItemDto]
-    let profiles: [Profile]?
-    let groups: [Group]?
+    let profiles: [UserDto]?
+//    TODO:
+//    Поле profiles содержит массив объектов пользователей (UserDto) с дополнительными полями:
+//    photo — адрес фотографии пользователя размером 50x50px;
+//    photo_medium_rec — адрес фотографии пользователя размером 100x100px;
+//    screen_name — короткий адрес страницы пользователя (например, andrew или id6492).
+
+    let groups: [GroupDto]?
     let nextFrom: String
     
     private enum CodingKeys: String, CodingKey {

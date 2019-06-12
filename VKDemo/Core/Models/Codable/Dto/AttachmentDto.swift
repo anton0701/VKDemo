@@ -13,12 +13,12 @@ struct AttachmentDto: Codable {
     
     let photo: PhotoDto?
     let video: VideoDto?
-    let audio: Audio?
-    let doc: Doc?
-    let link: Link?
-    let note: Note?
-    let poll: Poll?
-    let wikiPage: WikiPage?
+    let audio: AudioDto?
+    let doc: DocDto?
+    let link: LinkDto?
+    let note: NoteDto?
+    let poll: PollDto?
+    let wikiPage: WikiPageDto?
     let maketItem: MarketItem?
     let maketAlbum: MarketAlbum?
     let sticker: Sticker?
