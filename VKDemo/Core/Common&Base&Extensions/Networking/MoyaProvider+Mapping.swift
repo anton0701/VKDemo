@@ -22,67 +22,53 @@ extension MoyaProvider {
         return request(target, callbackQueue: callbackQueue, progress: progress) { result in
             switch result {
             case let .success(moyaResponse):
-                var filteredResponse: Response
-                var responseContentDict = [String: Any]()
-                
                 do {
-                    filteredResponse = try moyaResponse.filterSuccessfulStatusCodes()
+                    _ = try moyaResponse.filterSuccessfulStatusCodes()
                 }
                 catch _ {
                     // Неправильный статус код
                     failure(.error(code: HTTPStatusCode(rawValue: moyaResponse.statusCode) ?? .badRequest))
                 }
                 
-                do {
-                    responseContentDict = try JSONSerialization.jsonObject(with: moyaResponse.data, options: .allowFragments) as! [String: Any]
-                } catch {
-                    failure(.badResponse)
-                }
-                
                 let jsonDecoder = JSONDecoder()
-                let isResponseOk = (responseContentDict["response"] != nil)
-                
-                guard isResponseOk else {
-                    do {
-                        let errorDto = try jsonDecoder.decode(ErrorDto.self, from: moyaResponse.data)
-                        failure(.vkError(error: errorDto.error))
-                        return
-                    } catch {
-                        failure(.mappingError)
-                        return
-                    }
-                }
-                
                 do {
                     let mappedData = try jsonDecoder.decode(MappedResponse<T>.self, from: moyaResponse.data)
+                    // Все прошло хорошо, размапилось и не было VkError
                     success(mappedData.response)
-                } catch let error {
-                    print(error)
-                    guard let decodingError = error as? DecodingError else {
-                        failure(.mappingError)
+                } catch let error1 {
+                    do {
+                        let errorMappedData = try jsonDecoder.decode(ErrorDto.self, from: moyaResponse.data)
+                        // Пришел VkError
+                        failure(.vkError(error: errorMappedData.error))
                         return
+                    } catch {
+                        // Ошибка маппинга
+                        guard let decodingError = error1 as? DecodingError else {
+                            failure(.mappingError)
+                            return
+                        }
+                        
+                        switch decodingError {
+                        case .typeMismatch(let type, let context):
+                            print(type)
+                            print(context)
+                            break
+                        case .dataCorrupted(let context):
+                            print("dataCorrupted")
+                            break
+                        case .keyNotFound(let codingKey, let context):
+                            let a = context.codingPath
+                            let b = context.debugDescription
+                            let c = context.underlyingError
+                            let d = codingKey
+                            print("keyNotFound")
+                            break
+                        case .valueNotFound(let type, let context):
+                            print("valueNotFound")
+                            break
+                        }
+                        failure(.mappingError)
                     }
-                    
-                    switch decodingError {
-                    case .typeMismatch(let type, let context):
-                        print(type)
-                        print(context)
-                        break
-                    case .dataCorrupted(let context):
-                        print("dataCorrupted")
-                        break
-                    case .keyNotFound(let codingKey, let context):
-                        let a = context.codingPath
-                        let b = context.debugDescription
-                        let c = context.underlyingError
-                        let d = codingKey
-                        print("keyNotFound")
-                        break
-                    case .valueNotFound(let type, let context):
-                        print("valueNotFound")
-                        break
-                    }
-                    failure(.mappingError)
                 }
             case .failure(_):
                 // Сюда не должен попадать
