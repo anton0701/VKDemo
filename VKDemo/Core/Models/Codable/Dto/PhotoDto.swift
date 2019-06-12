@@ -12,7 +12,7 @@ struct PhotoDto: Codable {
     let id: Int
     let albumId: Int
     let ownerId: Int
-    let userId: Int
+    let userId: Int?
     let text: String
     let date: Int
     let sizes: [PhotoSizeCopy]
@@ -51,7 +51,7 @@ struct ExtendedPhotoDto: Codable {
     let accessKey: String
     let likes: LikesCountDto
     let reposts: RepostCountDto
-    let comments: CommentsSmallDto
+    let comments: CommentsCountDto
     let canComment: BoolInt
     let canRepost: BoolInt
     

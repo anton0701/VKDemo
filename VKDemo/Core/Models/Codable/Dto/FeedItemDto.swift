@@ -18,13 +18,13 @@ struct FeedItemDto: Codable {
     let markedAsAds: BoolInt?
     let attachments: [AttachmentDto]?
     let postSource: FeedPostSource?
-    let comments: CommentsSmallDto?
+    let comments: CommentsCountDto?
     let likes: LikesCountDto?
     let reposts: RepostCountDto?
     let views: ViewsCountDto?
     let isFavorite: Bool?
     let photos: PhotosListDto?
-    let friends: [Friend]?
+    let friends: Friend?
     let signerId: Int?
     let video: VideoListDto?
     let copyHistory: [CopyHistory]?
@@ -36,7 +36,7 @@ struct FeedItemDto: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case sourceId = "source_id"
-        case text = "text"
+        case text
         case postType = "post_type"
         case markedAsAds = "marked_as_ads"
         case postSource = "post_source"
@@ -45,16 +45,16 @@ struct FeedItemDto: Codable {
         case signerId = "signer_id"
         case copyHistory = "copy_history"
         
-        case type = "type"
-        case date = "date"
-        case attachments = "attachments"
-        case comments = "comments"
-        case likes = "likes"
-        case reposts = "reposts"
-        case views = "views"
-        case photos = "photos"
-        case friends = "friends"
-        case video = "video"
+        case type
+        case date
+        case attachments
+        case comments
+        case likes
+        case reposts
+        case views
+        case photos
+        case friends
+        case video
         case copyOwnerId = "copy_owner_id"
         case copyPostId = "copy_post_id"
         case copyPostDate = "copy_post_date"
@@ -78,7 +78,7 @@ struct FeedPostSource: Codable {
     
 }
 
-struct CommentsSmallDto: Codable {
+struct CommentsCountDto: Codable {
     let count: Int
     let canPost: BoolInt?
     let groupsCanPost: Bool?
