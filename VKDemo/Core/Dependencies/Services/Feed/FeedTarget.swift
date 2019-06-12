@@ -28,8 +28,6 @@ extension FeedTarget: TargetType {
         switch self {
         case .getFeed:
             return "newsfeed.get"
-        default:
-            return ""
         }
     }
     
