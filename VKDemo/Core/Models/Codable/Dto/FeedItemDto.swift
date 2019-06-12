@@ -23,10 +23,10 @@ struct FeedItemDto: Codable {
     let reposts: RepostCountDto?
     let views: ViewsCountDto?
     let isFavorite: Bool?
-    let photos: PhotosCountDto?
+    let photos: PhotosListDto?
     let friends: [Friend]?
     let signerId: Int?
-    let video: VideoDto?
+    let video: VideoListDto?
     let copyHistory: [CopyHistory]?
     let copyOwnerId: Int?
     let copyPostId: Int?

@@ -31,13 +31,15 @@ struct VideoDto: Codable {
     let player: String?
     let platform: String?
     let canEdit: Bool?
-    let canAdd: Bool?
+    let canAdd: BoolInt?
     let isPrivate: Bool?
     let accessKey: String
     let processing: Bool?
     let live: Bool?
     let upcoming: Bool?
     let isFavorite: Bool
+    let canComment: BoolInt?
+    let canRepost: BoolInt?
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -69,5 +71,12 @@ struct VideoDto: Codable {
         case live
         case upcoming
         case isFavorite = "is_favorite"
+        case canRepost = "can_repost"
+        case canComment = "can_comment"
     }
+}
+
+struct VideoListDto: Codable {
+    let count: Int
+    let items: [VideoDto]
 }

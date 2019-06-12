@@ -35,7 +35,7 @@ struct PhotoSizeCopy: Codable {
     let height: Int
 }
 
-struct PhotosCountDto: Codable {
+struct PhotosListDto: Codable {
     let count: Int
     let items: [ExtendedPhotoDto]
 }
