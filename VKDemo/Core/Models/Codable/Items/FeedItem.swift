@@ -35,6 +35,17 @@ enum FeedAttachmentType: String, Codable {
     case prettyCards = "pretty_cards"
 }
 
+enum BoolInt: Codable, Int {
+    case `true` = 1
+    case `false` = 0
+}
+
+extension BoolInt {
+    func asBool() -> Bool {
+        return self == .true
+    }
+}
+
 struct FeedAttachment: Codable {
     let type: FeedAttachmentType
     
@@ -52,6 +63,21 @@ struct FeedAttachment: Codable {
     
 //    case album = "album" TODO:доделать
 //    case photosList = "photos_list" Массив из строк, содержащих идентификаторы фотографий
+    
+    private enum CodingKeys: String, CodingKey {
+        case type
+        case photo
+        case video
+        case audio
+        case doc
+        case link
+        case note
+        case poll
+        case wikiPage = "page"
+        case maketItem
+        case maketAlbum
+        case sticker
+    }
 }
 
 struct AlbumFeedAttachment: FeedAttachment {
@@ -291,9 +317,50 @@ struct PreviewAudio: Codable {
     }
 }
 
-
 struct WikiPage: Codable {
+    let id: Int
+    let groupId: Int
+    let creatorId: Int
+    let title: String
+    let currentUserCanEdit: BoolInt
+    let currentUserCanEditAccess: BoolInt
+    let readRights: WikiPageAccessRights
+    let editRights: WikiPageAccessRights
+    let edited: Int
+    let created: Int
+    let editorId: Int
+    let viewsCount: Int
+    let parent: String?
+    let parent2: String?
+    let source: String?
+    let html: String?
+    let viewUrlString: String
     
+    enum WikiPageAccessRights: Int, Codable {
+        case groupManagersOnly = 0
+        case groupMembersOnly = 1
+        case everybody = 2
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case groupId = "group_id"
+        case creatorId = "creator_id"
+        case title
+        case currentUserCanEdit = "current_user_can_edit"
+        case currentUserCanEditAccess = "current_user_can_edit_access"
+        case readRights = "who_can_view"
+        case editRights = "who_can_edit"
+        case edited
+        case created
+        case editorId = "editor_id"
+        case viewsCount = "views"
+        case parent
+        case parent2
+        case source
+        case html
+        case viewUrlString = "view_url"
+    }
 }
 
 struct Link: Codable {
