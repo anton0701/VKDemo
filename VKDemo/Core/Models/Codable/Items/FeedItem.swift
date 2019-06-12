@@ -35,7 +35,7 @@ enum FeedAttachmentType: String, Codable {
     case prettyCards = "pretty_cards"
 }
 
-enum BoolInt: Codable, Int {
+enum BoolInt: Int, Codable {
     case `true` = 1
     case `false` = 0
 }
@@ -59,7 +59,7 @@ struct FeedAttachment: Codable {
     let wikiPage: WikiPage?
     let maketItem: MarketItem?
     let maketAlbum: MarketAlbum?
-    let sticker: Sticker
+    let sticker: Sticker?
     
 //    case album = "album" TODO:доделать
 //    case photosList = "photos_list" Массив из строк, содержащих идентификаторы фотографий
@@ -79,31 +79,6 @@ struct FeedAttachment: Codable {
         case sticker
     }
 }
-
-struct AlbumFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-    let id: Int
-    let thumb: Photo
-    let ownerId: Int
-    let title: String
-    let description: String
-    let created: Int
-    let updated: Int
-    let size: Int
-    
-    private enum CodingKeys: String, CodingKey {
-        case type
-        case id
-        case thumb
-        case ownerId = "owner_id"
-        case title
-        case description
-        case created
-        case updated
-        case size
-    }
-}
-
 
 struct FeedPostSource: Codable {
     
@@ -481,6 +456,18 @@ struct PollBackground: Codable {
         let position: Double
         let color: String
     }
+}
+
+struct MarketItem: Codable {
+    
+}
+
+struct MarketAlbum: Codable {
+    
+}
+
+struct Sticker: Codable {
+    
 }
 
 struct Product: Codable {
