@@ -21,30 +21,45 @@ enum FeedType: String, Codable {
 struct FeedAttachment: Codable {
     
 }
+
 struct FeedPostSource: Codable {
     
 }
+
 struct Comment: Codable {
     
 }
+
 struct Like: Codable {
     
 }
-struct Repost: Codable {
+
+struct FeedRepostCount: Codable {
+    let count: Int
+    let userReposted: Bool
     
+    private enum CodingKeys: String, CodingKey {
+        case count
+        case userReposted = "user_reposted"
+    }
 }
+
 struct View: Codable {
     
 }
+
 struct Photo: Codable {
     
 }
+
 struct Friend: Codable {
     
 }
+
 struct CopyHistory: Codable {
     
 }
+
 struct Video: Codable {
     
 }
@@ -60,7 +75,7 @@ struct FeedItem: Codable {
     let postSource: [FeedPostSource]?
     let comments: [Comment]
     let likes: [Like]
-    let reposts: [Repost]
+    let reposts: FeedRepostCount
     let views: [View]
     let isFavorite: Bool?
     let postId: Int?
@@ -69,6 +84,11 @@ struct FeedItem: Codable {
     let signerId: Int?
     let video: Video
     let copyHistory: [CopyHistory]?
+    let copyOwnerId: Int?
+    let copyPostId: Int?
+    let copyPostDate: Date?
+    let canEdit: Bool?
+    let canDelete: Bool?
     
     private enum CodingKeys: String, CodingKey {
         case sourceId = "source_id"
@@ -91,5 +111,10 @@ struct FeedItem: Codable {
         case photos = "photos"
         case friends = "friends"
         case video = "video"
+        case copyOwnerId = "copy_owner_id"
+        case copyPostId = "copy_post_id"
+        case copyPostDate = "copy_post_date"
+        case canEdit = "can_edit"
+        case canDelete = "can_delete"
     }
 }
