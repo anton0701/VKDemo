@@ -297,10 +297,58 @@ struct WikiPage: Codable {
 }
 
 struct Link: Codable {
+    let urlString: String
+    let title: String
+    let caption: String
+    let description: String
+    let photo: Photo?
+    let product: Product?
+    let button: ButtonDto?
+    let previewPage: String
+    let previewUrl: String
     
+    private enum CodingKeys: String, CodingKey {
+        case urlString = "url"
+        case title
+        case caption
+        case description
+        case photo
+        case product
+        case button
+        case previewPage = "preview_page"
+        case previewUrl = "preview_url"
+    }
 }
 
+struct Product: Codable {
+    let price: Price
+}
 
+struct Price: Codable {
+    let amount: Int
+    let currency: Currency
+    let text: String
+}
+
+struct Currency: Codable {
+    let id: Int
+    let name: String
+}
+
+struct ButtonDto: Codable {
+    let title: String
+    let action: ButtonActionDto
+}
+
+struct ButtonActionDto: Codable {
+    let title: String
+    let urlString: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case title
+        case urlString = "url"
+    }
+}
 
 struct FeedItem: Codable {
     let type: FeedType
