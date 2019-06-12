@@ -16,8 +16,8 @@ struct LinkDto: Codable {
     let photo: PhotoDto?
     let product: Product?
     let button: ButtonDto?
-    let previewPage: String
-    let previewUrl: String
+    let previewPage: String?
+    let previewUrl: String?
     
     private enum CodingKeys: String, CodingKey {
         case urlString = "url"
@@ -38,11 +38,11 @@ struct ButtonDto: Codable {
 }
 
 struct ButtonActionDto: Codable {
-    let title: String
+    let type: String
     let urlString: String
     
     private enum CodingKeys: String, CodingKey {
-        case title
+        case type
         case urlString = "url"
     }
 }

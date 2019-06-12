@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Before_auth_(Rx)/SignIn/SignInViewController.swift"
-            timestampString = "582046633.170105"
+            timestampString = "582065596.039588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -52,7 +52,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Before_auth_(Rx)/SignIn/SignInViewController.swift"
-            timestampString = "582046633.170161"
+            timestampString = "582065596.0396791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -91,38 +91,6 @@
             endingLineNumber = "67"
             landmarkName = "request(_:callbackQueue:progress:success:failure:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/MoyaProvider+Mapping.swift"
-                  timestampString = "582046633.421272"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "4523">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/MoyaProvider+Mapping.swift"
-                  timestampString = "582046633.42985"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "4784">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -234,6 +202,22 @@
             startingLineNumber = "146"
             endingLineNumber = "146"
             landmarkName = "init(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
+            timestampString = "582065596.040207"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "request(_:callbackQueue:progress:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

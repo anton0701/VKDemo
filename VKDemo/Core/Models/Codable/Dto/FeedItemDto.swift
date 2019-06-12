@@ -17,16 +17,16 @@ struct FeedItemDto: Codable {
     let text: String?
     let markedAsAds: BoolInt?
     let attachments: [AttachmentDto]?
-    let postSource: [FeedPostSource]?
-    let comments: CommentsSmallDto
-    let likes: LikesCountDto
-    let reposts: RepostCountDto
-    let views: [View]
+    let postSource: FeedPostSource?
+    let comments: CommentsSmallDto?
+    let likes: LikesCountDto?
+    let reposts: RepostCountDto?
+    let views: ViewsCountDto?
     let isFavorite: Bool?
-    let photos: [PhotoDto]
-    let friends: [Friend]
+    let photos: PhotosCountDto?
+    let friends: [Friend]?
     let signerId: Int?
-    let video: VideoDto
+    let video: VideoDto?
     let copyHistory: [CopyHistory]?
     let copyOwnerId: Int?
     let copyPostId: Int?
@@ -80,8 +80,8 @@ struct FeedPostSource: Codable {
 
 struct CommentsSmallDto: Codable {
     let count: Int
-    let canPost: BoolInt
-    let groupsCanPost: Bool
+    let canPost: BoolInt?
+    let groupsCanPost: Bool?
     
     private enum CodingKeys: String, CodingKey {
         case count
@@ -106,7 +106,7 @@ struct LikesCountDto: Codable {
 
 struct RepostCountDto: Codable {
     let count: Int
-    let userReposted: Bool
+    let userReposted: BoolInt
     
     private enum CodingKeys: String, CodingKey {
         case count
@@ -114,8 +114,8 @@ struct RepostCountDto: Codable {
     }
 }
 
-struct View: Codable {
-    
+struct ViewsCountDto: Codable {
+    let count: Int
 }
 
 struct Friend: Codable {

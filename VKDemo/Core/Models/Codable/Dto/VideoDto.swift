@@ -19,29 +19,29 @@ struct VideoDto: Codable {
     let photo640: String?
     let photo800: String?
     let photo1280: String?
-    let firstFrame130: String
-    let firstFrame320: String
+    let firstFrame130: String?
+    let firstFrame320: String?
     let firstFrame640: String?
     let firstFrame800: String?
     let firstFrame1280: String?
     let date: Int
-    let addingDate: Int
+    let addingDate: Int?
     let views: Int
     let comments: Int
-    let player: String
+    let player: String?
     let platform: String?
-    let canEdit: Bool
-    let canAdd: Bool
-    let isPrivate: Bool
+    let canEdit: Bool?
+    let canAdd: Bool?
+    let isPrivate: Bool?
     let accessKey: String
-    let processing: Bool
-    let live: Bool
-    let upcoming: Bool
+    let processing: Bool?
+    let live: Bool?
+    let upcoming: Bool?
     let isFavorite: Bool
     
     private enum CodingKeys: String, CodingKey {
         case id
-        case ownerId
+        case ownerId = "owner_id"
         case title
         case description
         case duration
