@@ -35,56 +35,23 @@ enum FeedAttachmentType: String, Codable {
     case prettyCards = "pretty_cards"
 }
 
-protocol FeedAttachment: Codable {
-    var type: FeedAttachmentType { get }
-}
-
-struct PhotoFeedAttachment: FeedAttachment {
+struct FeedAttachment: Codable {
     let type: FeedAttachmentType
     
-    let photo: Photo
-}
-
-struct VideoFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
+    let photo: Photo?
+    let video: Video?
+    let audio: Audio?
+    let doc: Doc?
+    let link: Link?
+    let note: Note?
+    let poll: Poll?
+    let wikiPage: WikiPage?
+    let maketItem: MarketItem?
+    let maketAlbum: MarketAlbum?
+    let sticker: Sticker
     
-    let video: Video
-}
-
-struct AudioFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-    
-    let audio: Audio
-}
-
-struct DocFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-    
-    let doc: Doc
-}
-
-struct LinkFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-    
-    let link: Link
-}
-
-struct NoteFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-    
-    let id: Int
-}
-
-struct PollFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-    
-    let id: Int
-}
-
-struct PageFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-
-    let page: Page
+//    case album = "album" TODO:доделать
+//    case photosList = "photos_list" Массив из строк, содержащих идентификаторы фотографий
 }
 
 struct AlbumFeedAttachment: FeedAttachment {
@@ -110,13 +77,6 @@ struct AlbumFeedAttachment: FeedAttachment {
         case size
     }
 }
-
-struct PhotosListFeedAttachment: FeedAttachment {
-    let type: FeedAttachmentType
-    
-    let id: Int
-}
-
 
 
 struct FeedPostSource: Codable {
@@ -147,14 +107,26 @@ struct View: Codable {
 
 struct Photo: Codable {
     let id: Int
-    let album_id: Int
-    let owner_id: Int
-    let user_id: Int
+    let albumId: Int
+    let ownerId: Int
+    let userId: Int
     let text: String
     let date: Int
     let sizes: [PhotoSizeCopy]
     let width: Int
     let height: Int
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case albumId = "album_id"
+        case ownerId = "owner_id"
+        case userId = "user_id"
+        case text
+        case date
+        case sizes
+        case width
+        case height
+    }
 }
 
 struct PhotoSizeCopy: Codable {
@@ -184,7 +156,7 @@ struct Doc: Codable {
     
 }
 
-struct Page: Codable {
+struct WikiPage: Codable {
     
 }
 
