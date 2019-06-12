@@ -152,14 +152,14 @@ struct Video: Codable {
     let duration: Int
     let photo130: String
     let photo320: String
-    let photo640: String
-    let photo800: String
-    let photo1280: String
+    let photo640: String?
+    let photo800: String?
+    let photo1280: String?
     let firstFrame130: String
     let firstFrame320: String
-    let firstFrame640: String
-    let firstFrame800: String
-    let firstFrame1280: String
+    let firstFrame640: String?
+    let firstFrame800: String?
+    let firstFrame1280: String?
     let date: Int
     let addingDate: Int
     let views: Int
@@ -209,7 +209,33 @@ struct Video: Codable {
 }
 
 struct Audio: Codable {
+    let id: Int
+    let ownerId: Int
+    let artist: Int
+    let title: Int
+    let duration: Int
+    let url: Int
+    let lyricsId: Int
+    let albumId: Int
+    let genreId: Int
+    let date: Int
+    let noSearch: Int?
+    let isHq: Bool
     
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case ownerId = "owner_id"
+        case artist
+        case title
+        case duration
+        case url
+        case lyricsId = "lyrics_id"
+        case albumId = "album_id"
+        case genreId = "genre_id"
+        case date
+        case noSearch = "no_search"
+        case isHq = "is_hq"
+    }
 }
 
 struct Doc: Codable {
