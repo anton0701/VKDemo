@@ -17,7 +17,7 @@ struct Group: Codable {
 }
 
 struct FeedResponse: Codable {
-    let items: [FeedItem]
+    let items: [FeedItemDto]
     let profiles: [Profile]?
     let groups: [Group]?
     let nextFrom: String
