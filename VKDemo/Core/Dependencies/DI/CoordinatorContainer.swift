@@ -9,19 +9,28 @@
 import Foundation
 
 protocol CoordinatorContainerProtocol {
+    var appCoordinator: IAppCoordinator { get }
     var mainTabBarCoordinator: IMainTabBarCoordinator { get }
 }
 
-class CoordinatorContainer: CoordinatorContainerProtocol {
+class CoordinatorContainer {
     private let serviceContainer = ServiceContainer()
     
     init() {
         let mainTabBarCoordinator = MainTabBarCoordinator()
         serviceContainer.add(services: mainTabBarCoordinator)
+        
+        let appCoordinator = AppCoordinator()
+        serviceContainer.add(services: appCoordinator)
     }
-    
+}
+
+extension CoordinatorContainer: CoordinatorContainerProtocol {
     var mainTabBarCoordinator: IMainTabBarCoordinator {
-        return serviceContainer.get(service: MainTabBarCoordinator.self) as! IMainTabBarCoordinator
+        return serviceContainer.get(service: MainTabBarCoordinator.self)!
     }
     
+    var appCoordinator: IAppCoordinator {
+        return serviceContainer.get(service: AppCoordinator.self)!
+    }
 }

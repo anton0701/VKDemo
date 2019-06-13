@@ -15,13 +15,14 @@ protocol IAppCoordinator {
 
 class AppCoordinator: BaseCoordinator<Void>, IAppCoordinator {
     
-    private let window: UIWindow
-    private let mainCoordinator = DI.container.coordinator.mainTabBarCoordinator
-    
-    init(window: UIWindow) {
-        self.window = window
-        super.init()
+    private var window: UIWindow {
+        guard let window = (UIApplication.shared.delegate as? AppDelegate)?.window else {
+            fatalError("No UIWindow found!")
+        }
+        return window
     }
+    
+    private lazy var mainCoordinator = DI.container.coordinator.mainTabBarCoordinator
     
     override func start() -> Observable<Void> {
         // Если нет пользака

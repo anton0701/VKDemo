@@ -10,20 +10,14 @@ import UIKit
 import RxSwift
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
     let disposeBag = DisposeBag()
+    
+    private let appCoordinator = DI.container.coordinator.appCoordinator
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        guard let window = window else {
-            return true
-        }
-        
         setupAppearance()
-        _ = DI.container
-        
-        let appCoordinator = AppCoordinator(window: window)
         _ = appCoordinator.start()
         
         return true
