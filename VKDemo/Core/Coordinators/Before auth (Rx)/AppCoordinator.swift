@@ -9,11 +9,14 @@
 import UIKit
 import RxSwift
 
-class AppCoordinator: BaseCoordinator<Void> {
+protocol IAppCoordinator {
+    func start() -> Observable<Void>
+}
+
+class AppCoordinator: BaseCoordinator<Void>, IAppCoordinator {
     
     private let window: UIWindow
-    
-    private let mainCoordinator = MainTabBarCoordinator()
+    private let mainCoordinator = DI.container.coordinator.mainTabBarCoordinator
     
     init(window: UIWindow) {
         self.window = window

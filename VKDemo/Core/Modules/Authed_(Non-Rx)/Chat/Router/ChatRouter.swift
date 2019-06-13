@@ -19,7 +19,9 @@ class ChatRouter {
         let presenter = ChatPresenter(view: vc, router: self)
 
         vc.presenter = presenter
-
+        vc.title = "Chat"
+        vc.view.backgroundColor = UIColor.blue
+        
         return vc
     }
 

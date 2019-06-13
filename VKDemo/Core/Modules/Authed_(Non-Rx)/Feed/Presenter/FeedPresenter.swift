@@ -11,7 +11,7 @@ class FeedPresenter {
     private let router: FeedRouterInput
     
     private let feedManager: IFeedManager
-
+    
     init(view: FeedViewInput,
          router: FeedRouterInput,
          feedManager: IFeedManager) {

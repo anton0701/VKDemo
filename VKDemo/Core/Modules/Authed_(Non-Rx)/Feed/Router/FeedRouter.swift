@@ -21,7 +21,9 @@ class FeedRouter {
                                       feedManager: DI.container.data.feedManager)
 
         vc.presenter = presenter
-
+        vc.title = "Feed"
+        vc.view.backgroundColor = UIColor.orange
+        
         return vc
     }
 
