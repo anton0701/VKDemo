@@ -11,7 +11,7 @@ import Foundation
 struct LinkDto: Codable {
     let urlString: String
     let title: String
-    let caption: String
+    let caption: String?
     let description: String
     let photo: PhotoDto?
     let product: Product?

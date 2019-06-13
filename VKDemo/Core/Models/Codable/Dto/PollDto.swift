@@ -26,9 +26,9 @@ struct PollDto: Codable {
     let canReport: Bool
     let canShare: Bool
     let authorId: Int
-    let photo: PhotoDto
-    let background: Int
-    let friends: [Int]?
+    let photo: PhotoDto?
+    let background: PollBackground?
+    let friends: [FriendIdDto]?
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -59,6 +59,10 @@ struct PossibleAnswer: Codable {
     let text: String
     let votes: Int
     let rate: Double
+}
+
+struct FriendIdDto: Codable {
+    let id: Int
 }
 
 struct PollBackground: Codable {
