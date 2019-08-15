@@ -10,24 +10,32 @@ class LikeButton: UIButton {
     private let fillColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
     private let blueMain = UIColor(red: 0.294, green: 0.471, blue: 0.706, alpha: 1.000)
 
-    private lazy var likeLayer: CAShapeLayer = {
+    
+    
+    private lazy var heartLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         
+        func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
+        
+        //// Subframes
+        let group: CGRect = CGRect(x: frame.minX + 72, y: frame.minY + fastFloor((frame.height - 56) * 0.10784 + 0.5), width: fastFloor((frame.width - 72) * 0.74149 + 0.5), height: frame.height - 56 - fastFloor((frame.height - 56) * 0.10784 + 0.5))
+        
         let bezierPath = UIBezierPath()
-        bezierPath.move(to: CGPoint(x: frame.minX + 0.50000 * frame.width, y: frame.minY + 0.98298 * frame.height))
-        bezierPath.addLine(to: CGPoint(x: frame.minX + 0.43192 * frame.width, y: frame.minY + 0.90900 * frame.height))
-        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.01373 * frame.width, y: frame.minY + 0.30128 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.17906 * frame.width, y: frame.minY + 0.66591 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.01373 * frame.width, y: frame.minY + 0.50209 * frame.height))
-        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.28118 * frame.width, y: frame.minY + 0.01064 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.01373 * frame.width, y: frame.minY + 0.13747 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.13043 * frame.width, y: frame.minY + 0.01064 * frame.height))
-        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.50000 * frame.width, y: frame.minY + 0.12161 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.36384 * frame.width, y: frame.minY + 0.01064 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.44651 * frame.width, y: frame.minY + 0.05291 * frame.height))
-        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.71882 * frame.width, y: frame.minY + 0.01064 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.55349 * frame.width, y: frame.minY + 0.05291 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.63616 * frame.width, y: frame.minY + 0.01064 * frame.height))
-        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.98627 * frame.width, y: frame.minY + 0.30128 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.86957 * frame.width, y: frame.minY + 0.01064 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.98627 * frame.width, y: frame.minY + 0.13747 * frame.height))
-        bezierPath.addCurve(to: CGPoint(x: frame.minX + 0.56808 * frame.width, y: frame.minY + 0.90900 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.98627 * frame.width, y: frame.minY + 0.50209 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.82094 * frame.width, y: frame.minY + 0.66591 * frame.height))
-        bezierPath.addLine(to: CGPoint(x: frame.minX + 0.50000 * frame.width, y: frame.minY + 0.98298 * frame.height))
+        bezierPath.move(to: CGPoint(x: group.minX + 0.27104 * group.width, y: group.minY + 1.00000 * group.height))
+        bezierPath.addLine(to: CGPoint(x: group.minX + 0.23309 * group.width, y: group.minY + 0.92797 * group.height))
+        bezierPath.addCurve(to: CGPoint(x: group.minX + 0.00000 * group.width, y: group.minY + 0.30023 * group.height), controlPoint1: CGPoint(x: group.minX + 0.09215 * group.width, y: group.minY + 0.67688 * group.height), controlPoint2: CGPoint(x: group.minX + 0.00000 * group.width, y: group.minY + 0.50766 * group.height))
+        bezierPath.addCurve(to: CGPoint(x: group.minX + 0.14907 * group.width, y: group.minY + 0.00000 * group.height), controlPoint1: CGPoint(x: group.minX + 0.00000 * group.width, y: group.minY + 0.13101 * group.height), controlPoint2: CGPoint(x: group.minX + 0.06505 * group.width, y: group.minY + 0.00000 * group.height))
+        bezierPath.addCurve(to: CGPoint(x: group.minX + 0.27104 * group.width, y: group.minY + 0.11463 * group.height), controlPoint1: CGPoint(x: group.minX + 0.19515 * group.width, y: group.minY + 0.00000 * group.height), controlPoint2: CGPoint(x: group.minX + 0.24122 * group.width, y: group.minY + 0.04367 * group.height))
+        bezierPath.addCurve(to: CGPoint(x: group.minX + 0.39301 * group.width, y: group.minY + 0.00000 * group.height), controlPoint1: CGPoint(x: group.minX + 0.30085 * group.width, y: group.minY + 0.04367 * group.height), controlPoint2: CGPoint(x: group.minX + 0.34693 * group.width, y: group.minY + 0.00000 * group.height))
+        bezierPath.addCurve(to: CGPoint(x: group.minX + 0.54208 * group.width, y: group.minY + 0.30023 * group.height), controlPoint1: CGPoint(x: group.minX + 0.47703 * group.width, y: group.minY + 0.00000 * group.height), controlPoint2: CGPoint(x: group.minX + 0.54208 * group.width, y: group.minY + 0.13101 * group.height))
+        bezierPath.addCurve(to: CGPoint(x: group.minX + 0.30898 * group.width, y: group.minY + 0.92797 * group.height), controlPoint1: CGPoint(x: group.minX + 0.54208 * group.width, y: group.minY + 0.50766 * group.height), controlPoint2: CGPoint(x: group.minX + 0.44992 * group.width, y: group.minY + 0.67688 * group.height))
+        bezierPath.addLine(to: CGPoint(x: group.minX + 0.27104 * group.width, y: group.minY + 1.00000 * group.height))
         bezierPath.close()
-        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
+        UIColor.white.setFill()
         bezierPath.fill()
-        blueMain.setStroke()
-        bezierPath.lineWidth = 2.5
+        UIColor.lightGray.setStroke()
+        bezierPath.lineWidth = 6.5
+        bezierPath.miterLimit = 4
         bezierPath.stroke()
 
         layer.path = bezierPath.cgPath
@@ -46,7 +54,7 @@ class LikeButton: UIButton {
     
     private func configureLayers() {
         backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        layer.addSublayer(likeLayer)
+        layer.addSublayer(heartLayer)
     }
 }
 
