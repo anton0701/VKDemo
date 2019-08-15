@@ -29,7 +29,7 @@ extension UIBezierPath {
         fillColor.setFill()
         bezierPath.fill()
         strokeColor.setStroke()
-        bezierPath.lineWidth = 2.0
+        bezierPath.lineWidth = 8
         bezierPath.stroke()
         
         return bezierPath

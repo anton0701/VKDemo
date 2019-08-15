@@ -67,24 +67,25 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="128" id="g8r-TI-WVI"/>
                         </constraints>
+                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-aU-rcO" customClass="LikeButton" customModule="VKDemo" customModuleProvider="target">
-                        <rect key="frame" x="36" y="397" width="44" height="44"/>
+                        <rect key="frame" x="24" y="397" width="25" height="25"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="44" id="42p-dx-hZv"/>
-                            <constraint firstAttribute="height" constant="44" id="SsA-tn-0FF"/>
+                            <constraint firstAttribute="width" constant="25" id="42p-dx-hZv"/>
+                            <constraint firstAttribute="height" constant="25" id="SsA-tn-0FF"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ttJ-6b-RXQ" firstAttribute="top" secondItem="2Cm-X7-aFs" secondAttribute="bottom" constant="16" id="1sN-GI-rgH"/>
                     <constraint firstItem="ZoU-IC-jOn" firstAttribute="centerY" secondItem="xUq-3a-3eN" secondAttribute="centerY" id="3ze-2e-p9I"/>
-                    <constraint firstItem="Vve-aU-rcO" firstAttribute="leading" secondItem="F5p-KX-1uM" secondAttribute="leadingMargin" constant="16" id="8a5-ia-J7X"/>
+                    <constraint firstItem="Vve-aU-rcO" firstAttribute="leading" secondItem="F5p-KX-1uM" secondAttribute="leading" constant="24" id="8a5-ia-J7X"/>
                     <constraint firstItem="2Cm-X7-aFs" firstAttribute="top" secondItem="vFn-UE-z0W" secondAttribute="bottom" constant="16" id="L0Y-77-VDc"/>
                     <constraint firstItem="vFn-UE-z0W" firstAttribute="top" secondItem="F5p-KX-1uM" secondAttribute="topMargin" constant="16" id="NWh-bk-moD"/>
                     <constraint firstItem="xUq-3a-3eN" firstAttribute="leading" secondItem="vFn-UE-z0W" secondAttribute="trailing" constant="16" id="NsD-T3-xof"/>
