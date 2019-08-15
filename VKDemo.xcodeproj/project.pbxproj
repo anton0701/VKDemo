@@ -77,6 +77,7 @@
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
+		34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */; };
 		36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2906D2B6071CF8C5FD822BD2 /* ChatViewInput.swift */; };
 		39AA7A4BC4E3EFD84BD41DD0 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7349F973D526317C2C448E9 /* FeedRouter.swift */; };
 		439794A3950B2DDF3E22E347 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A527030300C4B629FFE665CD /* ChatViewController.xib */; };
@@ -168,6 +169,7 @@
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
+		34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+MyPaths.swift"; sourceTree = "<group>"; };
 		436B60AFC158E4EC98719CD9 /* Pods-VKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.debug.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC01E6C6F14070BA0DB98B7 /* Pods-VKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.release.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		340624A22270EEC100B39D5B /* Common&Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */,
 				340624802270E9A000B39D5B /* AppDelegate.swift */,
 				341F0E1822B18764007791F8 /* UI */,
 				341F0E1722B18738007791F8 /* Networking */,
@@ -835,6 +838,7 @@
 				3436A01422AC1BB200D8E72E /* MainTabBarCoordinator.swift in Sources */,
 				3436A02122AC48A400D8E72E /* ViperModuleInput.swift in Sources */,
 				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
+				34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */,
 				349BB8E822AE76AC003397DC /* FeedTableViewCell.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
 				3436A02222AC48A400D8E72E /* ViperModuleTransitionHandler.swift in Sources */,
