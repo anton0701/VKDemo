@@ -19,7 +19,7 @@ class FeedViewController: BaseViewController, ViperModuleTransitionHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTableView()
+        setupAppearance()
         
         presenter?.viewLoaded()
     }
@@ -29,6 +29,11 @@ class FeedViewController: BaseViewController, ViperModuleTransitionHandler {
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    private func setupAppearance() {
+        setupTableView()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 

@@ -58,6 +58,7 @@
 		3436A02922AE711A00D8E72E /* UIViewController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A02822AE711A00D8E72E /* UIViewController+Style.swift */; };
 		3436A02B22AE71CD00D8E72E /* UIView+InCallStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A02A22AE71CD00D8E72E /* UIView+InCallStatusBar.swift */; };
 		3436A02D22AE731300D8E72E /* UIColor+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436A02C22AE731300D8E72E /* UIColor+Factory.swift */; };
+		3446E0F12305BD110011DBC8 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446E0F02305BD110011DBC8 /* LikeButton.swift */; };
 		345530B1229C43A50069E335 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B0229C43A50069E335 /* SignInViewController.swift */; };
 		345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B2229C43B30069E335 /* SignInViewModel.swift */; };
 		345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345530B4229C43DE0069E335 /* SignInViewController.xib */; };
@@ -148,6 +149,7 @@
 		3436A02822AE711A00D8E72E /* UIViewController+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Style.swift"; sourceTree = "<group>"; };
 		3436A02A22AE71CD00D8E72E /* UIView+InCallStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+InCallStatusBar.swift"; sourceTree = "<group>"; };
 		3436A02C22AE731300D8E72E /* UIColor+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Factory.swift"; sourceTree = "<group>"; };
+		3446E0F02305BD110011DBC8 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		345530B0229C43A50069E335 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		345530B2229C43B30069E335 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		345530B4229C43DE0069E335 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				3408FA56228C4BAC00433B61 /* VkEnterButton.swift */,
+				3446E0F02305BD110011DBC8 /* LikeButton.swift */,
 			);
 			path = "Custom Buttons";
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 				3436A02022AC48A400D8E72E /* ViperModuleOutput.swift in Sources */,
 				341F0E2922B18EC7007791F8 /* LinkDto.swift in Sources */,
 				349BB8F222AE9B6E003397DC /* MoyaProvider+Mapping.swift in Sources */,
+				3446E0F12305BD110011DBC8 /* LikeButton.swift in Sources */,
 				340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */,
 				341F0E3022B193BC007791F8 /* UserDto.swift in Sources */,
 				3408FA6F228C7A8100433B61 /* DaoContainer.swift in Sources */,
@@ -1044,13 +1048,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HC88VH796;
+				DEVELOPMENT_TEAM = NJ5KYR6UJJ;
 				INFOPLIST_FILE = VKDemo/Application/Configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myCompany.VKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.VKDemo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -1065,13 +1069,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HC88VH796;
+				DEVELOPMENT_TEAM = NJ5KYR6UJJ;
 				INFOPLIST_FILE = VKDemo/Application/Configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myCompany.VKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.VKDemo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
