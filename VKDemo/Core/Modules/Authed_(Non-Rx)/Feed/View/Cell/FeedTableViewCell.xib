@@ -12,7 +12,7 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="668" id="dIU-rd-IV3" customClass="FeedTableViewCell" customModule="VKDemo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="475" height="668"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIU-rd-IV3" id="F5p-KX-1uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIU-rd-IV3" id="F5p-KX-1uM">
                 <rect key="frame" x="0.0" y="0.0" width="475" height="668"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -72,9 +72,18 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-ew-rqB" customClass="LikeButton" customModule="VKDemo" customModuleProvider="target">
+                        <rect key="frame" x="36" y="397" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="66M-5o-Eyk"/>
+                            <constraint firstAttribute="width" constant="44" id="qbs-WF-gja"/>
+                        </constraints>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Zb2-ew-rqB" firstAttribute="top" secondItem="ttJ-6b-RXQ" secondAttribute="bottom" constant="16" id="10O-h7-WWI"/>
                     <constraint firstItem="ttJ-6b-RXQ" firstAttribute="top" secondItem="2Cm-X7-aFs" secondAttribute="bottom" constant="16" id="1sN-GI-rgH"/>
+                    <constraint firstItem="Zb2-ew-rqB" firstAttribute="leading" secondItem="F5p-KX-1uM" secondAttribute="leadingMargin" constant="16" id="3H1-Ex-Px2"/>
                     <constraint firstItem="ZoU-IC-jOn" firstAttribute="centerY" secondItem="xUq-3a-3eN" secondAttribute="centerY" id="3ze-2e-p9I"/>
                     <constraint firstItem="2Cm-X7-aFs" firstAttribute="top" secondItem="vFn-UE-z0W" secondAttribute="bottom" constant="16" id="L0Y-77-VDc"/>
                     <constraint firstItem="vFn-UE-z0W" firstAttribute="top" secondItem="F5p-KX-1uM" secondAttribute="topMargin" constant="16" id="NWh-bk-moD"/>
@@ -83,6 +92,7 @@
                     <constraint firstAttribute="trailing" secondItem="2Cm-X7-aFs" secondAttribute="trailing" constant="16" id="SCK-CQ-JzS"/>
                     <constraint firstAttribute="trailing" secondItem="ZoU-IC-jOn" secondAttribute="trailing" constant="16" id="TFb-l7-23U"/>
                     <constraint firstAttribute="trailing" secondItem="ttJ-6b-RXQ" secondAttribute="trailing" constant="16" id="a2g-em-Ate"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Zb2-ew-rqB" secondAttribute="bottom" constant="16" id="bTf-Mk-luh"/>
                     <constraint firstItem="xUq-3a-3eN" firstAttribute="centerY" secondItem="vFn-UE-z0W" secondAttribute="centerY" id="clP-cp-U4G"/>
                     <constraint firstItem="ZoU-IC-jOn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xUq-3a-3eN" secondAttribute="trailing" constant="16" id="cuh-su-ZKn"/>
                     <constraint firstItem="ttJ-6b-RXQ" firstAttribute="leading" secondItem="F5p-KX-1uM" secondAttribute="leading" constant="16" id="w0h-ue-tT1"/>
