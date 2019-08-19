@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import QuartzCore
 
 @IBDesignable
 class LikeButton: UIControl {
@@ -48,7 +49,7 @@ class LikeButton: UIControl {
         bezierPath.addCurve(to: CGPoint(x: 54.34, y: 76.97), controlPoint1: CGPoint(x: 81, y: 53.43), controlPoint2: CGPoint(x: 70.46, y: 62.91))
         bezierPath.addLine(to: CGPoint(x: 50, y: 81))
         bezierPath.close()
-        UIColor.white.setFill()
+        UIColor.red.setFill()
         bezierPath.fill()
         UIColor.lightGray.setStroke()
         bezierPath.lineWidth = 6.5
@@ -60,6 +61,8 @@ class LikeButton: UIControl {
         layer.fillColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor
         layer.strokeColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).cgColor
         
+        layer.frame = bounds
+        
         return layer
     }()
     
@@ -67,6 +70,9 @@ class LikeButton: UIControl {
         let layer = CAShapeLayer()
         let rectanglePath = UIBezierPath(roundedRect: CGRect(x: 4, y: 7, width: 201.5, height: 91.5), cornerRadius: 39)
         fillColor.setStroke()
+        #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).setFill()
+        rectanglePath.fill()
+        rectanglePath.stroke()
         rectanglePath.lineWidth = 3
         rectanglePath.lineCapStyle = .round
         rectanglePath.lineJoinStyle = .round
@@ -74,27 +80,27 @@ class LikeButton: UIControl {
 
         layer.path = rectanglePath.cgPath
         layer.strokeColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor
-        layer.fillColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor
+        layer.fillColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).cgColor
+        
+        layer.frame = bounds
         
         return layer
     }()
-            
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        configureAppearance()
-    }
-    
+                
     private func configureAppearance() {
         configureLayers()
         configOther()
     }
     
     private func configureLayers() {
-        layer.addSublayer(borderLayer)
-        layer.addSublayer(heartLayer)
-        
-        borderLayer.setNeedsDisplay()
-        heartLayer.setNeedsDisplay()
+        for subLayer in [
+          borderLayer,
+          heartLayer
+        ] {
+            layer.addSublayer(subLayer)
+            subLayer.frame = bounds
+            subLayer.setNeedsDisplay()
+        }
     }
     
     private func configOther() {
@@ -108,8 +114,6 @@ class LikeButton: UIControl {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        configureAppearance()
-//        backgroundColor = .clear
     }
     
 //    override func draw(_ rect: CGRect) {
