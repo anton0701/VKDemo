@@ -89,7 +89,7 @@
                             <constraint firstAttribute="height" constant="44" id="c5q-N9-U1H"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-eP-rXR" customClass="LikeButton" customModule="VKDemo" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-eP-rXR" customClass="RepliesButton" customModule="VKDemo" customModuleProvider="target">
                         <rect key="frame" x="244" y="397" width="95" height="44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

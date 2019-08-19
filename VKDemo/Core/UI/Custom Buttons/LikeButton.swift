@@ -27,16 +27,17 @@ class LikeButton: UIControl {
     }
 
     private lazy var heartLayer: CAShapeLayer = {
+        
         let heartPath = UIBezierPath()
-        heartPath.move(to: CGPoint(x: 21.85, y: 34))
-        heartPath.addLine(to: CGPoint(x: 20.17, y: 32.27))
-        heartPath.addCurve(to: CGPoint(x: 9.85, y: 17.21), controlPoint1: CGPoint(x: 13.93, y: 26.25), controlPoint2: CGPoint(x: 9.85, y: 22.18))
-        heartPath.addCurve(to: CGPoint(x: 16.45, y: 10), controlPoint1: CGPoint(x: 9.85, y: 13.14), controlPoint2: CGPoint(x: 12.73, y: 10))
-        heartPath.addCurve(to: CGPoint(x: 21.85, y: 12.75), controlPoint1: CGPoint(x: 18.49, y: 10), controlPoint2: CGPoint(x: 20.53, y: 11.05))
-        heartPath.addCurve(to: CGPoint(x: 27.25, y: 10), controlPoint1: CGPoint(x: 23.17, y: 11.05), controlPoint2: CGPoint(x: 25.21, y: 10))
-        heartPath.addCurve(to: CGPoint(x: 33.85, y: 17.21), controlPoint1: CGPoint(x: 30.97, y: 10), controlPoint2: CGPoint(x: 33.85, y: 13.14))
-        heartPath.addCurve(to: CGPoint(x: 23.53, y: 32.27), controlPoint1: CGPoint(x: 33.85, y: 22.18), controlPoint2: CGPoint(x: 29.77, y: 26.25))
-        heartPath.addLine(to: CGPoint(x: 21.85, y: 34))
+        heartPath.move(to: CGPoint(x: 21.85, y: 32.5))
+        heartPath.addLine(to: CGPoint(x: 20.38, y: 30.99))
+        heartPath.addCurve(to: CGPoint(x: 11.35, y: 17.8), controlPoint1: CGPoint(x: 14.92, y: 25.71), controlPoint2: CGPoint(x: 11.35, y: 22.16))
+        heartPath.addCurve(to: CGPoint(x: 17.12, y: 11.5), controlPoint1: CGPoint(x: 11.35, y: 14.25), controlPoint2: CGPoint(x: 13.87, y: 11.5))
+        heartPath.addCurve(to: CGPoint(x: 21.85, y: 13.91), controlPoint1: CGPoint(x: 18.91, y: 11.5), controlPoint2: CGPoint(x: 20.7, y: 12.42))
+        heartPath.addCurve(to: CGPoint(x: 26.57, y: 11.5), controlPoint1: CGPoint(x: 23.01, y: 12.42), controlPoint2: CGPoint(x: 24.79, y: 11.5))
+        heartPath.addCurve(to: CGPoint(x: 32.35, y: 17.8), controlPoint1: CGPoint(x: 29.83, y: 11.5), controlPoint2: CGPoint(x: 32.35, y: 14.25))
+        heartPath.addCurve(to: CGPoint(x: 23.32, y: 30.99), controlPoint1: CGPoint(x: 32.35, y: 22.16), controlPoint2: CGPoint(x: 28.78, y: 25.71))
+        heartPath.addLine(to: CGPoint(x: 21.85, y: 32.5))
         heartPath.close()
         #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
         heartPath.fill()
