@@ -12,4 +12,7 @@ import UIKit
 class FeedTableViewCell: UITableViewCell {
     static let cellName: String = String(describing: FeedTableViewCell.self)
 
+    override func prepareForReuse() {
+        super.prepareForReuse()        
+    }
 }

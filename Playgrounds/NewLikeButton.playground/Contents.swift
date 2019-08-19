@@ -1,11 +1,4 @@
-//
-//  LikeButton.swift
-//  VKDemo
-//
-//  Created by Anton Krylov on 15/08/2019.
-//  Copyright © 2019 Anton Krylov. All rights reserved.
-//
-
+import PlaygroundSupport
 import Foundation
 import UIKit
 
@@ -90,11 +83,8 @@ class LikeButton: UIControl {
     }
     
     private func configureLayers() {
-        layer.addSublayer(borderLayer)
-        layer.addSublayer(heartLayer)
-        
-        borderLayer.setNeedsDisplay()
-        heartLayer.setNeedsDisplay()
+            layer.addSublayer(borderLayer)
+            layer.addSublayer(heartLayer)
     }
     
     private func configOther() {
@@ -108,19 +98,11 @@ class LikeButton: UIControl {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        backgroundColor = .clear
         configureAppearance()
-//        backgroundColor = .clear
     }
-    
-//    override func draw(_ rect: CGRect) {
-//        configureAppearance()
-//
-//        for layer in [
-//          borderLayer,
-//          heartLayer
-//        ] {
-//          layer.bounds = bounds
-//          layer.position = center
-//        }
-//    }
 }
+
+
+let likeButton = LikeButton(frame: CGRect(x: 0, y: 0, width: 210, height: 105))
+PlaygroundPage.current.liveView = likeButton

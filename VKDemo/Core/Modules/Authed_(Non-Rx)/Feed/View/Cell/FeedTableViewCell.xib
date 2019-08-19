@@ -74,11 +74,11 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-aU-rcO" customClass="LikeButton" customModule="VKDemo" customModuleProvider="target">
-                        <rect key="frame" x="24" y="397" width="25" height="25"/>
+                        <rect key="frame" x="24" y="397" width="210" height="105"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="25" id="42p-dx-hZv"/>
-                            <constraint firstAttribute="height" constant="25" id="SsA-tn-0FF"/>
+                            <constraint firstAttribute="width" constant="210" id="42p-dx-hZv"/>
+                            <constraint firstAttribute="height" constant="105" id="SsA-tn-0FF"/>
                         </constraints>
                     </view>
                 </subviews>
