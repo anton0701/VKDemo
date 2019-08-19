@@ -13,33 +13,19 @@ import QuartzCore
 @IBDesignable
 class LikeButton: UIControl {
     
-//    private let fillColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
-    let fillColor = UIColor(red: 0.667, green: 0.667, blue: 0.667, alpha: 1.000)
-    let heartStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
-    let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+    private let fillColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+    private let heartStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+    private let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let likedFillColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
     private let notLikedFillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     private let blueMain = UIColor(red: 0.294, green: 0.471, blue: 0.706, alpha: 1.000)
     
     override var frame: CGRect {
         didSet {
-            configureAppearance()
+            configureLayers()
         }
     }
 
-    override func layoutSublayers(of layer: CALayer) {
-        super.layoutSublayers(of: layer)
-                
-        for layer in [
-          borderLayer,
-          heartLayer
-        ] {
-          layer.bounds = bounds
-          layer.position = center
-        }
-        configureAppearance()
-    }
-    
     private lazy var heartLayer: CAShapeLayer = {
         let heartPath = UIBezierPath()
         heartPath.move(to: CGPoint(x: 21.85, y: 34))
@@ -64,8 +50,6 @@ class LikeButton: UIControl {
         layer.strokeColor = heartStrokeColor.cgColor
         layer.lineWidth = 2.0
         
-        layer.frame = bounds
-        
         return layer
     }()
     
@@ -83,34 +67,33 @@ class LikeButton: UIControl {
         layer.fillColor = UIColor.clear.cgColor
         layer.lineWidth = 0.5
         
-        layer.frame = bounds
-        
         return layer
     }()
-                
-    private func configureAppearance() {
-        configureLayers()
-        configOther()
+    
+    private func addLayers() {
+        [borderLayer, heartLayer].forEach { layer.addSublayer($0) }
+    }
+    
+    private func removeLayersIfNeeded() {
+        layer.sublayers?.forEach { $0.removeFromSuperlayer() }
     }
     
     private func configureLayers() {
+        removeLayersIfNeeded()
+        addLayers()
+        
         for subLayer in [
           borderLayer,
           heartLayer
         ] {
-            layer.addSublayer(subLayer)
             subLayer.frame = bounds
             subLayer.setNeedsDisplay()
         }
     }
-    
-    private func configOther() {
         
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureAppearance()
+        addLayers()
     }
     
     required init?(coder: NSCoder) {
