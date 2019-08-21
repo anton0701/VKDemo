@@ -14,7 +14,7 @@ struct DocDto: Codable {
     let title: String
     let size: Int
     let ext: String
-    let url: Int
+    let url: String
     let date: Int
     let type: Int
     let preview: DocPreview
@@ -33,21 +33,43 @@ struct DocDto: Codable {
 }
 
 struct DocPreview: Codable {
-    let photo: PreviewPhoto?
-    let audioMessage: PreviewAudio?
+    let photo: DocPreviewPhoto?
+    let audioMessage: DocPreviewAudio?
+    let video: DocPreviewVideo?
     
     private enum CodingKeys: String, CodingKey {
         case photo
         case audioMessage = "audio_message"
+        case video
     }
 }
 
-struct PreviewPhoto: Codable {
-    // Возмлжно не PhotoSizeCopy, а другой класс, тк вроде юзается src вместо url
-    let sizes: [PhotoSizeCopy]
+struct DocPreviewPhoto: Codable {
+    let sizes: [DocPhotoSizeCopy]
 }
 
-struct PreviewAudio: Codable {
+struct DocPreviewVideo: Codable {
+    let src: String
+    let width: Int
+    let height: Int
+    let fileSize: Int
+    
+    private enum CodingKeys: String, CodingKey {
+        case src
+        case width
+        case height
+        case fileSize = "file_size"
+    }
+}
+
+struct DocPhotoSizeCopy: Codable {
+    let src: String
+    let width: Int
+    let height: Int
+    let type: String
+}
+
+struct DocPreviewAudio: Codable {
     let duration: Int
     let waveform: [Int]
     let linkOgg: String

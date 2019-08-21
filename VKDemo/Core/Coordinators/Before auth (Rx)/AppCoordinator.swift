@@ -34,8 +34,9 @@ class AppCoordinator: BaseCoordinator<Void>, IAppCoordinator {
 //            let mainCoordinator = MainTabBarCoordinator()
 //            mainCoordinator.start()
 //        })
-
-//      Убрать когда понадобится авторизация
+//
+        
+//      Вернуть когда НЕ НУЖНА авторизация
         let mainCoordinator = MainTabBarCoordinator()
         mainCoordinator.start()
 //
