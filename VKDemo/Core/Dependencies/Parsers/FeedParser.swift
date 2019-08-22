@@ -39,18 +39,26 @@ class FeedParser: IFeedParser {
                 copyHistoryFromIds = [Int]()
             }
 
-            let distinctProfileAndGroupIds = Set(copyHistoryOwnerIds + copyHistoryFromIds + [feedItemDto.sourceId])
-            let distinctProfileIds = distinctProfileAndGroupIds.filter { $0 > 0 }
-            let distinctGroupIds = distinctProfileAndGroupIds.filter { $0 < 0 }
+            let distinctProfileAndGroupIds = Set(copyHistoryOwnerIds
+                + copyHistoryFromIds
+                + [feedItemDto.sourceId])
+            
+            let distinctProfileIds = distinctProfileAndGroupIds
+                .filter { $0 > 0 }
+            
+            let distinctGroupIds = distinctProfileAndGroupIds
+                .filter { $0 < 0 }
+                .map { abs($0) }
             
             let profilesForCurrentFeedItem = profiles.filter { distinctProfileIds.contains($0.id) }
             let groupsForCurrentFeedItem = groups.filter { distinctGroupIds.contains($0.id) }
             
-            let feedItem = FeedItem(item: feedItemDto, profiles: profilesForCurrentFeedItem, groups: groupsForCurrentFeedItem)
-            
+            let feedItem = FeedItem(item: feedItemDto,
+                                    profiles: profilesForCurrentFeedItem,
+                                    groups: groupsForCurrentFeedItem)
             feedItems.append(feedItem)
         }
+        
         return feedItems
     }
-    
 }

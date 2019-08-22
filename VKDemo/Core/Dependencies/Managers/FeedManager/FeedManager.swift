@@ -11,17 +11,21 @@ import Moya
 
 class FeedManager {
     private let feedProvider: MoyaProvider<FeedTarget>
+    private let feedParser: IFeedParser
     
-    init(feedProvider: MoyaProvider<FeedTarget>) {
+    init(feedProvider: MoyaProvider<FeedTarget>,
+         feedParser: IFeedParser) {
         self.feedProvider = feedProvider
+        self.feedParser = feedParser
     }
 }
 
 extension FeedManager: IFeedManager {
-    func getFeed(success: @escaping (FeedResponse) -> Void,
+    func getFeed(success: @escaping ([FeedItem]) -> Void,
                  failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.getFeed, success: { (result: FeedResponse) in
-            success(result)
+        _ = feedProvider.request(.getFeed, success: { (feedResponse: FeedResponse) in
+            let feedItems = self.feedParser.parse(feedResponse: feedResponse)
+            success(feedItems)
         }) { error in
             failure(error)
         }

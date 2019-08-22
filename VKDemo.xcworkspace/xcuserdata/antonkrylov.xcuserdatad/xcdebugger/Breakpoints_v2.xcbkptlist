@@ -78,8 +78,8 @@
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "getFeed(success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -177,6 +177,22 @@
             startingLineNumber = "32"
             endingLineNumber = "32"
             landmarkName = "viewLoaded()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E735E505-B59E-4ADF-A5BF-B92AFAF0E096"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "parse(feedResponse:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

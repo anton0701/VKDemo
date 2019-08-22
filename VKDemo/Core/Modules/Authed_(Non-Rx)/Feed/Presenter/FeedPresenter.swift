@@ -23,9 +23,9 @@ class FeedPresenter {
 
 extension FeedPresenter: FeedViewOutput {
     func viewLoaded() {
-        feedManager.getFeed(success: { result in
+        feedManager.getFeed(success: { feedItems in
             print("BEGIN FEED RESULT!\n\n\n")
-            print(result)
+            print(feedItems)
             print("\n\n\nEND FEED RESULT!")
         }) { error in
             print("BEGIN FEED ERRROR!\n\n\n")

@@ -9,7 +9,11 @@
 import Foundation
 
 protocol ParserContainerProtocol {
+    var feedParser: IFeedParser { get }
 }
 
 class ParserContainer: ParserContainerProtocol {
+    var feedParser: IFeedParser {
+        return FeedParser()
+    }
 }

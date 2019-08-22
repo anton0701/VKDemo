@@ -15,18 +15,22 @@ protocol DataContainerProtocol {
 
 class DataContainer {
     private let serviceContainer = ServiceContainer()
-    
     private let core: CoreContainerProtocol
+    private let parser: ParserContainerProtocol
     
-    init(core: CoreContainerProtocol) {
+    init(core: CoreContainerProtocol,
+         parser: ParserContainerProtocol) {
+        
         self.core = core
+        self.parser = parser
         
         let authPlugin = VKAccessTokenPlugin(userSessionManager: core.sessionManager)
         let loggerPlugin = NetworkLoggerPlugin(verbose: true)
         let feedProvider = MoyaProvider<FeedTarget>(plugins: [authPlugin, loggerPlugin])
         serviceContainer.add(services: feedProvider)
         
-        let feedManager = FeedManager(feedProvider: feedProvider)
+        let feedManager = FeedManager(feedProvider: feedProvider,
+                                      feedParser: parser.feedParser)
         serviceContainer.add(services: feedManager)
     }
 }
