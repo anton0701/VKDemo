@@ -25,6 +25,5 @@ extension FeedManager: IFeedManager {
         }) { error in
             failure(error)
         }
-        
     }
 }
