@@ -12,6 +12,13 @@ import UIKit
 class FeedTableViewCell: UITableViewCell {
     static let cellName: String = String(describing: FeedTableViewCell.self)
 
+    @IBOutlet weak var textView: UITextView!
+    
+    func setup(text: String) {
+        textView.text = text
+        layoutIfNeeded()
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()        
     }

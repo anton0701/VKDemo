@@ -9,8 +9,9 @@
 class FeedPresenter {
     private weak var view: FeedViewInput?
     private let router: FeedRouterInput
-    
     private let feedManager: IFeedManager
+    
+    var feedItems: [FeedItem]?
     
     init(view: FeedViewInput,
          router: FeedRouterInput,
@@ -24,9 +25,8 @@ class FeedPresenter {
 extension FeedPresenter: FeedViewOutput {
     func viewLoaded() {
         feedManager.getFeed(success: { feedItems in
-            print("BEGIN FEED RESULT!\n\n\n")
-            print(feedItems)
-            print("\n\n\nEND FEED RESULT!")
+            self.feedItems = feedItems
+            self.view?.setup(feedItems: feedItems)
         }) { error in
             print("BEGIN FEED ERRROR!\n\n\n")
             print(error)

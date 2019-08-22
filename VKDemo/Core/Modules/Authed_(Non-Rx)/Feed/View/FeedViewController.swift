@@ -15,7 +15,8 @@ class FeedViewController: BaseViewController, ViperModuleTransitionHandler {
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    var feedItems = [FeedItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,8 +39,9 @@ class FeedViewController: BaseViewController, ViperModuleTransitionHandler {
 }
 
 extension FeedViewController: FeedViewInput {
-    func setup() {
-        
+    func setup(feedItems: [FeedItem]) {
+        self.feedItems = feedItems
+        tableView.reloadData()
     }
 }
 
@@ -49,11 +51,15 @@ extension FeedViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return feedItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? FeedTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.setup(text: "IUH uihwdfiuahsd ihIUh iasufhd iasuhd iausdh iah iuhi ufh iweufhiweufhi 2u3hriu 23h4ih23i4 h2i3u4h5 2i3u5h i23h5i23h45i2u34h i23h4i23h4 i23h4 i23h4i 2uh34iu2h34 iuh234i u2h34i uh23i4u h2i3u4 hdsfsdf ererer.")
+        cell.layoutIfNeeded()
         return cell
     }
 }

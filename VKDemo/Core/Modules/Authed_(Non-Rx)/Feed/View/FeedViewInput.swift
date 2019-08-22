@@ -7,5 +7,5 @@
 //
 
 protocol FeedViewInput: AnyObject {
-    func setup()
+    func setup(feedItems: [FeedItem])
 }
