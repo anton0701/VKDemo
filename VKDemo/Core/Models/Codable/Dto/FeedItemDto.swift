@@ -24,7 +24,7 @@ struct FeedItemDto: Codable {
     let views: ViewsCountDto?
     let isFavorite: Bool?
     let photos: PhotosListDto?
-    let friends: Friend?
+    let friends: FriendsDto?
     let signerId: Int?
     let video: VideoListDto?
     let copyHistory: [CopyHistory]? // Если есть, то это репост
@@ -119,14 +119,23 @@ struct ViewsCountDto: Codable {
     let count: Int
 }
 
-struct Friend: Codable {
+struct FriendsDto: Codable {
+    let count: Int
+    let items: [UserIdDto]
+}
+
+struct UserIdDto: Codable {
+    let userId: Int
     
+    private enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+    }
 }
 
 struct CopyHistory: Codable {
     let id: Int
-    let owner_id: Int
-    let from_id: Int
+    let ownerId: Int
+    let fromId: Int
     let date: Date
     let postType: String? // TODO: enum
     let text: String
@@ -135,8 +144,8 @@ struct CopyHistory: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case id
-        case owner_id = "owner_id"
-        case from_id = "from_id"
+        case ownerId = "owner_id"
+        case fromId = "from_id"
         case date
         case postType = "post_type"
         case text
