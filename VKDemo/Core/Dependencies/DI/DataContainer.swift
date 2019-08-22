@@ -22,7 +22,8 @@ class DataContainer {
         self.core = core
         
         let authPlugin = VKAccessTokenPlugin(userSessionManager: core.sessionManager)
-        let feedProvider = MoyaProvider<FeedTarget>(plugins: [authPlugin])
+        let loggerPlugin = NetworkLoggerPlugin(verbose: true)
+        let feedProvider = MoyaProvider<FeedTarget>(plugins: [authPlugin, loggerPlugin])
         serviceContainer.add(services: feedProvider)
         
         let feedManager = FeedManager(feedProvider: feedProvider)

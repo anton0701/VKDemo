@@ -27,7 +27,7 @@ struct FeedItemDto: Codable {
     let friends: Friend?
     let signerId: Int?
     let video: VideoListDto?
-    let copyHistory: [CopyHistory]?
+    let copyHistory: [CopyHistory]? // Если есть, то это репост
     let copyOwnerId: Int?
     let copyPostId: Int?
     let copyPostDate: Date?
@@ -55,9 +55,9 @@ struct FeedItemDto: Codable {
         case photos
         case friends
         case video
-        case copyOwnerId = "copy_owner_id"
-        case copyPostId = "copy_post_id"
-        case copyPostDate = "copy_post_date"
+        case copyOwnerId = "copy_owner_id" //Не факт, что приходит вообще
+        case copyPostId = "copy_post_id" //Не факт, что приходит вообще
+        case copyPostDate = "copy_post_date" //Не факт, что приходит вообще
         case canEdit = "can_edit"
         case canDelete = "can_delete"
     }
@@ -75,7 +75,8 @@ enum FeedType: String, Codable {
 }
 
 struct FeedPostSource: Codable {
-    
+    let type: String
+    let platform: String?
 }
 
 struct CommentsCountDto: Codable {
@@ -123,7 +124,25 @@ struct Friend: Codable {
 }
 
 struct CopyHistory: Codable {
+    let id: Int
+    let owner_id: Int
+    let from_id: Int
+    let date: Date
+    let postType: String? // TODO: enum
+    let text: String
+    let attachments: [AttachmentDto]?
+    let postSource: FeedPostSource
     
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case owner_id = "owner_id"
+        case from_id = "from_id"
+        case date
+        case postType = "post_type"
+        case text
+        case attachments
+        case postSource = "post_source"
+    }
 }
 
 
