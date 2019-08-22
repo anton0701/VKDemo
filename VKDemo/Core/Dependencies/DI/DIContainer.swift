@@ -13,7 +13,7 @@ protocol DIContainerProtocol {
     var data: DataContainerProtocol { get }
     var dao: DaoContainerProtocol { get }
     var presentation: PresentationContainerProtocol { get }
-    var parse: ParseContainerProtocol { get }
+    var parse: ParserContainerProtocol { get }
     var config: ConfigContainerProtocol { get }
     var coordinator: CoordinatorContainerProtocol { get }
 }
@@ -24,12 +24,12 @@ class DIContainer: DIContainerProtocol {
     internal var data: DataContainerProtocol
     internal var dao: DaoContainerProtocol
     internal var presentation: PresentationContainerProtocol
-    internal var parse: ParseContainerProtocol
+    internal var parse: ParserContainerProtocol
     internal var config: ConfigContainerProtocol
     var coordinator: CoordinatorContainerProtocol
     
     init() {
-        self.parse = ParseContainer()
+        self.parse = ParserContainer()
         self.config = ConfigContainer()
         self.dao = DaoContainer()
         self.core = CoreContainer(dao: self.dao)

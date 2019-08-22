@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol ParseContainerProtocol {
+protocol ParserContainerProtocol {
 }
 
-class ParseContainer: ParseContainerProtocol {
+class ParserContainer: ParserContainerProtocol {
 }
