@@ -6,6 +6,6 @@
 //  Copyright © 2019 BrightBox. All rights reserved.
 //
 
-protocol FeedViewOutput {
+protocol FeedViewOutput: class {
     func viewLoaded()
 }

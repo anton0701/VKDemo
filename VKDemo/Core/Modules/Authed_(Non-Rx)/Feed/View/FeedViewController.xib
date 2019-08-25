@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="VKDemo" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="jNa-Uf-M1q" id="Fky-Cb-SWa"/>
+                <outlet property="dataSource" destination="dH1-r8-SlV" id="rja-d0-JyV"/>
                 <outlet property="view" destination="aaa-bb-ccc" id="mmm-nn-xxx"/>
             </connections>
         </placeholder>
@@ -34,5 +34,10 @@
             <viewLayoutGuide key="safeArea" id="4m4-Um-m8c"/>
             <point key="canvasLocation" x="70" y="143"/>
         </view>
+        <customObject id="dH1-r8-SlV" customClass="FeedTableViewDataSource" customModule="VKDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="jNa-Uf-M1q" id="cRp-OW-OZS"/>
+            </connections>
+        </customObject>
     </objects>
 </document>

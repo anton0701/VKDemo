@@ -14,8 +14,8 @@ class FeedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var textView: UITextView!
     
-    func setup(feedItem: FeedItem) {
-        textView.text = feedItem.item.text
+    func setup(feedCellModel: FeedCellModel) {
+        textView.text = feedCellModel.feedItem.item.text
         print("123")
     }
     
