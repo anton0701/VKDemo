@@ -20,19 +20,28 @@ class FeedPresenter {
         self.router = router
         self.feedManager = feedManager
     }
-}
-
-extension FeedPresenter: FeedViewOutput {
-    func viewLoaded() {
-        feedManager.getFeed(success: { feedItems in
-//            let filteredFeedItems = feedItems.filter({  ($0.item.text?.hasPrefix("Мы не устаем") ?? false) })
-            
-            self.feedItems = feedItems
-            self.view?.setup(feedItems: feedItems)
+    
+    private func getFeedAndSetupView() {
+        feedManager.getFeed(success: { [weak self] feedItems in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.feedItems = feedItems
+            strongSelf.view?.setup(feedItems: feedItems)
         }) { error in
             print("BEGIN FEED ERRROR!\n\n\n")
             print(error)
             print("\n\n\nEND FEED ERRROR!")
         }
+    }
+}
+
+extension FeedPresenter: FeedViewOutput {
+    func didRefresh() {
+        getFeedAndSetupView()
+    }
+    
+    func viewLoaded() {
+        getFeedAndSetupView()
     }
 }

@@ -23,9 +23,11 @@ class FeedTableViewDataSource: NSObject {
     
     func setup(with feedItems: [FeedItem]) {
         feedCellModels = feedItems.map({ FeedCellModel(feedItem: $0) })
+        // TODO: убрать
         let firstCellModel = feedCellModels.first
         print(firstCellModel)
         tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
     }
 }
 
@@ -35,6 +37,16 @@ extension FeedTableViewDataSource {
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         tableView.dataSource = self
         tableView.delegate = self
+        
+        let refreshControl = UIRefreshControl(frame: .zero)
+        refreshControl.addTarget(self,
+                                 action: #selector(didPulledRefresh(_:)),
+                                 for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc private func didPulledRefresh(_: UIRefreshControl) {
+        output?.didRefresh()
     }
 }
 

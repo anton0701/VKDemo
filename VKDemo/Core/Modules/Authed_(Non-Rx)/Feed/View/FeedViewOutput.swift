@@ -8,4 +8,5 @@
 
 protocol FeedViewOutput: class {
     func viewLoaded()
+    func didRefresh()
 }
