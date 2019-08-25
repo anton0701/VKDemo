@@ -48,8 +48,7 @@ class FeedTableViewCell: UITableViewCell {
             }, completion: nil)
         }
         
-        let previewsCount = (cellModel?.photos.count ?? 0) + (cellModel?.videos.count ?? 0)
-        
+        previewCollectionViewDataSource.setup(attachments: cellModel?.feedItem.item.attachments ?? [])
     }
     
     override func prepareForReuse() {

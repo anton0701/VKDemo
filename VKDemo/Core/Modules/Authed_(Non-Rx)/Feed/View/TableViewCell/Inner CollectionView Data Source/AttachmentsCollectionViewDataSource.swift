@@ -11,10 +11,15 @@ import UIKit
 
 class AttachmentsCollectionViewDataSource: NSObject {
     
+    weak var output: FeedViewOutput?
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet {
             initialSetup()
         }
+    }
+    
+    func setup(attachments: [AttachmentDto]) {
+        
     }
 }
 
