@@ -87,6 +87,8 @@
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
+		34DE21E623128D9C001A7B9C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE21E523128D9B001A7B9C /* PlayerView.swift */; };
+		34DE21E823128E22001A7B9C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE21E723128E22001A7B9C /* UIView+Constraints.swift */; };
 		34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */; };
 		36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2906D2B6071CF8C5FD822BD2 /* ChatViewInput.swift */; };
 		39AA7A4BC4E3EFD84BD41DD0 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7349F973D526317C2C448E9 /* FeedRouter.swift */; };
@@ -189,6 +191,8 @@
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
+		34DE21E523128D9B001A7B9C /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		34DE21E723128E22001A7B9C /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+MyPaths.swift"; sourceTree = "<group>"; };
 		436B60AFC158E4EC98719CD9 /* Pods-VKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.debug.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -440,6 +444,7 @@
 		341F0E1822B18764007791F8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				34DE21E723128E22001A7B9C /* UIView+Constraints.swift */,
 				3436A02C22AE731300D8E72E /* UIColor+Factory.swift */,
 				3408FA77228C9B0200433B61 /* UIViewController+Init.swift */,
 				3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */,
@@ -662,6 +667,7 @@
 		34D2D52E2289D971007A8113 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				34DE21E523128D9B001A7B9C /* PlayerView.swift */,
 				34D2D52F2289D986007A8113 /* VkLogoView.swift */,
 			);
 			path = "Custom Views";
@@ -883,6 +889,7 @@
 				34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */,
 				349F155D23124638008309EE /* FeedCellModel.swift in Sources */,
 				3436A01422AC1BB200D8E72E /* MainTabBarCoordinator.swift in Sources */,
+				34DE21E623128D9C001A7B9C /* PlayerView.swift in Sources */,
 				3436A02122AC48A400D8E72E /* ViperModuleInput.swift in Sources */,
 				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
 				34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */,
@@ -904,6 +911,7 @@
 				3408FA70228C7A8100433B61 /* ServiceContainer.swift in Sources */,
 				340624812270E9A000B39D5B /* AppDelegate.swift in Sources */,
 				349F155A23123FD6008309EE /* FeedTableViewDataSource.swift in Sources */,
+				34DE21E823128E22001A7B9C /* UIView+Constraints.swift in Sources */,
 				349BB8F722AEC838003397DC /* VKAccessTokenPlugin.swift in Sources */,
 				3436A02922AE711A00D8E72E /* UIViewController+Style.swift in Sources */,
 				3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */,
