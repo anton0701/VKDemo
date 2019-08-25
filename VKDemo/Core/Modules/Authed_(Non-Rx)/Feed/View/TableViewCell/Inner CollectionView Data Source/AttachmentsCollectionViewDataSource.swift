@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class \: NSObject {
+class AttachmentsCollectionViewDataSource: NSObject {
     
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet {
@@ -41,4 +41,3 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
         return UICollectionViewCell()
     }
 }
-
