@@ -18,6 +18,9 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textView: UITextView!
     
+    @IBOutlet weak var singlePhotoImageView: UIImageView!
+    @IBOutlet weak var singleVideoPlayerView: PlayerView!
+    
     private var cellModel: FeedCellModel?
     
     func setup(feedCellModel: FeedCellModel) {
