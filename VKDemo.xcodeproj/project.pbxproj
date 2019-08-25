@@ -89,6 +89,7 @@
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
 		34DE21E623128D9C001A7B9C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE21E523128D9B001A7B9C /* PlayerView.swift */; };
 		34DE21E823128E22001A7B9C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE21E723128E22001A7B9C /* UIView+Constraints.swift */; };
+		34DE21EB2312A4C2001A7B9C /* AttachmentsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE21EA2312A4C2001A7B9C /* AttachmentsCollectionViewDataSource.swift */; };
 		34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */; };
 		36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2906D2B6071CF8C5FD822BD2 /* ChatViewInput.swift */; };
 		39AA7A4BC4E3EFD84BD41DD0 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7349F973D526317C2C448E9 /* FeedRouter.swift */; };
@@ -193,6 +194,7 @@
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
 		34DE21E523128D9B001A7B9C /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		34DE21E723128E22001A7B9C /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		34DE21EA2312A4C2001A7B9C /* AttachmentsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentsCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+MyPaths.swift"; sourceTree = "<group>"; };
 		436B60AFC158E4EC98719CD9 /* Pods-VKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.debug.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -586,13 +588,15 @@
 			path = FeedManager;
 			sourceTree = "<group>";
 		};
-		349BB8E622AE7699003397DC /* Cell */ = {
+		349BB8E622AE7699003397DC /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				34DE21EC2312A8E4001A7B9C /* Inner CollectionView Cells */,
+				34DE21E92312A46D001A7B9C /* Inner CollectionView Data Source */,
 				349BB8E722AE76AC003397DC /* FeedTableViewCell.swift */,
 				349BB8EA22AE76BF003397DC /* FeedTableViewCell.xib */,
 			);
-			path = Cell;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		349BB8EE22AE7DAD003397DC /* Feed */ = {
@@ -639,12 +643,12 @@
 			path = Dto;
 			sourceTree = "<group>";
 		};
-		349F155823123FBD008309EE /* DataSource */ = {
+		349F155823123FBD008309EE /* TableView DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				349F155923123FD6008309EE /* FeedTableViewDataSource.swift */,
 			);
-			path = DataSource;
+			path = "TableView DataSource";
 			sourceTree = "<group>";
 		};
 		349F155B2312462B008309EE /* Model */ = {
@@ -673,6 +677,21 @@
 			path = "Custom Views";
 			sourceTree = "<group>";
 		};
+		34DE21E92312A46D001A7B9C /* Inner CollectionView Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				34DE21EA2312A4C2001A7B9C /* AttachmentsCollectionViewDataSource.swift */,
+			);
+			path = "Inner CollectionView Data Source";
+			sourceTree = "<group>";
+		};
+		34DE21EC2312A8E4001A7B9C /* Inner CollectionView Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Inner CollectionView Cells";
+			sourceTree = "<group>";
+		};
 		45939E91365AEFF8C2A5CC56 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,11 +712,12 @@
 		7243BCB4A6DEA4C8D6EC467C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				349BB8E622AE7699003397DC /* Cell */,
+				349F155823123FBD008309EE /* TableView DataSource */,
 				F0D942B52393362D5BB1048B /* FeedViewController.swift */,
 				FB1D8388E7C9BDA825FFB098 /* FeedViewController.xib */,
 				EB7248A6CE59E261BFCD0A95 /* FeedViewInput.swift */,
 				EEB99552CB72701B15DDB287 /* FeedViewOutput.swift */,
+				349BB8E622AE7699003397DC /* TableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -705,7 +725,6 @@
 		7D8DE90D6F1C1EB362B57926 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				349F155823123FBD008309EE /* DataSource */,
 				349F155B2312462B008309EE /* Model */,
 				22442428BC60D83304463980 /* Router */,
 				45939E91365AEFF8C2A5CC56 /* Presenter */,
@@ -937,6 +956,7 @@
 				34103CE0230B52720059451A /* CommentsButton.swift in Sources */,
 				340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */,
 				349F156723127D5A008309EE /* CircleImageView.swift in Sources */,
+				34DE21EB2312A4C2001A7B9C /* AttachmentsCollectionViewDataSource.swift in Sources */,
 				341F0E3022B193BC007791F8 /* UserDto.swift in Sources */,
 				3408FA6F228C7A8100433B61 /* DaoContainer.swift in Sources */,
 				3436A02522AC48A400D8E72E /* ViperRouterProtocol.swift in Sources */,

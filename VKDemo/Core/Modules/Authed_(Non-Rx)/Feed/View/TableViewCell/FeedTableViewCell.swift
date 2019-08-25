@@ -19,8 +19,10 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var previewCollectionView: UICollectionView!
+    @IBOutlet var previewCollectionViewDataSource: AttachmentsCollectionViewDataSource!
     
     private var cellModel: FeedCellModel?
+    
     
     func setup(feedCellModel: FeedCellModel) {
         self.cellModel = feedCellModel

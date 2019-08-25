@@ -176,11 +176,17 @@
             <connections>
                 <outlet property="dateAddedLabel" destination="HGk-tO-wph" id="N1u-nh-zpx"/>
                 <outlet property="previewCollectionView" destination="2Cm-X7-aFs" id="4mJ-IG-Ydz"/>
+                <outlet property="previewCollectionViewDataSource" destination="e3e-u2-7Re" id="SBC-Lb-3aP"/>
                 <outlet property="sourceIconImageView" destination="vFn-UE-z0W" id="xc5-i8-nQJ"/>
                 <outlet property="sourceNameLabel" destination="mwb-M6-f0g" id="TwS-eN-KAj"/>
                 <outlet property="textView" destination="ttJ-6b-RXQ" id="TiF-aX-euA"/>
             </connections>
             <point key="canvasLocation" x="178.98550724637681" y="-122.20982142857142"/>
         </tableViewCell>
+        <customObject id="e3e-u2-7Re" customClass="AttachmentsCollectionViewDataSource">
+            <connections>
+                <outlet property="collectionView" destination="2Cm-X7-aFs" id="YBO-jF-MQN"/>
+            </connections>
+        </customObject>
     </objects>
 </document>
