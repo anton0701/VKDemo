@@ -19,7 +19,7 @@ struct PodcastDto: Codable {
     let date: Int
     let lyricsId: Int
     let noSearch: BoolInt
-    let isExplicit: BoolInt
+    let isExplicit: Bool
     let podcastInfo: PodcastInfoDto
     
     
