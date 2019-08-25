@@ -79,6 +79,7 @@
 		349BB8FF22AEFA18003397DC /* FeedItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8FE22AEFA18003397DC /* FeedItemDto.swift */; };
 		349F155A23123FD6008309EE /* FeedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F155923123FD6008309EE /* FeedTableViewDataSource.swift */; };
 		349F155D23124638008309EE /* FeedCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F155C23124638008309EE /* FeedCellModel.swift */; };
+		349F155F231267B6008309EE /* PodcastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F155E231267B6008309EE /* PodcastDto.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -176,6 +177,7 @@
 		349BB8FE22AEFA18003397DC /* FeedItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemDto.swift; sourceTree = "<group>"; };
 		349F155923123FD6008309EE /* FeedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewDataSource.swift; sourceTree = "<group>"; };
 		349F155C23124638008309EE /* FeedCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellModel.swift; sourceTree = "<group>"; };
+		349F155E231267B6008309EE /* PodcastDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDto.swift; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -615,6 +617,7 @@
 				341F0E2C22B18F0A007791F8 /* PollDto.swift */,
 				341F0E2F22B193BC007791F8 /* UserDto.swift */,
 				341F0E3122B193D8007791F8 /* GroupDto.swift */,
+				349F155E231267B6008309EE /* PodcastDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -672,7 +675,6 @@
 		7243BCB4A6DEA4C8D6EC467C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				349F155823123FBD008309EE /* DataSource */,
 				349BB8E622AE7699003397DC /* Cell */,
 				F0D942B52393362D5BB1048B /* FeedViewController.swift */,
 				FB1D8388E7C9BDA825FFB098 /* FeedViewController.xib */,
@@ -685,6 +687,7 @@
 		7D8DE90D6F1C1EB362B57926 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				349F155823123FBD008309EE /* DataSource */,
 				349F155B2312462B008309EE /* Model */,
 				22442428BC60D83304463980 /* Router */,
 				45939E91365AEFF8C2A5CC56 /* Presenter */,
@@ -901,6 +904,7 @@
 				3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */,
 				3436A02D22AE731300D8E72E /* UIColor+Factory.swift in Sources */,
 				3408FA6B228C7A8100433B61 /* CoordinatorContainer.swift in Sources */,
+				349F155F231267B6008309EE /* PodcastDto.swift in Sources */,
 				3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */,
 				341F0E2D22B18F0A007791F8 /* PollDto.swift in Sources */,
 				3436A02022AC48A400D8E72E /* ViperModuleOutput.swift in Sources */,

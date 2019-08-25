@@ -22,6 +22,7 @@ struct AttachmentDto: Codable {
     let maketItem: MarketItem?
     let maketAlbum: MarketAlbum?
     let sticker: Sticker?
+    let podcast: PodcastDto?
     
     //    case album = "album" TODO:доделать
     //    case photosList = "photos_list" Массив из строк, содержащих идентификаторы фотографий
@@ -39,6 +40,7 @@ struct AttachmentDto: Codable {
         case maketItem
         case maketAlbum
         case sticker
+        case podcast
     }
 }
 
@@ -56,4 +58,5 @@ enum AttachmentType: String, Codable {
     case market = "market"
     case marketAlbum = "market_album"
     case prettyCards = "pretty_cards"
+    case podcast = "podcast"
 }

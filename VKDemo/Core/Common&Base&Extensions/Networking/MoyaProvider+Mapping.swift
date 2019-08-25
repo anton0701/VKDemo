@@ -54,7 +54,8 @@ extension MoyaProvider {
                             print(context)
                             break
                         case .dataCorrupted(let context):
-                            print("dataCorrupted")
+                            print("dataCorrupted, context:")
+                            print(context)
                             break
                         case .keyNotFound(let codingKey, let context):
                             let a = context.codingPath
