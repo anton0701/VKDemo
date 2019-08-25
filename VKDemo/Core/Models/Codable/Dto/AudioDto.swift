@@ -20,7 +20,7 @@ struct AudioDto: Codable {
     let genreId: Int?
     let date: Int
     let noSearch: Int?
-    let isHq: Bool
+    let isHq: Bool?
     
     private enum CodingKeys: String, CodingKey {
         case id
