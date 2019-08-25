@@ -18,8 +18,7 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textView: UITextView!
     
-    @IBOutlet weak var singlePhotoImageView: UIImageView!
-    @IBOutlet weak var singleVideoPlayerView: PlayerView!
+    @IBOutlet weak var previewCollectionView: UICollectionView!
     
     private var cellModel: FeedCellModel?
     
@@ -46,6 +45,9 @@ class FeedTableViewCell: UITableViewCell {
                 strongImageView.image = image
             }, completion: nil)
         }
+        
+        let previewsCount = (cellModel?.photos.count ?? 0) + (cellModel?.videos.count ?? 0)
+        
     }
     
     override func prepareForReuse() {

@@ -83,22 +83,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SDC-9u-yho">
-                                        <rect key="frame" x="0.0" y="135" width="419" height="140"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" priority="999" constant="140" id="ebj-P2-v28"/>
-                                        </constraints>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvZ-I4-hi0" customClass="PlayerView" customModule="VKDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="299.5" width="419" height="140"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" priority="999" constant="140" id="UUM-86-05P"/>
-                                        </constraints>
-                                    </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-X7-aFs">
-                                        <rect key="frame" x="0.0" y="464.5" width="419" height="140"/>
+                                        <rect key="frame" x="0.0" y="299.5" width="419" height="140"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="999" constant="140" id="5hJ-pS-GC5"/>
@@ -189,8 +175,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dateAddedLabel" destination="HGk-tO-wph" id="N1u-nh-zpx"/>
-                <outlet property="singlePhotoImageView" destination="SDC-9u-yho" id="hvs-9s-TP3"/>
-                <outlet property="singleVideoPlayerView" destination="xvZ-I4-hi0" id="MOG-gq-KoM"/>
+                <outlet property="previewCollectionView" destination="2Cm-X7-aFs" id="4mJ-IG-Ydz"/>
                 <outlet property="sourceIconImageView" destination="vFn-UE-z0W" id="xc5-i8-nQJ"/>
                 <outlet property="sourceNameLabel" destination="mwb-M6-f0g" id="TwS-eN-KAj"/>
                 <outlet property="textView" destination="ttJ-6b-RXQ" id="TiF-aX-euA"/>

@@ -19,8 +19,8 @@ struct AttachmentDto: Codable {
     let note: NoteDto?
     let poll: PollDto?
     let wikiPage: WikiPageDto?
-    let maketItem: MarketItem?
-    let maketAlbum: MarketAlbum?
+    let marketItem: MarketItem?
+    let marketAlbum: MarketAlbum?
     let sticker: Sticker?
     let podcast: PodcastDto?
     
@@ -37,8 +37,8 @@ struct AttachmentDto: Codable {
         case note
         case poll
         case wikiPage = "page"
-        case maketItem
-        case maketAlbum
+        case marketItem
+        case marketAlbum
         case sticker
         case podcast
     }
