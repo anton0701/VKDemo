@@ -16,7 +16,6 @@ class FeedTableViewCell: UITableViewCell {
     
     func setup(feedCellModel: FeedCellModel) {
         textView.text = feedCellModel.feedItem.item.text
-        print("123")
     }
     
     override func prepareForReuse() {

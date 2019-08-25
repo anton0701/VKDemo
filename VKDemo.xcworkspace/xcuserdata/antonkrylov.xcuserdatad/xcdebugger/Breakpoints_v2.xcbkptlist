@@ -50,6 +50,38 @@
             endingLineNumber = "68"
             landmarkName = "request(_:callbackQueue:progress:success:failure:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FD5C647C-2038-4B3A-AEA2-D7342687C61D - 7d8ce6201a1c6b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "3852">
+               </Location>
+               <Location
+                  uuid = "FD5C647C-2038-4B3A-AEA2-D7342687C61D - 7d8ce6201a1c6b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "3960">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,6 +130,38 @@
             endingLineNumber = "53"
             landmarkName = "request(_:callbackQueue:progress:success:failure:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C45493A4-428E-4930-ACFC-861396304035 - 7d8ce6201a1c6b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "2200">
+               </Location>
+               <Location
+                  uuid = "C45493A4-428E-4930-ACFC-861396304035 - 7d8ce6201a1c6b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "2440">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,8 +222,8 @@
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Cell/FeedTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "setup(feedCellModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -215,16 +279,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "08624C12-9014-49EB-A314-2EC09CB33F74"
+            uuid = "AD0B6ED7-2ECA-486A-B299-E91B9D1B8099"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/FeedViewController.swift"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/DataSource/FeedTableViewDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "setup(feedItems:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "setup(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -31,6 +31,7 @@ extension MoyaProvider {
                 }
                 
                 let jsonDecoder = JSONDecoder()
+                jsonDecoder.dateDecodingStrategy = .secondsSince1970
                 do {
                     let mappedData = try jsonDecoder.decode(MappedResponse<T>.self, from: moyaResponse.data)
                     // Все прошло хорошо, размапилось и не было VkError

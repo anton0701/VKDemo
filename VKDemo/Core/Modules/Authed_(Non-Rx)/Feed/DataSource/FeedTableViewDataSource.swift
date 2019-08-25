@@ -22,7 +22,10 @@ class FeedTableViewDataSource: NSObject {
     }
     
     func setup(with feedItems: [FeedItem]) {
-        
+        feedCellModels = feedItems.map({ FeedCellModel(feedItem: $0) })
+        let firstCellModel = feedCellModels.first
+        print(firstCellModel)
+        tableView.reloadData()
     }
 }
 

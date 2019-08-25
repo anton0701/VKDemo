@@ -25,10 +25,10 @@ class FeedPresenter {
 extension FeedPresenter: FeedViewOutput {
     func viewLoaded() {
         feedManager.getFeed(success: { feedItems in
-            let filteredFeedItems = feedItems.filter({  ($0.item.text?.hasPrefix("Мы не устаем") ?? false) })
-            self.feedItems = filteredFeedItems
+//            let filteredFeedItems = feedItems.filter({  ($0.item.text?.hasPrefix("Мы не устаем") ?? false) })
             
-            self.view?.setup(feedItems: filteredFeedItems)
+            self.feedItems = feedItems
+            self.view?.setup(feedItems: feedItems)
         }) { error in
             print("BEGIN FEED ERRROR!\n\n\n")
             print(error)
