@@ -9,12 +9,11 @@
 import Foundation
 
 struct FeedCellModel {
-    let sourceIconUrl: String?
-    let sourceName: String?
-    let dateAdded: Date?
+    let sourceIconUrl: String
+    let sourceName: String
+    let dateAdded: Date
     
     var feedItem: FeedItem
-    
     
     init(feedItem: FeedItem) {
         self.feedItem = feedItem

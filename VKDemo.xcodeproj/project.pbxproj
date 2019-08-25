@@ -80,6 +80,10 @@
 		349F155A23123FD6008309EE /* FeedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F155923123FD6008309EE /* FeedTableViewDataSource.swift */; };
 		349F155D23124638008309EE /* FeedCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F155C23124638008309EE /* FeedCellModel.swift */; };
 		349F155F231267B6008309EE /* PodcastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F155E231267B6008309EE /* PodcastDto.swift */; };
+		349F156123127533008309EE /* UIImageView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156023127533008309EE /* UIImageView+Loading.swift */; };
+		349F156323127711008309EE /* ImageLoadingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156223127711008309EE /* ImageLoadingCache.swift */; };
+		349F156523127763008309EE /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156423127762008309EE /* GCD.swift */; };
+		349F156723127D5A008309EE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156623127D5A008309EE /* CircleImageView.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
@@ -178,6 +182,10 @@
 		349F155923123FD6008309EE /* FeedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewDataSource.swift; sourceTree = "<group>"; };
 		349F155C23124638008309EE /* FeedCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellModel.swift; sourceTree = "<group>"; };
 		349F155E231267B6008309EE /* PodcastDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDto.swift; sourceTree = "<group>"; };
+		349F156023127533008309EE /* UIImageView+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loading.swift"; sourceTree = "<group>"; };
+		349F156223127711008309EE /* ImageLoadingCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadingCache.swift; sourceTree = "<group>"; };
+		349F156423127762008309EE /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		349F156623127D5A008309EE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
@@ -367,6 +375,7 @@
 		340624A22270EEC100B39D5B /* Common&Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				349F156423127762008309EE /* GCD.swift */,
 				34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */,
 				340624802270E9A000B39D5B /* AppDelegate.swift */,
 				341F0E1822B18764007791F8 /* UI */,
@@ -415,6 +424,8 @@
 		341F0E1722B18738007791F8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				349F156223127711008309EE /* ImageLoadingCache.swift */,
+				349F156023127533008309EE /* UIImageView+Loading.swift */,
 				341F0E1922B1878A007791F8 /* Codable */,
 				349BB8F822AEF047003397DC /* MappedResponse.swift */,
 				349BB8F122AE9B6E003397DC /* MoyaProvider+Mapping.swift */,
@@ -433,6 +444,7 @@
 				3408FA77228C9B0200433B61 /* UIViewController+Init.swift */,
 				3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */,
 				3436A02A22AE71CD00D8E72E /* UIView+InCallStatusBar.swift */,
+				349F156623127D5A008309EE /* CircleImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -877,6 +889,7 @@
 				349BB8E822AE76AC003397DC /* FeedTableViewCell.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
 				3436A02222AC48A400D8E72E /* ViperModuleTransitionHandler.swift in Sources */,
+				349F156523127763008309EE /* GCD.swift in Sources */,
 				3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */,
 				3408FA6C228C7A8100433B61 /* CoreContainer.swift in Sources */,
 				349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */,
@@ -885,6 +898,7 @@
 				345530B1229C43A50069E335 /* SignInViewController.swift in Sources */,
 				341F0E2722B18E9D007791F8 /* WikiPageDto.swift in Sources */,
 				3436A02322AC48A400D8E72E /* ViperViewController.swift in Sources */,
+				349F156123127533008309EE /* UIImageView+Loading.swift in Sources */,
 				345530B7229D84FD0069E335 /* UserSessionManager.swift in Sources */,
 				3408FA62228C7A3F00433B61 /* DIContainer.swift in Sources */,
 				3408FA70228C7A8100433B61 /* ServiceContainer.swift in Sources */,
@@ -908,11 +922,13 @@
 				3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */,
 				341F0E2D22B18F0A007791F8 /* PollDto.swift in Sources */,
 				3436A02022AC48A400D8E72E /* ViperModuleOutput.swift in Sources */,
+				349F156323127711008309EE /* ImageLoadingCache.swift in Sources */,
 				341F0E2922B18EC7007791F8 /* LinkDto.swift in Sources */,
 				349BB8F222AE9B6E003397DC /* MoyaProvider+Mapping.swift in Sources */,
 				3446E0F12305BD110011DBC8 /* LikeButton.swift in Sources */,
 				34103CE0230B52720059451A /* CommentsButton.swift in Sources */,
 				340624AE2270F06D00B39D5B /* AppCoordinator.swift in Sources */,
+				349F156723127D5A008309EE /* CircleImageView.swift in Sources */,
 				341F0E3022B193BC007791F8 /* UserDto.swift in Sources */,
 				3408FA6F228C7A8100433B61 /* DaoContainer.swift in Sources */,
 				3436A02522AC48A400D8E72E /* ViperRouterProtocol.swift in Sources */,
