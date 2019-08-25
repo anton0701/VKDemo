@@ -14,9 +14,9 @@ class FeedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var textView: UITextView!
     
-    func setup(text: String) {
-        textView.text = text
-        layoutIfNeeded()
+    func setup(feedItem: FeedItem) {
+        textView.text = feedItem.item.text
+        print("123")
     }
     
     override func prepareForReuse() {

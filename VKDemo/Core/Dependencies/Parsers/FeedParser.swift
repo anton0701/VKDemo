@@ -38,10 +38,18 @@ class FeedParser: IFeedParser {
             } else {
                 copyHistoryFromIds = [Int]()
             }
+            
+            var optionalProfileAndGroupIds = [Int]()
+            if let signerId = feedItemDto.signerId {
+                optionalProfileAndGroupIds.append(signerId)
+            }
 
-            let distinctProfileAndGroupIds = Set(copyHistoryOwnerIds
+            let distinctProfileAndGroupIds = Set(
+                copyHistoryOwnerIds
                 + copyHistoryFromIds
-                + [feedItemDto.sourceId])
+                + optionalProfileAndGroupIds
+                + [feedItemDto.sourceId]
+            )
             
             let distinctProfileIds = distinctProfileAndGroupIds
                 .filter { $0 > 0 }
