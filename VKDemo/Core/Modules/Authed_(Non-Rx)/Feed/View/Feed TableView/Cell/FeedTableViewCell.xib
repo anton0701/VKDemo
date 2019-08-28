@@ -84,7 +84,7 @@
                                     </textView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-X7-aFs">
                                         <rect key="frame" x="0.0" y="299.5" width="419" height="140"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="999" constant="140" id="5hJ-pS-GC5"/>
                                         </constraints>
@@ -135,6 +135,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="2Cm-X7-aFs" firstAttribute="centerX" secondItem="0Ga-Rq-E2b" secondAttribute="centerX" id="HSA-zB-SYQ"/>
                                     <constraint firstItem="Snz-6i-4wq" firstAttribute="leading" secondItem="0Ga-Rq-E2b" secondAttribute="leading" id="I2v-YX-buo"/>
