@@ -279,16 +279,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E6476847-148A-4848-91AD-F12C5BD0267E"
+            uuid = "4928F8E6-CB93-4F2A-AE39-76AD3C2DFAFB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/TableViewCell/FeedTableViewCell.swift"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/TableViewCell/Inner CollectionView Data Source/AttachmentsCollectionViewDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "setup(feedCellModel:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "setup(attachments:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

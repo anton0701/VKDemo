@@ -31,6 +31,10 @@ extension AttachmentsCollectionViewDataSource {
     private func initialSetup() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        collectionView.register(UINib(nibName: AttachmentsCollectionViewCell.cellName,
+                                      bundle: nil),
+                                forCellWithReuseIdentifier: AttachmentsCollectionViewCell.cellName)
     }
 }
 
@@ -46,6 +50,9 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let attachmentCell = collectionView.dequeueReusableCell(withReuseIdentifier: <#T##String#>, for: <#T##IndexPath#>)
+        
         return UICollectionViewCell()
     }
 }
