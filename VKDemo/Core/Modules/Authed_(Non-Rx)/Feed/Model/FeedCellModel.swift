@@ -31,7 +31,7 @@ struct FeedCellModel {
     // Для большой картинки подходят:
     // w, z, y, x, m, s
     // Для превью картинки, если картинка 1:
-    // z, y, x, m, s
+    // w, z, y, x, m, s
     
     init(feedItem: FeedItem) {
         self.feedItem = feedItem

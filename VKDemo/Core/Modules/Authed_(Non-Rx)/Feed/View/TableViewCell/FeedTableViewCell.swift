@@ -19,7 +19,11 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var previewCollectionView: UICollectionView!
-    @IBOutlet var previewCollectionViewDataSource: AttachmentsCollectionViewDataSource!
+    var previewCollectionViewDataSource = AttachmentsCollectionViewDataSource() {
+        didSet {
+            previewCollectionViewDataSource.collectionView = previewCollectionView
+        }
+    }
     
     private var cellModel: FeedCellModel?
     

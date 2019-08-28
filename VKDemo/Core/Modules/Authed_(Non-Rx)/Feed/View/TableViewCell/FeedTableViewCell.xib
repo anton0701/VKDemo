@@ -9,8 +9,7 @@
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="833" id="dIU-rd-IV3" customClass="FeedTableViewCell" customModule="VKDemo" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="833" id="dIU-rd-IV3" customClass="FeedTableViewCell" customModule="VKDemo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="475" height="833"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="dIU-rd-IV3" id="F5p-KX-1uM">
@@ -176,17 +175,12 @@
             <connections>
                 <outlet property="dateAddedLabel" destination="HGk-tO-wph" id="N1u-nh-zpx"/>
                 <outlet property="previewCollectionView" destination="2Cm-X7-aFs" id="4mJ-IG-Ydz"/>
-                <outlet property="previewCollectionViewDataSource" destination="lrF-WY-6hI" id="isc-I9-S3i"/>
                 <outlet property="sourceIconImageView" destination="vFn-UE-z0W" id="xc5-i8-nQJ"/>
                 <outlet property="sourceNameLabel" destination="mwb-M6-f0g" id="TwS-eN-KAj"/>
                 <outlet property="textView" destination="ttJ-6b-RXQ" id="TiF-aX-euA"/>
             </connections>
             <point key="canvasLocation" x="178.98550724637681" y="-122.20982142857142"/>
         </tableViewCell>
-        <customObject id="lrF-WY-6hI" customClass="AttachmentsCollectionViewDataSource" customModule="VKDemo" customModuleProvider="target">
-            <connections>
-                <outlet property="collectionView" destination="2Cm-X7-aFs" id="WRJ-J4-5Pd"/>
-            </connections>
-        </customObject>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>
 </document>

@@ -12,6 +12,8 @@ import UIKit
 class AttachmentsCollectionViewDataSource: NSObject {
     
     weak var output: FeedViewOutput?
+    var attachments: [AttachmentDto]?
+    
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet {
             initialSetup()
@@ -19,7 +21,8 @@ class AttachmentsCollectionViewDataSource: NSObject {
     }
     
     func setup(attachments: [AttachmentDto]) {
-        
+        self.attachments = attachments
+        collectionView.reloadData()
     }
 }
 
@@ -39,7 +42,7 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDelegate {
 // MARK: - UICollectionViewDataSource
 extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return attachments?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
