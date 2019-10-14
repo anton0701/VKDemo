@@ -23,9 +23,8 @@ class FeedTableViewDataSource: NSObject {
     
     func setup(with feedItems: [FeedItem]) {
         feedCellModels = feedItems.map({ FeedCellModel(feedItem: $0) })
-        // TODO: убрать
-        let firstCellModel = feedCellModels.first
-        print(firstCellModel)
+        tableView.estimatedRowHeight = 200.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.reloadData()
         tableView.refreshControl?.endRefreshing()
     }
@@ -64,6 +63,8 @@ extension FeedTableViewDataSource: UITableViewDataSource {
         cell.setup(feedCellModel: feedCellModel)
         return cell
     }
+    
+    
 }
 
 // MARK: - UITableViewDelegate

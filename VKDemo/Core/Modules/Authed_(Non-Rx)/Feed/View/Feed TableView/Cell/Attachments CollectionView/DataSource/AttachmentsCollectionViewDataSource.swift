@@ -24,6 +24,16 @@ class AttachmentsCollectionViewDataSource: NSObject {
         self.attachments = attachments
         
         collectionView.reloadData()
+        guard let collectionViewHeightConstraint = collectionView.constraints.filter({
+            $0.firstAttribute == .height
+        }).first else { return }
+        
+        let height = CGFloat(120.0)
+        let photosCount = attachments.filter({
+            $0.photo != nil
+            }).count
+        
+        collectionViewHeightConstraint.constant = ceil(CGFloat(photosCount) / 2.0) * height
     }
 }
 
@@ -68,7 +78,7 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
             var j = 2
             photoDto.sizes.forEach {
                 let wxh = "\($0.width)x\($0.height)"
-                let aspRatio = ((CGFloat($0.height)/CGFloat($0.width))*100).rounded() / 100.0
+                let aspRatio = ((CGFloat($0.width)/CGFloat($0.height))*100).rounded() / 100.0
                 strings[j] += "\(wxh) \(aspRatio)\t\t"
                 j += 1
 //                print("\(wxh) \(aspRatio)")
@@ -177,5 +187,51 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
         case .photosList:
             return UICollectionViewCell()
         }
+    }
+}
+// MARK: - UICollectionViewDelegateFlowLayout
+extension AttachmentsCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = max(CGFloat(60.0), collectionView.bounds.width / 2.0 - 5.0)
+        let height = CGFloat(120.0)
+        
+        return CGSize(width: width, height: height)
+    }
+}
+
+
+class IntrinsicSizeCollectionView: UICollectionView {
+    // MARK: - lifecycle
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setup()
+    }
+
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
+
+        self.setup()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if !self.bounds.size.equalTo(self.intrinsicContentSize) {
+            self.invalidateIntrinsicContentSize()
+        }
+        
+        superview?.superview?.setNeedsLayout()
+    }
+
+    override var intrinsicContentSize: CGSize {
+        get {
+            let intrinsicContentSize = self.contentSize
+            return intrinsicContentSize
+        }
+    }
+
+    // MARK: - setup
+    func setup() {
+        self.isScrollEnabled = false
+        self.bounces = false
     }
 }
