@@ -22,6 +22,7 @@ class AttachmentsCollectionViewDataSource: NSObject {
     
     func setup(attachments: [AttachmentDto]) {
         self.attachments = attachments
+        
         collectionView.reloadData()
     }
 }
@@ -35,6 +36,9 @@ extension AttachmentsCollectionViewDataSource {
         collectionView.register(UINib(nibName: AttachmentVideoCollectionViewCell.cellName,
                                       bundle: nil),
                                 forCellWithReuseIdentifier: AttachmentVideoCollectionViewCell.cellName)
+        collectionView.register(UINib(nibName: AttachmentPhotoCollectionViewCell.cellName,
+                                      bundle: nil),
+                                forCellWithReuseIdentifier: AttachmentPhotoCollectionViewCell.cellName)
     }
 }
 
@@ -46,23 +50,101 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDelegate {
 // MARK: - UICollectionViewDataSource
 extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let photoAttachments = attachments?.filter({ $0.type == .photo }) ?? []
+        
+        var strings = [String]()
+        for _ in 0..<15 {
+            strings.append("")
+        }
+        
+        for i in 0..<photoAttachments.count {
+            guard let photoDto = photoAttachments[i].photo else {
+                return 0
+            }
+            strings[0] += "\(i+1) фото\t\t"
+            strings[1] += "\(photoDto.sizes.count) размеров\t"
+//            print("\(i+1) фото")
+//            print("\(photoDto.sizes.count) размеров")
+            var j = 2
+            photoDto.sizes.forEach {
+                let wxh = "\($0.width)x\($0.height)"
+                let aspRatio = ((CGFloat($0.height)/CGFloat($0.width))*100).rounded() / 100.0
+                strings[j] += "\(wxh) \(aspRatio)\t\t"
+                j += 1
+//                print("\(wxh) \(aspRatio)")
+            }
+            let urlString = "\(photoDto.sizes.last!.url)\t"
+            strings[j] += urlString
+        }
+        
+        if photoAttachments.count == 10 {
+            print("101010101010")
+        }
+        
+        print("\n\n\n************Photo info*************")
+        for i in 0..<15 {
+            print(strings[i])
+        }
+        
+        return photoAttachments.count
+                
 //        return attachments?.count ?? 0
-        let videoAttachments = attachments?.filter({ $0.type == .video }) ?? []
-        return videoAttachments.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        guard let attachment = videoAttachments[indexPath.row] else {
-//            return UICollectionViewCell()
-//        }
+        let photoAttachments = attachments?.filter({ $0.type == .photo }) ?? []
+        let attachment = photoAttachments[indexPath.row]
         
-        let videoAttachments = attachments?.filter({ $0.type == .video }) ?? []
-        let attachment = videoAttachments[indexPath.row]
+//        let photoVideoAttachments = attachments?.filter({ $0.type == .video || $0.type == .photo }) ?? []
+//        let attachment = photoVideoAttachments[indexPath.row]
+        
+        //  1 фото          2 фото
+        //  10 размеров     7 размеров
+        //  19х38 (1х2)
+        //  100х200 (1х2)
+        //  ......
+        //
+        /*
+        var strings = [String]()
+        for _ in 0..<15 {
+            strings.append("")
+        }
+        
+        for i in 0..<photoAttachments.count {
+            guard let photoDto = photoAttachments[i].photo else {
+                return UICollectionViewCell()
+            }
+            strings[0] += "\(i+1) фото\t\t"
+            strings[1] += "\(photoDto.sizes.count) размеров\t"
+//            print("\(i+1) фото")
+//            print("\(photoDto.sizes.count) размеров")
+            var j = 2
+            photoDto.sizes.forEach {
+                let wxh = "\($0.width)x\($0.height)"
+                let aspRatio = ((CGFloat($0.height)/CGFloat($0.width))*100).rounded() / 100.0
+                strings[j] += "\(wxh) \(aspRatio)\t\t"
+                j += 1
+//                print("\(wxh) \(aspRatio)")
+            }
+            let urlString = "\(photoDto.sizes.last!.url)\t"
+            strings[j] += urlString
+        }
+        
+        print("\n\n\n************Photo info*************")
+        for i in 0..<15 {
+            print(strings[i])
+        }
+        */
         
         switch attachment.type {
         case .photo:
-            return UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AttachmentPhotoCollectionViewCell.cellName, for: indexPath) as? AttachmentPhotoCollectionViewCell,
+                let photoDto = attachment.photo else {
+                return UICollectionViewCell()
+            }
+            cell.setup(photoDto: photoDto)
+            return cell
         case .video:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AttachmentVideoCollectionViewCell.cellName, for: indexPath) as? AttachmentVideoCollectionViewCell,
                 let videoDto = attachment.video else {
