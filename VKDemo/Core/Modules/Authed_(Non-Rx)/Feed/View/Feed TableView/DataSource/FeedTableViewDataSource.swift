@@ -34,6 +34,8 @@ extension FeedTableViewDataSource {
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         tableView.dataSource = self
         tableView.delegate = self
+                
+        tableView.estimatedRowHeight = 300.0
         
         let refreshControl = UIRefreshControl(frame: .zero)
         refreshControl.addTarget(self,

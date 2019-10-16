@@ -57,6 +57,17 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        super.prepareForReuse()        
+        super.prepareForReuse()
+    }
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+
+        // If the cell's size has to be exactly the content
+        // Size of the collection View, just return the
+        // collectionViewLayout's collectionViewContentSize.
+        let cellHeight = previewCollectionViewDataSource.collectionViewHeight(for: cellModel?.feedItem.item.attachments ?? []) + 314.0
+        let cellWidth = targetSize.width
+        
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }

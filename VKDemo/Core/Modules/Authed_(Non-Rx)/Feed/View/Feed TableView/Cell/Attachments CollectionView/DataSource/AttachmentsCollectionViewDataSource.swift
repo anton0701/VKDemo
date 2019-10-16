@@ -27,14 +27,17 @@ class AttachmentsCollectionViewDataSource: NSObject {
             $0.firstAttribute == .height
         }).first else { return }
         
-        let height = CGFloat(120.0)
+        collectionViewHeightConstraint.constant = collectionViewHeight(for: attachments)
+        collectionView.reloadData()
+    }
+    
+    func collectionViewHeight(for attachments: [AttachmentDto]) -> CGFloat {
+        let height = CGFloat(125.0)
         let photosCount = attachments.filter({
             $0.type == .photo
             }).count
         
-        collectionViewHeightConstraint.constant = ceil(CGFloat(photosCount) / 2.0) * height
-        
-        collectionView.reloadData()
+        return ceil(CGFloat(photosCount) / 2.0) * height
     }
 }
 
@@ -193,46 +196,9 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension AttachmentsCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = max(CGFloat(60.0), collectionView.bounds.width / 2.0 - 5.0)
+        let width = collectionView.bounds.width / 2.0 - 5.0
         let height = CGFloat(120.0)
         
         return CGSize(width: width, height: height)
-    }
-}
-
-
-class IntrinsicSizeCollectionView: UICollectionView {
-    // MARK: - lifecycle
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.setup()
-    }
-
-    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(frame: frame, collectionViewLayout: layout)
-
-        self.setup()
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if !self.bounds.size.equalTo(self.intrinsicContentSize) {
-            self.invalidateIntrinsicContentSize()
-        }
-        
-        superview?.superview?.setNeedsLayout()
-    }
-
-    override var intrinsicContentSize: CGSize {
-        get {
-            let intrinsicContentSize = self.contentSize
-            return intrinsicContentSize
-        }
-    }
-
-    // MARK: - setup
-    func setup() {
-        self.isScrollEnabled = false
-        self.bounces = false
     }
 }
