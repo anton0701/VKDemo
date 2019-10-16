@@ -19,7 +19,7 @@ struct PodcastDto: Codable {
     let date: Int
     let lyricsId: Int
     let noSearch: BoolInt
-    let isExplicit: Bool
+    let isExplicit: BoolInt?
     let podcastInfo: PodcastInfoDto
     
     
@@ -42,12 +42,14 @@ struct PodcastDto: Codable {
 struct PodcastInfoDto: Codable {
     let cover: PodcastInfoCoverDto
     let plays: Int
-    let isFavorite: Bool
+    let position: Int?
+    let isFavorite: Bool?
     let description: String
     
     private enum CodingKeys: String, CodingKey {
         case cover
         case plays
+        case position
         case isFavorite = "is_favorite"
         case description
     }

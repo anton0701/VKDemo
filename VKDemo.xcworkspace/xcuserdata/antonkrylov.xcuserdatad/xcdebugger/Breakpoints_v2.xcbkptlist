@@ -14,8 +14,8 @@
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "request(_:callbackQueue:progress:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -224,7 +224,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
                   endingLineNumber = "27"
-                  offsetFromSymbolStart = "424">
+                  offsetFromSymbolStart = "461">
                </Location>
                <Location
                   uuid = "B2BA6B51-E208-400B-AD33-F61D64747CFF - dba1bd7cfd1237cd"
@@ -239,7 +239,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
                   endingLineNumber = "29"
-                  offsetFromSymbolStart = "292">
+                  offsetFromSymbolStart = "360">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -418,38 +418,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "311C8079-3C5C-445E-8CC0-3ACA9669E99A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "setup(attachments:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8EDAA12F-951F-4408-98BF-E34F5B430B3C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "DFDB7E15-126A-430B-A2D5-7A7BE45E8C54"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -459,8 +427,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
+            landmarkName = "FeedTableViewDataSource"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -515,7 +483,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F9019F7-CBAC-4260-BC57-B9F76A2F5F59"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Photo/AttachmentPhotoCollectionViewCell.swift"
@@ -528,7 +496,7 @@
             <Locations>
                <Location
                   uuid = "6F9019F7-CBAC-4260-BC57-B9F76A2F5F59 - edbff91dbda3cfaa"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "VKDemo.AttachmentPhotoCollectionViewCell.setup(photoDto: VKDemo.PhotoDto) -&gt; ()"
@@ -543,7 +511,7 @@
                </Location>
                <Location
                   uuid = "6F9019F7-CBAC-4260-BC57-B9F76A2F5F59 - 638b37c927f40f6f"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Swift.Optional&lt;__C.UIImage&gt;, Swift.String) -&gt; () in VKDemo.AttachmentPhotoCollectionViewCell.setup(photoDto: VKDemo.PhotoDto) -&gt; ()"
@@ -563,7 +531,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F8635B59-D6C2-497B-BAC3-6C416C53AD70"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Photo/AttachmentPhotoCollectionViewCell.swift"
@@ -578,15 +546,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "62192F68-904C-4978-97ED-D4E1307007ED"
-            shouldBeEnabled = "Yes"
+            uuid = "0A7878CB-A619-45D9-980C-2F7356026A67"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "setup(attachments:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -594,16 +562,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C74B4087-0128-41A5-A2D5-BA6F09E89ADA"
+            uuid = "82EF5265-C2FA-4A14-9498-5588C6C6392A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
+            filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getFeed(success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "353164AE-715F-4A63-A75A-E1F453490359"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "parse(feedResponse:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B748EA3-6DD5-4752-B57A-C93F888A120F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "parse(feedResponse:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

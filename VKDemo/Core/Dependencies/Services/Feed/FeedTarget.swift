@@ -45,7 +45,7 @@ extension FeedTarget: TargetType {
     var task: Task {
         switch self {
         case .getFeed:
-            return .requestParameters(parameters: ["v": 5.95, "access_token": sessionManager.getAccessToken() ?? ""], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["v": 5.95, "access_token": sessionManager.getAccessToken() ?? "", "filters" : "post,photo"], encoding: URLEncoding.queryString)
         default:
             return .requestPlain
         }

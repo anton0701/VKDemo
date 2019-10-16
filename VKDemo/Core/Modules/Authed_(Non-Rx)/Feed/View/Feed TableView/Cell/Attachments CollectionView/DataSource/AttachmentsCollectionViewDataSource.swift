@@ -23,17 +23,18 @@ class AttachmentsCollectionViewDataSource: NSObject {
     func setup(attachments: [AttachmentDto]) {
         self.attachments = attachments
         
-        collectionView.reloadData()
         guard let collectionViewHeightConstraint = collectionView.constraints.filter({
             $0.firstAttribute == .height
         }).first else { return }
         
         let height = CGFloat(120.0)
         let photosCount = attachments.filter({
-            $0.photo != nil
+            $0.type == .photo
             }).count
         
         collectionViewHeightConstraint.constant = ceil(CGFloat(photosCount) / 2.0) * height
+        
+        collectionView.reloadData()
     }
 }
 
