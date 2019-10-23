@@ -28,6 +28,7 @@ class FeedTableViewCell: UITableViewCell {
     
     private var cellModel: FeedCellModel?
     
+    @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
     func setup(feedCellModel: FeedCellModel) {
         self.cellModel = feedCellModel
@@ -54,6 +55,14 @@ class FeedTableViewCell: UITableViewCell {
         }
         
         previewCollectionViewDataSource.setup(attachments: cellModel?.feedItem.item.attachments ?? [])
+        
+        let fixedWidth = textView.frame.size.width
+        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+//        textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+
+        
+        textViewHeightConstraint.constant = newSize.height
+        textView.setNeedsLayout()
     }
     
     override func prepareForReuse() {

@@ -71,8 +71,18 @@ class LikeButton: UIControl {
         return layer
     }()
     
+    private lazy var label: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "123"
+        label.frame = CGRect(x: 42, y: 11, width: 41, height: 21)
+        
+        return label
+    }()
+    
     private func addLayers() {
         [borderLayer, heartLayer].forEach { layer.addSublayer($0) }
+        addSubview(label)
     }
     
     private func removeLayersIfNeeded() {

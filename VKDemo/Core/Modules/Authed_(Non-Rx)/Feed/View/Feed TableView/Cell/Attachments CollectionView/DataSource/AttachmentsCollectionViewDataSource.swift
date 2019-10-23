@@ -28,6 +28,7 @@ class AttachmentsCollectionViewDataSource: NSObject {
         }).first else { return }
         
         collectionViewHeightConstraint.constant = collectionViewHeight(for: attachments)
+        collectionView.setNeedsLayout()
         collectionView.reloadData()
     }
     

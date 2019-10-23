@@ -35,7 +35,7 @@ extension FeedTableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
                 
-        tableView.estimatedRowHeight = 300.0
+        tableView.estimatedRowHeight = 500.0
         
         let refreshControl = UIRefreshControl(frame: .zero)
         refreshControl.addTarget(self,
@@ -64,7 +64,12 @@ extension FeedTableViewDataSource: UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let feedCellModel = feedCellModels[indexPath.row]
+//        let collectionViewHeight = ceil(CGFloat(feedCellModel.photos.count) / 2.0) * 125.0
+//        let textViewHeight
+        return UITableViewAutomaticDimension
+    }
 }
 
 // MARK: - UITableViewDelegate
