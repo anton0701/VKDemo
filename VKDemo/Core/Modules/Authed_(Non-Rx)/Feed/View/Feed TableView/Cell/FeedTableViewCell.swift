@@ -58,11 +58,8 @@ class FeedTableViewCell: UITableViewCell {
         
         let fixedWidth = textView.frame.size.width
         let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-//        textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
-
-        
         textViewHeightConstraint.constant = newSize.height
-        textView.setNeedsLayout()
+//        textView.setNeedsLayout()
     }
     
     override func prepareForReuse() {
@@ -78,5 +75,19 @@ class FeedTableViewCell: UITableViewCell {
         let cellWidth = targetSize.width
         
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+}
+
+class FeedTextView: UITextView {
+    override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        font = UIFont.systemFont(ofSize: 14.0)
+        isScrollEnabled = false
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        font = UIFont.systemFont(ofSize: 14.0)
+        isScrollEnabled = false
     }
 }

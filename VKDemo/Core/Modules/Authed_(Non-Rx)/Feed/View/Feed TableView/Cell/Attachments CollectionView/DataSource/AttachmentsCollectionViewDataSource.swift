@@ -28,12 +28,12 @@ class AttachmentsCollectionViewDataSource: NSObject {
         }).first else { return }
         
         collectionViewHeightConstraint.constant = collectionViewHeight(for: attachments)
-        collectionView.setNeedsLayout()
+//        collectionView.setNeedsLayout()
         collectionView.reloadData()
     }
     
     func collectionViewHeight(for attachments: [AttachmentDto]) -> CGFloat {
-        let height = CGFloat(125.0)
+        let height = CGFloat(120.0)
         let photosCount = attachments.filter({
             $0.type == .photo
             }).count

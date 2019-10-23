@@ -21,6 +21,21 @@ class FeedTableViewDataSource: NSObject {
         }
     }
     
+    private lazy var templateFeedTextView: UITextView = {
+        let textView = FeedTextView(frame: CGRect(x: 0.0,
+                                                  y: 0.0,
+                                                  width: tableView.frame.size.width - 32.0,
+                                                  height: 0.0))
+        return textView
+    }()
+    
+    private func templateFeedTextViewHeight(text: String) -> Double {
+        templateFeedTextView.text = text
+        let fixedWidth = templateFeedTextView.frame.size.width
+        let textViewSize = templateFeedTextView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+        return Double(textViewSize.height)
+    }
+    
     func setup(with feedItems: [FeedItem]) {
         feedCellModels = feedItems.map({ FeedCellModel(feedItem: $0) })
         tableView.reloadData()
@@ -35,7 +50,7 @@ extension FeedTableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
                 
-        tableView.estimatedRowHeight = 500.0
+        tableView.estimatedRowHeight = 300.0
         
         let refreshControl = UIRefreshControl(frame: .zero)
         refreshControl.addTarget(self,
@@ -65,10 +80,21 @@ extension FeedTableViewDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let feedCellModel = feedCellModels[indexPath.row]
-//        let collectionViewHeight = ceil(CGFloat(feedCellModel.photos.count) / 2.0) * 125.0
-//        let textViewHeight
-        return UITableViewAutomaticDimension
+        let feedCellModel = feedCellModels[indexPath.row]
+        
+        let textViewHeight = templateFeedTextViewHeight(text: feedCellModel.feedItem.item.text ?? "")
+        let collectionViewHeight = ceil(Double(feedCellModel.photos.count) / 2.0) * 125.0
+        let headerViewHeight = 82.0
+        let socialButtonsViewHeight = 58.0
+        let sumMarginsHeight = 40.0
+        
+        let overallHeight = headerViewHeight +
+                            textViewHeight +
+                            collectionViewHeight +
+                            socialButtonsViewHeight +
+                            sumMarginsHeight
+        
+        return CGFloat(overallHeight)
     }
 }
 

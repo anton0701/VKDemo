@@ -35,8 +35,8 @@ struct VideoDto: Codable {
     let isPrivate: Bool?
     let accessKey: String
     let processing: Bool?
-    let live: Bool?
-    let upcoming: Bool?
+    let live: BoolInt?
+    let upcoming: BoolInt?
     let isFavorite: Bool
     let canComment: BoolInt?
     let canRepost: BoolInt?

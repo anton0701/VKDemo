@@ -26,23 +26,23 @@
                                         <rect key="frame" x="0.0" y="0.0" width="443" height="82"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-UE-z0W" customClass="CircleImageView" customModule="VKDemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="8" width="66" height="66"/>
+                                                <rect key="frame" x="1" y="8" width="66" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="66" id="9ZN-zB-2Xh"/>
                                                     <constraint firstAttribute="width" constant="66" id="qaM-Uw-rMG"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xUq-3a-3eN">
-                                                <rect key="frame" x="82" y="21.5" width="151.5" height="39"/>
+                                                <rect key="frame" x="75" y="23" width="151.5" height="36.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwb-M6-f0g">
-                                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="23"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="678" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwb-M6-f0g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29 сентября 2019 20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGk-tO-wph">
-                                                        <rect key="frame" x="0.0" y="23" width="151.5" height="16"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="151.5" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -59,10 +59,10 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="vFn-UE-z0W" firstAttribute="leading" secondItem="UCF-Ge-2qz" secondAttribute="leading" id="643-jl-vMh"/>
+                                            <constraint firstItem="vFn-UE-z0W" firstAttribute="leading" secondItem="UCF-Ge-2qz" secondAttribute="leading" constant="1" id="643-jl-vMh"/>
                                             <constraint firstAttribute="trailing" secondItem="ZoU-IC-jOn" secondAttribute="trailing" id="6CT-8D-FIr"/>
                                             <constraint firstItem="vFn-UE-z0W" firstAttribute="centerY" secondItem="UCF-Ge-2qz" secondAttribute="centerY" id="K89-LS-6I3"/>
-                                            <constraint firstItem="xUq-3a-3eN" firstAttribute="leading" secondItem="vFn-UE-z0W" secondAttribute="trailing" constant="16" id="KfC-AF-J7p"/>
+                                            <constraint firstItem="xUq-3a-3eN" firstAttribute="leading" secondItem="vFn-UE-z0W" secondAttribute="trailing" constant="8" id="KfC-AF-J7p"/>
                                             <constraint firstItem="ZoU-IC-jOn" firstAttribute="centerY" secondItem="xUq-3a-3eN" secondAttribute="centerY" id="hmf-pN-1NW"/>
                                             <constraint firstItem="vFn-UE-z0W" firstAttribute="top" secondItem="UCF-Ge-2qz" secondAttribute="topMargin" id="lNB-kN-gzP"/>
                                             <constraint firstItem="xUq-3a-3eN" firstAttribute="centerY" secondItem="vFn-UE-z0W" secondAttribute="centerY" id="lzN-uS-C43"/>
@@ -70,11 +70,11 @@
                                             <constraint firstAttribute="height" constant="82" id="yzc-Ku-NFC"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ttJ-6b-RXQ">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ttJ-6b-RXQ" customClass="FeedTextView" customModule="VKDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="443" height="169"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="169" id="Htp-LJ-5BA"/>
+                                            <constraint firstAttribute="height" constant="169" id="791-E2-uie"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <viewLayoutGuide key="contentLayoutGuide" id="6ZM-Ii-Rxo"/>
@@ -185,7 +185,7 @@
                 <outlet property="sourceIconImageView" destination="vFn-UE-z0W" id="xc5-i8-nQJ"/>
                 <outlet property="sourceNameLabel" destination="mwb-M6-f0g" id="TwS-eN-KAj"/>
                 <outlet property="textView" destination="ttJ-6b-RXQ" id="TiF-aX-euA"/>
-                <outlet property="textViewHeightConstraint" destination="Htp-LJ-5BA" id="lKg-qV-YGW"/>
+                <outlet property="textViewHeightConstraint" destination="791-E2-uie" id="sb2-JC-Bd5"/>
             </connections>
             <point key="canvasLocation" x="178.40000000000001" y="-255.92203898050977"/>
         </tableViewCell>
