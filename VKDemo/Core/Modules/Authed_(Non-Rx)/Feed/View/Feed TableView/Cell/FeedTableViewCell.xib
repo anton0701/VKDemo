@@ -10,17 +10,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="505" id="dIU-rd-IV3" customClass="FeedTableViewCell" customModule="VKDemo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="475" height="505"/>
+            <rect key="frame" x="0.0" y="0.0" width="475" height="497"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="dIU-rd-IV3" id="F5p-KX-1uM">
-                <rect key="frame" x="0.0" y="0.0" width="475" height="505"/>
+                <rect key="frame" x="0.0" y="0.0" width="475" height="497"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXn-7H-pxn" userLabel="Rounded Bounds View">
-                        <rect key="frame" x="8" y="8" width="459" height="489"/>
+                        <rect key="frame" x="8" y="8" width="459" height="481"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJz-ii-JgI" userLabel="Main View">
-                                <rect key="frame" x="8" y="4" width="443" height="481"/>
+                                <rect key="frame" x="8" y="4" width="443" height="473"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCF-Ge-2qz" userLabel="Header View">
                                         <rect key="frame" x="0.0" y="0.0" width="443" height="82"/>
@@ -97,7 +97,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                     </collectionView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snz-6i-4wq">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snz-6i-4wq" userLabel="Social Buttons View">
                                         <rect key="frame" x="0.0" y="415" width="443" height="58"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-eP-rXR" customClass="RepliesButton" customModule="VKDemo" customModuleProvider="target">
@@ -144,7 +144,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Snz-6i-4wq" secondAttribute="trailing" id="7kY-XN-uIO"/>
                                     <constraint firstItem="ttJ-6b-RXQ" firstAttribute="leading" secondItem="iJz-ii-JgI" secondAttribute="leading" id="G08-aD-1Xe"/>
                                     <constraint firstItem="UCF-Ge-2qz" firstAttribute="leading" secondItem="iJz-ii-JgI" secondAttribute="leading" id="I9p-D4-M7r"/>
-                                    <constraint firstAttribute="bottom" secondItem="Snz-6i-4wq" secondAttribute="bottom" constant="8" id="IvO-Qq-wsx"/>
+                                    <constraint firstAttribute="bottom" secondItem="Snz-6i-4wq" secondAttribute="bottom" id="IvO-Qq-wsx"/>
                                     <constraint firstAttribute="trailing" secondItem="2Cm-X7-aFs" secondAttribute="trailing" id="PWM-tC-1uX"/>
                                     <constraint firstItem="Snz-6i-4wq" firstAttribute="top" secondItem="2Cm-X7-aFs" secondAttribute="bottom" constant="8" id="Qxu-nG-07q"/>
                                     <constraint firstAttribute="trailing" secondItem="UCF-Ge-2qz" secondAttribute="trailing" id="Wi1-GY-eSW"/>

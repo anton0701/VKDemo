@@ -89,7 +89,7 @@ extension FeedTableViewDataSource: UITableViewDataSource {
         let collectionViewHeight = ceil(Double(feedCellModel.photos.count) / 2.0) * 125.0
         let headerViewHeight = 82.0
         let socialButtonsViewHeight = 58.0
-        let sumMarginsHeight = 40.0
+        let sumMarginsHeight = 48.0
         
         let overallHeight = headerViewHeight +
                             textViewHeight +
