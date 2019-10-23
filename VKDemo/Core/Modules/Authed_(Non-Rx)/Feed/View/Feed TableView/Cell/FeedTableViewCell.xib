@@ -9,17 +9,17 @@
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="105" id="dIU-rd-IV3" customClass="FeedTableViewCell" customModule="VKDemo" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="505" id="dIU-rd-IV3" customClass="FeedTableViewCell" customModule="VKDemo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="475" height="505"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="dIU-rd-IV3" id="F5p-KX-1uM">
                 <rect key="frame" x="0.0" y="0.0" width="475" height="505"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXn-7H-pxn" userLabel="Bounds View">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXn-7H-pxn" userLabel="Rounded Bounds View">
                         <rect key="frame" x="8" y="8" width="459" height="489"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJz-ii-JgI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJz-ii-JgI" userLabel="Main View">
                                 <rect key="frame" x="8" y="4" width="443" height="481"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCF-Ge-2qz" userLabel="Header View">
@@ -180,6 +180,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="collectionViewHeightConstraint" destination="5hJ-pS-GC5" id="uwB-IY-Bbu"/>
                 <outlet property="dateAddedLabel" destination="HGk-tO-wph" id="N1u-nh-zpx"/>
                 <outlet property="previewCollectionView" destination="2Cm-X7-aFs" id="4mJ-IG-Ydz"/>
                 <outlet property="sourceIconImageView" destination="vFn-UE-z0W" id="xc5-i8-nQJ"/>

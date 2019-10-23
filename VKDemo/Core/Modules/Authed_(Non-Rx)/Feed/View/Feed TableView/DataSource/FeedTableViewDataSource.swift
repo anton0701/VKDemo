@@ -30,6 +30,9 @@ class FeedTableViewDataSource: NSObject {
     }()
     
     private func templateFeedTextViewHeight(text: String) -> Double {
+        guard text.count > 0 else {
+            return 0.0
+        }
         templateFeedTextView.text = text
         let fixedWidth = templateFeedTextView.frame.size.width
         let textViewSize = templateFeedTextView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))

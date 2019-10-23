@@ -23,12 +23,11 @@ class AttachmentsCollectionViewDataSource: NSObject {
     func setup(attachments: [AttachmentDto]) {
         self.attachments = attachments
         
-        guard let collectionViewHeightConstraint = collectionView.constraints.filter({
-            $0.firstAttribute == .height
-        }).first else { return }
+//        guard let collectionViewHeightConstraint = collectionView.constraints.filter({
+//            $0.firstAttribute == .height
+//        }).first else { return }
         
-        collectionViewHeightConstraint.constant = collectionViewHeight(for: attachments)
-//        collectionView.setNeedsLayout()
+//        collectionViewHeightConstraint.constant = collectionViewHeight(for: attachments)
         collectionView.reloadData()
     }
     

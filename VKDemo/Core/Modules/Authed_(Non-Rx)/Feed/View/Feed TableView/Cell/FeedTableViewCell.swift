@@ -29,11 +29,15 @@ class FeedTableViewCell: UITableViewCell {
     private var cellModel: FeedCellModel?
     
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
     func setup(feedCellModel: FeedCellModel) {
         self.cellModel = feedCellModel
         
-        textView.text = feedCellModel.feedItem.item.text
+        let feedText = feedCellModel.feedItem.item.text
+        let feedTextLength = feedText?.count ?? 0
+        
+        textView.text = feedText
         sourceNameLabel.text = feedCellModel.sourceName
         dateAddedLabel.text = "Date added"
         
@@ -53,12 +57,19 @@ class FeedTableViewCell: UITableViewCell {
                 strongImageView.image = image
             }, completion: nil)
         }
+                
+        if feedTextLength > 0 {
+            let fixedWidth = textView.frame.size.width
+            let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+            textViewHeightConstraint.constant = newSize.height
+        } else {
+            textViewHeightConstraint.constant = 0.0
+        }
         
+        collectionViewHeightConstraint.constant = previewCollectionViewDataSource.collectionViewHeight(for: cellModel?.feedItem.item.attachments ?? [AttachmentDto]())
+//        setNeedsDisplay()
         previewCollectionViewDataSource.setup(attachments: cellModel?.feedItem.item.attachments ?? [])
         
-        let fixedWidth = textView.frame.size.width
-        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-        textViewHeightConstraint.constant = newSize.height
 //        textView.setNeedsLayout()
     }
     
