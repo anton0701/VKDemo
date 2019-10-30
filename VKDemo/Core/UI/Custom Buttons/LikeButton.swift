@@ -15,7 +15,8 @@ class LikeButton: UIControl {
     private var isIdle: Bool = true
     
     private let fillColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
-    private let heartStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+//    private let heartStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+    private let heartStrokeColor = UIColor(white: 0.7, alpha: 1.0)
     private let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let likedFillColor = #colorLiteral(red: 0.9960784314, green: 0.4901960784, blue: 0.6980392157, alpha: 1)
     private let notLikedFillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -60,7 +61,6 @@ class LikeButton: UIControl {
             animation.fromValue = fromPath
             animation.toValue = toPath
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-//                .init(name: .easeIn)
             animation.duration = 0.6
             
             activeBackgroundLayer.add(animation, forKey: "pathAnimation")
@@ -122,7 +122,7 @@ class LikeButton: UIControl {
         layer.path = rectanglePath.cgPath
         layer.strokeColor = borderStrokeColor.cgColor
         layer.fillColor = UIColor.white.cgColor
-        layer.lineWidth = 0.25
+        layer.lineWidth = 0
         
         return layer
     }()
