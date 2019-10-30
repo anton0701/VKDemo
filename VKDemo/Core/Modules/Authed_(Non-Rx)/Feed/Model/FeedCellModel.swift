@@ -12,7 +12,7 @@ struct FeedCellModel {
     let sourceIconUrl: String
     let sourceName: String
     let dateAdded: Date
-        
+    let likes: LikesCountDto?
     let photos: [PhotoDto]
     let videos: [VideoDto]
     let audios: [AudioDto]
@@ -75,6 +75,7 @@ struct FeedCellModel {
         self.marketAlbums = feedItem.item.attachments?.compactMap({ $0.marketAlbum }) ?? [MarketAlbum]()
         self.stickers = feedItem.item.attachments?.compactMap({ $0.sticker }) ?? [Sticker]()
         self.podcasts = feedItem.item.attachments?.compactMap({ $0.podcast }) ?? [PodcastDto]()
+        self.likes = feedItem.item.likes
         // ****************** //
         
         // Likes, shares, views and info for these buttons

@@ -18,6 +18,8 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textView: UITextView!
     
+    @IBOutlet weak var likeButton: LikeButton!
+    
     @IBOutlet weak var previewCollectionView: UICollectionView! {
         didSet {
             previewCollectionViewDataSource.collectionView = previewCollectionView
@@ -41,6 +43,10 @@ class FeedTableViewCell: UITableViewCell {
         sourceNameLabel.text = feedCellModel.sourceName
         dateAddedLabel.text = "Date added"
         
+        if let likes = feedCellModel.likes {
+            likeButton.setup(likesCount: likes.count, state: .notLiked, animated: false)
+        }
+                
         feedCellModel.sourceIconUrl.getAsyncImageFromUrl { [weak self] image, url in
             guard let strongSelf = self,
                 let cellModel = strongSelf.cellModel,
@@ -67,10 +73,7 @@ class FeedTableViewCell: UITableViewCell {
         }
         
         collectionViewHeightConstraint.constant = previewCollectionViewDataSource.collectionViewHeight(for: cellModel?.feedItem.item.attachments ?? [AttachmentDto]())
-//        setNeedsDisplay()
         previewCollectionViewDataSource.setup(attachments: cellModel?.feedItem.item.attachments ?? [])
-        
-//        textView.setNeedsLayout()
     }
     
     override func prepareForReuse() {

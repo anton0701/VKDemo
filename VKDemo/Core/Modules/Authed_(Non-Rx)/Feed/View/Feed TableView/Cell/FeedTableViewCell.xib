@@ -182,6 +182,7 @@
             <connections>
                 <outlet property="collectionViewHeightConstraint" destination="5hJ-pS-GC5" id="uwB-IY-Bbu"/>
                 <outlet property="dateAddedLabel" destination="HGk-tO-wph" id="N1u-nh-zpx"/>
+                <outlet property="likeButton" destination="il7-w4-cVP" id="vYP-PE-wQE"/>
                 <outlet property="previewCollectionView" destination="2Cm-X7-aFs" id="4mJ-IG-Ydz"/>
                 <outlet property="sourceIconImageView" destination="vFn-UE-z0W" id="xc5-i8-nQJ"/>
                 <outlet property="sourceNameLabel" destination="mwb-M6-f0g" id="TwS-eN-KAj"/>

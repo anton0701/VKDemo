@@ -204,7 +204,7 @@ class LikeButton: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addLayers()
-        backgroundColor = .white
+        backgroundColor = .clear
         
         addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
@@ -212,7 +212,7 @@ class LikeButton: UIControl {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         addLayers()
-        backgroundColor = .white
+        backgroundColor = .clear
         
         addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
