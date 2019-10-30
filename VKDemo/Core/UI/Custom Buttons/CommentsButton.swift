@@ -12,8 +12,8 @@ import QuartzCore
 
 @IBDesignable
 class CommentsButton: UIControl {
-    
-    private let fillColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+//    private let fillColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+    private let fillColor = UIColor.clear
     private let strokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let likedFillColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
@@ -110,15 +110,13 @@ class CommentsButton: UIControl {
         commentsPath.addCurve(to: CGPoint(x: 22.81, y: 14.58), controlPoint1: CGPoint(x: 25.03, y: 15.76), controlPoint2: CGPoint(x: 24.05, y: 15.08))
         commentsPath.addCurve(to: CGPoint(x: 18.82, y: 13.84), controlPoint1: CGPoint(x: 21.57, y: 14.09), controlPoint2: CGPoint(x: 20.24, y: 13.84))
         commentsPath.close()
-        strokeColor.setFill()
-        commentsPath.fill()
         strokeColor.setStroke()
-        commentsPath.lineWidth = 1.0
+        commentsPath.lineWidth = 1
         commentsPath.stroke()
 
         let layer = CAShapeLayer()
         layer.path = commentsPath.cgPath
-        layer.fillColor = strokeColor.cgColor
+        layer.fillColor = fillColor.cgColor
         layer.strokeColor = strokeColor.cgColor
         layer.lineWidth = 1
         
