@@ -12,10 +12,14 @@ enum LikeState {
 @IBDesignable
 class LikeButton: UIControl {
     
-    private var isIdle: Bool = true
+    private var likeState: LikeState = LikeState.notLiked
+    private var isIdle: Bool {
+        get {
+            return (likeState == .inProgress) ? false : true
+        }
+    }
     
     private let fillColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
-//    private let heartStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let heartStrokeColor = UIColor(white: 0.7, alpha: 1.0)
     private let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let likedFillColor = #colorLiteral(red: 0.9960784314, green: 0.4901960784, blue: 0.6980392157, alpha: 1)
@@ -81,12 +85,6 @@ class LikeButton: UIControl {
             activeBackgroundLayer.mask = borderLayer
 
             break
-        }
-    }
-        
-    public var likeState: LikeState = LikeState.notLiked {
-        didSet {
-            isIdle = (likeState == .inProgress) ? false : true
         }
     }
 
