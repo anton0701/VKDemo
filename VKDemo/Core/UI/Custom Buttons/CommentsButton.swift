@@ -12,20 +12,11 @@ import QuartzCore
 
 @IBDesignable
 class CommentsButton: UIControl {
-//    private let fillColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
+    private let plashkaFillColor = UIColor.white
     private let fillColor = UIColor.clear
     private let strokeColor = UIColor(white: 0.7, alpha: 1.0)
     private let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
-    private let likedFillColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
-    private let notLikedFillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    private let blueMain = UIColor(red: 0.294, green: 0.471, blue: 0.706, alpha: 1.000)
     
-    override var frame: CGRect {
-        didSet {
-            configureLayers()
-        }
-    }
-
     private lazy var commentsIconLayer: CAShapeLayer = {
         let commentsPath = UIBezierPath()
         commentsPath.move(to: CGPoint(x: 30.29, y: 28.78))
@@ -134,7 +125,7 @@ class CommentsButton: UIControl {
 
         layer.path = rectanglePath.cgPath
         layer.strokeColor = borderStrokeColor.cgColor
-        layer.fillColor = UIColor.clear.cgColor
+        layer.fillColor = plashkaFillColor.cgColor
         layer.lineWidth = 0
         
         return layer
@@ -164,9 +155,12 @@ class CommentsButton: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addLayers()
+        backgroundColor = .clear
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        addLayers()
+        backgroundColor = .clear
     }
 }
