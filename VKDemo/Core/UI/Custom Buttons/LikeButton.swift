@@ -1,87 +1,185 @@
-//
-//  LikeButton.swift
-//  VKDemo
-//
-//  Created by Anton Krylov on 15/08/2019.
-//  Copyright © 2019 Anton Krylov. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import QuartzCore
 
+
+enum LikeState {
+    case liked
+    case notLiked
+    case inProgress
+}
+
 @IBDesignable
 class LikeButton: UIControl {
+    
+    private var isIdle: Bool = true
     
     private let fillColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let heartStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
-    private let likedFillColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+    private let likedFillColor = #colorLiteral(red: 0.9960784314, green: 0.4901960784, blue: 0.6980392157, alpha: 1)
     private let notLikedFillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     private let blueMain = UIColor(red: 0.294, green: 0.471, blue: 0.706, alpha: 1.000)
     
-    override var frame: CGRect {
+    private func showInProgress(_ show: Bool = true) {
+        if show {
+            inProgressLayer.isHidden = false
+            let pulseAnimation = CASpringAnimation(keyPath: "transform.scale")
+            pulseAnimation.duration = 0.45
+            pulseAnimation.fromValue = 1.0
+            pulseAnimation.toValue = 1.15
+            pulseAnimation.autoreverses = true
+            pulseAnimation.repeatCount = 1
+            pulseAnimation.initialVelocity = 0.5
+            pulseAnimation.damping = 0.4
+
+            let animationGroup = CAAnimationGroup()
+            animationGroup.duration = 1.1
+            animationGroup.repeatCount = .greatestFiniteMagnitude
+            animationGroup.animations = [pulseAnimation]
+
+            inProgressLayer.add(animationGroup, forKey: "pulse")
+        } else {
+            let animation = CABasicAnimation(keyPath: "transform.scale")
+            animation.toValue = 0
+            animation.duration = 0.3
+            inProgressLayer.add(animation, forKey: "escaping")
+            inProgressLayer.removeAnimation(forKey: "pulse")
+        }
+    }
+
+    private func animateTo(_ state: LikeState) {
+        switch state {
+        case .inProgress:
+            break
+        case .liked:
+            let fromPath = UIBezierPath(cgPath: activeBackgroundLayer.path!)
+            let toPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
+
+            let animation = CABasicAnimation(keyPath: "path")
+            animation.fromValue = fromPath
+            animation.toValue = toPath
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+//                .init(name: .easeIn)
+            animation.duration = 0.6
+            
+            activeBackgroundLayer.add(animation, forKey: "pathAnimation")
+            
+            activeBackgroundLayer.path = toPath.cgPath
+            activeBackgroundLayer.mask = borderLayer
+            break
+        case .notLiked:
+            let toPath = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
+            let animation = CABasicAnimation(keyPath: "path")
+            animation.toValue = toPath
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            animation.duration = 0.6
+            
+            activeBackgroundLayer.add(animation, forKey: "pathAnimation")
+            
+            activeBackgroundLayer.path = toPath.cgPath
+            activeBackgroundLayer.mask = borderLayer
+
+            break
+        }
+    }
+        
+    public var likeState: LikeState = LikeState.notLiked {
         didSet {
-            configureLayers()
+            isIdle = (likeState == .inProgress) ? false : true
         }
     }
 
     private lazy var heartLayer: CAShapeLayer = {
-        
         let heartPath = UIBezierPath()
-        heartPath.move(to: CGPoint(x: 21.85, y: 32.5))
-        heartPath.addLine(to: CGPoint(x: 20.38, y: 30.99))
-        heartPath.addCurve(to: CGPoint(x: 11.35, y: 17.8), controlPoint1: CGPoint(x: 14.92, y: 25.71), controlPoint2: CGPoint(x: 11.35, y: 22.16))
-        heartPath.addCurve(to: CGPoint(x: 17.12, y: 11.5), controlPoint1: CGPoint(x: 11.35, y: 14.25), controlPoint2: CGPoint(x: 13.87, y: 11.5))
-        heartPath.addCurve(to: CGPoint(x: 21.85, y: 13.91), controlPoint1: CGPoint(x: 18.91, y: 11.5), controlPoint2: CGPoint(x: 20.7, y: 12.42))
-        heartPath.addCurve(to: CGPoint(x: 26.57, y: 11.5), controlPoint1: CGPoint(x: 23.01, y: 12.42), controlPoint2: CGPoint(x: 24.79, y: 11.5))
-        heartPath.addCurve(to: CGPoint(x: 32.35, y: 17.8), controlPoint1: CGPoint(x: 29.83, y: 11.5), controlPoint2: CGPoint(x: 32.35, y: 14.25))
-        heartPath.addCurve(to: CGPoint(x: 23.32, y: 30.99), controlPoint1: CGPoint(x: 32.35, y: 22.16), controlPoint2: CGPoint(x: 28.78, y: 25.71))
-        heartPath.addLine(to: CGPoint(x: 21.85, y: 32.5))
+        heartPath.move(to: CGPoint(x: 21.5, y: 32))
+        heartPath.addLine(to: CGPoint(x: 20.03, y: 30.49))
+        heartPath.addCurve(to: CGPoint(x: 11, y: 17.3), controlPoint1: CGPoint(x: 14.57, y: 25.21), controlPoint2: CGPoint(x: 11, y: 21.66))
+        heartPath.addCurve(to: CGPoint(x: 16.77, y: 11), controlPoint1: CGPoint(x: 11, y: 13.75), controlPoint2: CGPoint(x: 13.52, y: 11))
+        heartPath.addCurve(to: CGPoint(x: 21.5, y: 13.41), controlPoint1: CGPoint(x: 18.56, y: 11), controlPoint2: CGPoint(x: 20.34, y: 11.92))
+        heartPath.addCurve(to: CGPoint(x: 26.22, y: 11), controlPoint1: CGPoint(x: 22.66, y: 11.92), controlPoint2: CGPoint(x: 24.44, y: 11))
+        heartPath.addCurve(to: CGPoint(x: 32, y: 17.3), controlPoint1: CGPoint(x: 29.48, y: 11), controlPoint2: CGPoint(x: 32, y: 13.75))
+        heartPath.addCurve(to: CGPoint(x: 22.97, y: 30.49), controlPoint1: CGPoint(x: 32, y: 21.66), controlPoint2: CGPoint(x: 28.43, y: 25.21))
+        heartPath.addLine(to: CGPoint(x: 21.5, y: 32))
         heartPath.close()
-        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
-        heartPath.fill()
-        heartStrokeColor.setStroke()
         heartPath.lineCapStyle = .round
-        heartPath.stroke()
 
         let layer = CAShapeLayer()
         layer.path = heartPath.cgPath
-        layer.fillColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor
+        layer.fillColor = UIColor.white.cgColor
         layer.strokeColor = heartStrokeColor.cgColor
-        layer.lineWidth = 2.0
-        
+        layer.lineWidth = 1
+
         return layer
     }()
     
     private lazy var borderLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         let rectanglePath = UIBezierPath(roundedRect: CGRect(x: 1, y: 1, width: 93, height: 42), cornerRadius: 21)
-        fillColor.setStroke()
-        rectanglePath.lineWidth = 0.5
         rectanglePath.lineCapStyle = .round
         rectanglePath.lineJoinStyle = .round
-        rectanglePath.stroke()
 
         layer.path = rectanglePath.cgPath
         layer.strokeColor = borderStrokeColor.cgColor
-        layer.fillColor = UIColor.clear.cgColor
-        layer.lineWidth = 0.5
+        layer.fillColor = UIColor.white.cgColor
+        layer.lineWidth = 0.25
         
+        return layer
+    }()
+    
+    private lazy var inProgressLayer: CALayer = {
+        let inProgressLayer = CALayer()
+        inProgressLayer.backgroundColor = likedFillColor.cgColor
+        inProgressLayer.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
+                
+        let outerHeartLayer = CAShapeLayer()
+        let outerHeartPath = UIBezierPath()
+                
+        outerHeartPath.move(to: CGPoint(x: 21.5, y: 33))
+        outerHeartPath.addLine(to: CGPoint(x: 19.89, y: 31.34))
+        outerHeartPath.addCurve(to: CGPoint(x: 10, y: 16.91), controlPoint1: CGPoint(x: 13.91, y: 25.57), controlPoint2: CGPoint(x: 10, y: 21.68))
+        outerHeartPath.addCurve(to: CGPoint(x: 16.32, y: 10), controlPoint1: CGPoint(x: 10, y: 13.01), controlPoint2: CGPoint(x: 12.76, y: 10))
+        outerHeartPath.addCurve(to: CGPoint(x: 21.5, y: 12.64), controlPoint1: CGPoint(x: 18.28, y: 10), controlPoint2: CGPoint(x: 20.23, y: 11))
+        outerHeartPath.addCurve(to: CGPoint(x: 26.67, y: 10), controlPoint1: CGPoint(x: 22.77, y: 11), controlPoint2: CGPoint(x: 24.72, y: 10))
+        outerHeartPath.addCurve(to: CGPoint(x: 33, y: 16.91), controlPoint1: CGPoint(x: 30.24, y: 10), controlPoint2: CGPoint(x: 33, y: 13.01))
+        outerHeartPath.addCurve(to: CGPoint(x: 23.11, y: 31.34), controlPoint1: CGPoint(x: 33, y: 21.68), controlPoint2: CGPoint(x: 29.09, y: 25.57))
+        outerHeartPath.addLine(to: CGPoint(x: 21.5, y: 33))
+        
+        outerHeartPath.close()
+        outerHeartPath.lineWidth = 0.1
+        outerHeartPath.lineCapStyle = .round
+        
+        outerHeartLayer.path = outerHeartPath.cgPath
+        inProgressLayer.mask = outerHeartLayer
+        inProgressLayer.isHidden = true
+        
+        return inProgressLayer
+    }()
+    
+    private lazy var activeBackgroundLayer: CAShapeLayer = {
+        let layer = CAShapeLayer()
+        
+        layer.path = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13)).cgPath
+        layer.fillColor = likedFillColor.cgColor
+        layer.strokeColor = likedFillColor.cgColor
+        layer.backgroundColor = likedFillColor.cgColor
+        layer.mask = borderLayer
+
         return layer
     }()
     
     private lazy var label: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = UIColor(white: 0.3, alpha: 1.0)
         label.text = "123"
         label.frame = CGRect(x: 42, y: 11, width: 41, height: 21)
+        label.font = UIFont.systemFont(ofSize: 13.0)
         
         return label
     }()
     
     private func addLayers() {
-        [borderLayer, heartLayer].forEach { layer.addSublayer($0) }
+        [borderLayer, activeBackgroundLayer, inProgressLayer, heartLayer].forEach { layer.addSublayer($0) }
         addSubview(label)
     }
     
@@ -95,7 +193,8 @@ class LikeButton: UIControl {
         
         for subLayer in [
           borderLayer,
-          heartLayer
+          heartLayer,
+          inProgressLayer
         ] {
             subLayer.frame = bounds
             subLayer.setNeedsDisplay()
@@ -105,9 +204,63 @@ class LikeButton: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addLayers()
+        backgroundColor = .white
+        
+        addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        addLayers()
+        backgroundColor = .white
+        
+        addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+    }
+    
+    public func setup(likesCount: Int, state: LikeState, animated: Bool) {
+        self.likeState = state
+        label.text = "\(likesCount)"
+        
+        guard animated else { return }
+        
+        switch likeState {
+        case .inProgress:
+            showInProgress(true)
+            break
+        case .liked:
+            animateTo(.liked)
+            showInProgress(false)
+        case .notLiked:
+            animateTo(.notLiked)
+            showInProgress(false)
+            break
+        }
+    }
+
+    @objc private func buttonPressed() {
+        guard isIdle else { return }
+        
+//        setup(likesCount: 92831, state: .inProgress, animated: true)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+//            self.setup(likesCount: -2, state: .liked, animated: true)
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//                self.setup(likesCount: 32, state: .notLiked, animated: true)
+//            }
+//        }
+            
+        switch likeState {
+        case .inProgress:
+            likeState = .liked
+            animateTo(.liked)
+            break
+        case .liked:
+            likeState = .notLiked
+            animateTo(.notLiked)
+            showInProgress(false)
+        case .notLiked:
+            likeState = .inProgress
+            showInProgress(true)
+            break
+        }
     }
 }

@@ -93,12 +93,15 @@
 		349F156323127711008309EE /* ImageLoadingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156223127711008309EE /* ImageLoadingCache.swift */; };
 		349F156523127763008309EE /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156423127762008309EE /* GCD.swift */; };
 		349F156723127D5A008309EE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156623127D5A008309EE /* CircleImageView.swift */; };
+		34CC2E362360E25800027789 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC2E342360E25800027789 /* CGRect+Extensions.swift */; };
+		34CC2E372360E25800027789 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC2E352360E25800027789 /* CGSize+Extensions.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
 		34D2D52D2289A815007A8113 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52C2289A815007A8113 /* AuthViewModel.swift */; };
 		34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52F2289D986007A8113 /* VkLogoView.swift */; };
 		34DE21E623128D9C001A7B9C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE21E523128D9B001A7B9C /* PlayerView.swift */; };
 		34DE21E823128E22001A7B9C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE21E723128E22001A7B9C /* UIView+Constraints.swift */; };
 		34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */; };
+		34F0ABC92369183A001D8388 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0ABC82369183A001D8388 /* Utils.swift */; };
 		36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2906D2B6071CF8C5FD822BD2 /* ChatViewInput.swift */; };
 		39AA7A4BC4E3EFD84BD41DD0 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7349F973D526317C2C448E9 /* FeedRouter.swift */; };
 		439794A3950B2DDF3E22E347 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A527030300C4B629FFE665CD /* ChatViewController.xib */; };
@@ -202,12 +205,15 @@
 		349F156223127711008309EE /* ImageLoadingCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadingCache.swift; sourceTree = "<group>"; };
 		349F156423127762008309EE /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		349F156623127D5A008309EE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		34CC2E342360E25800027789 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		34CC2E352360E25800027789 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		34D2D52C2289A815007A8113 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		34D2D52F2289D986007A8113 /* VkLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLogoView.swift; sourceTree = "<group>"; };
 		34DE21E523128D9B001A7B9C /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		34DE21E723128E22001A7B9C /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+MyPaths.swift"; sourceTree = "<group>"; };
+		34F0ABC82369183A001D8388 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		436B60AFC158E4EC98719CD9 /* Pods-VKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.debug.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F4096A4223227EB8E514 /* Pods_VKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC01E6C6F14070BA0DB98B7 /* Pods-VKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKDemo.release.xcconfig"; path = "Target Support Files/Pods-VKDemo/Pods-VKDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -389,12 +395,15 @@
 		340624A22270EEC100B39D5B /* Common&Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				34CC2E342360E25800027789 /* CGRect+Extensions.swift */,
+				34CC2E352360E25800027789 /* CGSize+Extensions.swift */,
 				349F156423127762008309EE /* GCD.swift */,
 				34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */,
 				340624802270E9A000B39D5B /* AppDelegate.swift */,
 				341F0E1822B18764007791F8 /* UI */,
 				341F0E1722B18738007791F8 /* Networking */,
 				3436A01922AC484900D8E72E /* VIPER */,
+				34F0ABC82369183A001D8388 /* Utils.swift */,
 			);
 			path = "Common&Base&Extensions";
 			sourceTree = "<group>";
@@ -961,6 +970,7 @@
 				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
 				34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
+				34CC2E372360E25800027789 /* CGSize+Extensions.swift in Sources */,
 				3436A02222AC48A400D8E72E /* ViperModuleTransitionHandler.swift in Sources */,
 				349F156523127763008309EE /* GCD.swift in Sources */,
 				3408FA5D228C743400433B61 /* UIButton+BackgroundColor.swift in Sources */,
@@ -994,6 +1004,7 @@
 				3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */,
 				3436A02D22AE731300D8E72E /* UIColor+Factory.swift in Sources */,
 				3408FA6B228C7A8100433B61 /* CoordinatorContainer.swift in Sources */,
+				34CC2E362360E25800027789 /* CGRect+Extensions.swift in Sources */,
 				3407D2562316DDA3002E2CA4 /* FeedViewOutput.swift in Sources */,
 				349F155F231267B6008309EE /* PodcastDto.swift in Sources */,
 				3407D2552316DDA3002E2CA4 /* FeedViewInput.swift in Sources */,
@@ -1032,6 +1043,7 @@
 				341F0E1F22B18966007791F8 /* PhotoDto.swift in Sources */,
 				90583B9B14D905B9D99983E8 /* ChatRouterInput.swift in Sources */,
 				B2EBCBF5A5B0A836875FF328 /* ChatRouter.swift in Sources */,
+				34F0ABC92369183A001D8388 /* Utils.swift in Sources */,
 				B6928985AAEDB89737C51659 /* ChatPresenter.swift in Sources */,
 				71B6A58A1B4F33BE6D662FE7 /* ChatViewController.swift in Sources */,
 				36B4884318471AE32BC2694F /* ChatViewInput.swift in Sources */,
