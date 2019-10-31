@@ -79,6 +79,8 @@
 		345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345530B4229C43DE0069E335 /* SignInViewController.xib */; };
 		345530B7229D84FD0069E335 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B6229D84FD0069E335 /* UserSessionManager.swift */; };
 		345530BB229DA3860069E335 /* IUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530BA229DA3860069E335 /* IUserSessionManager.swift */; };
+		34764BCA236BACB40070414A /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BC9236BACB40070414A /* MessagesManager.swift */; };
+		34764BCC236BACC20070414A /* IMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCB236BACC20070414A /* IMessagesManager.swift */; };
 		3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942422A7C2E500CC0E5B /* FeedManager.swift */; };
 		3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942622A7C2EC00CC0E5B /* IFeedManager.swift */; };
 		349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EF22AE7DC1003397DC /* FeedTarget.swift */; };
@@ -191,6 +193,8 @@
 		345530B4229C43DE0069E335 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		345530B6229D84FD0069E335 /* UserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
 		345530BA229DA3860069E335 /* IUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSessionManager.swift; sourceTree = "<group>"; };
+		34764BC9236BACB40070414A /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
+		34764BCB236BACC20070414A /* IMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMessagesManager.swift; sourceTree = "<group>"; };
 		3489942422A7C2E500CC0E5B /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		3489942622A7C2EC00CC0E5B /* IFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedManager.swift; sourceTree = "<group>"; };
 		349BB8EF22AE7DC1003397DC /* FeedTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTarget.swift; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 		340624962270EA1800B39D5B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				34764BC8236BAC970070414A /* MessagesManager */,
 				3489942322A7C2D000CC0E5B /* FeedManager */,
 				345530B9229DA3520069E335 /* UserSessionManager */,
 			);
@@ -679,6 +684,15 @@
 			path = POSO;
 			sourceTree = "<group>";
 		};
+		34764BC8236BAC970070414A /* MessagesManager */ = {
+			isa = PBXGroup;
+			children = (
+				34764BC9236BACB40070414A /* MessagesManager.swift */,
+				34764BCB236BACC20070414A /* IMessagesManager.swift */,
+			);
+			path = MessagesManager;
+			sourceTree = "<group>";
+		};
 		3489942322A7C2D000CC0E5B /* FeedManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,11 +1007,13 @@
 				349BB8F722AEC838003397DC /* VKAccessTokenPlugin.swift in Sources */,
 				3436A02922AE711A00D8E72E /* UIViewController+Style.swift in Sources */,
 				3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */,
+				34764BCA236BACB40070414A /* MessagesManager.swift in Sources */,
 				34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */,
 				3408FA6D228C7A8100433B61 /* DataContainer.swift in Sources */,
 				340624AC2270EF0F00B39D5B /* RequestResponse.swift in Sources */,
 				341F0E3222B193D8007791F8 /* GroupDto.swift in Sources */,
 				34103CE4230E39380059451A /* FeedParser.swift in Sources */,
+				34764BCC236BACC20070414A /* IMessagesManager.swift in Sources */,
 				341F0E1D22B18923007791F8 /* AttachmentDto.swift in Sources */,
 				341F0E2122B18993007791F8 /* VideoDto.swift in Sources */,
 				340624A02270ECA200B39D5B /* BaseCoordinator.swift in Sources */,

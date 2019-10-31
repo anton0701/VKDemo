@@ -24,7 +24,6 @@ class LikeButton: UIControl {
     private let borderStrokeColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 0.5)
     private let likedFillColor = #colorLiteral(red: 0.9960784314, green: 0.4901960784, blue: 0.6980392157, alpha: 1)
     private let notLikedFillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    private let blueMain = UIColor(red: 0.294, green: 0.471, blue: 0.706, alpha: 1.000)
     
     private func showInProgress(_ show: Bool = true) {
         if show {
@@ -45,10 +44,7 @@ class LikeButton: UIControl {
 
             inProgressLayer.add(animationGroup, forKey: "pulse")
         } else {
-            let animation = CABasicAnimation(keyPath: "transform.scale")
-            animation.toValue = 0
-            animation.duration = 0.3
-            inProgressLayer.add(animation, forKey: "escaping")
+            inProgressLayer.isHidden = true
             inProgressLayer.removeAnimation(forKey: "pulse")
         }
     }
@@ -58,9 +54,24 @@ class LikeButton: UIControl {
         case .inProgress:
             break
         case .liked:
-            let fromPath = UIBezierPath(cgPath: activeBackgroundLayer.path!)
+            let fromPath = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
             let toPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
-
+            let animation = CABasicAnimation(keyPath: "path")
+            animation.fromValue = fromPath.cgPath
+            animation.toValue = toPath.cgPath
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            animation.duration = 0.6
+            
+            activeBackgroundLayer.add(animation, forKey: "pathAnimation")
+            
+            activeBackgroundLayer.path = toPath.cgPath
+            activeBackgroundLayer.mask = borderLayer
+            borderLayer.fillColor = UIColor.white.cgColor
+            borderLayer.setNeedsLayout()
+            break
+        case .notLiked:
+            let fromPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
+            let toPath = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
             let animation = CABasicAnimation(keyPath: "path")
             animation.fromValue = fromPath
             animation.toValue = toPath
@@ -68,22 +79,10 @@ class LikeButton: UIControl {
             animation.duration = 0.6
             
             activeBackgroundLayer.add(animation, forKey: "pathAnimation")
-            
             activeBackgroundLayer.path = toPath.cgPath
             activeBackgroundLayer.mask = borderLayer
-            break
-        case .notLiked:
-            let toPath = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
-            let animation = CABasicAnimation(keyPath: "path")
-            animation.toValue = toPath
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-            animation.duration = 0.6
-            
-            activeBackgroundLayer.add(animation, forKey: "pathAnimation")
-            
-            activeBackgroundLayer.path = toPath.cgPath
-            activeBackgroundLayer.mask = borderLayer
-
+            borderLayer.fillColor = UIColor.white.cgColor
+            borderLayer.setNeedsLayout()
             break
         }
     }
@@ -120,7 +119,7 @@ class LikeButton: UIControl {
         layer.path = rectanglePath.cgPath
         layer.strokeColor = borderStrokeColor.cgColor
         layer.fillColor = UIColor.white.cgColor
-        layer.lineWidth = 0
+        layer.lineWidth = 0.5
         
         return layer
     }()
@@ -238,27 +237,27 @@ class LikeButton: UIControl {
     @objc private func buttonPressed() {
         guard isIdle else { return }
         
-//        setup(likesCount: 92831, state: .inProgress, animated: true)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-//            self.setup(likesCount: -2, state: .liked, animated: true)
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//                self.setup(likesCount: 32, state: .notLiked, animated: true)
-//            }
-//        }
-            
-        switch likeState {
-        case .inProgress:
-            likeState = .liked
-            animateTo(.liked)
-            break
-        case .liked:
-            likeState = .notLiked
-            animateTo(.notLiked)
-            showInProgress(false)
-        case .notLiked:
-            likeState = .inProgress
-            showInProgress(true)
-            break
+        setup(likesCount: 92831, state: .inProgress, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.setup(likesCount: -2, state: .liked, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                self.setup(likesCount: 32, state: .notLiked, animated: true)
+            }
         }
+            
+//        switch likeState {
+//        case .inProgress:
+//            likeState = .liked
+//            animateTo(.liked)
+//            break
+//        case .liked:
+//            likeState = .notLiked
+//            animateTo(.notLiked)
+//            showInProgress(false)
+//        case .notLiked:
+//            likeState = .inProgress
+//            showInProgress(true)
+//            break
+//        }
     }
 }

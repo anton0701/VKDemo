@@ -126,7 +126,7 @@ class CommentsButton: UIControl {
         layer.path = rectanglePath.cgPath
         layer.strokeColor = borderStrokeColor.cgColor
         layer.fillColor = plashkaFillColor.cgColor
-        layer.lineWidth = 0
+        layer.lineWidth = 0.5
         
         return layer
     }()
