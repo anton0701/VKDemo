@@ -81,6 +81,7 @@
 		345530BB229DA3860069E335 /* IUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530BA229DA3860069E335 /* IUserSessionManager.swift */; };
 		34764BCA236BACB40070414A /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BC9236BACB40070414A /* MessagesManager.swift */; };
 		34764BCC236BACC20070414A /* IMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCB236BACC20070414A /* IMessagesManager.swift */; };
+		34764BCF236BAD630070414A /* MessagesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCE236BAD630070414A /* MessagesTarget.swift */; };
 		3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942422A7C2E500CC0E5B /* FeedManager.swift */; };
 		3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942622A7C2EC00CC0E5B /* IFeedManager.swift */; };
 		349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EF22AE7DC1003397DC /* FeedTarget.swift */; };
@@ -195,6 +196,7 @@
 		345530BA229DA3860069E335 /* IUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSessionManager.swift; sourceTree = "<group>"; };
 		34764BC9236BACB40070414A /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		34764BCB236BACC20070414A /* IMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMessagesManager.swift; sourceTree = "<group>"; };
+		34764BCE236BAD630070414A /* MessagesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTarget.swift; sourceTree = "<group>"; };
 		3489942422A7C2E500CC0E5B /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		3489942622A7C2EC00CC0E5B /* IFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedManager.swift; sourceTree = "<group>"; };
 		349BB8EF22AE7DC1003397DC /* FeedTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTarget.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		3406249A2270EA4000B39D5B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				34764BCD236BAD4D0070414A /* Messages */,
 				349BB8EE22AE7DAD003397DC /* Feed */,
 			);
 			path = Services;
@@ -691,6 +694,14 @@
 				34764BCB236BACC20070414A /* IMessagesManager.swift */,
 			);
 			path = MessagesManager;
+			sourceTree = "<group>";
+		};
+		34764BCD236BAD4D0070414A /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				34764BCE236BAD630070414A /* MessagesTarget.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		3489942322A7C2D000CC0E5B /* FeedManager */ = {
@@ -1036,6 +1047,7 @@
 				349F156723127D5A008309EE /* CircleImageView.swift in Sources */,
 				341F0E3022B193BC007791F8 /* UserDto.swift in Sources */,
 				3408FA6F228C7A8100433B61 /* DaoContainer.swift in Sources */,
+				34764BCF236BAD630070414A /* MessagesTarget.swift in Sources */,
 				3436A02522AC48A400D8E72E /* ViperRouterProtocol.swift in Sources */,
 				3408FA6E228C7A8100433B61 /* ParserContainer.swift in Sources */,
 				3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */,

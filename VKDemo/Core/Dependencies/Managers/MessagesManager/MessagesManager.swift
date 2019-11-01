@@ -7,7 +7,27 @@
 //
 
 import Foundation
+import Moya
 
-class MessagesManager: IMessagesManager {
+class MessagesManager {
+    private let feedProvider: MoyaProvider<FeedTarget>
+    private let feedParser: IFeedParser
     
+    init(feedProvider: MoyaProvider<FeedTarget>,
+         feedParser: IFeedParser) {
+        self.feedProvider = feedProvider
+        self.feedParser = feedParser
+    }
+}
+
+extension MessagesManager: IMessagesManager {
+    func getFeed(success: @escaping ([FeedItem]) -> Void,
+                 failure: @escaping FailureClosure) {
+        _ = feedProvider.request(.getFeed, success: { (feedResponse: FeedResponse) in
+            let feedItems = self.feedParser.parse(feedResponse: feedResponse)
+            success(feedItems)
+        }) { error in
+            failure(error)
+        }
+    }
 }
