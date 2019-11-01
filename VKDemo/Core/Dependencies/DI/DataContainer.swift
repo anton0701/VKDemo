@@ -11,6 +11,7 @@ import Moya
 
 protocol DataContainerProtocol {
     var feedManager: IFeedManager { get }
+    var messagesManager: IMessagesManager { get }
 }
 
 class DataContainer {
@@ -27,16 +28,28 @@ class DataContainer {
         let authPlugin = VKAccessTokenPlugin(userSessionManager: core.sessionManager)
         let loggerPlugin = NetworkLoggerPlugin(verbose: true)
         let feedProvider = MoyaProvider<FeedTarget>(plugins: [authPlugin, loggerPlugin])
+        
         serviceContainer.add(services: feedProvider)
         
         let feedManager = FeedManager(feedProvider: feedProvider,
                                       feedParser: parser.feedParser)
         serviceContainer.add(services: feedManager)
+        
+        let messagesProvider = MoyaProvider<MessagesTarget>(plugins: [authPlugin, loggerPlugin])
+        serviceContainer.add(services: messagesProvider)
+        
+        let messagesManager = MessagesManager(messagesProvider: messagesProvider,
+                                              messagesParser: parser.messagesParser)
+        serviceContainer.add(services: messagesManager)
     }
 }
 
 extension DataContainer: DataContainerProtocol {
+    var messagesManager: IMessagesManager {
+        serviceContainer.get(service: MessagesManager.self)!
+    }
+    
     var feedManager: IFeedManager {
         return serviceContainer.get(service: FeedManager.self)!
-    }
+    }    
 }

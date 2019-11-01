@@ -11,10 +11,10 @@ import Moya
 
 class MessagesManager {
     private let messagesProvider: MoyaProvider<MessagesTarget>
-    private let messagesParser: IFeedParser
+    private let messagesParser: IMessagesParser
     
     init(messagesProvider: MoyaProvider<MessagesTarget>,
-               messagesParser: IFeedParser) {
+               messagesParser: IMessagesParser) {
         self.messagesProvider = messagesProvider
         self.messagesParser = messagesParser
     }

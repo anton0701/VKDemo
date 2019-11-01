@@ -10,10 +10,15 @@ import Foundation
 
 protocol ParserContainerProtocol {
     var feedParser: IFeedParser { get }
+    var messagesParser: IMessagesParser { get }
 }
 
 class ParserContainer: ParserContainerProtocol {
     var feedParser: IFeedParser {
         return FeedParser()
+    }
+    
+    var messagesParser: IMessagesParser {
+        return MessagesParser()
     }
 }
