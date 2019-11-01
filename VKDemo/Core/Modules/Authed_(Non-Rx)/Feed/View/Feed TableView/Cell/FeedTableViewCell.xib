@@ -19,22 +19,6 @@
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXn-7H-pxn" userLabel="Rounded Bounds View">
                         <rect key="frame" x="8" y="8" width="459" height="470"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-qa-MUa" userLabel="Shadow View">
-                                <rect key="frame" x="0.0" y="0.0" width="459" height="470"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                        <size key="value" width="-15" height="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJz-ii-JgI" userLabel="Main View">
                                 <rect key="frame" x="8" y="4" width="443" height="462"/>
                                 <subviews>
@@ -103,7 +87,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <viewLayoutGuide key="contentLayoutGuide" id="6ZM-Ii-Rxo"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="uHX-iC-GB0"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -196,18 +180,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iJz-ii-JgI" firstAttribute="leading" secondItem="jXn-7H-pxn" secondAttribute="leading" constant="8" id="2yq-ru-21j"/>
-                            <constraint firstItem="mcI-qa-MUa" firstAttribute="leading" secondItem="jXn-7H-pxn" secondAttribute="leading" id="8aW-KJ-ARd"/>
                             <constraint firstAttribute="bottom" secondItem="iJz-ii-JgI" secondAttribute="bottom" constant="4" id="8td-Yn-gKy"/>
                             <constraint firstAttribute="trailing" secondItem="iJz-ii-JgI" secondAttribute="trailing" constant="8" id="9zc-jr-vW0"/>
-                            <constraint firstItem="mcI-qa-MUa" firstAttribute="top" secondItem="jXn-7H-pxn" secondAttribute="top" id="GDu-b8-w3Y"/>
-                            <constraint firstAttribute="trailing" secondItem="mcI-qa-MUa" secondAttribute="trailing" id="Iv5-qx-8ER"/>
-                            <constraint firstAttribute="bottom" secondItem="mcI-qa-MUa" secondAttribute="bottom" id="iDn-Aw-WAY"/>
                             <constraint firstItem="iJz-ii-JgI" firstAttribute="top" secondItem="jXn-7H-pxn" secondAttribute="top" constant="4" id="zrC-fQ-Fy6"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="16"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                <size key="value" width="2" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
