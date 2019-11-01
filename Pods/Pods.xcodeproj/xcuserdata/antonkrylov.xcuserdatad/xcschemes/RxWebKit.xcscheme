@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "263408BCC875AC5F01DD8866224090AF"
+               BlueprintIdentifier = "76448663D1B6EC9FE694FEDFDC3BF785"
                BuildableName = "RxWebKit.framework"
                BlueprintName = "RxWebKit"
                ReferencedContainer = "container:Pods.xcodeproj">

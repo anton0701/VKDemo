@@ -1,5 +1,11 @@
+platform :ios, '12.0'
+supports_swift_versions '>= 4.2'
+
+use_frameworks!
+
+source 'https://cdn.cocoapods.org/'
+
 target 'VKDemo' do
-  use_frameworks!
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxAlamofire'
@@ -7,4 +13,5 @@ target 'VKDemo' do
   pod 'Reachability'
   pod 'Moya/RxSwift'
   pod 'RxWebKit'
+  pod 'SkeletonView'
 end

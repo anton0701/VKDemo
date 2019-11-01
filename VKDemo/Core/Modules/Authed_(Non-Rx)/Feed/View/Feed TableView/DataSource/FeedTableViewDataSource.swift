@@ -70,19 +70,21 @@ extension FeedTableViewDataSource {
 // MARK: - UITableViewDataSource
 extension FeedTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedCellModels.count
+        return 1//feedCellModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? FeedTableViewCell else {
             return UITableViewCell()
         }
-        let feedCellModel = feedCellModels[indexPath.row]
-        cell.setup(feedCellModel: feedCellModel)
+//        let feedCellModel = feedCellModels[indexPath.row]
+//        cell.setup(feedCellModel: feedCellModel)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        82+169+44+52
+        return 347.0
         let feedCellModel = feedCellModels[indexPath.row]
         
         let textViewHeight = templateFeedTextViewHeight(text: feedCellModel.feedItem.item.text ?? "")

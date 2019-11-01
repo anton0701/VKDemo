@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SkeletonView
 
 class FeedTableViewCell: UITableViewCell {
     static let cellName: String = String(describing: FeedTableViewCell.self)
@@ -95,6 +96,22 @@ class FeedTableViewCell: UITableViewCell {
         let cellWidth = targetSize.width
         
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        showSkeleton()
+    }
+    
+    private func showSkeleton() {
+        textView.showAnimatedGradientSkeleton()
+        sourceIconImageView.showAnimatedGradientSkeleton()
+        sourceNameLabel.showAnimatedGradientSkeleton()
+        dateAddedLabel.showAnimatedGradientSkeleton()
+        likeButton.showAnimatedGradientSkeleton()
+        commentsButton.showAnimatedGradientSkeleton()
+        repostsButton.showAnimatedGradientSkeleton()
+        previewCollectionView.showAnimatedGradientSkeleton()
     }
 }
 

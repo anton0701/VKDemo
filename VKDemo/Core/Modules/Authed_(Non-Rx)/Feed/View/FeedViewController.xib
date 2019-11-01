@@ -24,7 +24,7 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="4m4-Um-m8c" firstAttribute="trailing" secondItem="jNa-Uf-M1q" secondAttribute="trailing" id="Och-bX-kER"/>
                 <constraint firstItem="jNa-Uf-M1q" firstAttribute="leading" secondItem="4m4-Um-m8c" secondAttribute="leading" id="Plo-X0-vMf"/>
