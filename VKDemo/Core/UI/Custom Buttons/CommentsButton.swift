@@ -131,8 +131,19 @@ class CommentsButton: UIControl {
         return layer
     }()
     
+    private lazy var label: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor(white: 0.3, alpha: 1.0)
+        label.text = "123"
+        label.frame = CGRect(x: 42, y: 11, width: 41, height: 21)
+        label.font = UIFont.systemFont(ofSize: 13.0)
+        
+        return label
+    }()
+    
     private func addLayers() {
         [borderLayer, commentsIconLayer].forEach { layer.addSublayer($0) }
+        addSubview(label)
     }
     
     private func removeLayersIfNeeded() {
