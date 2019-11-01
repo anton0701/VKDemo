@@ -118,4 +118,8 @@ class RepliesButton: UIControl {
         addLayers()
         backgroundColor = .clear
     }
+    
+    public func setup(repliesCount: Int) {
+        countLabel.text = "\(repliesCount)"
+    }
 }

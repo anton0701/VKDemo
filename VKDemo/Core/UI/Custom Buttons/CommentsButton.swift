@@ -174,4 +174,8 @@ class CommentsButton: UIControl {
         addLayers()
         backgroundColor = .clear
     }
+    
+    public func setup(commentsCount: Int) {
+        countLabel.text = "\(commentsCount)"
+    }
 }
