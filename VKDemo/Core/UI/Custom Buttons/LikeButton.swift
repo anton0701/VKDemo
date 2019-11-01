@@ -54,24 +54,26 @@ class LikeButton: UIControl {
         case .inProgress:
             break
         case .liked:
-            let fromPath = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
-            let toPath = UIBezierPath(roundedRect: CGRect(x: 1.5, y: 1.5, width: 92, height: 41), cornerRadius: 20.5)
-//                UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
+            let fromPath =
+                UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
+            let toPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
             let animation = CABasicAnimation(keyPath: "path")
+            activeBackgroundLayer.mask = borderLayer2
             animation.fromValue = fromPath.cgPath
             animation.toValue = toPath.cgPath
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
             animation.duration = 0.6
             
             activeBackgroundLayer.add(animation, forKey: "pathAnimation")
             
             activeBackgroundLayer.path = toPath.cgPath
-            borderLayer.fillColor = UIColor.white.cgColor
+            borderLayer.fillColor = UIColor.clear.cgColor
             borderLayer.setNeedsLayout()
             break
         case .notLiked:
             let fromPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
-            let toPath = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
+            let toPath =
+                UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
             let animation = CABasicAnimation(keyPath: "path")
             animation.fromValue = fromPath
             animation.toValue = toPath
@@ -80,7 +82,7 @@ class LikeButton: UIControl {
             
             activeBackgroundLayer.add(animation, forKey: "pathAnimation")
             activeBackgroundLayer.path = toPath.cgPath
-            borderLayer.fillColor = UIColor.white.cgColor
+            borderLayer.fillColor = UIColor.clear.cgColor
             borderLayer.setNeedsLayout()
             break
         }
@@ -114,14 +116,39 @@ class LikeButton: UIControl {
         let rectanglePath = UIBezierPath(roundedRect: CGRect(x: 1, y: 1, width: 93, height: 42), cornerRadius: 21)
         rectanglePath.lineCapStyle = .round
         rectanglePath.lineJoinStyle = .round
+        UIColor.clear.setFill()
+        rectanglePath.fill()
 
         layer.path = rectanglePath.cgPath
         layer.strokeColor = borderStrokeColor.cgColor
         layer.fillColor = UIColor.white.cgColor
         layer.lineWidth = 0.5
         
+        layer.backgroundColor  = UIColor.clear.cgColor
+        
         return layer
     }()
+    
+    private lazy var borderLayer2: CAShapeLayer = {
+        let layer = CAShapeLayer()
+        let rectanglePath = UIBezierPath(roundedRect: CGRect(x: 1.5, y: 1.5, width: 92, height: 41), cornerRadius: 20.5)
+        rectanglePath.lineCapStyle = .round
+        rectanglePath.lineJoinStyle = .round
+        UIColor.clear.setFill()
+        rectanglePath.fill()
+
+        layer.path = rectanglePath.cgPath
+        layer.strokeColor = borderStrokeColor.cgColor
+        layer.fillColor = UIColor.white.cgColor
+        layer.lineWidth = 0.5
+        
+        layer.backgroundColor  = UIColor.clear.cgColor
+        
+        return layer
+    }()
+
+    
+    
     
     private lazy var inProgressLayer: CALayer = {
         let inProgressLayer = CALayer()
@@ -155,7 +182,9 @@ class LikeButton: UIControl {
     private lazy var activeBackgroundLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         
-        layer.path = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13)).cgPath
+        layer.path =
+//            UIBezierPath(ovalIn: CGRect(x: 47.25, y: 21.25, width: 0, height: 0)).cgPath
+            UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13)).cgPath
         layer.fillColor = likedFillColor.cgColor
         layer.strokeColor = likedFillColor.cgColor
         layer.backgroundColor = likedFillColor.cgColor
@@ -174,7 +203,7 @@ class LikeButton: UIControl {
     }()
     
     private func addLayers() {
-        [borderLayer, activeBackgroundLayer, inProgressLayer, heartLayer].forEach { layer.addSublayer($0) }
+        [activeBackgroundLayer, borderLayer, borderLayer2, inProgressLayer, heartLayer].forEach { layer.addSublayer($0) }
         addSubview(countLabel)
     }
     
@@ -184,16 +213,8 @@ class LikeButton: UIControl {
     
     private func configureLayers() {
         removeLayersIfNeeded()
+        borderLayer.backgroundColor = UIColor.clear.cgColor
         addLayers()
-        
-        for subLayer in [
-          borderLayer,
-          heartLayer,
-          inProgressLayer
-        ] {
-            subLayer.frame = bounds
-            subLayer.setNeedsDisplay()
-        }
     }
         
     override init(frame: CGRect) {
@@ -238,7 +259,7 @@ class LikeButton: UIControl {
         setup(likesCount: 92831, state: .inProgress, animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.setup(likesCount: -2, state: .liked, animated: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                 self.setup(likesCount: 32, state: .notLiked, animated: true)
             }
         }
