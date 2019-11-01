@@ -70,23 +70,29 @@ extension FeedTableViewDataSource {
 // MARK: - UITableViewDataSource
 extension FeedTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//feedCellModels.count
+        return feedCellModels.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? FeedTableViewCell else {
             return UITableViewCell()
         }
-//        let feedCellModel = feedCellModels[indexPath.row]
-//        cell.setup(feedCellModel: feedCellModel)
+        
+        if indexPath.row < feedCellModels.count {
+            let feedCellModel = feedCellModels[indexPath.row]
+            cell.setup(feedCellModel: feedCellModel)
+        } else {
+            cell.showSkeleton()
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        82+169+44+52
-        return 347.0
-        let feedCellModel = feedCellModels[indexPath.row]
+        if indexPath.row >= feedCellModels.count { return 347.0 }
         
+        let feedCellModel = feedCellModels[indexPath.row]
         let textViewHeight = templateFeedTextViewHeight(text: feedCellModel.feedItem.item.text ?? "")
         let collectionViewHeight = ceil(Double(feedCellModel.photos.count) / 2.0) * 125.0
         let headerViewHeight = 82.0

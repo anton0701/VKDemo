@@ -85,6 +85,7 @@ class FeedTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        hideSkeleton()
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
@@ -98,12 +99,8 @@ class FeedTableViewCell: UITableViewCell {
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        showSkeleton()
-    }
     
-    private func showSkeleton() {
+    func showSkeleton() {
         textView.showAnimatedGradientSkeleton()
         sourceIconImageView.showAnimatedGradientSkeleton()
         sourceNameLabel.showAnimatedGradientSkeleton()
@@ -112,6 +109,17 @@ class FeedTableViewCell: UITableViewCell {
         commentsButton.showAnimatedGradientSkeleton()
         repostsButton.showAnimatedGradientSkeleton()
         previewCollectionView.showAnimatedGradientSkeleton()
+    }
+    
+    func hideSkeleton() {
+        textView.hideSkeleton()
+        sourceIconImageView.hideSkeleton()
+        sourceNameLabel.hideSkeleton()
+        dateAddedLabel.hideSkeleton()
+        likeButton.hideSkeleton()
+        commentsButton.hideSkeleton()
+        repostsButton.hideSkeleton()
+        previewCollectionView.hideSkeleton()
     }
 }
 
