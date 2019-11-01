@@ -199,54 +199,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B2BA6B51-E208-400B-AD33-F61D64747CFF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "parse(feedResponse:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B2BA6B51-E208-400B-AD33-F61D64747CFF - cb7c70d92d421545"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VKDemo.FeedParser.parse(feedResponse: VKDemo.FeedResponse) -&gt; Swift.Array&lt;VKDemo.FeedItem&gt;"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "461">
-               </Location>
-               <Location
-                  uuid = "B2BA6B51-E208-400B-AD33-F61D64747CFF - dba1bd7cfd1237cd"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VKDemo.FeedItemDto) -&gt; () in VKDemo.FeedParser.parse(feedResponse: VKDemo.FeedResponse) -&gt; Swift.Array&lt;VKDemo.FeedItem&gt;"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "360">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "AD0B6ED7-2ECA-486A-B299-E91B9D1B8099"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -540,38 +492,6 @@
             startingLineNumber = "27"
             endingLineNumber = "27"
             landmarkName = "getFeed(success:failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "353164AE-715F-4A63-A75A-E1F453490359"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "parse(feedResponse:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2B748EA3-6DD5-4752-B57A-C93F888A120F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Dependencies/Parsers/FeedParser.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "parse(feedResponse:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

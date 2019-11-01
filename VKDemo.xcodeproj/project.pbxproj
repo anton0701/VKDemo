@@ -83,6 +83,7 @@
 		34764BCC236BACC20070414A /* IMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCB236BACC20070414A /* IMessagesManager.swift */; };
 		34764BCF236BAD630070414A /* MessagesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCE236BAD630070414A /* MessagesTarget.swift */; };
 		34764BD1236BAF4C0070414A /* ConversationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BD0236BAF4C0070414A /* ConversationsResponse.swift */; };
+		34764BD3236BBEB70070414A /* MessagesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BD2236BBEB70070414A /* MessagesParser.swift */; };
 		3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942422A7C2E500CC0E5B /* FeedManager.swift */; };
 		3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942622A7C2EC00CC0E5B /* IFeedManager.swift */; };
 		349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EF22AE7DC1003397DC /* FeedTarget.swift */; };
@@ -199,6 +200,7 @@
 		34764BCB236BACC20070414A /* IMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMessagesManager.swift; sourceTree = "<group>"; };
 		34764BCE236BAD630070414A /* MessagesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTarget.swift; sourceTree = "<group>"; };
 		34764BD0236BAF4C0070414A /* ConversationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsResponse.swift; sourceTree = "<group>"; };
+		34764BD2236BBEB70070414A /* MessagesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesParser.swift; sourceTree = "<group>"; };
 		3489942422A7C2E500CC0E5B /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		3489942622A7C2EC00CC0E5B /* IFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedManager.swift; sourceTree = "<group>"; };
 		349BB8EF22AE7DC1003397DC /* FeedTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTarget.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				34103CE3230E39380059451A /* FeedParser.swift */,
+				34764BD2236BBEB70070414A /* MessagesParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -995,6 +998,7 @@
 				3436A01422AC1BB200D8E72E /* MainTabBarCoordinator.swift in Sources */,
 				34DE21E623128D9C001A7B9C /* PlayerView.swift in Sources */,
 				3436A02122AC48A400D8E72E /* ViperModuleInput.swift in Sources */,
+				34764BD3236BBEB70070414A /* MessagesParser.swift in Sources */,
 				345530B3229C43B30069E335 /* SignInViewModel.swift in Sources */,
 				34E5BD1D2305D23600EB05D4 /* UIBezierPath+MyPaths.swift in Sources */,
 				340624AB2270EF0F00B39D5B /* RequestError.swift in Sources */,
