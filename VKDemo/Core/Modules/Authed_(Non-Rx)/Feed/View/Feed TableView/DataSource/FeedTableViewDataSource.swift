@@ -83,6 +83,7 @@ extension FeedTableViewDataSource: UITableViewDataSource {
             cell.setup(feedCellModel: feedCellModel)
         } else {
             cell.showSkeleton()
+            cell.hideCollectionView()
         }
         
         return cell

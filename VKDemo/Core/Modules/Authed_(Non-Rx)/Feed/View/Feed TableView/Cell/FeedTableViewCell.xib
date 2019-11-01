@@ -118,7 +118,7 @@
                                         </collectionViewFlowLayout>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkh-Yj-lLz" userLabel="LightGray Strip">
-                                        <rect key="frame" x="-8" y="269.5" width="459" height="0.5"/>
+                                        <rect key="frame" x="-8" y="267.5" width="459" height="0.5"/>
                                         <color key="backgroundColor" red="0.6705882353" green="0.67000001669999998" blue="0.67000001669999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="DZb-lK-bSG"/>
@@ -173,7 +173,7 @@
                                     <constraint firstItem="ttJ-6b-RXQ" firstAttribute="leading" secondItem="iJz-ii-JgI" secondAttribute="leading" id="G08-aD-1Xe"/>
                                     <constraint firstItem="k0C-B6-bs3" firstAttribute="top" secondItem="UCF-Ge-2qz" secondAttribute="bottom" id="Gxd-fB-8m4"/>
                                     <constraint firstItem="UCF-Ge-2qz" firstAttribute="leading" secondItem="iJz-ii-JgI" secondAttribute="leading" id="I9p-D4-M7r"/>
-                                    <constraint firstItem="Snz-6i-4wq" firstAttribute="top" secondItem="lkh-Yj-lLz" secondAttribute="bottom" constant="5" id="IM1-Vh-pbx"/>
+                                    <constraint firstItem="Snz-6i-4wq" firstAttribute="top" secondItem="lkh-Yj-lLz" secondAttribute="bottom" constant="7" id="IM1-Vh-pbx"/>
                                     <constraint firstAttribute="trailing" secondItem="2Cm-X7-aFs" secondAttribute="trailing" id="PWM-tC-1uX"/>
                                     <constraint firstItem="k0C-B6-bs3" firstAttribute="leading" secondItem="iJz-ii-JgI" secondAttribute="leading" constant="-8" id="TMl-aI-4jG"/>
                                     <constraint firstAttribute="trailing" secondItem="lkh-Yj-lLz" secondAttribute="trailing" constant="-8" id="V30-Ms-MYu"/>
@@ -181,7 +181,7 @@
                                     <constraint firstItem="Snz-6i-4wq" firstAttribute="leading" secondItem="iJz-ii-JgI" secondAttribute="leading" id="bNM-vZ-pQd"/>
                                     <constraint firstAttribute="bottom" secondItem="Snz-6i-4wq" secondAttribute="bottom" constant="3.5" id="bUy-rA-9dV"/>
                                     <constraint firstItem="lkh-Yj-lLz" firstAttribute="leading" secondItem="iJz-ii-JgI" secondAttribute="leading" constant="-8" id="dkS-33-jA8"/>
-                                    <constraint firstItem="lkh-Yj-lLz" firstAttribute="top" secondItem="2Cm-X7-aFs" secondAttribute="bottom" constant="5" id="eCI-mD-gdw"/>
+                                    <constraint firstItem="lkh-Yj-lLz" firstAttribute="top" secondItem="2Cm-X7-aFs" secondAttribute="bottom" constant="3" id="eCI-mD-gdw"/>
                                     <constraint firstItem="ttJ-6b-RXQ" firstAttribute="top" secondItem="k0C-B6-bs3" secondAttribute="bottom" constant="5" id="qSK-QO-URN"/>
                                     <constraint firstItem="k0C-B6-bs3" firstAttribute="centerX" secondItem="iJz-ii-JgI" secondAttribute="centerX" id="tWK-iG-K3N"/>
                                     <constraint firstAttribute="trailing" secondItem="ttJ-6b-RXQ" secondAttribute="trailing" id="yE8-TW-2Je"/>

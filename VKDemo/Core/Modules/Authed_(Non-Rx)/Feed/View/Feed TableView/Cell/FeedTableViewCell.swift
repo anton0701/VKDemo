@@ -121,6 +121,10 @@ class FeedTableViewCell: UITableViewCell {
         repostsButton.hideSkeleton()
         previewCollectionView.hideSkeleton()
     }
+    
+    func hideCollectionView() {
+        collectionViewHeightConstraint.constant = 0.0
+    }
 }
 
 class FeedTextView: UITextView {
