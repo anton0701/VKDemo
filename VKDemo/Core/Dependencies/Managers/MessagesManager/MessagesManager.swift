@@ -10,34 +10,25 @@ import Foundation
 import Moya
 
 class MessagesManager {
-    private let feedProvider: MoyaProvider<MessagesTarget>
-    private let feedParser: IFeedParser
+    private let messagesProvider: MoyaProvider<MessagesTarget>
+    private let messagesParser: IFeedParser
     
-    init(feedProvider: MoyaProvider<FeedTarget>,
-         feedParser: IFeedParser) {
-        self.feedProvider = feedProvider
-        self.feedParser = feedParser
+    init(messagesProvider: MoyaProvider<MessagesTarget>,
+               messagesParser: IFeedParser) {
+        self.messagesProvider = messagesProvider
+        self.messagesParser = messagesParser
     }
 }
 
 extension MessagesManager: IMessagesManager {
-    func getFeed(success: @escaping ([FeedItem]) -> Void,
-                 failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.getFeed, success: { (feedResponse: FeedResponse) in
-            let feedItems = self.feedParser.parse(feedResponse: feedResponse)
-            success(feedItems)
-        }) { error in
-            failure(error)
-        }
-    }
-    
-    func getConversations(success: @escaping (Dictionary<String, Any>) -> Void,
+    func getConversations(success: @escaping ([FeedItem]) -> Void,
                           failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.getFeed, success: { (feedResponse: FeedResponse) in
-//            let feedItems = self.feedParser.parse(feedResponse: feedResponse)
-//            success(feedResponse.)
-        }) { error in
-            failure(error)
-        }
+        
+        _ = messagesProvider.request(.getConversations, success: { (conversationsResponse: ConversationsResponse) in
+            print("HOORAY!!!!!!! CONVERSATIONS ARE OK")
+        }, failure: { error in
+            print("OMG! SO BAD! CONVERSATIONS FAILED !! ERROR:")
+            print(error)
+        })
     }
 }
