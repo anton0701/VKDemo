@@ -140,7 +140,7 @@ class LikeButton: UIControl {
         layer.path = rectanglePath.cgPath
         layer.strokeColor = borderStrokeColor.cgColor
         layer.fillColor = UIColor.white.cgColor
-        layer.lineWidth = 0.5
+        layer.lineWidth = 0
         
         layer.backgroundColor  = UIColor.clear.cgColor
         
