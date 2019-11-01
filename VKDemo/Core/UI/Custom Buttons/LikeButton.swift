@@ -55,7 +55,8 @@ class LikeButton: UIControl {
             break
         case .liked:
             let fromPath = UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
-            let toPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
+            let toPath = UIBezierPath(roundedRect: CGRect(x: 1.5, y: 1.5, width: 92, height: 41), cornerRadius: 20.5)
+//                UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
             let animation = CABasicAnimation(keyPath: "path")
             animation.fromValue = fromPath.cgPath
             animation.toValue = toPath.cgPath
@@ -65,7 +66,6 @@ class LikeButton: UIControl {
             activeBackgroundLayer.add(animation, forKey: "pathAnimation")
             
             activeBackgroundLayer.path = toPath.cgPath
-            activeBackgroundLayer.mask = borderLayer
             borderLayer.fillColor = UIColor.white.cgColor
             borderLayer.setNeedsLayout()
             break
@@ -80,7 +80,6 @@ class LikeButton: UIControl {
             
             activeBackgroundLayer.add(animation, forKey: "pathAnimation")
             activeBackgroundLayer.path = toPath.cgPath
-            activeBackgroundLayer.mask = borderLayer
             borderLayer.fillColor = UIColor.white.cgColor
             borderLayer.setNeedsLayout()
             break
@@ -160,7 +159,6 @@ class LikeButton: UIControl {
         layer.fillColor = likedFillColor.cgColor
         layer.strokeColor = likedFillColor.cgColor
         layer.backgroundColor = likedFillColor.cgColor
-        layer.mask = borderLayer
 
         return layer
     }()
