@@ -58,9 +58,9 @@ struct CanWriteDto: Codable {
 struct ChatSettingsDto: Codable {
     let membersCount: Int
     let title: String
-    let pinnedMessage: Bool?
+    let pinnedMessage: PinnedMessageDto
     let state: String
-    let photo: Bool?
+    let photo: ChatPhotoDto
     let activeIds: [Int]
     let isGroupChannel: BoolInt
 
@@ -76,5 +76,53 @@ struct ChatSettingsDto: Codable {
     }
 }
 
+struct PinnedMessageDto: Codable {
+    let id: Int
+    let date: Int
+    let fromId: Int
+    let text: String
+    let attachments: String // TODO: Struct
+    let geo: GeoDto
+}
+
+struct ChatPhotoDto: Codable {
+    let photo50: String?
+    let photo100: String?
+    let photo200: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case photo50 = "photo_50"
+        case photo100 = "photo_100"
+        case photo200 = "photo_200"
+    }
+}
+
+struct GeoDto: Codable {
+    let type: String
+    let coordinates: String
+    let place: GeoPlaceDto
+}
+
+struct GeoPlaceDto: Codable {
+    let id: Int
+    let title: String
+    let latitude: Double
+    let longitude: Double
+    let created: Int
+    let iconUrl: String
+    let country: String
+    let city: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case latitude
+        case longitude
+        case created
+        case iconUrl = "icon"
+        case country
+        case city
+    }
+}
 
 
