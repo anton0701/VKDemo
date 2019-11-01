@@ -23,10 +23,6 @@ class ChatPresenter {
 
 extension ChatPresenter: ChatViewOutput {
     func viewLoaded() {
-        messagesManager.getConversations(success: { feedItem in
-            
-        }) { error in
-            
-        }
+        
     }
 }
