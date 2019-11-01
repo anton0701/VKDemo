@@ -13,6 +13,8 @@ struct FeedCellModel {
     let sourceName: String
     let dateAdded: Date
     let likes: LikesCountDto?
+    let comments: CommentsCountDto?
+    let reposts: RepostCountDto?
     let photos: [PhotoDto]
     let videos: [VideoDto]
     let audios: [AudioDto]
@@ -76,6 +78,8 @@ struct FeedCellModel {
         self.stickers = feedItem.item.attachments?.compactMap({ $0.sticker }) ?? [Sticker]()
         self.podcasts = feedItem.item.attachments?.compactMap({ $0.podcast }) ?? [PodcastDto]()
         self.likes = feedItem.item.likes
+        self.comments = feedItem.item.comments
+        self.reposts = feedItem.item.reposts
         // ****************** //
         
         // Likes, shares, views and info for these buttons

@@ -47,7 +47,7 @@
 		3408FA78228C9B0200433B61 /* UIViewController+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408FA77228C9B0200433B61 /* UIViewController+Init.swift */; };
 		3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3408FA79228C9B5700433B61 /* AuthViewController.xib */; };
 		34103CE0230B52720059451A /* CommentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34103CDF230B52720059451A /* CommentsButton.swift */; };
-		34103CE2230B52810059451A /* RepliesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34103CE1230B52810059451A /* RepliesButton.swift */; };
+		34103CE2230B52810059451A /* RepostsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34103CE1230B52810059451A /* RepostsButton.swift */; };
 		34103CE4230E39380059451A /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34103CE3230E39380059451A /* FeedParser.swift */; };
 		341F0E1B22B1879A007791F8 /* BoolInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F0E1A22B1879A007791F8 /* BoolInt.swift */; };
 		341F0E1D22B18923007791F8 /* AttachmentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F0E1C22B18923007791F8 /* AttachmentDto.swift */; };
@@ -164,7 +164,7 @@
 		3408FA77228C9B0200433B61 /* UIViewController+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Init.swift"; sourceTree = "<group>"; };
 		3408FA79228C9B5700433B61 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		34103CDF230B52720059451A /* CommentsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsButton.swift; sourceTree = "<group>"; };
-		34103CE1230B52810059451A /* RepliesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepliesButton.swift; sourceTree = "<group>"; };
+		34103CE1230B52810059451A /* RepostsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepostsButton.swift; sourceTree = "<group>"; };
 		34103CE3230E39380059451A /* FeedParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
 		341F0E1A22B1879A007791F8 /* BoolInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolInt.swift; sourceTree = "<group>"; };
 		341F0E1C22B18923007791F8 /* AttachmentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentDto.swift; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 				3408FA56228C4BAC00433B61 /* VkEnterButton.swift */,
 				3446E0F02305BD110011DBC8 /* LikeButton.swift */,
 				34103CDF230B52720059451A /* CommentsButton.swift */,
-				34103CE1230B52810059451A /* RepliesButton.swift */,
+				34103CE1230B52810059451A /* RepostsButton.swift */,
 			);
 			path = "Custom Buttons";
 			sourceTree = "<group>";
@@ -1074,7 +1074,7 @@
 				341F0E2322B18E11007791F8 /* AudioDto.swift in Sources */,
 				341F0E1B22B1879A007791F8 /* BoolInt.swift in Sources */,
 				349BB8FB22AEF543003397DC /* FeedResponse.swift in Sources */,
-				34103CE2230B52810059451A /* RepliesButton.swift in Sources */,
+				34103CE2230B52810059451A /* RepostsButton.swift in Sources */,
 				C64958277887EF491CCC0417 /* FeedPresenter.swift in Sources */,
 				341F0E1F22B18966007791F8 /* PhotoDto.swift in Sources */,
 				90583B9B14D905B9D99983E8 /* ChatRouterInput.swift in Sources */,

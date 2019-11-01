@@ -11,7 +11,7 @@ import UIKit
 import QuartzCore
 
 @IBDesignable
-class RepliesButton: UIControl {
+class RepostsButton: UIControl {
     
     private let plashkaFillColor = UIColor.white
     private let fillColor = UIColor.clear

@@ -19,6 +19,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var likeButton: LikeButton!
+    @IBOutlet weak var commentsButton: CommentsButton!
+    @IBOutlet weak var repostsButton: RepostsButton!
     
     @IBOutlet weak var previewCollectionView: UICollectionView! {
         didSet {
@@ -43,10 +45,14 @@ class FeedTableViewCell: UITableViewCell {
         sourceNameLabel.text = feedCellModel.sourceName
         dateAddedLabel.text = "Date added"
         
-        if let likes = feedCellModel.likes {
-            likeButton.setup(likesCount: likes.count, state: .notLiked, animated: false)
-        }
-                
+        let likesCount = feedCellModel.likes?.count ?? 0
+        let commentsCount = feedCellModel.comments?.count ?? 0
+        let repostsCount = feedCellModel.reposts?.count ?? 0
+        
+        likeButton.setup(likesCount: likesCount, state: .notLiked, animated: false)
+        commentsButton.setup(commentsCount: commentsCount)
+        repostsButton.setup(repliesCount: repostsCount)
+                        
         feedCellModel.sourceIconUrl.getAsyncImageFromUrl { [weak self] image, url in
             guard let strongSelf = self,
                 let cellModel = strongSelf.cellModel,

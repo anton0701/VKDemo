@@ -115,7 +115,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snz-6i-4wq" userLabel="Social Buttons View">
                                         <rect key="frame" x="0.0" y="415" width="443" height="44"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-eP-rXR" customClass="RepliesButton" customModule="VKDemo" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-eP-rXR" customClass="RepostsButton" customModule="VKDemo" customModuleProvider="target">
                                                 <rect key="frame" x="348" y="0.0" width="95" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -213,9 +213,11 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="collectionViewHeightConstraint" destination="5hJ-pS-GC5" id="uwB-IY-Bbu"/>
+                <outlet property="commentsButton" destination="0tE-6U-rcN" id="Xvd-Rb-69c"/>
                 <outlet property="dateAddedLabel" destination="HGk-tO-wph" id="N1u-nh-zpx"/>
                 <outlet property="likeButton" destination="il7-w4-cVP" id="vYP-PE-wQE"/>
                 <outlet property="previewCollectionView" destination="2Cm-X7-aFs" id="4mJ-IG-Ydz"/>
+                <outlet property="repostsButton" destination="iWI-eP-rXR" id="Ia0-eS-TZv"/>
                 <outlet property="sourceIconImageView" destination="vFn-UE-z0W" id="xc5-i8-nQJ"/>
                 <outlet property="sourceNameLabel" destination="mwb-M6-f0g" id="TwS-eN-KAj"/>
                 <outlet property="textView" destination="ttJ-6b-RXQ" id="TiF-aX-euA"/>
