@@ -26,6 +26,7 @@ extension MessagesManager: IMessagesManager {
         
         _ = messagesProvider.request(.getConversations, success: { (conversationsResponse: ConversationsResponse) in
             print("HOORAY!!!!!!! CONVERSATIONS ARE OK")
+            print(conversationsResponse)
         }, failure: { error in
             print("OMG! SO BAD! CONVERSATIONS FAILED !! ERROR:")
             print(error)

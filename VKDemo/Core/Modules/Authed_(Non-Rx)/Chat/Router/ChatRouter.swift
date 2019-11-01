@@ -16,11 +16,14 @@ class ChatRouter {
 
         transitionHandler = vc
 
-        let presenter = ChatPresenter(view: vc, router: self)
+        let presenter = ChatPresenter(view: vc,
+                                      router: self,
+                                      messagesManager: DI.container.data.messagesManager)
 
         vc.presenter = presenter
         vc.title = "Chat"
         vc.view.backgroundColor = UIColor.blue
+        
         
         return vc
     }

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol IMessagesManager {
-    
+    func getConversations(success: @escaping ([FeedItem]) -> Void,
+                          failure: @escaping FailureClosure)
 }
