@@ -643,7 +643,7 @@
 				3408FA5E228C79E200433B61 /* DI */,
 				340624962270EA1800B39D5B /* Managers */,
 				3406249A2270EA4000B39D5B /* Services */,
-				349BB8F522AEC68B003397DC /* Plugins */,
+				349BB8F522AEC68B003397DC /* Moya Plugins */,
 				340829C322A19B5B00A31ABB /* DAO */,
 				340624982270EA2400B39D5B /* Parsers */,
 			);
@@ -726,12 +726,12 @@
 			path = Feed;
 			sourceTree = "<group>";
 		};
-		349BB8F522AEC68B003397DC /* Plugins */ = {
+		349BB8F522AEC68B003397DC /* Moya Plugins */ = {
 			isa = PBXGroup;
 			children = (
 				349BB8F622AEC838003397DC /* VKAccessTokenPlugin.swift */,
 			);
-			path = Plugins;
+			path = "Moya Plugins";
 			sourceTree = "<group>";
 		};
 		349BB8FC22AEF9F9003397DC /* Responses */ = {
