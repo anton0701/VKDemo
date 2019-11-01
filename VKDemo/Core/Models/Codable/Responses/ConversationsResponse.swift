@@ -17,13 +17,24 @@ struct ConversationDto: Codable {
     let peer: PeerDto
     let inRead: Int
     let outRead: Int
-    let unread_count: Int
+    let unreadCount: Int
     let important: BoolInt
     let unanswered: BoolInt
-    let push_settings: PushSettingsDto
-    let can_write: CanWriteDto
-    let chat_settings: ChatSettingsDto
-        
+    let pushSettings: PushSettingsDto
+    let canWrite: CanWriteDto
+    let chatSettings: ChatSettingsDto
+    
+    private enum CodingKeys: String, CodingKey {
+        case peer
+        case inRead = "in_read"
+        case outRead = "out_read"
+        case unreadCount = "unread_count"
+        case important
+        case unanswered
+        case pushSettings = "push_settings"
+        case canWrite = "can_write"
+        case chatSettings = "chat_settings"
+    }
 }
 
 struct PeerDto: Codable {
