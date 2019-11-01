@@ -95,19 +95,48 @@ extension FeedTableViewDataSource: UITableViewDataSource {
         
         let feedCellModel = feedCellModels[indexPath.row]
         let textViewHeight = templateFeedTextViewHeight(text: feedCellModel.feedItem.item.text ?? "")
-        let collectionViewHeight = ceil(Double(feedCellModel.photos.count) / 2.0) * 125.0 + 10
+        let collectionViewHeigh = collectionViewHeight(for: feedCellModel.feedItem.item.attachments ?? [AttachmentDto]())
+//            ceil(Double(feedCellModel.photos.count) / 2.0) * 125.0 + 10
+        
         let headerViewHeight = 82.0
         let socialButtonsViewHeight = 44.0
         let sumMarginsHeight = 50.5 + 2.0 * 0.5
         
         let overallHeight = headerViewHeight +
                             textViewHeight +
-                            collectionViewHeight +
+                            Double(collectionViewHeigh) +
                             socialButtonsViewHeight +
                             sumMarginsHeight
         
         return CGFloat(overallHeight)
     }
+    
+    func collectionViewHeight(for attachments: [AttachmentDto]) -> CGFloat {
+        if (attachments.count == 1),
+            let photo = attachments.first?.photo,
+            photo.sizes.count > 0 {
+            let photoSizes = photo.sizes
+            let photoSizesOrderArray = ["z", "y", "x", "w"]
+            let properPhotoSize = photoSizes.sorted(by: {
+                guard let index0 = photoSizesOrderArray.index(of: $0.type) else { return false }
+                guard let index1 = photoSizesOrderArray.index(of: $1.type) else { return true }
+                return index0 <= index1
+                }).first
+            let width = tableView.frame.width - 32.0
+            let height = CGFloat(properPhotoSize?.height ?? 0) / CGFloat(properPhotoSize?.width ?? 1) * width
+            
+            return height
+        }
+            
+            
+        let height = CGFloat(120.0)
+        let photosCount = attachments.filter({
+            $0.type == .photo
+            }).count
+        
+        return ceil(CGFloat(photosCount) / 2.0) * height
+    }
+
 }
 
 // MARK: - UITableViewDelegate

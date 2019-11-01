@@ -16,7 +16,7 @@ class AttachmentPhotoCollectionViewCell: UICollectionViewCell {
     var photoDto: PhotoDto?
     var photoUrlString: String?
     
-    let photoSizesOrderArray = ["x", "y", "z", "w"]
+    let photoSizesOrderArray = ["z", "y", "x", "w"]
     
     @IBOutlet weak var imageView: UIImageView!
     

@@ -559,5 +559,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6231BDDF-2D32-4868-8364-B2B5FEEDD5D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "collectionViewHeight(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6231BDDF-2D32-4868-8364-B2B5FEEDD5D9 - 965e0b54a518e8c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKDemo.AttachmentsCollectionViewDataSource.collectionViewHeight(for: Swift.Array&lt;VKDemo.AttachmentDto&gt;) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed%20TableView/Cell/Attachments%20CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "15045">
+               </Location>
+               <Location
+                  uuid = "6231BDDF-2D32-4868-8364-B2B5FEEDD5D9 - 5a66883b52660e8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (VKDemo.AttachmentDto) -&gt; Swift.Bool in VKDemo.AttachmentsCollectionViewDataSource.collectionViewHeight(for: Swift.Array&lt;VKDemo.AttachmentDto&gt;) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "VKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed%20TableView/Cell/Attachments%20CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

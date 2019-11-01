@@ -32,6 +32,23 @@ class AttachmentsCollectionViewDataSource: NSObject {
     }
     
     func collectionViewHeight(for attachments: [AttachmentDto]) -> CGFloat {
+        if (attachments.count == 1),
+            let photo = attachments.first?.photo,
+            photo.sizes.count > 0 {
+            let photoSizes = photo.sizes
+            let photoSizesOrderArray = ["z", "y", "x", "w"]
+            let properPhotoSize = photoSizes.sorted(by: {
+                guard let index0 = photoSizesOrderArray.index(of: $0.type) else { return false }
+                guard let index1 = photoSizesOrderArray.index(of: $1.type) else { return true }
+                return index0 <= index1
+                }).first
+            let width = collectionView.frame.width
+            let height = CGFloat(properPhotoSize?.height ?? 0) / CGFloat(properPhotoSize?.width ?? 1) * width
+            
+            return height
+        }
+            
+            
         let height = CGFloat(120.0)
         let photosCount = attachments.filter({
             $0.type == .photo
@@ -196,6 +213,23 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension AttachmentsCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if (attachments?.count == 1),
+            let photo = attachments?.first?.photo,
+            photo.sizes.count > 0 {
+            let photoSizes = photo.sizes
+            let photoSizesOrderArray = ["z", "y", "x", "w"]
+            let properPhotoSize = photoSizes.sorted(by: {
+                guard let index0 = photoSizesOrderArray.index(of: $0.type) else { return false }
+                guard let index1 = photoSizesOrderArray.index(of: $1.type) else { return true }
+                return index0 <= index1
+                }).first
+            let width = collectionView.frame.width
+            let height = CGFloat(properPhotoSize?.height ?? 0) / CGFloat(properPhotoSize?.width ?? 1) * width
+            
+            return CGSize(width: width, height: height)
+        }
+        
         let width = collectionView.bounds.width / 2.0 - 5.0
         let height = CGFloat(120.0)
         
