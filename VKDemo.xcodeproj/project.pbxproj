@@ -82,6 +82,7 @@
 		34764BCA236BACB40070414A /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BC9236BACB40070414A /* MessagesManager.swift */; };
 		34764BCC236BACC20070414A /* IMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCB236BACC20070414A /* IMessagesManager.swift */; };
 		34764BCF236BAD630070414A /* MessagesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCE236BAD630070414A /* MessagesTarget.swift */; };
+		34764BD1236BAF4C0070414A /* ConversationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BD0236BAF4C0070414A /* ConversationsResponse.swift */; };
 		3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942422A7C2E500CC0E5B /* FeedManager.swift */; };
 		3489942722A7C2EC00CC0E5B /* IFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489942622A7C2EC00CC0E5B /* IFeedManager.swift */; };
 		349BB8F022AE7DC1003397DC /* FeedTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BB8EF22AE7DC1003397DC /* FeedTarget.swift */; };
@@ -197,6 +198,7 @@
 		34764BC9236BACB40070414A /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		34764BCB236BACC20070414A /* IMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMessagesManager.swift; sourceTree = "<group>"; };
 		34764BCE236BAD630070414A /* MessagesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTarget.swift; sourceTree = "<group>"; };
+		34764BD0236BAF4C0070414A /* ConversationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsResponse.swift; sourceTree = "<group>"; };
 		3489942422A7C2E500CC0E5B /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		3489942622A7C2EC00CC0E5B /* IFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedManager.swift; sourceTree = "<group>"; };
 		349BB8EF22AE7DC1003397DC /* FeedTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTarget.swift; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				349BB8FA22AEF543003397DC /* FeedResponse.swift */,
+				34764BD0236BAF4C0070414A /* ConversationsResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -1034,6 +1037,7 @@
 				34CC2E362360E25800027789 /* CGRect+Extensions.swift in Sources */,
 				3407D2562316DDA3002E2CA4 /* FeedViewOutput.swift in Sources */,
 				349F155F231267B6008309EE /* PodcastDto.swift in Sources */,
+				34764BD1236BAF4C0070414A /* ConversationsResponse.swift in Sources */,
 				3407D2552316DDA3002E2CA4 /* FeedViewInput.swift in Sources */,
 				3489942522A7C2E500CC0E5B /* FeedManager.swift in Sources */,
 				341F0E2D22B18F0A007791F8 /* PollDto.swift in Sources */,

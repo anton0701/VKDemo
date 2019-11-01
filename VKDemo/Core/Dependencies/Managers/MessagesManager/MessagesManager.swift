@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 class MessagesManager {
-    private let feedProvider: MoyaProvider<FeedTarget>
+    private let feedProvider: MoyaProvider<MessagesTarget>
     private let feedParser: IFeedParser
     
     init(feedProvider: MoyaProvider<FeedTarget>,
@@ -26,6 +26,16 @@ extension MessagesManager: IMessagesManager {
         _ = feedProvider.request(.getFeed, success: { (feedResponse: FeedResponse) in
             let feedItems = self.feedParser.parse(feedResponse: feedResponse)
             success(feedItems)
+        }) { error in
+            failure(error)
+        }
+    }
+    
+    func getConversations(success: @escaping (Dictionary<String, Any>) -> Void,
+                          failure: @escaping FailureClosure) {
+        _ = feedProvider.request(.getFeed, success: { (feedResponse: FeedResponse) in
+//            let feedItems = self.feedParser.parse(feedResponse: feedResponse)
+//            success(feedResponse.)
         }) { error in
             failure(error)
         }

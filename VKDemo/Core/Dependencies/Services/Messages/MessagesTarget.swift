@@ -45,7 +45,7 @@ extension MessagesTarget: TargetType {
     var task: Task {
         switch self {
         case .getConversations:
-            return .requestParameters(parameters: ["v": 5.95, "access_token": sessionManager.getAccessToken() ?? "", "count" : "200"], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["v": 5.108, "access_token": sessionManager.getAccessToken() ?? "", "count" : "200"], encoding: URLEncoding.queryString)
         default:
             return .requestPlain
         }
