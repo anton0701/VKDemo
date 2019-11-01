@@ -165,7 +165,7 @@ class LikeButton: UIControl {
         return layer
     }()
     
-    private lazy var label: UILabel = {
+    private lazy var countLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(white: 0.3, alpha: 1.0)
         label.text = "123"
@@ -177,7 +177,7 @@ class LikeButton: UIControl {
     
     private func addLayers() {
         [borderLayer, activeBackgroundLayer, inProgressLayer, heartLayer].forEach { layer.addSublayer($0) }
-        addSubview(label)
+        addSubview(countLabel)
     }
     
     private func removeLayersIfNeeded() {
@@ -216,7 +216,7 @@ class LikeButton: UIControl {
     
     public func setup(likesCount: Int, state: LikeState, animated: Bool) {
         self.likeState = state
-        label.text = "\(likesCount)"
+        countLabel.text = "\(likesCount)"
         
         guard animated else { return }
         

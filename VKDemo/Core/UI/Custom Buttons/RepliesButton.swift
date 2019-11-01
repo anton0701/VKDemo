@@ -75,7 +75,7 @@ class RepliesButton: UIControl {
         return layer
     }()
     
-    private lazy var label: UILabel = {
+    private lazy var countLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(white: 0.3, alpha: 1.0)
         label.text = "123"
@@ -87,7 +87,7 @@ class RepliesButton: UIControl {
     
     private func addLayers() {
         [borderLayer, repliesIconLayer].forEach { layer.addSublayer($0) }
-        addSubview(label)
+        addSubview(countLabel)
     }
     
     private func removeLayersIfNeeded() {
