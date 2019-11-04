@@ -31,15 +31,10 @@ class AttachmentPhotoCollectionViewCell: UICollectionViewCell {
             return
         }
         
-//        guard let originalPhotoUrl = photoDto.sizes.first?.url as String? else {
-//            return
-//        }
-        
-        properSizedPhotoDto.url.getAsyncImageFromUrl(completion: { image, urlStrig in
-//            guard urlStrig == originalPhotoUrl else {
-//                return
-//            }
-            self.imageView.image = image
+        imageView.image = nil
+        properSizedPhotoDto.url.getAsyncImageFromUrl(completion: { [weak self] image, urlStrig in
+            guard urlStrig == properSizedPhotoDto.url else { return }
+            self?.imageView.image = image
         })
     }
 }
