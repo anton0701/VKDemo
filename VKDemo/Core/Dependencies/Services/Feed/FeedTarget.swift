@@ -11,7 +11,7 @@ import Moya
 import Alamofire
 
 enum FeedTarget {
-    case getFeed
+    case getFeed(count: Int, startFrom: Int?)
 }
 
 extension FeedTarget: TargetType {
@@ -44,8 +44,14 @@ extension FeedTarget: TargetType {
     
     var task: Task {
         switch self {
-        case .getFeed:
-            return .requestParameters(parameters: ["v": 5.95, "access_token": sessionManager.getAccessToken() ?? "", "filters" : "post,photo"], encoding: URLEncoding.queryString)
+        case .getFeed(let count, let startFrom):
+            let startFromString: String
+            if let startFrom = startFrom {
+                startFromString = "\(startFrom)"
+            } else {
+                startFromString = ""
+            }
+            return .requestParameters(parameters: ["v": 5.95, "access_token": sessionManager.getAccessToken() ?? "", "filters" : "post,photo", "count": count, "start_from": startFromString], encoding: URLEncoding.queryString)
         default:
             return .requestPlain
         }

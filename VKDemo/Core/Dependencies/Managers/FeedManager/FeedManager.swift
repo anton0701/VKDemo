@@ -23,11 +23,11 @@ class FeedManager {
 extension FeedManager: IFeedManager {
     func getFeed(success: @escaping ([FeedItem]) -> Void,
                  failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.getFeed, success: { (feedResponse: FeedResponse) in
+        _ = feedProvider.request(.getFeed(count: 100, startFrom: 0), success: { (feedResponse: FeedResponse) in
             let feedItems = self.feedParser.parse(feedResponse: feedResponse)
             success(feedItems)
-        }) { error in
+        }, failure: { error in
             failure(error)
-        }
+        })
     }
 }
