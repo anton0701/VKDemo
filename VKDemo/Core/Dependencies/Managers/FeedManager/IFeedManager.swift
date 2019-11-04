@@ -9,6 +9,20 @@
 import Foundation
 
 protocol IFeedManager {
-    func getFeed(success: @escaping ([FeedItem]) -> Void,
+    func getFeed(count: Int,
+                 startFrom: Int?,
+                 success: @escaping ([FeedItem]) -> Void,
                  failure: @escaping FailureClosure)
+}
+
+extension IFeedManager {
+    func getFeed(count: Int,
+                 startFrom: Int? = nil,
+                 success: @escaping ([FeedItem]) -> Void,
+                 failure: @escaping FailureClosure) {
+        getFeed(count: count,
+                startFrom: nil,
+                success: success,
+                failure: failure)
+    }
 }

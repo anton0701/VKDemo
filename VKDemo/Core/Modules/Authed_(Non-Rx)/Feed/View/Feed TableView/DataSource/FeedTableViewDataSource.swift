@@ -79,6 +79,7 @@ extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard feedCellModels.count == 0 else { return CGFloat(0) }
         return CGFloat(300.0)
     }
     
