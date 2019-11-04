@@ -67,10 +67,27 @@ extension FeedTableViewDataSource {
     }
 }
 
-// MARK: - UITableViewDataSource
-extension FeedTableViewDataSource: UITableViewDataSource {
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard feedCellModels.count == 0,
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellName) as? FeedTableViewCell else { return nil }
+
+        cell.showSkeleton()
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(300.0)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedCellModels.count + 1
+        return feedCellModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -137,9 +154,4 @@ extension FeedTableViewDataSource: UITableViewDataSource {
         return ceil(CGFloat(photosCount) / 2.0) * height
     }
 
-}
-
-// MARK: - UITableViewDelegate
-extension FeedTableViewDataSource: UITableViewDelegate {
-    
 }

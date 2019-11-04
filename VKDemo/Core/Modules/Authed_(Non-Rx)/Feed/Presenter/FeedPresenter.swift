@@ -22,17 +22,18 @@ class FeedPresenter {
     }
     
     private func getFeedAndSetupView() {
-        feedManager.getFeed(success: { [weak self] feedItems in
-            guard let strongSelf = self else {
-                return
-            }
-            strongSelf.feedItems = feedItems
-            strongSelf.view?.setup(feedItems: feedItems)
-        }) { error in
-            print("BEGIN FEED ERRROR!\n\n\n")
-            print(error)
-            print("\n\n\nEND FEED ERRROR!")
-        }
+        view?.setup(feedItems: [FeedItem]())
+//        feedManager.getFeed(success: { [weak self] feedItems in
+//            guard let strongSelf = self else {
+//                return
+//            }
+//            strongSelf.feedItems = feedItems
+//            strongSelf.view?.setup(feedItems: feedItems)
+//        }) { error in
+//            print("BEGIN FEED ERRROR!\n\n\n")
+//            print(error)
+//            print("\n\n\nEND FEED ERRROR!")
+//        }
     }
 }
 
