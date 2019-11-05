@@ -65,15 +65,14 @@ class FeedPresenter {
 
 extension FeedPresenter: FeedViewOutput {
     func didRefresh() {
-//        getFeedAndSetupView()
+        loadFeed(take: 15, startFrom: nil)
     }
     
     func viewLoaded() {
-//        getFeedAndSetupView()
-        loadFeed(take: 100, startFrom: nil, completion: nil)
+        loadFeed(take: 15, startFrom: nil, completion: nil)
     }
     
     func didScrollForMore() {
-        loadFeed(take: 100, startFrom: nextFrom, completion: nil)
+        loadFeed(take: 15, startFrom: nextFrom, completion: nil)
     }
 }

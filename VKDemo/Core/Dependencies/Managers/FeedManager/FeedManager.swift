@@ -25,7 +25,7 @@ extension FeedManager: IFeedManager {
              startFrom: String?,
                success: @escaping ([FeedItem], String) -> Void,
                failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.getFeed(count: 10, startFrom: startFrom),
+        _ = feedProvider.request(.getFeed(count: count, startFrom: startFrom),
                                  success: { (feedResponse: FeedResponse) in
             let feedItems = self.feedParser.parse(feedResponse: feedResponse)
             success(feedItems, feedResponse.nextFrom)
