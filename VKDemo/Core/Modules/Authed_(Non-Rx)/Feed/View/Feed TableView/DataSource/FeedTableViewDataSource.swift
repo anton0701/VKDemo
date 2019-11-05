@@ -111,14 +111,9 @@ extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        if indexPath.row < feedCellModels.count {
-            let feedCellModel = feedCellModels[indexPath.row]
-            cell.setup(feedCellModel: feedCellModel)
-        } else {
-            cell.showSkeleton()
-            cell.hideCollectionView()
-        }
-        
+        let feedCellModel = feedCellModels[indexPath.row]
+        cell.setup(feedCellModel: feedCellModel, delegate: self)
+
         return cell
     }
     

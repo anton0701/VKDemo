@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 import SkeletonView
 
+protocol SocialButtonsDelegate: class {
+    func didLike()
+}
+
+
 class FeedTableViewCell: UITableViewCell {
     static let cellName: String = String(describing: FeedTableViewCell.self)
 
@@ -32,11 +37,12 @@ class FeedTableViewCell: UITableViewCell {
     }()
     
     private var cellModel: FeedCellModel?
+    private weak var delegate: SocialButtonsDelegate?
     
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
-    func setup(feedCellModel: FeedCellModel) {
+    func setup(feedCellModel: FeedCellModel, delegate: SocialButtonsDelegate? = nil) {
         self.cellModel = feedCellModel
         
         let feedText = feedCellModel.feedItem.item.text
@@ -50,9 +56,13 @@ class FeedTableViewCell: UITableViewCell {
         let commentsCount = feedCellModel.comments?.count ?? 0
         let repostsCount = feedCellModel.reposts?.count ?? 0
         
-        likeButton.setup(likesCount: likesCount, state: .notLiked, animated: false)
+        likeButton.setup(likesCount: likesCount,
+                         state: .notLiked,
+                         animated: false,
+                         delegate: self)
         commentsButton.setup(commentsCount: commentsCount)
         repostsButton.setup(repliesCount: repostsCount)
+        
                         
         feedCellModel.sourceIconUrl.getAsyncImageFromUrl { [weak self] image, url in
             guard let strongSelf = self,
@@ -138,5 +148,11 @@ class FeedTextView: UITextView {
         super.init(coder: coder)
         font = UIFont.systemFont(ofSize: 14.0)
         isScrollEnabled = false
+    }
+}
+
+extension FeedTableViewCell: LikeButtonDelegate {
+    func didToggleLike(likeButton: LikeButton?) {
+        <#code#>
     }
 }

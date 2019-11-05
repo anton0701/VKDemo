@@ -379,7 +379,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "setup(feedCellModel:)"
+            landmarkName = "setup(feedCellModel:delegate:)"
             landmarkType = "7">
             <Locations>
                <Location

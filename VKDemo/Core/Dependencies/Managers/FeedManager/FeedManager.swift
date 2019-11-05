@@ -21,6 +21,10 @@ class FeedManager {
 }
 
 extension FeedManager: IFeedManager {
+    func addLike(for feedItem: FeedItem, success: @escaping (FeedItem, Int) -> Void, failure: @escaping FailureClosure) {
+        
+    }
+    
     func getFeed(count: Int,
              startFrom: String?,
                success: @escaping ([FeedItem], String) -> Void,

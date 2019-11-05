@@ -10,4 +10,7 @@ protocol FeedViewOutput: class {
     func viewLoaded()
     func didRefresh()
     func didScrollForMore()
+    
+    func didLike(feedItem: FeedItem)
+    func didUnlike(feedItem: FeedItem)
 }

@@ -13,6 +13,10 @@ protocol IFeedManager {
                  startFrom: String?,
                  success: @escaping ([FeedItem], String) -> Void,
                  failure: @escaping FailureClosure)
+    
+    func addLike(for feedItem: FeedItem,
+                      success: @escaping (FeedItem, Int) -> Void,
+                      failure: @escaping FailureClosure)
 }
 
 extension IFeedManager {

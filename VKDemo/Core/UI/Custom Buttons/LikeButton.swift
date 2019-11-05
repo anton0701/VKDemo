@@ -3,6 +3,10 @@ import UIKit
 import QuartzCore
 
 
+protocol LikeButtonDelegate: class {
+    func didToggleLike(likeButton: LikeButton?)
+}
+
 enum LikeState {
     case liked
     case notLiked
@@ -12,6 +16,7 @@ enum LikeState {
 @IBDesignable
 class LikeButton: UIControl {
     
+    private weak var delegate: LikeButtonDelegate?
     private var likeState: LikeState = LikeState.notLiked
     private var isIdle: Bool {
         get {
@@ -233,8 +238,12 @@ class LikeButton: UIControl {
         addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
     
-    public func setup(likesCount: Int, state: LikeState, animated: Bool) {
+    func setup(likesCount: Int,
+               state: LikeState,
+               animated: Bool,
+               delegate: LikeButtonDelegate? = nil) {
         self.likeState = state
+        self.delegate = delegate
         countLabel.text = "\(likesCount)"
         
         guard animated else { return }
@@ -255,6 +264,8 @@ class LikeButton: UIControl {
 
     @objc private func buttonPressed() {
         guard isIdle else { return }
+        
+        delegate?.didToggleLike(likeButton: self)
         
         setup(likesCount: 92831, state: .inProgress, animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {

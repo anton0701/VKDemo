@@ -75,4 +75,17 @@ extension FeedPresenter: FeedViewOutput {
     func didScrollForMore() {
         loadFeed(take: 15, startFrom: nextFrom, completion: nil)
     }
+    
+    func didLike(feedItem: FeedItem) {
+        feedManager.addLike(for: feedItem,
+                            success: { feedItem, likesCount in
+            print(123)
+        }) { error in
+            
+        }
+    }
+    
+    func didUnlike(feedItem: FeedItem) {
+        
+    }
 }
