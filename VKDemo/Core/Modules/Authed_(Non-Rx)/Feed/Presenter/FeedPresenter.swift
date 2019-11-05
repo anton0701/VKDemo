@@ -50,11 +50,7 @@ class FeedPresenter {
                 self?.view?.reloadFeed()
             } else {
                 self?.feedItems += feedItems
-                
-                let startIndex = self?.feedItems.count ?? 0
-                let endIndex = feedItems.count + startIndex
-                let indexPaths = Array(startIndex...endIndex).map { IndexPath(row: $0, section: 0) }
-                self?.view?.addNewsFeedItems(at: indexPaths)
+                self?.view?.addNewFeedItems(feedItems: feedItems)
                 
                 completion?()
             }

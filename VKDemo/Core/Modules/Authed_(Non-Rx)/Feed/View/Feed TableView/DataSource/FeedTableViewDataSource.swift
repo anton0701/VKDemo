@@ -44,6 +44,10 @@ class FeedTableViewDataSource: NSObject {
         tableView.reloadData()
         tableView.refreshControl?.endRefreshing()
     }
+    
+    func addNew(feedItems: [FeedItem]) {
+        
+    }
 }
 
 // MARK: - Private functions

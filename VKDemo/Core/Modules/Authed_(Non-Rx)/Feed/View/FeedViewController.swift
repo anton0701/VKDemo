@@ -36,12 +36,12 @@ extension FeedViewController: FeedViewInput {
     }
     
     func reloadFeed() {
-        tableView.reloadData()
-        refreshControl?.endRefreshing()
+//        tableView.reloadData()
+//        refreshControl?.endRefreshing()
     }
     
-    func addNewsFeedItems(at indexPaths: [IndexPath]) {
-        
+    func addNewFeedItems(feedItems: [FeedItem]) {
+        dataSource.addNew(feedItems: feedItems)
     }
 }
 
