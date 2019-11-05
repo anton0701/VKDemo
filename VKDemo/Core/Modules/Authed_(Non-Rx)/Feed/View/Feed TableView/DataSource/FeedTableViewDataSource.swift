@@ -46,7 +46,13 @@ class FeedTableViewDataSource: NSObject {
     }
     
     func addNew(feedItems: [FeedItem]) {
-        
+        let newFeedCellModels = feedItems.map({ FeedCellModel(feedItem: $0) })
+        let startIndex = feedCellModels.count
+        feedCellModels += newFeedCellModels
+        let endIndex = feedCellModels.count - 1
+        let newIndexPaths = Array(startIndex...endIndex).map { IndexPath(item: $0, section: 0)
+        }
+        tableView.insertRows(at: newIndexPaths, with: .none)
     }
 }
 
@@ -88,7 +94,9 @@ extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+        if indexPath.row == (feedCellModels.count - 1) {
+            output?.didScrollForMore()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

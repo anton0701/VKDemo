@@ -9,4 +9,5 @@
 protocol FeedViewOutput: class {
     func viewLoaded()
     func didRefresh()
+    func didScrollForMore()
 }

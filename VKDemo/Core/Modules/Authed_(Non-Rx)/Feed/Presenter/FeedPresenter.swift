@@ -14,6 +14,7 @@ class FeedPresenter {
     private let feedManager: IFeedManager
     
     var feedItems =  [FeedItem]()
+    var nextFrom: String?
     
     init(view: FeedViewInput,
          router: FeedRouterInput,
@@ -23,35 +24,36 @@ class FeedPresenter {
         self.feedManager = feedManager
     }
     
-    private func getFeedAndSetupView() {
-        
-//        view?.showIsLoadingView(true) //
-                
-        feedManager.getFeed(count: 100, startFrom: nil, success: { [weak self] feedItems in
-            guard let strongSelf = self else {
-                return
-            }
-            strongSelf.feedItems = feedItems
-            strongSelf.view?.setup(feedItems: feedItems)
-        }) { error in
-            print("BEGIN FEED ERRROR!\n\n\n")
-            print(error)
-            print("\n\n\nEND FEED ERRROR!")
-        }
-    }
+//    private func getFeedAndSetupView() {
+//
+////        view?.showIsLoadingView(true) //
+//
+//        feedManager.getFeed(count: 100, startFrom: nil, success: { [weak self] feedItems in
+//            guard let strongSelf = self else {
+//                return
+//            }
+//            strongSelf.feedItems = feedItems
+//            strongSelf.view?.setup(feedItems: feedItems)
+//        }) { error in
+//            print("BEGIN FEED ERRROR!\n\n\n")
+//            print(error)
+//            print("\n\n\nEND FEED ERRROR!")
+//        }
+//    }
     
     private func loadFeed(take: Int,
-                     startFrom: Int?,
+                     startFrom: String?,
                     completion: (() -> Void)? = nil) {
-        feedManager.getFeed(count: take, startFrom: startFrom, success: { [weak self] feedItems in
+        feedManager.getFeed(count: take, startFrom: startFrom, success: { [weak self] feedItems, nextFrom in
+            self?.nextFrom = nextFrom
+            
             let isDownloadingFromBeginning = (startFrom == nil)
             if isDownloadingFromBeginning {
                 self?.feedItems = feedItems
-                self?.view?.reloadFeed()
+                self?.view?.setup(feedItems: feedItems)
             } else {
                 self?.feedItems += feedItems
                 self?.view?.addNewFeedItems(feedItems: feedItems)
-                
                 completion?()
             }
         }) { [weak self] error in
@@ -63,10 +65,15 @@ class FeedPresenter {
 
 extension FeedPresenter: FeedViewOutput {
     func didRefresh() {
-        getFeedAndSetupView()
+//        getFeedAndSetupView()
     }
     
     func viewLoaded() {
-        getFeedAndSetupView()
+//        getFeedAndSetupView()
+        loadFeed(take: 100, startFrom: nil, completion: nil)
+    }
+    
+    func didScrollForMore() {
+        loadFeed(take: 100, startFrom: nextFrom, completion: nil)
     }
 }
