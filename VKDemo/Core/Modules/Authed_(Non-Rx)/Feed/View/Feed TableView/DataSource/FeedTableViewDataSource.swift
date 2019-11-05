@@ -96,7 +96,9 @@ extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == (feedCellModels.count - 1) {
-            output?.didScrollForMore()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+                self.output?.didScrollForMore()
+            }
         }
     }
     

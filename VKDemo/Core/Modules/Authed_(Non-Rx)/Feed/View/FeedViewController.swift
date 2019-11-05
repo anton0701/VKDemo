@@ -22,7 +22,9 @@ class FeedViewController: BaseViewController, ViperModuleTransitionHandler {
             dataSource.output = output
         }
         
-        presenter?.viewLoaded()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.presenter?.viewLoaded()
+        }
     }
     
     private func setupAppearance() {
