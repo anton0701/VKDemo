@@ -79,6 +79,9 @@
 		345530B5229C43DE0069E335 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345530B4229C43DE0069E335 /* SignInViewController.xib */; };
 		345530B7229D84FD0069E335 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530B6229D84FD0069E335 /* UserSessionManager.swift */; };
 		345530BB229DA3860069E335 /* IUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345530BA229DA3860069E335 /* IUserSessionManager.swift */; };
+		347122B62371739800FC039F /* FeedLoadMoreFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347122B52371739800FC039F /* FeedLoadMoreFooterView.swift */; };
+		347122B8237173BF00FC039F /* FeedLoadMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347122B7237173BF00FC039F /* FeedLoadMoreFooterView.xib */; };
+		347122BA23717B1500FC039F /* UIView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347122B923717B1500FC039F /* UIView+Init.swift */; };
 		34764BCA236BACB40070414A /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BC9236BACB40070414A /* MessagesManager.swift */; };
 		34764BCC236BACC20070414A /* IMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCB236BACC20070414A /* IMessagesManager.swift */; };
 		34764BCF236BAD630070414A /* MessagesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34764BCE236BAD630070414A /* MessagesTarget.swift */; };
@@ -196,6 +199,9 @@
 		345530B4229C43DE0069E335 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		345530B6229D84FD0069E335 /* UserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
 		345530BA229DA3860069E335 /* IUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSessionManager.swift; sourceTree = "<group>"; };
+		347122B52371739800FC039F /* FeedLoadMoreFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadMoreFooterView.swift; sourceTree = "<group>"; };
+		347122B7237173BF00FC039F /* FeedLoadMoreFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedLoadMoreFooterView.xib; sourceTree = "<group>"; };
+		347122B923717B1500FC039F /* UIView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Init.swift"; sourceTree = "<group>"; };
 		34764BC9236BACB40070414A /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		34764BCB236BACC20070414A /* IMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMessagesManager.swift; sourceTree = "<group>"; };
 		34764BCE236BAD630070414A /* MessagesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTarget.swift; sourceTree = "<group>"; };
@@ -463,6 +469,7 @@
 		3407D2632316EC18002E2CA4 /* Feed TableView */ = {
 			isa = PBXGroup;
 			children = (
+				347122B42371735600FC039F /* Footer */,
 				3407D24E2316DDA3002E2CA4 /* Cell */,
 				3407D2642316EC28002E2CA4 /* DataSource */,
 			);
@@ -565,6 +572,7 @@
 				3408FA5C228C743400433B61 /* UIButton+BackgroundColor.swift */,
 				3436A02A22AE71CD00D8E72E /* UIView+InCallStatusBar.swift */,
 				349F156623127D5A008309EE /* CircleImageView.swift */,
+				347122B923717B1500FC039F /* UIView+Init.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -690,6 +698,15 @@
 			children = (
 			);
 			path = POSO;
+			sourceTree = "<group>";
+		};
+		347122B42371735600FC039F /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				347122B52371739800FC039F /* FeedLoadMoreFooterView.swift */,
+				347122B7237173BF00FC039F /* FeedLoadMoreFooterView.xib */,
+			);
+			path = Footer;
 			sourceTree = "<group>";
 		};
 		34764BC8236BAC970070414A /* MessagesManager */ = {
@@ -907,6 +924,7 @@
 				3407D2592316DDA3002E2CA4 /* FeedTableViewCell.xib in Resources */,
 				3407D26B2316F115002E2CA4 /* AttachmentVideoCollectionViewCell.xib in Resources */,
 				3406248B2270E9A200B39D5B /* LaunchScreen.storyboard in Resources */,
+				347122B8237173BF00FC039F /* FeedLoadMoreFooterView.xib in Resources */,
 				3408FA59228C4FFE00433B61 /* Colors.xcassets in Resources */,
 				3407D2542316DDA3002E2CA4 /* FeedViewController.xib in Resources */,
 				3408FA7A228C9B5700433B61 /* AuthViewController.xib in Resources */,
@@ -970,6 +988,7 @@
 				3408FA57228C4BAC00433B61 /* VkEnterButton.swift in Sources */,
 				340624AA2270EF0F00B39D5B /* HTTPStatusCodes.swift in Sources */,
 				340624A92270EF0F00B39D5B /* HTTPStatusCodes+Extensions.swift in Sources */,
+				347122B62371739800FC039F /* FeedLoadMoreFooterView.swift in Sources */,
 				3436A01122ABF7E800D8E72E /* WelcomeCoordinator.swift in Sources */,
 				345530BB229DA3860069E335 /* IUserSessionManager.swift in Sources */,
 				34D2D5302289D986007A8113 /* VkLogoView.swift in Sources */,
@@ -1060,6 +1079,7 @@
 				341F0E1F22B18966007791F8 /* PhotoDto.swift in Sources */,
 				90583B9B14D905B9D99983E8 /* ChatRouterInput.swift in Sources */,
 				B2EBCBF5A5B0A836875FF328 /* ChatRouter.swift in Sources */,
+				347122BA23717B1500FC039F /* UIView+Init.swift in Sources */,
 				34F0ABC92369183A001D8388 /* Utils.swift in Sources */,
 				B6928985AAEDB89737C51659 /* ChatPresenter.swift in Sources */,
 				71B6A58A1B4F33BE6D662FE7 /* ChatViewController.swift in Sources */,

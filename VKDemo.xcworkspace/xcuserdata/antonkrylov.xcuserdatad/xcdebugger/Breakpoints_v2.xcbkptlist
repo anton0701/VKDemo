@@ -64,7 +64,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "4895">
+                  offsetFromSymbolStart = "3852">
                </Location>
                <Location
                   uuid = "FD5C647C-2038-4B3A-AEA2-D7342687C61D - 7d8ce6201a1c6b2e"
@@ -79,7 +79,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "5019">
+                  offsetFromSymbolStart = "3960">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -144,7 +144,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "2866">
+                  offsetFromSymbolStart = "2200">
                </Location>
                <Location
                   uuid = "C45493A4-428E-4930-ACFC-861396304035 - 7d8ce6201a1c6b2e"
@@ -159,7 +159,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "3127">
+                  offsetFromSymbolStart = "2440">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -507,7 +507,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "327">
+                  offsetFromSymbolStart = "384">
                </Location>
                <Location
                   uuid = "0E172F05-CE0F-4DEC-8AE4-F34D82BF83B9 - ba7ee1475393f36b"
@@ -522,7 +522,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
                   endingLineNumber = "31"
-                  offsetFromSymbolStart = "23">
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -571,7 +571,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "15045">
+                  offsetFromSymbolStart = "9248">
                </Location>
                <Location
                   uuid = "6231BDDF-2D32-4868-8364-B2B5FEEDD5D9 - 5a66883b52660e8f"
@@ -586,7 +586,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
                   endingLineNumber = "54"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -604,54 +604,6 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "setup(feedItems:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "625EFE06-65B1-422D-9D1A-CB89F8F2AF1B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/DataSource/FeedTableViewDataSource.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "tableView(_:heightForHeaderInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F6561846-4BA5-4180-8C55-2999585F92BC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/DataSource/FeedTableViewDataSource.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0A42AF92-5803-4915-8BDD-A0FD5FBF9B42"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/DataSource/FeedTableViewDataSource.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "tableView(_:viewForHeaderInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -700,6 +652,22 @@
             startingLineNumber = "30"
             endingLineNumber = "30"
             landmarkName = "getFeed(count:startFrom:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86A7545F-A7A6-4737-A4B7-58B07729D8C5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Footer/FeedLoadMoreFooterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

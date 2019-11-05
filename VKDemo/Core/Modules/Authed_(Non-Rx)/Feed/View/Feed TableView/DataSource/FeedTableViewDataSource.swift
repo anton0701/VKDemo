@@ -64,6 +64,7 @@ extension FeedTableViewDataSource {
         tableView.delegate = self
                 
         tableView.estimatedRowHeight = 300.0
+        tableView.tableFooterView = FeedLoadMoreFooterView.loadFromXib()
         
         let refreshControl = UIRefreshControl(frame: .zero)
         refreshControl.addTarget(self,
