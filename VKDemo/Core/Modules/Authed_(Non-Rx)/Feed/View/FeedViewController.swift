@@ -34,6 +34,15 @@ extension FeedViewController: FeedViewInput {
     func setup(feedItems: [FeedItem]) {
         dataSource.setup(with: feedItems)
     }
+    
+    func reloadFeed() {
+        tableView.reloadData()
+        refreshControl?.endRefreshing()
+    }
+    
+    func addNewsFeedItems(at indexPaths: [IndexPath]) {
+        
+    }
 }
 
 extension FeedViewController: UITableViewDelegate {

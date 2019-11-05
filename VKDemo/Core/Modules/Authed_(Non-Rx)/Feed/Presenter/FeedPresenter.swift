@@ -6,12 +6,14 @@
 //  Copyright © 2019 BrightBox. All rights reserved.
 //
 
+import UIKit
+
 class FeedPresenter {
     private weak var view: FeedViewInput?
     private let router: FeedRouterInput
     private let feedManager: IFeedManager
     
-    var feedItems: [FeedItem]?
+    var feedItems =  [FeedItem]()
     
     init(view: FeedViewInput,
          router: FeedRouterInput,
@@ -22,7 +24,10 @@ class FeedPresenter {
     }
     
     private func getFeedAndSetupView() {
-        feedManager.getFeed(count: 100, success: { [weak self] feedItems in
+        
+//        view?.showIsLoadingView(true) //
+                
+        feedManager.getFeed(count: 100, startFrom: nil, success: { [weak self] feedItems in
             guard let strongSelf = self else {
                 return
             }
@@ -34,6 +39,30 @@ class FeedPresenter {
             print("\n\n\nEND FEED ERRROR!")
         }
     }
+    
+    private func loadFeed(take: Int,
+                     startFrom: Int?,
+                    completion: (() -> Void)? = nil) {
+        feedManager.getFeed(count: take, startFrom: startFrom, success: { [weak self] feedItems in
+            let isDownloadingFromBeginning = (startFrom == nil)
+            if isDownloadingFromBeginning {
+                self?.feedItems = feedItems
+                self?.view?.reloadFeed()
+            } else {
+                self?.feedItems += feedItems
+                
+                let startIndex = self?.feedItems.count ?? 0
+                let endIndex = feedItems.count + startIndex
+                let indexPaths = Array(startIndex...endIndex).map { IndexPath(row: $0, section: 0) }
+                self?.view?.addNewsFeedItems(at: indexPaths)
+                
+                completion?()
+            }
+        }) { [weak self] error in
+            completion?()
+        }
+    }
+
 }
 
 extension FeedPresenter: FeedViewOutput {
