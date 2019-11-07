@@ -55,11 +55,12 @@ class FeedTableViewCell: UITableViewCell {
         dateAddedLabel.text = "Date added"
         
         let likesCount = feedCellModel.likes?.count ?? 0
+        let userLiked = (feedCellModel.likes?.userLikes == BoolInt.true) ? true : false
         let commentsCount = feedCellModel.comments?.count ?? 0
         let repostsCount = feedCellModel.reposts?.count ?? 0
         
         likeButton.setup(likesCount: likesCount,
-                         state: .notLiked,
+                         state: userLiked ? .liked : .notLiked,
                          animated: false,
                          delegate: self)
         commentsButton.setup(commentsCount: commentsCount)
@@ -161,10 +162,12 @@ extension FeedTableViewCell: LikeButtonDelegate {
             guard self?.cellModel?.feedItem.item.postId == updatedFeedItem.item.postId else { return }
             self?.cellModel?.feedItem = updatedFeedItem
             
-            likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
-                              state: .liked,
-                              animated: true,
-                              delegate: self)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
+                state: .liked,
+                animated: true,
+                delegate: self)
+            }
         })
     }
     
@@ -175,10 +178,12 @@ extension FeedTableViewCell: LikeButtonDelegate {
             guard self?.cellModel?.feedItem.item.sourceId == updatedFeedItem.item.sourceId else { return }
             self?.cellModel?.feedItem = updatedFeedItem
             
-            likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
-                              state: .notLiked,
-                              animated: true,
-                              delegate: self)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
+                state: .notLiked,
+                animated: true,
+                delegate: self)
+            }
         })
     }
 }

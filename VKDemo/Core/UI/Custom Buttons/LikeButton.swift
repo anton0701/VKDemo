@@ -93,6 +93,46 @@ class LikeButton: UIControl {
             break
         }
     }
+    
+    private func goTo(_ state: LikeState) {
+        switch state {
+        case .inProgress:
+            break
+        case .liked:
+//            let fromPath =
+//                UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
+            let toPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
+//            let animation = CABasicAnimation(keyPath: "path")
+            activeBackgroundLayer.mask = borderLayer2
+//            animation.fromValue = fromPath.cgPath
+//            animation.toValue = toPath.cgPath
+//            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+//            animation.duration = 0.6
+            
+//            activeBackgroundLayer.add(animation, forKey: "pathAnimation")
+            
+            activeBackgroundLayer.path = toPath.cgPath
+            borderLayer.fillColor = UIColor.clear.cgColor
+            borderLayer.setNeedsLayout()
+            break
+        case .notLiked:
+//            let fromPath = UIBezierPath(cgPath: Utils.pathForCircleThatContains(rect: self.frame))
+            let toPath =
+                UIBezierPath(ovalIn: CGRect(x: 14.25, y: 13.25, width: 13, height: 13))
+//            let animation = CABasicAnimation(keyPath: "path")
+//            animation.fromValue = fromPath
+//            animation.toValue = toPath
+//            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+//            animation.duration = 0.6
+            
+//            activeBackgroundLayer.add(animation, forKey: "pathAnimation")
+            activeBackgroundLayer.path = toPath.cgPath
+            borderLayer.fillColor = UIColor.clear.cgColor
+            borderLayer.setNeedsLayout()
+            break
+        }
+    }
+
 
     private lazy var heartLayer: CAShapeLayer = {
         let heartPath = UIBezierPath()
@@ -247,20 +287,39 @@ class LikeButton: UIControl {
         self.delegate = delegate
         countLabel.text = "\(likesCount)"
         
-        guard animated else { return }
+//        guard animated else {
+//            return
+//        }
         
-        switch likeState {
-        case .inProgress:
-            showInProgress(true)
-            break
-        case .liked:
-            animateTo(.liked)
-            showInProgress(false)
-        case .notLiked:
-            animateTo(.notLiked)
-            showInProgress(false)
-            break
+        
+        if animated {
+            switch likeState {
+            case .inProgress:
+                showInProgress(true)
+                break
+            case .liked:
+                animateTo(.liked)
+                showInProgress(false)
+            case .notLiked:
+                animateTo(.notLiked)
+                showInProgress(false)
+                break
+            }
+        } else {
+            switch likeState {
+            case .inProgress:
+                showInProgress(true)
+                break
+            case .liked:
+                goTo(.liked)
+                showInProgress(false)
+            case .notLiked:
+                goTo(.notLiked)
+                showInProgress(false)
+                break
+            }
         }
+        
     }
 
     @objc private func buttonPressed() {
