@@ -96,23 +96,6 @@ class FeedTableViewCell: UITableViewCell {
         previewCollectionViewDataSource.setup(attachments: cellModel?.feedItem.item.attachments ?? [])
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        hideSkeleton()
-    }
-    
-    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
-        
-        // If the cell's size has to be exactly the content
-        // Size of the collection View, just return the
-        // collectionViewLayout's collectionViewContentSize.
-        let cellHeight = previewCollectionViewDataSource.collectionViewHeight(for: cellModel?.feedItem.item.attachments ?? []) + 314.0
-        let cellWidth = targetSize.width
-        
-        return CGSize(width: cellWidth, height: cellHeight)
-    }
-    
-    
     func showSkeleton() {
         textView.showAnimatedGradientSkeleton()
         sourceIconImageView.showAnimatedGradientSkeleton()
@@ -135,22 +118,8 @@ class FeedTableViewCell: UITableViewCell {
         previewCollectionView.hideSkeleton()
     }
     
-    func hideCollectionView() {
+    private func hideCollectionView() {
         collectionViewHeightConstraint.constant = 0.0
-    }
-}
-
-class FeedTextView: UITextView {
-    override init(frame: CGRect, textContainer: NSTextContainer?) {
-        super.init(frame: frame, textContainer: textContainer)
-        font = UIFont.systemFont(ofSize: 14.0)
-        isScrollEnabled = false
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        font = UIFont.systemFont(ofSize: 14.0)
-        isScrollEnabled = false
     }
 }
 
