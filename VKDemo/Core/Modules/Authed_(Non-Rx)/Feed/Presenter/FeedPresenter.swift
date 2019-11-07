@@ -24,23 +24,6 @@ class FeedPresenter {
         self.feedManager = feedManager
     }
     
-//    private func getFeedAndSetupView() {
-//
-////        view?.showIsLoadingView(true) //
-//
-//        feedManager.getFeed(count: 100, startFrom: nil, success: { [weak self] feedItems in
-//            guard let strongSelf = self else {
-//                return
-//            }
-//            strongSelf.feedItems = feedItems
-//            strongSelf.view?.setup(feedItems: feedItems)
-//        }) { error in
-//            print("BEGIN FEED ERRROR!\n\n\n")
-//            print(error)
-//            print("\n\n\nEND FEED ERRROR!")
-//        }
-//    }
-    
     private func loadFeed(take: Int,
                      startFrom: String?,
                     completion: (() -> Void)? = nil) {
@@ -61,6 +44,18 @@ class FeedPresenter {
         }
     }
 
+    private func likeFeed(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void)) {
+        feedManager.addLike(for: feedItem,
+                            success: { [weak self] feedItem, likesCount in
+                                completion(feedItem)
+        }) { [weak self] error in
+            
+        }
+        
+    }
+    
+    private func unlikeFeed(feedItem: FeedItem, completion: ((FeedItem) -> Void)) {
+    }
 }
 
 extension FeedPresenter: FeedViewOutput {
@@ -75,17 +70,14 @@ extension FeedPresenter: FeedViewOutput {
     func didScrollForMore() {
         loadFeed(take: 15, startFrom: nextFrom, completion: nil)
     }
-    
-    func didLike(feedItem: FeedItem) {
-        feedManager.addLike(for: feedItem,
-                            success: { feedItem, likesCount in
-            print(123)
-        }) { error in
-            
-        }
+}
+
+extension FeedPresenter: SocialButtonsDelegate {
+    func didLike(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void)) {
+        likeFeed(feedItem: feedItem, completion: completion)
     }
     
-    func didUnlike(feedItem: FeedItem) {
-        
+    func didUnlike(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void)) {
+        unlikeFeed(feedItem: feedItem, completion: completion)
     }
 }

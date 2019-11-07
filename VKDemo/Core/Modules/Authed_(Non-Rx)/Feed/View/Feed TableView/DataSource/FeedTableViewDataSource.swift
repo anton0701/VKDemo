@@ -112,7 +112,8 @@ extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
         }
         
         let feedCellModel = feedCellModels[indexPath.row]
-        cell.setup(feedCellModel: feedCellModel, delegate: self)
+        // TODO: output as! SocialButtonsDelegate переделать
+        cell.setup(feedCellModel: feedCellModel, delegate: output as! SocialButtonsDelegate)
 
         return cell
     }

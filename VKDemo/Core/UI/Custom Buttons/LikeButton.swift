@@ -4,7 +4,8 @@ import QuartzCore
 
 
 protocol LikeButtonDelegate: class {
-    func didToggleLike(likeButton: LikeButton?)
+    func didLike(likeButton: LikeButton?)
+    func didUnlike(likeButton: LikeButton?)
 }
 
 enum LikeState {
@@ -265,29 +266,30 @@ class LikeButton: UIControl {
     @objc private func buttonPressed() {
         guard isIdle else { return }
         
-        delegate?.didToggleLike(likeButton: self)
-        
-        setup(likesCount: 92831, state: .inProgress, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.setup(likesCount: -2, state: .liked, animated: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                self.setup(likesCount: 32, state: .notLiked, animated: true)
-            }
+        switch likeState {
+        case .inProgress:
+            likeState = .liked
+            animateTo(.liked)
+            break
+        case .liked:
+            likeState = .notLiked
+            animateTo(.notLiked)
+            showInProgress(false)
+        case .notLiked:
+            likeState = .inProgress
+            showInProgress(true)
+            break
         }
-            
-//        switch likeState {
-//        case .inProgress:
-//            likeState = .liked
-//            animateTo(.liked)
-//            break
-//        case .liked:
-//            likeState = .notLiked
-//            animateTo(.notLiked)
-//            showInProgress(false)
-//        case .notLiked:
-//            likeState = .inProgress
-//            showInProgress(true)
-//            break
+
+        delegate?.didLike(likeButton: self)
+        
+//        setup(likesCount: 92831, state: .inProgress, animated: true)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+//            self.setup(likesCount: -2, state: .liked, animated: true)
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//                self.setup(likesCount: 32, state: .notLiked, animated: true)
+//            }
 //        }
+            
     }
 }

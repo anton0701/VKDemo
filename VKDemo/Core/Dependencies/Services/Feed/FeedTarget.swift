@@ -12,6 +12,7 @@ import Alamofire
 
 enum FeedTarget {
     case getFeed(count: Int, startFrom: String?)
+    case addLike(feedItem: FeedItem)
 }
 
 extension FeedTarget: TargetType {
@@ -28,13 +29,17 @@ extension FeedTarget: TargetType {
         switch self {
         case .getFeed:
             return "newsfeed.get"
+        case .addLike:
+            return "likes.add"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        default:
+        case .getFeed:
             return .get
+        case .addLike:
+            return .post
         }
     }
     
@@ -47,9 +52,24 @@ extension FeedTarget: TargetType {
         case .getFeed(let count, let startFrom):
             let startFromString = startFrom ?? ""
             
-            return .requestParameters(parameters: ["v": 5.95, "access_token": sessionManager.getAccessToken() ?? "", "filters" : "post,photo", "count": count, "start_from": startFromString], encoding: URLEncoding.queryString)
-        default:
-            return .requestPlain
+            return .requestParameters(parameters: ["v": 5.95,
+                                                   "access_token": sessionManager.getAccessToken() ?? "",
+                                                   "filters" : "post,photo",
+                                                   "count": count,
+                                                   "start_from": startFromString],
+                                      encoding: URLEncoding.queryString)
+        case .addLike(let feedItem):
+            let feedType = feedItem.item.type
+            let ownerId = feedItem.item.sourceId
+            let itemId = (feedItem.item.postId != nil) ? String(describing: feedItem.item.postId!) : ""
+            let standardParams = ["v": 5.103,
+                                  "access_token": sessionManager.getAccessToken() ?? "",
+                                  "type": feedType,
+                                  "owner_id": ownerId,
+                                  "item_id": itemId] as [String: Any]
+            
+            return .requestParameters(parameters: standardParams,
+                                      encoding: URLEncoding.httpBody)
         }
     }
     

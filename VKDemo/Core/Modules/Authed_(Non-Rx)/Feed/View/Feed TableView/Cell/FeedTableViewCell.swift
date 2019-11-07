@@ -11,7 +11,8 @@ import UIKit
 import SkeletonView
 
 protocol SocialButtonsDelegate: class {
-    func didLike()
+    func didLike(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void))
+    func didUnlike(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void))
 }
 
 
@@ -44,6 +45,7 @@ class FeedTableViewCell: UITableViewCell {
     
     func setup(feedCellModel: FeedCellModel, delegate: SocialButtonsDelegate? = nil) {
         self.cellModel = feedCellModel
+        self.delegate = delegate
         
         let feedText = feedCellModel.feedItem.item.text
         let feedTextLength = feedText?.count ?? 0
@@ -152,7 +154,29 @@ class FeedTextView: UITextView {
 }
 
 extension FeedTableViewCell: LikeButtonDelegate {
-    func didToggleLike(likeButton: LikeButton?) {
-        <#code#>
+    func didLike(likeButton: LikeButton?) {
+        guard let feedItem = cellModel?.feedItem else { return }
+        
+        delegate?.didLike(feedItem: feedItem, completion: { [weak self] updatedFeedItem in
+            guard self?.cellModel?.feedItem.item.sourceId == updatedFeedItem.item.sourceId else { return }
+            self?.cellModel?.feedItem = updatedFeedItem
+            
+            likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
+                              state: .liked,
+                              animated: true)
+        })
+    }
+    
+    func didUnlike(likeButton: LikeButton?) {
+        guard let feedItem = cellModel?.feedItem else { return }
+        
+        delegate?.didUnlike(feedItem: feedItem, completion: { [weak self] updatedFeedItem in
+            guard self?.cellModel?.feedItem.item.sourceId == updatedFeedItem.item.sourceId else { return }
+            self?.cellModel?.feedItem = updatedFeedItem
+            
+            likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
+                              state: .notLiked,
+                              animated: true)
+        })
     }
 }

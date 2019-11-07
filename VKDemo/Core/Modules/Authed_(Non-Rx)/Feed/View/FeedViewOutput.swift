@@ -11,6 +11,6 @@ protocol FeedViewOutput: class {
     func didRefresh()
     func didScrollForMore()
     
-    func didLike(feedItem: FeedItem)
-    func didUnlike(feedItem: FeedItem)
+//    func didLike(feedItem: FeedItem)
+//    func didUnlike(feedItem: FeedItem)
 }

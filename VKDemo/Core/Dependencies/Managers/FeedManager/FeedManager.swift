@@ -20,9 +20,18 @@ class FeedManager {
     }
 }
 
+// TODO: перенести
+struct LikesCountResponse: Codable {
+    let likes: Int
+}
+
 extension FeedManager: IFeedManager {
     func addLike(for feedItem: FeedItem, success: @escaping (FeedItem, Int) -> Void, failure: @escaping FailureClosure) {
-        
+        _ = feedProvider.request(.addLike(feedItem: feedItem), success: { (likesCountResponse: LikesCountResponse) in
+            print("adfadasd")
+        }, failure: { error in
+            print("123123adfadasd")
+        })
     }
     
     func getFeed(count: Int,
