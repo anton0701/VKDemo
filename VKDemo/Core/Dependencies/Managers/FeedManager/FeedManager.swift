@@ -36,10 +36,21 @@ extension FeedManager: IFeedManager {
             feedItem.item.likes?.count = likesCountResponse.likesCount
             feedItem.item.likes?.userLikes = BoolInt.true
             success(feedItem)
-            print("adfadasd")
         }, failure: { error in
             failure(error)
-            print("123123adfadasd")
+        })
+    }
+    
+    func deleteLike(for feedItem: FeedItem,
+                         success: @escaping (FeedItem) -> Void,
+                         failure: @escaping FailureClosure) {
+        _ = feedProvider.request(.deleteLike(feedItem: feedItem), success: { [feedItem] (likesCountResponse: LikesCountResponse) in
+            var feedItem = feedItem
+            feedItem.item.likes?.count = likesCountResponse.likesCount
+            feedItem.item.likes?.userLikes = BoolInt.true
+            success(feedItem)
+        }, failure: { error in
+            failure(error)
         })
     }
     

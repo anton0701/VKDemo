@@ -163,7 +163,8 @@ extension FeedTableViewCell: LikeButtonDelegate {
             
             likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
                               state: .liked,
-                              animated: true)
+                              animated: true,
+                              delegate: self)
         })
     }
     
@@ -176,7 +177,8 @@ extension FeedTableViewCell: LikeButtonDelegate {
             
             likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
                               state: .notLiked,
-                              animated: true)
+                              animated: true,
+                              delegate: self)
         })
     }
 }

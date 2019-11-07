@@ -54,8 +54,12 @@ class FeedPresenter {
         
     }
     
-    private func unlikeFeed(feedItem: FeedItem, completion: ((FeedItem) -> Void)) {
-        
+    private func unlikeFeed(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void)) {
+        feedManager.deleteLike(for: feedItem, success: { feedItem in
+            completion(feedItem)
+        }) { error in
+            
+        }
     }
 }
 

@@ -13,6 +13,7 @@ import Alamofire
 enum FeedTarget {
     case getFeed(count: Int, startFrom: String?)
     case addLike(feedItem: FeedItem)
+    case deleteLike(feedItem: FeedItem)
 }
 
 extension FeedTarget: TargetType {
@@ -31,6 +32,8 @@ extension FeedTarget: TargetType {
             return "newsfeed.get"
         case .addLike:
             return "likes.add"
+        case .deleteLike:
+            return "likes.delete"
         }
     }
     
@@ -39,6 +42,8 @@ extension FeedTarget: TargetType {
         case .getFeed:
             return .get
         case .addLike:
+            return .post
+        case .deleteLike:
             return .post
         }
     }
@@ -59,6 +64,18 @@ extension FeedTarget: TargetType {
                                                    "start_from": startFromString],
                                       encoding: URLEncoding.queryString)
         case .addLike(let feedItem):
+            let feedType = feedItem.item.type
+            let ownerId = feedItem.item.sourceId
+            let itemId = (feedItem.item.postId != nil) ? String(describing: feedItem.item.postId!) : ""
+            let standardParams = ["v": 5.103,
+                                  "access_token": sessionManager.getAccessToken() ?? "",
+                                  "type": feedType,
+                                  "owner_id": ownerId,
+                                  "item_id": itemId] as [String: Any]
+            
+            return .requestParameters(parameters: standardParams,
+                                      encoding: URLEncoding.httpBody)
+        case .deleteLike(let feedItem):
             let feedType = feedItem.item.type
             let ownerId = feedItem.item.sourceId
             let itemId = (feedItem.item.postId != nil) ? String(describing: feedItem.item.postId!) : ""
