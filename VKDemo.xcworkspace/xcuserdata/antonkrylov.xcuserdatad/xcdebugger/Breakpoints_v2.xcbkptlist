@@ -537,8 +537,8 @@
             filePath = "VKDemo/Core/UI/Custom Buttons/LikeButton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "buttonPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -563,7 +563,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "28493548-20CA-4123-9C2A-FA7997C1CDB5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/DataSource/FeedTableViewDataSource.swift"
@@ -618,7 +618,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "177"
                   endingLineNumber = "177"
-                  offsetFromSymbolStart = "520">
+                  offsetFromSymbolStart = "264">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -793,9 +793,41 @@
             filePath = "VKDemo/Core/UI/Custom Buttons/LikeButton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "setup(likesCount:state:animated:delegate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6F3D02A-AA44-4EFC-9105-2A1EC901701F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/UI/Custom Buttons/LikeButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
+            landmarkName = "buttonPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F048E17D-864D-483A-8191-892A9DF11E5A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/UI/Custom Buttons/LikeButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "buttonPressed()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

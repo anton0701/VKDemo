@@ -18,7 +18,7 @@ protocol SocialButtonsDelegate: class {
 
 class FeedTableViewCell: UITableViewCell {
     static let cellName: String = String(describing: FeedTableViewCell.self)
-
+    
     @IBOutlet weak var sourceIconImageView: UIImageView!
     @IBOutlet weak var sourceNameLabel: UILabel!
     @IBOutlet weak var dateAddedLabel: UILabel!
@@ -66,24 +66,24 @@ class FeedTableViewCell: UITableViewCell {
         commentsButton.setup(commentsCount: commentsCount)
         repostsButton.setup(repliesCount: repostsCount)
         
-                        
+        
         feedCellModel.sourceIconUrl.getAsyncImageFromUrl { [weak self] image, url in
             guard let strongSelf = self,
                 let cellModel = strongSelf.cellModel,
                 cellModel.sourceIconUrl == url,
                 let image = image,
                 let strongImageView = strongSelf.sourceIconImageView  else {
-                return
+                    return
             }
             
             UIView.transition(with: strongImageView,
                               duration: 0.3,
                               options: .transitionCrossDissolve,
                               animations: {
-                strongImageView.image = image
+                                strongImageView.image = image
             }, completion: nil)
         }
-                
+        
         if feedTextLength > 0 {
             let fixedWidth = textView.frame.size.width
             let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
@@ -102,7 +102,7 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
-
+        
         // If the cell's size has to be exactly the content
         // Size of the collection View, just return the
         // collectionViewLayout's collectionViewContentSize.
@@ -164,9 +164,9 @@ extension FeedTableViewCell: LikeButtonDelegate {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
-                state: .liked,
-                animated: true,
-                delegate: self)
+                                  state: .liked,
+                                  animated: true,
+                                  delegate: self)
             }
         })
     }
@@ -178,12 +178,10 @@ extension FeedTableViewCell: LikeButtonDelegate {
             guard self?.cellModel?.feedItem.item.sourceId == updatedFeedItem.item.sourceId else { return }
             self?.cellModel?.feedItem = updatedFeedItem
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
-                state: .notLiked,
-                animated: true,
-                delegate: self)
-            }
+            likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,
+                              state: .notLiked,
+                              animated: true,
+                              delegate: self)
         })
     }
 }
