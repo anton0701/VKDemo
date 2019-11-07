@@ -46,7 +46,7 @@ class FeedPresenter {
 
     private func likeFeed(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void)) {
         feedManager.addLike(for: feedItem,
-                            success: { [weak self] feedItem, likesCount in
+                            success: { [weak self] feedItem in
                                 completion(feedItem)
         }) { [weak self] error in
             
@@ -55,6 +55,7 @@ class FeedPresenter {
     }
     
     private func unlikeFeed(feedItem: FeedItem, completion: ((FeedItem) -> Void)) {
+        
     }
 }
 

@@ -275,13 +275,13 @@ class LikeButton: UIControl {
             likeState = .notLiked
             animateTo(.notLiked)
             showInProgress(false)
+            delegate?.didUnlike(likeButton: self)
         case .notLiked:
             likeState = .inProgress
             showInProgress(true)
+            delegate?.didLike(likeButton: self)
             break
         }
-
-        delegate?.didLike(likeButton: self)
         
 //        setup(likesCount: 92831, state: .inProgress, animated: true)
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
@@ -290,6 +290,5 @@ class LikeButton: UIControl {
 //                self.setup(likesCount: 32, state: .notLiked, animated: true)
 //            }
 //        }
-            
     }
 }

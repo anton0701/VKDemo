@@ -15,7 +15,7 @@ protocol IFeedManager {
                  failure: @escaping FailureClosure)
     
     func addLike(for feedItem: FeedItem,
-                      success: @escaping (FeedItem, Int) -> Void,
+                      success: @escaping (FeedItem) -> Void,
                       failure: @escaping FailureClosure)
 }
 

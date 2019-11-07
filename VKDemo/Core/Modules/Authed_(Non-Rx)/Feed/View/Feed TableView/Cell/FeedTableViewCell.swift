@@ -158,7 +158,7 @@ extension FeedTableViewCell: LikeButtonDelegate {
         guard let feedItem = cellModel?.feedItem else { return }
         
         delegate?.didLike(feedItem: feedItem, completion: { [weak self] updatedFeedItem in
-            guard self?.cellModel?.feedItem.item.sourceId == updatedFeedItem.item.sourceId else { return }
+            guard self?.cellModel?.feedItem.item.postId == updatedFeedItem.item.postId else { return }
             self?.cellModel?.feedItem = updatedFeedItem
             
             likeButton?.setup(likesCount: updatedFeedItem.item.likes?.count ?? 0,

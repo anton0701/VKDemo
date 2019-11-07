@@ -22,14 +22,23 @@ class FeedManager {
 
 // TODO: перенести
 struct LikesCountResponse: Codable {
-    let likes: Int
+    let likesCount: Int
+    
+    private enum CodingKeys: String, CodingKey {
+        case likesCount = "likes"
+    }
 }
 
 extension FeedManager: IFeedManager {
-    func addLike(for feedItem: FeedItem, success: @escaping (FeedItem, Int) -> Void, failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.addLike(feedItem: feedItem), success: { (likesCountResponse: LikesCountResponse) in
+    func addLike(for feedItem: FeedItem, success: @escaping (FeedItem) -> Void, failure: @escaping FailureClosure) {
+        _ = feedProvider.request(.addLike(feedItem: feedItem), success: { [feedItem] (likesCountResponse: LikesCountResponse) in
+            var feedItem = feedItem
+            feedItem.item.likes?.count = likesCountResponse.likesCount
+            feedItem.item.likes?.userLikes = BoolInt.true
+            success(feedItem)
             print("adfadasd")
         }, failure: { error in
+            failure(error)
             print("123123adfadasd")
         })
     }

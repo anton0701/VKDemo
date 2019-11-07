@@ -9,7 +9,7 @@
 import Foundation
 
 struct FeedItem {
-    let item: FeedItemDto
+    var item: FeedItemDto
     let profiles: [UserDto]?
     let groups: [GroupDto]?
 }

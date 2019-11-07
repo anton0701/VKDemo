@@ -19,7 +19,7 @@ struct FeedItemDto: Codable {
     let attachments: [AttachmentDto]?
     let postSource: FeedPostSource?
     let comments: CommentsCountDto?
-    let likes: LikesCountDto?
+    var likes: LikesCountDto?
     let reposts: RepostCountDto?
     let views: ViewsCountDto?
     let isFavorite: Bool?
@@ -92,8 +92,8 @@ struct CommentsCountDto: Codable {
 }
 
 struct LikesCountDto: Codable {
-    let count: Int
-    let userLikes: BoolInt
+    var count: Int
+    var userLikes: BoolInt
     let canLike: BoolInt?
     let canPublish: BoolInt?
 
