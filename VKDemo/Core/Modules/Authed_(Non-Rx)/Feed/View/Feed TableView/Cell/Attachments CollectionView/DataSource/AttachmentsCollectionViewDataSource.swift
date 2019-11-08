@@ -22,12 +22,6 @@ class AttachmentsCollectionViewDataSource: NSObject {
     
     func setup(attachments: [AttachmentDto]) {
         self.attachments = attachments
-        
-//        guard let collectionViewHeightConstraint = collectionView.constraints.filter({
-//            $0.firstAttribute == .height
-//        }).first else { return }
-        
-//        collectionViewHeightConstraint.constant = collectionViewHeight(for: attachments)
         collectionView.reloadData()
     }
     
@@ -94,15 +88,12 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
             }
             strings[0] += "\(i+1) фото\t\t"
             strings[1] += "\(photoDto.sizes.count) размеров\t"
-//            print("\(i+1) фото")
-//            print("\(photoDto.sizes.count) размеров")
             var j = 2
             photoDto.sizes.forEach {
                 let wxh = "\($0.width)x\($0.height)"
                 let aspRatio = ((CGFloat($0.width)/CGFloat($0.height))*100).rounded() / 100.0
                 strings[j] += "\(wxh) \(aspRatio)\t\t"
                 j += 1
-//                print("\(wxh) \(aspRatio)")
             }
             let urlString = "\(photoDto.sizes.last!.url)\t"
             strings[j] += urlString
@@ -118,55 +109,12 @@ extension AttachmentsCollectionViewDataSource: UICollectionViewDataSource {
         }
         
         return photoAttachments.count
-                
-//        return attachments?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let photoAttachments = attachments?.filter({ $0.type == .photo }) ?? []
         let attachment = photoAttachments[indexPath.row]
-        
-//        let photoVideoAttachments = attachments?.filter({ $0.type == .video || $0.type == .photo }) ?? []
-//        let attachment = photoVideoAttachments[indexPath.row]
-        
-        //  1 фото          2 фото
-        //  10 размеров     7 размеров
-        //  19х38 (1х2)
-        //  100х200 (1х2)
-        //  ......
-        //
-        /*
-        var strings = [String]()
-        for _ in 0..<15 {
-            strings.append("")
-        }
-        
-        for i in 0..<photoAttachments.count {
-            guard let photoDto = photoAttachments[i].photo else {
-                return UICollectionViewCell()
-            }
-            strings[0] += "\(i+1) фото\t\t"
-            strings[1] += "\(photoDto.sizes.count) размеров\t"
-//            print("\(i+1) фото")
-//            print("\(photoDto.sizes.count) размеров")
-            var j = 2
-            photoDto.sizes.forEach {
-                let wxh = "\($0.width)x\($0.height)"
-                let aspRatio = ((CGFloat($0.height)/CGFloat($0.width))*100).rounded() / 100.0
-                strings[j] += "\(wxh) \(aspRatio)\t\t"
-                j += 1
-//                print("\(wxh) \(aspRatio)")
-            }
-            let urlString = "\(photoDto.sizes.last!.url)\t"
-            strings[j] += urlString
-        }
-        
-        print("\n\n\n************Photo info*************")
-        for i in 0..<15 {
-            print(strings[i])
-        }
-        */
         
         switch attachment.type {
         case .photo:
