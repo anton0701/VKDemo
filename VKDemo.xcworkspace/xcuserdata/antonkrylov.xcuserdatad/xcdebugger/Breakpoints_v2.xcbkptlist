@@ -530,22 +530,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "44D981E7-25A7-4FCA-9D66-E9A02735D44D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/UI/Custom Buttons/LikeButton.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
-            landmarkName = "buttonPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "28493548-20CA-4123-9C2A-FA7997C1CDB5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -556,70 +540,6 @@
             startingLineNumber = "119"
             endingLineNumber = "119"
             landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A5717B18-D2AD-4B83-8AE6-1EDC984549AA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/FeedTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "didUnlike(likeButton:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A5717B18-D2AD-4B83-8AE6-1EDC984549AA - 6b6049114225a642"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VKDemo.FeedTableViewCell.didUnlike(likeButton: Swift.Optional&lt;VKDemo.LikeButton&gt;) -&gt; ()"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed%20TableView/Cell/FeedTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "500">
-               </Location>
-               <Location
-                  uuid = "A5717B18-D2AD-4B83-8AE6-1EDC984549AA - 15f59ff320465aa0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VKDemo.FeedItem) -&gt; () in VKDemo.FeedTableViewCell.didUnlike(likeButton: Swift.Optional&lt;VKDemo.LikeButton&gt;) -&gt; ()"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed%20TableView/Cell/FeedTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "264">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "98731FE5-4021-492B-BD66-73E265154B4F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/FeedTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "didUnlike(likeButton:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -642,22 +562,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "57D5D444-EDDA-437A-BED1-44C36E910DEB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/FeedTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "didUnlike(likeButton:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "60D4662A-C214-43F1-A517-EEB3775009B8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -674,54 +578,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BE3E9BA5-E363-459A-8B5C-851DACB57F4A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "deleteLike(from:success:failure:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BE3E9BA5-E363-459A-8B5C-851DACB57F4A - 4274a00aaed53ec8"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VKDemo.FeedManager.deleteLike(for: VKDemo.FeedItem, success: (VKDemo.FeedItem) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; ()"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  uuid = "BE3E9BA5-E363-459A-8B5C-851DACB57F4A - c70ba8cfc306b5b8"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VKDemo.LikesCountResponse) -&gt; () in VKDemo.FeedManager.deleteLike(for: VKDemo.FeedItem, success: (VKDemo.FeedItem) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; ()"
-                  moduleName = "VKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonkrylov/Documents/RX/VKDemo/VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "256E7677-997B-4136-813B-415A3A2200F1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -729,8 +585,8 @@
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "deleteLike(from:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -754,22 +610,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D01CFE18-7AB7-4D5C-B427-2395BF0D04C9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/FeedTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "didUnlike(likeButton:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F2A2EE98-A8D1-4A75-960E-FBEF18DDF192"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -780,38 +620,6 @@
             startingLineNumber = "271"
             endingLineNumber = "271"
             landmarkName = "setup(likesCount:state:animated:delegate:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D6F3D02A-AA44-4EFC-9105-2A1EC901701F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/UI/Custom Buttons/LikeButton.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
-            landmarkName = "buttonPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F048E17D-864D-483A-8191-892A9DF11E5A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKDemo/Core/UI/Custom Buttons/LikeButton.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
-            landmarkName = "buttonPressed()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

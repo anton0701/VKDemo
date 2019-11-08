@@ -25,10 +25,11 @@ class FeedManager {
 
 extension FeedManager: IFeedManager {
     func addLike(for feedItem: FeedItem, success: @escaping (FeedItem) -> Void, failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.addLike(feedItem: feedItem), success: { [feedItem] (likesCountResponse: LikesCountResponse) in
+        _ = feedProvider.request(.addLike(feedItem: feedItem), success: { [weak self, feedItem] (likesCountResponse: LikesCountResponse) in
             var feedItem = feedItem
             feedItem.item.likes?.count = likesCountResponse.likesCount
             feedItem.item.likes?.userLikes = BoolInt.true
+            self?.onFeedLikeUpdate.raise(feedItem)
             success(feedItem)
         }, failure: { error in
             failure(error)
@@ -38,10 +39,11 @@ extension FeedManager: IFeedManager {
     func deleteLike(from feedItem: FeedItem,
                          success: @escaping (FeedItem) -> Void,
                          failure: @escaping FailureClosure) {
-        _ = feedProvider.request(.deleteLike(feedItem: feedItem), success: { [feedItem] (likesCountResponse: LikesCountResponse) in
+        _ = feedProvider.request(.deleteLike(feedItem: feedItem), success: { [weak self, feedItem] (likesCountResponse: LikesCountResponse) in
             var feedItem = feedItem
             feedItem.item.likes?.count = likesCountResponse.likesCount
-            feedItem.item.likes?.userLikes = BoolInt.true
+            feedItem.item.likes?.userLikes = BoolInt.false
+            self?.onFeedLikeUpdate.raise(feedItem)
             success(feedItem)
         }, failure: { error in
             failure(error)
