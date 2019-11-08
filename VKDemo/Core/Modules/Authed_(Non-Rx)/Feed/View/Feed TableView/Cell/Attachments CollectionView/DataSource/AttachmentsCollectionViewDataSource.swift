@@ -104,9 +104,10 @@ class AttachmentsCollectionViewDataSource: NSObject {
       return layout
     }
 
-    func generateSingleLayoutGroup() -> NSCollectionLayoutGroup {
+    func generateSingleLayoutGroup(photoDto: PhotoDto) -> NSCollectionLayoutGroup {
         let width = collectionView.frame.width
-        let photo = attachments![0].photo!
+//        let photo = attachments![0].photo!
+        let photo = photoDto
         let photoSize = photo.sizes.correctSize()
         let photoRatio = CGFloat(photoSize?.height ?? 0) / CGFloat(photoSize?.width ?? 1)
         let photoHeight = photoRatio * width
@@ -125,21 +126,21 @@ class AttachmentsCollectionViewDataSource: NSObject {
         return layoutGroup
     }
     
-    func generateMainWithPairLayoutGroup() -> NSCollectionLayoutGroup {
+    func generateMainWithPairLayoutGroup(photoDto1: PhotoDto, photoDto2: PhotoDto, photoDto3: PhotoDto) -> NSCollectionLayoutGroup {
         let width1 = collectionView.frame.width * 2.0 / 3.0
-        let photo1 = attachments![0].photo!
+        let photo1 = photoDto1
         let photo1Size = photo1.sizes.correctSize()
         let photo1Ratio = CGFloat(photo1Size?.height ?? 0) / CGFloat(photo1Size?.width ?? 1)
         let photo1Height = photo1Ratio * width1
         
         let width2 = collectionView.frame.width / 3.0
-        let photo2 = attachments![1].photo!
+        let photo2 = photoDto2
         let photo2Size = photo2.sizes.correctSize()
         let photo2Ratio = CGFloat(photo2Size?.height ?? 0) / CGFloat(photo2Size?.width ?? 1)
         let photo2Height = photo2Ratio * width2
         
         let width3 = collectionView.frame.width / 3.0
-        let photo3 = attachments![2].photo!
+        let photo3 = photoDto3
         let photo3Size = photo2.sizes.correctSize()
         let photo3Ratio = CGFloat(photo3Size?.height ?? 0) / CGFloat(photo3Size?.width ?? 1)
         let photo3Height = photo3Ratio * width3
@@ -178,22 +179,22 @@ class AttachmentsCollectionViewDataSource: NSObject {
         return mainWithPairGroup
     }
     
-    func generateTripletLayoutGroup() -> NSCollectionLayoutGroup {
+    func generateTripletLayoutGroup(photoDto1: PhotoDto, photoDto2: PhotoDto, photoDto3: PhotoDto) -> NSCollectionLayoutGroup {
         let width1 = collectionView.frame.width / 3.0
-        let photo1 = attachments![0].photo!
+        let photo1 = photoDto1
         let photo1Size = photo1.sizes.correctSize()
         let photo1Ratio = CGFloat(photo1Size?.height ?? 0) / CGFloat(photo1Size?.width ?? 1)
         let photo1Height = photo1Ratio * width1
         
         let width2 = collectionView.frame.width / 3.0
-        let photo2 = attachments![1].photo!
+        let photo2 = photoDto2
         let photo2Size = photo2.sizes.correctSize()
         let photo2Ratio = CGFloat(photo2Size?.height ?? 0) / CGFloat(photo2Size?.width ?? 1)
         let photo2Height = photo2Ratio * width2
         
         let width3 = collectionView.frame.width / 3.0
-        let photo3 = attachments![2].photo!
-        let photo3Size = photo2.sizes.correctSize()
+        let photo3 = photoDto3
+        let photo3Size = photo3.sizes.correctSize()
         let photo3Ratio = CGFloat(photo3Size?.height ?? 0) / CGFloat(photo3Size?.width ?? 1)
         let photo3Height = photo3Ratio * width3
         
