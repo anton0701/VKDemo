@@ -92,7 +92,7 @@ class FeedTableViewCell: UITableViewCell {
             textViewHeightConstraint.constant = 0.0
         }
         
-        collectionViewHeightConstraint.constant = previewCollectionViewDataSource.collectionViewHeight(for: cellModel?.feedItem.item.attachments ?? [AttachmentDto]())
+        collectionViewHeightConstraint.constant = previewCollectionViewDataSource.collectionViewHeight(for: cellModel?.feedItem.item.attachments ?? [AttachmentDto]()) + 200.0
         previewCollectionViewDataSource.setup(attachments: cellModel?.feedItem.item.attachments ?? [])
     }
     

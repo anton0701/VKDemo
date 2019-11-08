@@ -23,13 +23,14 @@ class AttachmentPhotoCollectionViewCell: UICollectionViewCell {
     func setup(photoDto: PhotoDto) {
         self.photoDto = photoDto
         
-        guard let properSizedPhotoDto = photoDto.sizes.sorted(by: {
-            guard let index0 = photoSizesOrderArray.index(of: $0.type) else { return false }
-            guard let index1 = photoSizesOrderArray.index(of: $1.type) else { return true }
-            return  index0 <= index1
-        }).first else {
-            return
-        }
+        guard let properSizedPhotoDto = photoDto.sizes.correctSize() else { return }
+//        sorted(by: {
+//            guard let index0 = photoSizesOrderArray.index(of: $0.type) else { return false }
+//            guard let index1 = photoSizesOrderArray.index(of: $1.type) else { return true }
+//            return  index0 <= index1
+//        }).first else {
+//            return
+//        }
         
         imageView.image = nil
         properSizedPhotoDto.url.getAsyncImageFromUrl(completion: { [weak self] image, urlStrig in

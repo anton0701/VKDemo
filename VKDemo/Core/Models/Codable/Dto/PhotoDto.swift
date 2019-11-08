@@ -28,6 +28,18 @@ struct PhotoDto: Codable {
     }
 }
 
+extension Array where Element == PhotoSizeCopy {
+    func correctSize() -> PhotoSizeCopy? {
+        return [self.first(where: { $0.type == "z" }),
+                self.first(where: { $0.type == "y" }),
+                self.first(where: { $0.type == "x" }),
+                self.first(where: { $0.type == "w" })]
+            .compactMap({$0})
+            .first
+    }
+}
+
+
 struct PhotoSizeCopy: Codable {
     let type: String
     let url: String

@@ -148,7 +148,7 @@ extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
                             socialButtonsViewHeight +
                             sumMarginsHeight
         
-        return CGFloat(overallHeight)
+        return CGFloat(overallHeight + 200.0)
     }
     
     func collectionViewHeight(for attachments: [AttachmentDto]) -> CGFloat {
