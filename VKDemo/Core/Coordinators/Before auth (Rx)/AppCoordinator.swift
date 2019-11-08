@@ -30,15 +30,15 @@ class AppCoordinator: BaseCoordinator<Void>, IAppCoordinator {
         let observable = coordinate(to: welcomeCoordinator)
         
 //        Вернуть когда понадобится авторизация
-//        _ = observable.subscribe({ event in
-//            let mainCoordinator = MainTabBarCoordinator()
-//            mainCoordinator.start()
-//        })
+        _ = observable.subscribe({ event in
+            let mainCoordinator = MainTabBarCoordinator()
+            mainCoordinator.start()
+        })
 
         
 //      Вернуть когда НЕ НУЖНА авторизация
-        let mainCoordinator = MainTabBarCoordinator()
-        mainCoordinator.start()
+//        let mainCoordinator = MainTabBarCoordinator()
+//        mainCoordinator.start()
 
         
         return .never()

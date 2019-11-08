@@ -18,7 +18,7 @@ class FeedViewController: BaseViewController, ViperModuleTransitionHandler {
         
         setupAppearance()
         
-        if let output = presenter {
+        if let output = presenter as? (FeedViewOutput & SocialButtonsDelegate){
             dataSource.output = output
         }
         

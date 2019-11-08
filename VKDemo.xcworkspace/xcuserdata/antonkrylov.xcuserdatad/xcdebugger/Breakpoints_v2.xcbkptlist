@@ -553,8 +553,8 @@
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/DataSource/FeedTableViewDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -681,8 +681,8 @@
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "deleteLike(for:success:failure:)"
             landmarkType = "7">
             <Locations>
@@ -729,8 +729,8 @@
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "FeedManager"
             landmarkType = "21">
          </BreakpointContent>
@@ -745,8 +745,8 @@
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "getFeed(count:startFrom:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
