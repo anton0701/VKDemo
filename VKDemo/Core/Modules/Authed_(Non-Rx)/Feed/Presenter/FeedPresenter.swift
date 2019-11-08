@@ -73,7 +73,7 @@ extension FeedPresenter: FeedViewOutput {
             guard let strongSelf = self else { return }
             
             strongSelf.feedItems.updateWithFeedItem(feedItem)
-            strongSelf.view?.updateFeedAfterLike(feedItem)
+            strongSelf.view?.updateFeedAfterLike(feedItem: feedItem)
         })
         
         loadFeed(take: 15, startFrom: nil, completion: nil)
