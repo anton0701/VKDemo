@@ -22,7 +22,7 @@ class FeedViewController: BaseViewController, ViperModuleTransitionHandler {
             dataSource.output = output
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             self.presenter?.viewLoaded()
         }
     }
@@ -36,12 +36,7 @@ extension FeedViewController: FeedViewInput {
     func setup(feedItems: [FeedItem]) {
         dataSource.setup(with: feedItems)
     }
-    
-    func reloadFeed() {
-//        tableView.reloadData()
-//        refreshControl?.endRefreshing()
-    }
-    
+        
     func addNewFeedItems(feedItems: [FeedItem]) {
         dataSource.addNew(feedItems: feedItems)
     }

@@ -20,14 +20,6 @@ class FeedManager {
     }
 }
 
-// TODO: перенести
-struct LikesCountResponse: Codable {
-    let likesCount: Int
-    
-    private enum CodingKeys: String, CodingKey {
-        case likesCount = "likes"
-    }
-}
 
 extension FeedManager: IFeedManager {
     func addLike(for feedItem: FeedItem, success: @escaping (FeedItem) -> Void, failure: @escaping FailureClosure) {

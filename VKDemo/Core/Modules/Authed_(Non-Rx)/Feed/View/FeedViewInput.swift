@@ -8,6 +8,5 @@
 
 protocol FeedViewInput: AnyObject {
     func setup(feedItems: [FeedItem])
-    func reloadFeed()
     func addNewFeedItems(feedItems: [FeedItem])
 }

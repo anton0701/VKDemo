@@ -11,7 +11,7 @@ import UIKit
 
 class FeedTableViewDataSource: NSObject {
 
-    weak var output: FeedViewOutput?
+    weak var output: (FeedViewOutput & SocialButtonsDelegate)?
     private let cellName = FeedTableViewCell.cellName
     private var feedCellModels = [FeedCellModel]()
     
@@ -113,6 +113,9 @@ extension FeedTableViewDataSource: UITableViewDataSource, UITableViewDelegate {
         
         let feedCellModel = feedCellModels[indexPath.row]
         // TODO: output as! SocialButtonsDelegate переделать
+        if let outputAsSocialButtonsDelegate = output as? SocialButtonsDelegate {
+            
+        }
         cell.setup(feedCellModel: feedCellModel, delegate: output as! SocialButtonsDelegate)
 
         return cell

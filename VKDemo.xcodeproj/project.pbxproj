@@ -102,6 +102,7 @@
 		349F156523127763008309EE /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156423127762008309EE /* GCD.swift */; };
 		349F156723127D5A008309EE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156623127D5A008309EE /* CircleImageView.swift */; };
 		34A2E0D223748C7C002F3130 /* FeedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2E0D123748C7C002F3130 /* FeedTextView.swift */; };
+		34A2E0D42374A43F002F3130 /* LikesCountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2E0D32374A43F002F3130 /* LikesCountResponse.swift */; };
 		34CC2E362360E25800027789 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC2E342360E25800027789 /* CGRect+Extensions.swift */; };
 		34CC2E372360E25800027789 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC2E352360E25800027789 /* CGSize+Extensions.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
@@ -223,6 +224,7 @@
 		349F156423127762008309EE /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		349F156623127D5A008309EE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		34A2E0D123748C7C002F3130 /* FeedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTextView.swift; sourceTree = "<group>"; };
+		34A2E0D32374A43F002F3130 /* LikesCountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCountResponse.swift; sourceTree = "<group>"; };
 		34CC2E342360E25800027789 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		34CC2E352360E25800027789 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -759,6 +761,7 @@
 			children = (
 				349BB8FA22AEF543003397DC /* FeedResponse.swift */,
 				34764BD0236BAF4C0070414A /* ConversationsResponse.swift */,
+				34A2E0D32374A43F002F3130 /* LikesCountResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				3436A02322AC48A400D8E72E /* ViperViewController.swift in Sources */,
 				349F156123127533008309EE /* UIImageView+Loading.swift in Sources */,
 				3407D26A2316F115002E2CA4 /* AttachmentVideoCollectionViewCell.swift in Sources */,
+				34A2E0D42374A43F002F3130 /* LikesCountResponse.swift in Sources */,
 				345530B7229D84FD0069E335 /* UserSessionManager.swift in Sources */,
 				3407D2572316DDA3002E2CA4 /* FeedTableViewDataSource.swift in Sources */,
 				3408FA62228C7A3F00433B61 /* DIContainer.swift in Sources */,
