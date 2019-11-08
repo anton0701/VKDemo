@@ -14,6 +14,13 @@ struct FeedItem {
     let groups: [GroupDto]?
 }
 
+extension Array where Element == FeedItem {
+    mutating func updateWithFeedItem(_ feedItem: FeedItem) {
+        guard let index = firstIndex (where: { $0.item.postId == feedItem.item.postId }) else { return }
+        self[index] = feedItem
+    }
+}
+
 protocol IFeedParser {
     func parse(feedResponse: FeedResponse) -> [FeedItem]
 }

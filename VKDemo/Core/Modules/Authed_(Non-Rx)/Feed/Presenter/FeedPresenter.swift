@@ -55,7 +55,7 @@ class FeedPresenter {
     }
     
     private func unlikeFeed(feedItem: FeedItem, completion: @escaping ((FeedItem) -> Void)) {
-        feedManager.deleteLike(for: feedItem, success: { feedItem in
+        feedManager.deleteLike(from: feedItem, success: { feedItem in
             completion(feedItem)
         }) { error in
             
@@ -69,6 +69,13 @@ extension FeedPresenter: FeedViewOutput {
     }
     
     func viewLoaded() {
+        feedManager.add(feedLikeUpdateHandler: { [weak self] feedItem in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.feedItems.updateWithFeedItem(feedItem)
+            strongSelf.view?.updateFeedAfterLike(feedItem)
+        })
+        
         loadFeed(take: 15, startFrom: nil, completion: nil)
     }
     

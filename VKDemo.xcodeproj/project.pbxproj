@@ -103,6 +103,7 @@
 		349F156723127D5A008309EE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F156623127D5A008309EE /* CircleImageView.swift */; };
 		34A2E0D223748C7C002F3130 /* FeedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2E0D123748C7C002F3130 /* FeedTextView.swift */; };
 		34A2E0D42374A43F002F3130 /* LikesCountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2E0D32374A43F002F3130 /* LikesCountResponse.swift */; };
+		34A2E0D72375A749002F3130 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A2E0D62375A749002F3130 /* Events.swift */; };
 		34CC2E362360E25800027789 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC2E342360E25800027789 /* CGRect+Extensions.swift */; };
 		34CC2E372360E25800027789 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC2E352360E25800027789 /* CGSize+Extensions.swift */; };
 		34D2D52B2289A808007A8113 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2D52A2289A808007A8113 /* AuthViewController.swift */; };
@@ -225,6 +226,7 @@
 		349F156623127D5A008309EE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		34A2E0D123748C7C002F3130 /* FeedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTextView.swift; sourceTree = "<group>"; };
 		34A2E0D32374A43F002F3130 /* LikesCountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCountResponse.swift; sourceTree = "<group>"; };
+		34A2E0D62375A749002F3130 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		34CC2E342360E25800027789 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		34CC2E352360E25800027789 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
 		34D2D52A2289A808007A8113 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -418,10 +420,11 @@
 		340624A22270EEC100B39D5B /* Common&Base&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				34A2E0D82375A765002F3130 /* UIBezierPath */,
+				34A2E0D52375A739002F3130 /* EventHandler */,
 				34CC2E342360E25800027789 /* CGRect+Extensions.swift */,
 				34CC2E352360E25800027789 /* CGSize+Extensions.swift */,
 				349F156423127762008309EE /* GCD.swift */,
-				34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */,
 				340624802270E9A000B39D5B /* AppDelegate.swift */,
 				341F0E1822B18764007791F8 /* UI */,
 				341F0E1722B18738007791F8 /* Networking */,
@@ -794,6 +797,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		34A2E0D52375A739002F3130 /* EventHandler */ = {
+			isa = PBXGroup;
+			children = (
+				34A2E0D62375A749002F3130 /* Events.swift */,
+			);
+			path = EventHandler;
+			sourceTree = "<group>";
+		};
+		34A2E0D82375A765002F3130 /* UIBezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				34E5BD1C2305D23600EB05D4 /* UIBezierPath+MyPaths.swift */,
+			);
+			path = UIBezierPath;
+			sourceTree = "<group>";
+		};
 		34D2D5292289A4E2007A8113 /* #Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -1042,6 +1061,7 @@
 				34764BCC236BACC20070414A /* IMessagesManager.swift in Sources */,
 				341F0E1D22B18923007791F8 /* AttachmentDto.swift in Sources */,
 				341F0E2122B18993007791F8 /* VideoDto.swift in Sources */,
+				34A2E0D72375A749002F3130 /* Events.swift in Sources */,
 				340624A02270ECA200B39D5B /* BaseCoordinator.swift in Sources */,
 				3408FA72228C7A8100433B61 /* ConfigContainer.swift in Sources */,
 				3436A02D22AE731300D8E72E /* UIColor+Factory.swift in Sources */,

@@ -54,6 +54,14 @@ class FeedTableViewDataSource: NSObject {
         }
         tableView.insertRows(at: newIndexPaths, with: .none)
     }
+    
+    func updateFeedItem(feedItem: FeedItem) {
+        guard let indexOfCellModelToUpdate = feedCellModels.firstIndex (where: {
+            $0.feedItem.item.postId == feedItem.item.postId
+        }) else { return }
+        let updatedFeedCellModel = FeedCellModel.init(feedItem: feedItem)
+        feedCellModels[indexOfCellModelToUpdate] = updatedFeedCellModel
+    }
 }
 
 // MARK: - Private functions

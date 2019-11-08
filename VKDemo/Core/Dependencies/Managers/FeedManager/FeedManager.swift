@@ -13,6 +13,8 @@ class FeedManager {
     private let feedProvider: MoyaProvider<FeedTarget>
     private let feedParser: IFeedParser
     
+    private let onFeedLikeUpdate = Events<FeedItem>()
+    
     init(feedProvider: MoyaProvider<FeedTarget>,
          feedParser: IFeedParser) {
         self.feedProvider = feedProvider
@@ -33,7 +35,7 @@ extension FeedManager: IFeedManager {
         })
     }
     
-    func deleteLike(for feedItem: FeedItem,
+    func deleteLike(from feedItem: FeedItem,
                          success: @escaping (FeedItem) -> Void,
                          failure: @escaping FailureClosure) {
         _ = feedProvider.request(.deleteLike(feedItem: feedItem), success: { [feedItem] (likesCountResponse: LikesCountResponse) in
@@ -57,5 +59,9 @@ extension FeedManager: IFeedManager {
         }, failure: { error in
             failure(error)
         })
+    }
+    
+    func add(feedLikeUpdateHandler: @escaping (_ feedItem: FeedItem) -> Void) {
+        onFeedLikeUpdate.addHandler(feedLikeUpdateHandler)
     }
 }

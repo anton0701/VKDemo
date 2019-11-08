@@ -9,4 +9,5 @@
 protocol FeedViewInput: AnyObject {
     func setup(feedItems: [FeedItem])
     func addNewFeedItems(feedItems: [FeedItem])
+    func updateFeedAfterLike(feedItem: FeedItem)
 }

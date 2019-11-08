@@ -40,6 +40,10 @@ extension FeedViewController: FeedViewInput {
     func addNewFeedItems(feedItems: [FeedItem]) {
         dataSource.addNew(feedItems: feedItems)
     }
+    
+    func updateFeedAfterLike(feedItem: FeedItem) {
+        dataSource.updateFeedItem(feedItem: feedItem)
+    }
 }
 
 extension FeedViewController: UITableViewDelegate {
