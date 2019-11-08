@@ -104,25 +104,128 @@ class AttachmentsCollectionViewDataSource: NSObject {
       return layout
     }
 
-    func generateLayoutGroupForSinglePhoto() -> NSCollectionLayoutGroup {
+    func generateSingleLayoutGroup() -> NSCollectionLayoutGroup {
+        let width = collectionView.frame.width
+        let photo = attachments![0].photo!
+        let photoSize = photo.sizes.correctSize()
+        let photoRatio = CGFloat(photoSize?.height ?? 0) / CGFloat(photoSize?.width ?? 1)
+        let photoHeight = photoRatio * width
+
         // Full
         let fullPhotoItem = NSCollectionLayoutItem(
           layoutSize: NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalWidth(3/2)))
         fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-
-        let width = collectionView.frame.width
-        let photo = attachments![0].photo!
-        let photoSize = photo.sizes.correctSize()
-        let photoRatio = CGFloat(photoSize.height) / CGFloat(photoSize.width)
-        let photoHeight = photoRatio * width
         
-        let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(photoRatio)),
+        let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                                                                heightDimension: .fractionalWidth(photoRatio)),
                                                                                                 subitem: fullPhotoItem,
                                                                                                 count: 1)
-        let height = collectionView.frame.size.width / fullPhotoItem.layoutSize.widthDimension.dimension
         return layoutGroup
+    }
+    
+    func generateMainWithPairLayoutGroup() -> NSCollectionLayoutGroup {
+        let width1 = collectionView.frame.width * 2.0 / 3.0
+        let photo1 = attachments![0].photo!
+        let photo1Size = photo1.sizes.correctSize()
+        let photo1Ratio = CGFloat(photo1Size?.height ?? 0) / CGFloat(photo1Size?.width ?? 1)
+        let photo1Height = photo1Ratio * width1
+        
+        let width2 = collectionView.frame.width / 3.0
+        let photo2 = attachments![1].photo!
+        let photo2Size = photo2.sizes.correctSize()
+        let photo2Ratio = CGFloat(photo2Size?.height ?? 0) / CGFloat(photo2Size?.width ?? 1)
+        let photo2Height = photo2Ratio * width2
+        
+        let width3 = collectionView.frame.width / 3.0
+        let photo3 = attachments![2].photo!
+        let photo3Size = photo2.sizes.correctSize()
+        let photo3Ratio = CGFloat(photo3Size?.height ?? 0) / CGFloat(photo3Size?.width ?? 1)
+        let photo3Height = photo3Ratio * width3
+        
+        // photo1Height < maxHeight
+        // photo2Height 20% diff with photo3Height
+
+        let mainItem = NSCollectionLayoutItem(
+          layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(2/3),
+            heightDimension: .fractionalHeight(1.0)))
+        mainItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+
+        let pairItem1 = NSCollectionLayoutItem(
+          layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(photo2Ratio))) // меняем
+        pairItem1.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+        
+        let pairItem2 = NSCollectionLayoutItem(
+          layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(photo3Ratio))) // меняем
+        pairItem2.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+        
+        let trailingGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1/3),
+            heightDimension: .fractionalHeight(1.0)), subitems: [pairItem1, pairItem2])
+
+        let mainWithPairGroup = NSCollectionLayoutGroup.horizontal(
+          layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalWidth(4/9)),
+          subitems: [mainItem, trailingGroup])
+
+        return mainWithPairGroup
+    }
+    
+    func generateTripletLayoutGroup() -> NSCollectionLayoutGroup {
+        let width1 = collectionView.frame.width / 3.0
+        let photo1 = attachments![0].photo!
+        let photo1Size = photo1.sizes.correctSize()
+        let photo1Ratio = CGFloat(photo1Size?.height ?? 0) / CGFloat(photo1Size?.width ?? 1)
+        let photo1Height = photo1Ratio * width1
+        
+        let width2 = collectionView.frame.width / 3.0
+        let photo2 = attachments![1].photo!
+        let photo2Size = photo2.sizes.correctSize()
+        let photo2Ratio = CGFloat(photo2Size?.height ?? 0) / CGFloat(photo2Size?.width ?? 1)
+        let photo2Height = photo2Ratio * width2
+        
+        let width3 = collectionView.frame.width / 3.0
+        let photo3 = attachments![2].photo!
+        let photo3Size = photo2.sizes.correctSize()
+        let photo3Ratio = CGFloat(photo3Size?.height ?? 0) / CGFloat(photo3Size?.width ?? 1)
+        let photo3Height = photo3Ratio * width3
+        
+        // photo1Height < maxHeight photo2Height < maxHeight photo3Height < maxHeight
+        // photo2Height 20% diff with photo3Height and photo1Height
+
+        // Triplet
+        let tripletItem1 = NSCollectionLayoutItem(
+          layoutSize: NSCollectionLayoutSize(
+              widthDimension: .fractionalHeight(photo1Ratio),
+            heightDimension: .fractionalHeight(1.0)))
+
+          let tripletItem2 = NSCollectionLayoutItem(
+          layoutSize: NSCollectionLayoutSize(
+              widthDimension: .fractionalHeight(photo2Ratio),
+            heightDimension: .fractionalHeight(1.0)))
+          
+          let tripletItem3 = NSCollectionLayoutItem(
+          layoutSize: NSCollectionLayoutSize(
+              widthDimension: .fractionalHeight(photo3Ratio),
+            heightDimension: .fractionalHeight(1.0)))
+          tripletItem1.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+          tripletItem2.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+          tripletItem3.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+
+        let tripletGroup = NSCollectionLayoutGroup.horizontal(
+          layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalWidth(2/3)),
+          subitems: [tripletItem1, tripletItem2, tripletItem3])
+        
+        return tripletGroup
     }
     
     func setup(attachments: [AttachmentDto]) {
