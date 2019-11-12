@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "32B08FF5-1455-47CD-B145-80845BEC84E3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3F06AB20-A432-40FB-832E-28142751A94A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FD5C647C-2038-4B3A-AEA2-D7342687C61D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -53,7 +53,7 @@
             <Locations>
                <Location
                   uuid = "FD5C647C-2038-4B3A-AEA2-D7342687C61D - 7d8ce6201a1c6b2e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
@@ -68,7 +68,7 @@
                </Location>
                <Location
                   uuid = "FD5C647C-2038-4B3A-AEA2-D7342687C61D - 7d8ce6201a1c6b2e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C3220DFB-3FD0-4EDC-985E-209F4C734B7E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -104,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7A63FFB9-1F3C-46B4-B408-F41B6659DA30"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C45493A4-428E-4930-ACFC-861396304035"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -133,7 +133,7 @@
             <Locations>
                <Location
                   uuid = "C45493A4-428E-4930-ACFC-861396304035 - 7d8ce6201a1c6b2e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
@@ -148,7 +148,7 @@
                </Location>
                <Location
                   uuid = "C45493A4-428E-4930-ACFC-861396304035 - 7d8ce6201a1c6b2e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in VKDemo):Moya.MoyaProvider.request&lt;A where A1: Swift.Decodable, A1: Swift.Encodable&gt;(_: A, callbackQueue: Swift.Optional&lt;__C.OS_dispatch_queue&gt;, progress: Swift.Optional&lt;(Moya.ProgressResponse) -&gt; ()&gt;, success: (A1) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; Moya.Cancellable"
@@ -168,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BED986A0-0D14-4C48-B246-D33A61E2C86D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -184,7 +184,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D8F9E7ED-3232-4CCF-8681-889E3F8143DA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Common&amp;Base&amp;Extensions/Networking/MoyaProvider+Mapping.swift"
@@ -200,7 +200,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AD0B6ED7-2ECA-486A-B299-E91B9D1B8099"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/DataSource/FeedTableViewDataSource.swift"
@@ -216,7 +216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9E26CF26-7ED3-4131-939C-6D7B64AA78BB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Cell/FeedTableViewCell.swift"
@@ -232,7 +232,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4928F8E6-CB93-4F2A-AE39-76AD3C2DFAFB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/TableViewCell/Inner CollectionView Data Source/AttachmentsCollectionViewDataSource.swift"
@@ -259,7 +259,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "670DC041-E2AC-40A6-8990-18ACFFF40107"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Video/AttachmentVideoCollectionViewCell.swift"
@@ -275,7 +275,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3EAE2D42-9344-40A3-88B9-DDB551DB7C10"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Video/AttachmentVideoCollectionViewCell.swift"
@@ -291,7 +291,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B8E3486C-5693-480F-97E9-A4AA821321FD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Video/AttachmentVideoCollectionViewCell.swift"
@@ -307,7 +307,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A5390E88-4DCC-4F14-AFA6-2FFDCB5358BF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Video/AttachmentVideoCollectionViewCell.swift"
@@ -323,7 +323,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D0F7406E-2725-4749-BD19-152086DDE7C3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Video/AttachmentVideoCollectionViewCell.swift"
@@ -339,7 +339,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "24961829-A6DE-4165-ABA1-9A9A5A37D69A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Video/AttachmentVideoCollectionViewCell.swift"
@@ -355,7 +355,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2E1551DF-54C2-4B91-8B50-4BDA63485C90"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/Cell/Video/AttachmentVideoCollectionViewCell.swift"
@@ -443,15 +443,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "setup(photoDto:)"
-            landmarkType = "7">
+            landmarkName = "AttachmentPhotoCollectionViewCell"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0E172F05-CE0F-4DEC-8AE4-F34D82BF83B9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Dependencies/Managers/MessagesManager/MessagesManager.swift"
@@ -464,7 +464,7 @@
             <Locations>
                <Location
                   uuid = "0E172F05-CE0F-4DEC-8AE4-F34D82BF83B9 - 305f786470382d93"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (VKDemo.ConversationsResponse) -&gt; () in VKDemo.MessagesManager.getConversations(success: (Swift.Array&lt;VKDemo.FeedItem&gt;) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; ()"
@@ -479,7 +479,7 @@
                </Location>
                <Location
                   uuid = "0E172F05-CE0F-4DEC-8AE4-F34D82BF83B9 - ba7ee1475393f36b"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (VKDemo.RequestError) -&gt; () in VKDemo.MessagesManager.getConversations(success: (Swift.Array&lt;VKDemo.FeedItem&gt;) -&gt; (), failure: (VKDemo.RequestError) -&gt; ()) -&gt; ()"
@@ -499,7 +499,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7C1894A2-CA95-4B45-8135-E2110B1E5A3B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Dependencies/Managers/MessagesManager/MessagesManager.swift"
@@ -515,7 +515,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7F1198D5-C71D-4FCF-A405-E8FF9E311387"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/Presenter/FeedPresenter.swift"
@@ -547,7 +547,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B8560D51-2F51-497F-AAB0-1BD5BCFDD0DB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/FeedTableViewCell.swift"
@@ -563,7 +563,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "60D4662A-C214-43F1-A517-EEB3775009B8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/FeedTableViewCell.swift"
@@ -579,7 +579,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "256E7677-997B-4136-813B-415A3A2200F1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
@@ -595,7 +595,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BE5908BA-4211-4CC7-B1CA-D0145C6495E6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Dependencies/Managers/FeedManager/FeedManager.swift"
@@ -627,14 +627,62 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2945339A-2A13-4670-9D9D-AEC8CF451E3B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "generateLayout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A71BB3F-DCC1-42C8-953E-01D9EC2F5F76"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "generateLayout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "690D6D21-B727-4157-8766-2426603572A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "generateLayout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E864A0E5-6B40-4CEA-8E27-DEA480E8FC25"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKDemo/Core/Modules/Authed_(Non-Rx)/Feed/View/Feed TableView/Cell/Attachments CollectionView/DataSource/AttachmentsCollectionViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "generateLayout()"
             landmarkType = "7">
          </BreakpointContent>

@@ -18,11 +18,14 @@ class AttachmentPhotoCollectionViewCell: UICollectionViewCell {
     
     let photoSizesOrderArray = ["z", "y", "x", "w"]
     
+    
+    
     @IBOutlet weak var imageView: UIImageView!
     
     func setup(photoDto: PhotoDto) {
         self.photoDto = photoDto
-        
+    
+        photoUrlString?.append("")
         guard let properSizedPhotoDto = photoDto.sizes.correctSize() else { return }
 //        sorted(by: {
 //            guard let index0 = photoSizesOrderArray.index(of: $0.type) else { return false }

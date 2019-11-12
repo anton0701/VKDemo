@@ -30,83 +30,122 @@ class AttachmentsCollectionViewDataSource: NSObject {
       // Three 1/3 width photos stacked horizontally
 
       // Full
-      let fullPhotoItem = NSCollectionLayoutItem(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .fractionalWidth(3/2)))
-      fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+//      let fullPhotoItem = NSCollectionLayoutItem(
+//        layoutSize: NSCollectionLayoutSize(
+//          widthDimension: .fractionalWidth(1.0),
+//          heightDimension: .fractionalWidth(3/2)))
+//      fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+//
+//      // Main with pair
+//      let mainItem = NSCollectionLayoutItem(
+//        layoutSize: NSCollectionLayoutSize(
+//          widthDimension: .fractionalWidth(2/3),
+//          heightDimension: .fractionalHeight(1.0)))
+//      mainItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+//
+//      let pairItem = NSCollectionLayoutItem(
+//        layoutSize: NSCollectionLayoutSize(
+//          widthDimension: .fractionalWidth(1.0),
+//          heightDimension: .fractionalHeight(0.5)))
+//      pairItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+//      let trailingGroup = NSCollectionLayoutGroup.vertical(
+//        layoutSize: NSCollectionLayoutSize(
+//          widthDimension: .fractionalWidth(1/3),
+//          heightDimension: .fractionalHeight(1.0)),
+//        subitem: pairItem,
+//        count: 2)
+//
+//      let mainWithPairGroup = NSCollectionLayoutGroup.horizontal(
+//        layoutSize: NSCollectionLayoutSize(
+//          widthDimension: .fractionalWidth(1.0),
+//          heightDimension: .fractionalWidth(4/9)),
+//        subitems: [mainItem, trailingGroup])
+//
+//      // Triplet
+//      let tripletItem1 = NSCollectionLayoutItem(
+//        layoutSize: NSCollectionLayoutSize(
+//            widthDimension: .fractionalWidth(1/3.35),
+//          heightDimension: .fractionalHeight(1.0)))
+//
+//        let tripletItem2 = NSCollectionLayoutItem(
+//        layoutSize: NSCollectionLayoutSize(
+//            widthDimension: .fractionalWidth(1.35/3.35),
+//          heightDimension: .fractionalHeight(1.0)))
+//
+//        let tripletItem3 = NSCollectionLayoutItem(
+//        layoutSize: NSCollectionLayoutSize(
+//            widthDimension: .fractionalWidth(1/3.35),
+//          heightDimension: .fractionalHeight(1.0)))
+//        tripletItem1.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+//        tripletItem2.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+//        tripletItem3.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+//
+//      let tripletGroup = NSCollectionLayoutGroup.horizontal(
+//        layoutSize: NSCollectionLayoutSize(
+//          widthDimension: .fractionalWidth(1.0),
+//          heightDimension: .fractionalWidth(2/3)),
+//        subitems: [tripletItem1, tripletItem2, tripletItem3])
+//
+//      // Reversed main with pair
+//      let mainWithPairReversedGroup = NSCollectionLayoutGroup.horizontal(
+//        layoutSize: NSCollectionLayoutSize(
+//          widthDimension: .fractionalWidth(1.0),
+//          heightDimension: .fractionalWidth(4/9)),
+//        subitems: [trailingGroup, mainItem])
 
-      // Main with pair
-      let mainItem = NSCollectionLayoutItem(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(2/3),
-          heightDimension: .fractionalHeight(1.0)))
-      mainItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-
-      let pairItem = NSCollectionLayoutItem(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .fractionalHeight(0.5)))
-      pairItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-      let trailingGroup = NSCollectionLayoutGroup.vertical(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1/3),
-          heightDimension: .fractionalHeight(1.0)),
-        subitem: pairItem,
-        count: 2)
-
-      let mainWithPairGroup = NSCollectionLayoutGroup.horizontal(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .fractionalWidth(4/9)),
-        subitems: [mainItem, trailingGroup])
-
-      // Triplet
-      let tripletItem1 = NSCollectionLayoutItem(
-        layoutSize: NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1/3.35),
-          heightDimension: .fractionalHeight(1.0)))
-
-        let tripletItem2 = NSCollectionLayoutItem(
-        layoutSize: NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.35/3.35),
-          heightDimension: .fractionalHeight(1.0)))
         
-        let tripletItem3 = NSCollectionLayoutItem(
-        layoutSize: NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1/3.35),
-          heightDimension: .fractionalHeight(1.0)))
-        tripletItem1.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-        tripletItem2.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-        tripletItem3.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+        guard let photoAttachments = attachments?.filter({ $0.photo != nil }),
+            photoAttachments.count > 0 else {
+//            let layoutGroup = NSCollectionLayoutGroup(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+//                                                                                         heightDimension: .fractionalHeight(1.0)))
+//            let section = NSCollectionLayoutSection(group: layoutGroup)
+//            let layout = UICollectionViewCompositionalLayout(section: section)
+            return UICollectionViewLayout()
+        }
 
-      let tripletGroup = NSCollectionLayoutGroup.horizontal(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .fractionalWidth(2/3)),
-        subitems: [tripletItem1, tripletItem2, tripletItem3])
-
-      // Reversed main with pair
-      let mainWithPairReversedGroup = NSCollectionLayoutGroup.horizontal(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .fractionalWidth(4/9)),
-        subitems: [trailingGroup, mainItem])
-
-      let nestedGroup = NSCollectionLayoutGroup.vertical(
-        layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .fractionalWidth(16/9)),
-        subitems: [fullPhotoItem, mainWithPairGroup, tripletGroup, mainWithPairReversedGroup])
-
-      let section = NSCollectionLayoutSection(group: nestedGroup)
-      let layout = UICollectionViewCompositionalLayout(section: section)
-      return layout
+        
+        var subgroups = [NSCollectionLayoutGroup]()
+        var k = 0
+        for _ in 1...3 {
+            if k > photoAttachments.count - 1 { break }
+            let j = Int.random(in: 1...4)
+            let photo1 = (k < photoAttachments.count) ? photoAttachments[k].photo : photoAttachments.first?.photo!
+            let photo2 = (k < photoAttachments.count - 1) ? photoAttachments[k+1].photo : photoAttachments.first?.photo!
+            let photo3 = (k < photoAttachments.count - 2) ? photoAttachments[k+2].photo : photoAttachments.first?.photo!
+            switch j {
+            case 1:
+                subgroups.append(generateSingleLayoutGroup(photoDto: photo1!))
+                k += 1
+            case 2:
+                subgroups.append(generateMainWithPairLayoutGroup(photoDto1: photo1!, photoDto2: photo2!, photoDto3: photo3!))
+                k += 3
+            case 3:
+                subgroups.append(generateTripletLayoutGroup(photoDto1: photo1!, photoDto2: photo2!, photoDto3: photo3!))
+                k += 3
+            case 4:
+                break
+            default:
+                break
+            }
+        }
+        
+        let photo1 = (k < photoAttachments.count) ? photoAttachments[k].photo : photoAttachments.first?.photo!
+        if subgroups.count == 0 { subgroups.append(generateSingleLayoutGroup(photoDto: photo1!)) }
+        
+        let nestedGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .fractionalHeight(1.0)),
+            subitems: subgroups)
+//            [fullPhotoItem, mainWithPairGroup, tripletGroup, mainWithPairReversedGroup])
+        
+        let section = NSCollectionLayoutSection(group: nestedGroup)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
     }
 
     func generateSingleLayoutGroup(photoDto: PhotoDto) -> NSCollectionLayoutGroup {
         let width = collectionView.frame.width
-//        let photo = attachments![0].photo!
         let photo = photoDto
         let photoSize = photo.sizes.correctSize()
         let photoRatio = CGFloat(photoSize?.height ?? 0) / CGFloat(photoSize?.width ?? 1)
@@ -150,7 +189,7 @@ class AttachmentsCollectionViewDataSource: NSObject {
 
         let mainItem = NSCollectionLayoutItem(
           layoutSize: NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(2/3),
+            widthDimension: .fractionalWidth(photo1Ratio),
             heightDimension: .fractionalHeight(1.0)))
         mainItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
 
@@ -167,7 +206,7 @@ class AttachmentsCollectionViewDataSource: NSObject {
         pairItem2.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
         
         let trailingGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1/3),
+            widthDimension: .fractionalWidth(1.0 - photo1Ratio),
             heightDimension: .fractionalHeight(1.0)), subitems: [pairItem1, pairItem2])
 
         let mainWithPairGroup = NSCollectionLayoutGroup.horizontal(
@@ -223,16 +262,18 @@ class AttachmentsCollectionViewDataSource: NSObject {
         let tripletGroup = NSCollectionLayoutGroup.horizontal(
           layoutSize: NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalWidth(2/3)),
+            heightDimension: .absolute(CGFloat(300))),
           subitems: [tripletItem1, tripletItem2, tripletItem3])
         
         return tripletGroup
+        
+        UIApplication().applicationState
     }
     
     func setup(attachments: [AttachmentDto]) {
         self.attachments = attachments
-        collectionView.setCollectionViewLayout(generateLayout(), animated: false)
         collectionView.reloadData()
+        collectionView.setCollectionViewLayout(generateLayout(), animated: false)
     }
     
     func collectionViewHeight(for attachments: [AttachmentDto]) -> CGFloat {
@@ -263,6 +304,42 @@ class AttachmentsCollectionViewDataSource: NSObject {
         
         return ceil(CGFloat(photosCount) / 2.0) * height
     }
+    
+    func createLayoutForPhotos(_ photos:[PhotoDto]) -> [CompositionalLayout] {
+        for i in 4...1 {
+            for j in 4...0 {
+                for k in 4...0 {
+                    guard i + j + k == photos.count,
+                        (j != 0) || (k == 0) else {
+                            continue
+                            
+                    }
+                    
+                    let row1Photos = Array(photos[0..<i])
+                    let row2Photos = Array(photos[i..<j+i])
+                    let row3Photos = Array(photos.dropFirst(j+i))
+                    
+                    createRowsLayout(row1: row1Photos,
+                                     row2: row2Photos,
+                                     row3: row3Photos)
+                }
+            }
+        }
+        
+        return [CompositionalLayout]()
+    }
+    
+    func createRowsLayout(row1: [PhotoDto], row2: [PhotoDto]?, row3: [PhotoDto]?) {
+        
+    }
+}
+
+struct CompositionalLayout {
+    var rows: [RowLayout]
+}
+
+struct RowLayout {
+    var cells: Any
 }
 
 // MARK: - Private functions
