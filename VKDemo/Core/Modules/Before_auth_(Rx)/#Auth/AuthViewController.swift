@@ -27,7 +27,7 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupBindings()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +37,7 @@ class AuthViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        setupBindings()
         startWelcomeAnimation()
     }
     

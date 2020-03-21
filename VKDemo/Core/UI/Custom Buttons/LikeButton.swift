@@ -234,7 +234,11 @@ class LikeButton: UIControl {
     }()
     
     private func addLayers() {
-        [activeBackgroundLayer, borderLayer, borderLayer2, inProgressLayer, heartLayer].forEach { layer.addSublayer($0) }
+        [activeBackgroundLayer,
+         borderLayer,
+         borderLayer2,
+         inProgressLayer,
+         heartLayer].forEach { layer.addSublayer($0) }
         addSubview(countLabel)
     }
     
@@ -261,7 +265,9 @@ class LikeButton: UIControl {
         addLayers()
         backgroundColor = .clear
         
-        addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        addTarget(self,
+                  action: #selector(buttonPressed),
+                  for: .touchUpInside)
     }
     
     func setup(likesCount: Int,
